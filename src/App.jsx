@@ -1,4 +1,7 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Inscription from "./pages/Inscription";
+import Connexion from "./pages/Connexion";
 
 const projets = [
   {
@@ -57,7 +60,7 @@ const projets = [
   },
 ];
 
-function App() {
+function Accueil() {
   return (
     <div className="site">
       <header className="header" id="accueil">
@@ -76,9 +79,15 @@ function App() {
           <a href="#contact">Contact</a>
         </nav>
 
-        <a className="bouton bouton-header" href="#projets">
-          ♥ Faire un don
-        </a>
+        <div className="actions-header">
+  <Link className="bouton bouton-connexion" to="/connexion">
+    Se connecter
+  </Link>
+
+  <Link className="bouton bouton-header" to="/inscription">
+    Créer un compte
+  </Link>
+</div>
       </header>
 
       <main>
@@ -239,6 +248,18 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/inscription" element={<Inscription />} />
+        <Route path="/connexion" element={<Connexion />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
