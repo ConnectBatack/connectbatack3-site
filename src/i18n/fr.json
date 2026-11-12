@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "titre": "ConnectBatack 3 : soutenir le village de Batack",
+    "description": "Financez la mise en service du dispensaire de Batack, au Cameroun, et suivez à quoi sert chaque don."
+  },
+  "preversion": "Préversion du site : les chiffres sont des exemples et aucun paiement réel n'est possible.",
+  "nav": {
+    "projets": "Projets",
+    "fonctionnement": "Votre don",
+    "apropos": "Qui sommes-nous",
+    "don": "Faire un don",
+    "connexion": "Espace COVIDEBA",
+    "accueil": "Retour à l'accueil"
+  },
+  "accueil": {
+    "surtitre": "Batack, Ouest-Cameroun",
+    "titre": "Aidez Batack à ouvrir son dispensaire",
+    "intro": "Le bâtiment du dispensaire existe. Pour qu'il accueille ses premiers patients, il lui manque une toiture solide, un câblage électrique et du matériel médical. Chaque don finance une de ces étapes, et vous voyez ensuite à quoi il a servi.",
+    "boutonDon": "Faire un don",
+    "boutonProjets": "Voir les projets",
+    "projetsTitre": "Les projets en cours",
+    "projetsIntro": "Le comité du village choisit l'ordre des travaux. Les montants affichés sont des exemples, en attendant les chiffres du COVIDEBA.",
+    "collecte": "collectés sur",
+    "soutenir": "Soutenir ce projet",
+    "impactTitre": "Ce que permet votre don",
+    "impactIntro": "Un montant, une utilisation précise. Ces correspondances sont des exemples qui seront remplacés par les coûts réels.",
+    "etapesTitre": "Ce que devient votre don",
+    "etapes": [
+      {
+        "titre": "Vous donnez",
+        "texte": "Le paiement passe par Stripe, un prestataire de paiement sécurisé. Vos données bancaires ne passent jamais par ce site."
+      },
+      {
+        "titre": "Le comité décide",
+        "texte": "Le COVIDEBA choisit la prochaine dépense, avec un outil d'aide à la décision qui garde toujours une réserve de sécurité."
+      },
+      {
+        "titre": "Vous voyez le résultat",
+        "texte": "Chaque dépense importante est publiée ici, avec sa facture ou une photo des travaux."
+      }
+    ],
+    "aproposTitre": "Qui sommes-nous",
+    "aproposTexte": [
+      "Le COVIDEBA est le comité de développement du village de Batack. Il porte les projets du village : eau potable, écoles, santé.",
+      "ConnectBatack 3 réunit le COVIDEBA, des étudiants de la Faculté polytechnique de Mons (UMONS) et l'École nationale supérieure polytechnique de Yaoundé (ENSPY). Les deux premières phases ont installé un microréseau solaire et construit le bâtiment du dispensaire."
+    ],
+    "appelTitre": "Un don, une étape concrète",
+    "appelTexte": "Vous pouvez donner sans créer de compte, une fois ou chaque mois.",
+    "prochainBesoin": "Prochain besoin à financer",
+    "besoinTitre": "Toiture du dispensaire",
+    "besoinTexte": "Première étape des travaux : mettre le bâtiment à l'abri avant d'installer l'électricité et le matériel médical."
+  },
+  "projets": {
+    "dispensaire": {
+      "categorie": "Santé",
+      "titre": "Mise en service du dispensaire",
+      "description": "D'abord la toiture, puis le câblage électrique, puis le matériel d'analyse et de radiologie."
+    },
+    "batteries": {
+      "categorie": "Énergie",
+      "titre": "Entretien des batteries solaires",
+      "description": "Les batteries du microréseau alimentent le dispensaire. Elles doivent être entretenues, puis remplacées."
+    },
+    "ecole": {
+      "categorie": "Éducation",
+      "titre": "Salaire d'un instituteur",
+      "description": "Payer un instituteur pour que les enfants aient classe toute l'année."
+    },
+    "eau": {
+      "categorie": "Eau",
+      "titre": "Accès à l'eau potable",
+      "description": "Étendre le réseau d'eau potable que le COVIDEBA a commencé à construire."
+    }
+  },
+  "exemple": "exemple",
+  "don": {
+    "titre": "Faire un don",
+    "intro": "Trois étapes, environ deux minutes. Aucun compte n'est nécessaire.",
+    "etape": "Étape {n} sur 3",
+    "frequenceTitre": "Je donne",
+    "ponctuel": "Une fois",
+    "mensuel": "Chaque mois",
+    "montantTitre": "Montant de mon don",
+    "autreMontant": "Autre montant (€)",
+    "parMois": "par mois",
+    "contextes": {
+      "ponctuel": {
+        "25": "contribue à l'achat de médicaments de base pour le dispensaire",
+        "50": "contribue à l'entretien des batteries solaires",
+        "100": "contribue au salaire mensuel d'un instituteur",
+        "250": "contribue à la toiture du dispensaire"
+      },
+      "mensuel": {
+        "10": "contribue chaque mois aux médicaments de base",
+        "20": "contribue chaque mois à l'entretien des batteries",
+        "35": "contribue chaque mois au salaire d'un instituteur",
+        "50": "contribue chaque mois aux travaux du dispensaire"
+      }
+    },
+    "contexteAutre": "Votre don rejoint le projet choisi, ou le fonds général si vous n'en choisissez pas.",
+    "projetTitre": "Affecter mon don",
+    "projetGeneral": "Là où le besoin est le plus urgent",
+    "suivant": "Suivant",
+    "precedent": "Précédent",
+    "infosTitre": "Mes coordonnées",
+    "prenom": "Prénom",
+    "nom": "Nom de famille",
+    "email": "Adresse e-mail",
+    "obligatoire": "obligatoire",
+    "attestation": "Je souhaite une attestation fiscale",
+    "attestationAide": "L'attestation est délivrée au début de l'année suivante par l'institution agréée qui reçoit les dons. Stripe vous demandera votre adresse postale. D'autres informations pourront être demandées, par exemple le numéro de registre national en Belgique.",
+    "conditions": "J'accepte les conditions d'utilisation et la politique de confidentialité.",
+    "paiementTitre": "Mode de paiement",
+    "bancontact": "Bancontact",
+    "carte": "Carte bancaire",
+    "mensuelCarte": "Le don mensuel se fait par carte bancaire.",
+    "securite": "Le paiement est traité par Stripe sur une page sécurisée. Vos données bancaires ne passent pas par ce site.",
+    "recapitulatif": "Récapitulatif",
+    "confirmer": "Confirmer mon don",
+    "envoi": "Redirection vers le paiement…",
+    "erreurs": {
+      "montant": "Choisissez un montant entre {min} € et {max} €, sans centimes.",
+      "nom": "Indiquez votre nom de famille.",
+      "email": "Indiquez une adresse e-mail valide.",
+      "conditions": "Acceptez les conditions pour continuer.",
+      "nonConfigure": "Le paiement en ligne n'est pas encore activé : cette page est une préversion.",
+      "serveur": "Le paiement n'a pas pu démarrer. Réessayez dans un instant."
+    }
+  },
+  "merci": {
+    "titre": "Merci pour votre don",
+    "texte": "Stripe vous envoie un reçu par e-mail. Si vous avez demandé une attestation fiscale, vous la recevrez au début de l'année prochaine.",
+    "annule": "Le paiement a été annulé. Aucun montant n'a été prélevé."
+  },
+  "connexion": {
+    "titre": "Espace COVIDEBA",
+    "texte": "Cet espace servira aux membres du COVIDEBA et aux encadrants : registre de l'argent, tâches et calcul du plan d'investissement. Il est en cours de construction.",
+    "donateur": "Pour donner, aucun compte n'est nécessaire."
+  },
+  "pied": {
+    "texte": "ConnectBatack 3 : COVIDEBA, Faculté polytechnique de Mons (UMONS) et ENSPY.",
+    "droits": "© 2026 COVIDEBA"
+  },
+  "changementLangue": {
+    "bouton": "Langue",
+    "titre": "Bienvenue sur les pages en français",
+    "texte": "Le français est la langue d'origine de ce site.",
+    "annuler": "Annuler",
+    "continuer": "Continuer"
+  }
+}

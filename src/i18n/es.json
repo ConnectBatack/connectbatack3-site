@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "titre": "ConnectBatack 3: apoya a la aldea de Batack",
+    "description": "Ayuda a abrir el centro de salud de Batack, en Camerún, y comprueba para qué sirve cada donación."
+  },
+  "preversion": "Versión preliminar del sitio: las cifras son ejemplos y no se puede realizar ningún pago real.",
+  "nav": {
+    "projets": "Proyectos",
+    "fonctionnement": "Tu donación",
+    "apropos": "Quiénes somos",
+    "don": "Donar",
+    "connexion": "Espacio COVIDEBA",
+    "accueil": "Volver al inicio"
+  },
+  "accueil": {
+    "surtitre": "Batack, oeste de Camerún",
+    "titre": "Ayuda a Batack a abrir su centro de salud",
+    "intro": "El edificio del centro de salud ya existe. Para recibir a sus primeros pacientes, todavía necesita un tejado sólido, una instalación eléctrica y material médico. Cada donación financia una de estas etapas, y después puedes ver para qué sirvió.",
+    "boutonDon": "Donar",
+    "boutonProjets": "Ver los proyectos",
+    "projetsTitre": "Proyectos en curso",
+    "projetsIntro": "El comité de la aldea decide el orden de las obras. Los importes que se muestran son ejemplos, a la espera de las cifras del COVIDEBA.",
+    "collecte": "recaudados de",
+    "soutenir": "Apoyar este proyecto",
+    "impactTitre": "Lo que permite tu donación",
+    "impactIntro": "Un importe, un uso concreto. Estas correspondencias son ejemplos y se sustituirán por los costes reales.",
+    "etapesTitre": "Qué pasa con tu donación",
+    "etapes": [
+      {
+        "titre": "Tú donas",
+        "texte": "El pago se hace a través de Stripe, un proveedor de pagos seguro. Tus datos bancarios nunca pasan por este sitio."
+      },
+      {
+        "titre": "El comité decide",
+        "texte": "El COVIDEBA elige el próximo gasto con una herramienta de ayuda a la decisión que siempre conserva una reserva de seguridad."
+      },
+      {
+        "titre": "Ves el resultado",
+        "texte": "Cada gasto importante se publica aquí, con su factura o una foto de las obras."
+      }
+    ],
+    "aproposTitre": "Quiénes somos",
+    "aproposTexte": [
+      "El COVIDEBA es el comité de desarrollo de la aldea de Batack. Lleva los proyectos de la aldea: agua potable, escuelas, salud.",
+      "ConnectBatack 3 reúne al COVIDEBA, a estudiantes de la Facultad Politécnica de Mons (UMONS) y a la Escuela Nacional Superior Politécnica de Yaundé (ENSPY). Las dos primeras fases instalaron una microrred solar y construyeron el edificio del centro de salud."
+    ],
+    "appelTitre": "Una donación, una etapa concreta",
+    "appelTexte": "Puedes donar sin crear una cuenta, una sola vez o cada mes.",
+    "prochainBesoin": "Próxima necesidad que financiar",
+    "besoinTitre": "Tejado del centro de salud",
+    "besoinTexte": "Primera etapa de las obras: proteger el edificio antes de instalar la electricidad y el material médico."
+  },
+  "projets": {
+    "dispensaire": {
+      "categorie": "Salud",
+      "titre": "Puesta en marcha del centro de salud",
+      "description": "Primero el tejado, después la instalación eléctrica y, por último, el material de análisis y de radiología."
+    },
+    "batteries": {
+      "categorie": "Energía",
+      "titre": "Mantenimiento de las baterías solares",
+      "description": "Las baterías de la microrred alimentan el centro de salud. Hay que mantenerlas y, más adelante, sustituirlas."
+    },
+    "ecole": {
+      "categorie": "Educación",
+      "titre": "Salario de un maestro",
+      "description": "Pagar a un maestro para que los niños tengan clase todo el año."
+    },
+    "eau": {
+      "categorie": "Agua",
+      "titre": "Acceso al agua potable",
+      "description": "Ampliar la red de agua potable que el COVIDEBA empezó a construir."
+    }
+  },
+  "exemple": "ejemplo",
+  "don": {
+    "titre": "Donar",
+    "intro": "Tres pasos, unos dos minutos. No hace falta crear una cuenta.",
+    "etape": "Paso {n} de 3",
+    "frequenceTitre": "Dono",
+    "ponctuel": "Una vez",
+    "mensuel": "Cada mes",
+    "montantTitre": "Importe de mi donación",
+    "autreMontant": "Otro importe (€)",
+    "parMois": "al mes",
+    "contextes": {
+      "ponctuel": {
+        "25": "ayuda a comprar medicamentos básicos para el centro de salud",
+        "50": "ayuda a mantener las baterías solares",
+        "100": "ayuda a pagar el salario mensual de un maestro",
+        "250": "ayuda a construir el tejado del centro de salud"
+      },
+      "mensuel": {
+        "10": "ayuda cada mes a comprar medicamentos básicos",
+        "20": "ayuda cada mes al mantenimiento de las baterías",
+        "35": "ayuda cada mes a pagar a un maestro",
+        "50": "ayuda cada mes a las obras del centro de salud"
+      }
+    },
+    "contexteAutre": "Tu donación va al proyecto que elijas o, si no eliges ninguno, al fondo general.",
+    "projetTitre": "Destinar mi donación",
+    "projetGeneral": "Donde la necesidad es más urgente",
+    "suivant": "Siguiente",
+    "precedent": "Anterior",
+    "infosTitre": "Mis datos",
+    "prenom": "Nombre",
+    "nom": "Apellido",
+    "email": "Correo electrónico",
+    "obligatoire": "obligatorio",
+    "attestation": "Deseo un certificado fiscal",
+    "attestationAide": "El certificado lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal. Es posible que se pidan otros datos, por ejemplo el número de registro nacional en Bélgica.",
+    "conditions": "Acepto las condiciones de uso y la política de privacidad.",
+    "paiementTitre": "Método de pago",
+    "bancontact": "Bancontact",
+    "carte": "Tarjeta bancaria",
+    "mensuelCarte": "La donación mensual se hace con tarjeta bancaria.",
+    "securite": "Stripe procesa el pago en una página segura. Tus datos bancarios no pasan por este sitio.",
+    "recapitulatif": "Resumen",
+    "confirmer": "Confirmar mi donación",
+    "envoi": "Redirigiendo al pago…",
+    "erreurs": {
+      "montant": "Elige un importe entre {min} € y {max} €, sin céntimos.",
+      "nom": "Indica tu apellido.",
+      "email": "Indica un correo electrónico válido.",
+      "conditions": "Acepta las condiciones para continuar.",
+      "nonConfigure": "El pago en línea todavía no está activado: esta página es una versión preliminar.",
+      "serveur": "No se pudo iniciar el pago. Inténtalo de nuevo dentro de un momento."
+    }
+  },
+  "merci": {
+    "titre": "Gracias por tu donación",
+    "texte": "Stripe te envía un recibo por correo electrónico. Si pediste un certificado fiscal, lo recibirás a principios del año que viene.",
+    "annule": "El pago se ha cancelado. No se ha cobrado ningún importe."
+  },
+  "connexion": {
+    "titre": "Espacio COVIDEBA",
+    "texte": "Este espacio servirá a los miembros del COVIDEBA y a los supervisores: registro del dinero, tareas y plan de inversión. Está en construcción.",
+    "donateur": "Para donar no necesitas una cuenta."
+  },
+  "pied": {
+    "texte": "ConnectBatack 3: COVIDEBA, Facultad Politécnica de Mons (UMONS) y ENSPY.",
+    "droits": "© 2026 COVIDEBA"
+  },
+  "changementLangue": {
+    "bouton": "Idioma",
+    "titre": "Bienvenido a las páginas en español",
+    "texte": "Estas páginas se han traducido del francés. Si ves un error, avísanos, por favor.",
+    "annuler": "Cancelar",
+    "continuer": "Continuar"
+  }
+}

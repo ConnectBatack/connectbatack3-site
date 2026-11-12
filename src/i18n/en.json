@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "titre": "ConnectBatack 3: support the village of Batack",
+    "description": "Help open the health centre in Batack, Cameroon, and see what each donation is used for."
+  },
+  "preversion": "Site preview: figures are examples and no real payment is possible.",
+  "nav": {
+    "projets": "Projects",
+    "fonctionnement": "Your donation",
+    "apropos": "About us",
+    "don": "Donate",
+    "connexion": "COVIDEBA area",
+    "accueil": "Back to home"
+  },
+  "accueil": {
+    "surtitre": "Batack, West Cameroon",
+    "titre": "Help Batack open its health centre",
+    "intro": "The health centre building is there. Before it can welcome its first patients, it still needs a solid roof, electrical wiring and medical equipment. Each donation funds one of these steps, and you then see what it was used for.",
+    "boutonDon": "Donate",
+    "boutonProjets": "See the projects",
+    "projetsTitre": "Current projects",
+    "projetsIntro": "The village committee decides the order of the work. The amounts shown are examples until the COVIDEBA provides the real figures.",
+    "collecte": "raised of",
+    "soutenir": "Support this project",
+    "impactTitre": "What your donation makes possible",
+    "impactIntro": "One amount, one specific use. These links are examples and will be replaced by real costs.",
+    "etapesTitre": "What happens to your donation",
+    "etapes": [
+      {
+        "titre": "You donate",
+        "texte": "Payment goes through Stripe, a secure payment provider. Your bank details never pass through this site."
+      },
+      {
+        "titre": "The committee decides",
+        "texte": "The COVIDEBA chooses the next expense with a decision-support tool that always keeps a safety reserve."
+      },
+      {
+        "titre": "You see the result",
+        "texte": "Every significant expense is published here, with its invoice or a photo of the work."
+      }
+    ],
+    "aproposTitre": "About us",
+    "aproposTexte": [
+      "The COVIDEBA is the development committee of the village of Batack. It leads the village projects: drinking water, schools, health.",
+      "ConnectBatack 3 brings together the COVIDEBA, students from the Faculty of Engineering of Mons (UMONS) and the National Advanced School of Engineering of Yaoundé (ENSPY). The first two phases installed a solar microgrid and built the health centre building."
+    ],
+    "appelTitre": "One donation, one concrete step",
+    "appelTexte": "You can donate without creating an account, once or every month.",
+    "prochainBesoin": "Next need to fund",
+    "besoinTitre": "Health centre roof",
+    "besoinTexte": "First step of the works: protect the building before installing electricity and medical equipment."
+  },
+  "projets": {
+    "dispensaire": {
+      "categorie": "Health",
+      "titre": "Opening the health centre",
+      "description": "First the roof, then the electrical wiring, then the laboratory and X-ray equipment."
+    },
+    "batteries": {
+      "categorie": "Energy",
+      "titre": "Solar battery maintenance",
+      "description": "The microgrid batteries power the health centre. They must be maintained, then replaced."
+    },
+    "ecole": {
+      "categorie": "Education",
+      "titre": "A teacher's salary",
+      "description": "Pay a teacher so that the children have classes all year round."
+    },
+    "eau": {
+      "categorie": "Water",
+      "titre": "Access to drinking water",
+      "description": "Extend the drinking water network that the COVIDEBA has started to build."
+    }
+  },
+  "exemple": "example",
+  "don": {
+    "titre": "Donate",
+    "intro": "Three steps, about two minutes. No account needed.",
+    "etape": "Step {n} of 3",
+    "frequenceTitre": "I give",
+    "ponctuel": "Once",
+    "mensuel": "Monthly",
+    "montantTitre": "Amount of my donation",
+    "autreMontant": "Other amount (€)",
+    "parMois": "per month",
+    "contextes": {
+      "ponctuel": {
+        "25": "helps buy basic medicines for the health centre",
+        "50": "helps maintain the solar batteries",
+        "100": "helps pay a teacher's monthly salary",
+        "250": "helps build the health centre roof"
+      },
+      "mensuel": {
+        "10": "helps buy basic medicines every month",
+        "20": "helps maintain the batteries every month",
+        "35": "helps pay a teacher every month",
+        "50": "helps the health centre works every month"
+      }
+    },
+    "contexteAutre": "Your donation goes to the project you choose, or to the general fund if you do not choose one.",
+    "projetTitre": "Allocate my donation",
+    "projetGeneral": "Where the need is most urgent",
+    "suivant": "Next",
+    "precedent": "Previous",
+    "infosTitre": "My details",
+    "prenom": "First name",
+    "nom": "Last name",
+    "email": "Email address",
+    "obligatoire": "required",
+    "attestation": "I would like a tax certificate",
+    "attestationAide": "The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address. Other information may be requested, such as the national register number in Belgium.",
+    "conditions": "I accept the terms of use and the privacy policy.",
+    "paiementTitre": "Payment method",
+    "bancontact": "Bancontact",
+    "carte": "Bank card",
+    "mensuelCarte": "Monthly donations are made by bank card.",
+    "securite": "Payment is processed by Stripe on a secure page. Your bank details do not pass through this site.",
+    "recapitulatif": "Summary",
+    "confirmer": "Confirm my donation",
+    "envoi": "Redirecting to payment…",
+    "erreurs": {
+      "montant": "Choose an amount between €{min} and €{max}, with no cents.",
+      "nom": "Enter your last name.",
+      "email": "Enter a valid email address.",
+      "conditions": "Accept the terms to continue.",
+      "nonConfigure": "Online payment is not active yet: this page is a preview.",
+      "serveur": "The payment could not start. Please try again in a moment."
+    }
+  },
+  "merci": {
+    "titre": "Thank you for your donation",
+    "texte": "Stripe sends you a receipt by email. If you asked for a tax certificate, you will receive it early next year.",
+    "annule": "The payment was cancelled. No amount was charged."
+  },
+  "connexion": {
+    "titre": "COVIDEBA area",
+    "texte": "This area will be used by COVIDEBA members and supervisors: money register, tasks and investment plan. It is under construction.",
+    "donateur": "You do not need an account to donate."
+  },
+  "pied": {
+    "texte": "ConnectBatack 3: COVIDEBA, Faculty of Engineering of Mons (UMONS) and ENSPY.",
+    "droits": "© 2026 COVIDEBA"
+  },
+  "changementLangue": {
+    "bouton": "Language",
+    "titre": "Welcome to the English pages",
+    "texte": "These pages were translated from French. If you notice a mistake, please let us know.",
+    "annuler": "Cancel",
+    "continuer": "Continue"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "titre": "ConnectBatack 3: steun het dorp Batack",
+    "description": "Help het gezondheidscentrum van Batack in Kameroen te openen en zie waarvoor elke gift wordt gebruikt."
+  },
+  "preversion": "Voorlopige versie van de site: de cijfers zijn voorbeelden en er is geen echte betaling mogelijk.",
+  "nav": {
+    "projets": "Projecten",
+    "fonctionnement": "Uw gift",
+    "apropos": "Over ons",
+    "don": "Doneren",
+    "connexion": "COVIDEBA-ruimte",
+    "accueil": "Terug naar de startpagina"
+  },
+  "accueil": {
+    "surtitre": "Batack, West-Kameroen",
+    "titre": "Help Batack zijn gezondheidscentrum te openen",
+    "intro": "Het gebouw van het gezondheidscentrum staat er al. Om de eerste patiënten te ontvangen, heeft het nog een stevig dak, elektrische bedrading en medisch materiaal nodig. Elke gift financiert een van deze stappen, en daarna ziet u waarvoor ze gediend heeft.",
+    "boutonDon": "Doneren",
+    "boutonProjets": "Bekijk de projecten",
+    "projetsTitre": "Lopende projecten",
+    "projetsIntro": "Het dorpscomité bepaalt de volgorde van de werken. De getoonde bedragen zijn voorbeelden, in afwachting van de cijfers van het COVIDEBA.",
+    "collecte": "ingezameld van",
+    "soutenir": "Steun dit project",
+    "impactTitre": "Wat uw gift mogelijk maakt",
+    "impactIntro": "Eén bedrag, één concreet gebruik. Deze koppelingen zijn voorbeelden en worden vervangen door de echte kosten.",
+    "etapesTitre": "Wat er met uw gift gebeurt",
+    "etapes": [
+      {
+        "titre": "U geeft",
+        "texte": "De betaling verloopt via Stripe, een beveiligde betaaldienst. Uw bankgegevens komen nooit op deze site terecht."
+      },
+      {
+        "titre": "Het comité beslist",
+        "texte": "Het COVIDEBA kiest de volgende uitgave met een hulpmiddel voor besluitvorming dat altijd een veiligheidsreserve bewaart."
+      },
+      {
+        "titre": "U ziet het resultaat",
+        "texte": "Elke belangrijke uitgave wordt hier gepubliceerd, met de factuur of een foto van de werken."
+      }
+    ],
+    "aproposTitre": "Over ons",
+    "aproposTexte": [
+      "Het COVIDEBA is het ontwikkelingscomité van het dorp Batack. Het draagt de projecten van het dorp: drinkwater, scholen, gezondheid.",
+      "ConnectBatack 3 brengt het COVIDEBA samen met studenten van de Polytechnische Faculteit van Bergen (UMONS) en de Nationale Polytechnische Hogeschool van Yaoundé (ENSPY). De eerste twee fasen hebben een zonne-microgrid geïnstalleerd en het gebouw van het gezondheidscentrum gebouwd."
+    ],
+    "appelTitre": "Eén gift, één concrete stap",
+    "appelTexte": "U kunt doneren zonder account, eenmalig of elke maand.",
+    "prochainBesoin": "Volgende nood om te financieren",
+    "besoinTitre": "Dak van het gezondheidscentrum",
+    "besoinTexte": "Eerste stap van de werken: het gebouw beschermen voordat de elektriciteit en het medisch materiaal geïnstalleerd worden."
+  },
+  "projets": {
+    "dispensaire": {
+      "categorie": "Gezondheid",
+      "titre": "Ingebruikname van het gezondheidscentrum",
+      "description": "Eerst het dak, dan de elektrische bedrading, en daarna het materiaal voor analyses en radiologie."
+    },
+    "batteries": {
+      "categorie": "Energie",
+      "titre": "Onderhoud van de zonnebatterijen",
+      "description": "De batterijen van het microgrid voeden het gezondheidscentrum. Ze moeten onderhouden en later vervangen worden."
+    },
+    "ecole": {
+      "categorie": "Onderwijs",
+      "titre": "Loon van een leerkracht",
+      "description": "Een leerkracht betalen zodat de kinderen het hele jaar les hebben."
+    },
+    "eau": {
+      "categorie": "Water",
+      "titre": "Toegang tot drinkwater",
+      "description": "Het drinkwaternet uitbreiden dat het COVIDEBA begonnen is aan te leggen."
+    }
+  },
+  "exemple": "voorbeeld",
+  "don": {
+    "titre": "Doneren",
+    "intro": "Drie stappen, ongeveer twee minuten. Een account is niet nodig.",
+    "etape": "Stap {n} van 3",
+    "frequenceTitre": "Ik geef",
+    "ponctuel": "Eenmalig",
+    "mensuel": "Elke maand",
+    "montantTitre": "Bedrag van mijn gift",
+    "autreMontant": "Ander bedrag (€)",
+    "parMois": "per maand",
+    "contextes": {
+      "ponctuel": {
+        "25": "draagt bij aan de aankoop van basisgeneesmiddelen voor het gezondheidscentrum",
+        "50": "draagt bij aan het onderhoud van de zonnebatterijen",
+        "100": "draagt bij aan het maandloon van een leerkracht",
+        "250": "draagt bij aan het dak van het gezondheidscentrum"
+      },
+      "mensuel": {
+        "10": "draagt elke maand bij aan basisgeneesmiddelen",
+        "20": "draagt elke maand bij aan het onderhoud van de batterijen",
+        "35": "draagt elke maand bij aan het loon van een leerkracht",
+        "50": "draagt elke maand bij aan de werken aan het gezondheidscentrum"
+      }
+    },
+    "contexteAutre": "Uw gift gaat naar het gekozen project, of naar het algemene fonds als u geen project kiest.",
+    "projetTitre": "Mijn gift bestemmen",
+    "projetGeneral": "Waar de nood het hoogst is",
+    "suivant": "Volgende",
+    "precedent": "Vorige",
+    "infosTitre": "Mijn gegevens",
+    "prenom": "Voornaam",
+    "nom": "Achternaam",
+    "email": "E-mailadres",
+    "obligatoire": "verplicht",
+    "attestation": "Ik wens een fiscaal attest",
+    "attestationAide": "Het attest wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres. Er kunnen andere gegevens gevraagd worden, bijvoorbeeld het rijksregisternummer in België.",
+    "conditions": "Ik aanvaard de gebruiksvoorwaarden en het privacybeleid.",
+    "paiementTitre": "Betaalmethode",
+    "bancontact": "Bancontact",
+    "carte": "Bankkaart",
+    "mensuelCarte": "Een maandelijkse gift verloopt via bankkaart.",
+    "securite": "De betaling wordt door Stripe verwerkt op een beveiligde pagina. Uw bankgegevens komen niet op deze site terecht.",
+    "recapitulatif": "Overzicht",
+    "confirmer": "Mijn gift bevestigen",
+    "envoi": "Doorsturen naar de betaling…",
+    "erreurs": {
+      "montant": "Kies een bedrag tussen {min} € en {max} €, zonder centen.",
+      "nom": "Vul uw achternaam in.",
+      "email": "Vul een geldig e-mailadres in.",
+      "conditions": "Aanvaard de voorwaarden om verder te gaan.",
+      "nonConfigure": "Online betalen is nog niet geactiveerd: deze pagina is een voorlopige versie.",
+      "serveur": "De betaling kon niet starten. Probeer het zo meteen opnieuw."
+    }
+  },
+  "merci": {
+    "titre": "Bedankt voor uw gift",
+    "texte": "Stripe stuurt u een ontvangstbewijs per e-mail. Als u een fiscaal attest gevraagd hebt, ontvangt u het begin volgend jaar.",
+    "annule": "De betaling is geannuleerd. Er is geen bedrag afgeschreven."
+  },
+  "connexion": {
+    "titre": "COVIDEBA-ruimte",
+    "texte": "Deze ruimte is bedoeld voor de leden van het COVIDEBA en de begeleiders: register van het geld, taken en investeringsplan. Ze is in aanbouw.",
+    "donateur": "Om te doneren hebt u geen account nodig."
+  },
+  "pied": {
+    "texte": "ConnectBatack 3: COVIDEBA, Polytechnische Faculteit van Bergen (UMONS) en ENSPY.",
+    "droits": "© 2026 COVIDEBA"
+  },
+  "changementLangue": {
+    "bouton": "Taal",
+    "titre": "Welkom op de Nederlandstalige pagina's",
+    "texte": "Deze pagina's zijn vertaald uit het Frans. Ziet u een fout? Laat het ons weten.",
+    "annuler": "Annuleren",
+    "continuer": "Doorgaan"
+  }
+}
