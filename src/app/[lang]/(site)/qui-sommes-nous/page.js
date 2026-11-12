@@ -4,6 +4,7 @@ import { chargerDictionnaire } from "@/i18n/dictionnaires";
 import { cheminPhoto } from "@/donnees/projets";
 import Apparition from "@/components/Apparition";
 import Parallaxe from "@/components/Parallaxe";
+import logoCovideba from "../../../../../public/images/logos/logo-covideba.png";
 
 // Noms propres : identiques dans toutes les langues. Les rôles sont dans les dictionnaires.
 const encadrants = [
@@ -37,6 +38,7 @@ export default async function QuiSommesNous({ params }) {
       <section className="section">
         <Apparition className="duo">
           <div>
+            <Image className="logo-covideba" src={logoCovideba} alt="COVIDEBA" />
             <h2>{q.covidebaTitre}</h2>
             {q.covidebaTexte.map((p) => (
               <p key={p.slice(0, 24)}>{p}</p>

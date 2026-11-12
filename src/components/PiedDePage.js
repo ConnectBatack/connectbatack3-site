@@ -1,11 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
+import logoBatack from "../../public/images/logos/logo-batack.png";
+import logoCovideba from "../../public/images/logos/logo-covideba.png";
 
 export default function PiedDePage({ dict, lang }) {
   const legal = dict.legal.pages;
   return (
     <footer className="pied">
       <div>
-        <strong>Batack · ConnectBatack 3</strong>
+        <div className="pied-logos">
+          <Image src={logoBatack} alt="Batack" height={56} />
+          <Image src={logoCovideba} alt="COVIDEBA" height={64} />
+        </div>
         <p>{dict.pied.texte}</p>
         <small>{dict.pied.droits}</small>
       </div>
