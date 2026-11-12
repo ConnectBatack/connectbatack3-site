@@ -242,6 +242,10 @@ img { max-width: 100%; }
 .projet-photo { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--rayon); margin-bottom: 28px; }
 .projet-photo img { object-fit: cover; }
 .projet-actions { margin-top: 28px; }
+.stats-projet { list-style: none; margin: 28px 0 8px; padding: 22px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; border-top: 1px solid var(--trait); border-bottom: 1px solid var(--trait); }
+.stats-projet strong { display: block; font-size: clamp(1.6rem, 3.5vw, 2.3rem); font-weight: 800; color: var(--principal); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stats-projet span { color: var(--gris); font-size: 0.95rem; }
+@media (max-width: 560px) { .stats-projet { grid-template-columns: 1fr; } }
 
 /* ---------- formulaire de don ---------- */
 .section-don { padding-left: max(16px, calc((100% - 760px) / 2)); padding-right: max(16px, calc((100% - 760px) / 2)); }

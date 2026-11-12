@@ -61,27 +61,27 @@
   "projets": {
     "dispensaire": {
       "categorie": "Santé",
-      "titre": "Mise en service du dispensaire",
-      "description": "D'abord la toiture, puis le câblage électrique, puis le matériel d'analyse et de radiologie.",
-      "accroche": "Ouvrir le dispensaire du village"
+      "titre": "Achever et équiper le dispensaire",
+      "description": "Le bâtiment du dispensaire est construit, mais il ne peut pas encore accueillir de patients. Il faut d'abord terminer la toiture, puis installer le câblage électrique, et enfin acheter le matériel d'analyse et de radiologie. Aujourd'hui, l'hôpital le plus proche est à 20 km : un dispensaire en service évitera ce trajet pour les soins courants.",
+      "accroche": "Soigner les habitants au cœur du village"
     },
     "batteries": {
       "categorie": "Énergie",
-      "titre": "Entretien des batteries solaires",
-      "description": "Les batteries du microréseau alimentent le dispensaire. Elles doivent être entretenues, puis remplacées.",
-      "accroche": "Garder la lumière et le froid au dispensaire"
+      "titre": "Énergie solaire du dispensaire",
+      "description": "En janvier 2026, Connect Batack 2 a équipé le dispensaire de panneaux solaires et de batteries. Ils font fonctionner le réfrigérateur qui conserve les vaccins et l'éclairage des soins de nuit. Les batteries s'usent : ce projet finance leur entretien régulier, puis leur remplacement, pour que le dispensaire ne dépende pas d'un réseau électrique peu fiable.",
+      "accroche": "Contribuez à l'autonomie énergétique du dispensaire"
     },
     "ecole": {
       "categorie": "Éducation",
-      "titre": "Salaire d'un instituteur",
-      "description": "Payer un instituteur pour que les enfants aient classe toute l'année.",
-      "accroche": "Un instituteur payé toute l'année"
+      "titre": "Éducation à l'école primaire",
+      "description": "Les écoles de Batack existent, mais leurs salles de classe sont sombres et étroites. Le COVIDEBA doit aussi payer chaque mois des enseignants. Ce projet finance le salaire d'un instituteur, pour que les enfants du primaire aient classe toute l'année.",
+      "accroche": "Garantir l'accès à l'éducation de base aux enfants du primaire"
     },
     "eau": {
       "categorie": "Eau",
       "titre": "Accès à l'eau potable",
-      "description": "Étendre le réseau d'eau potable que le COVIDEBA a commencé à construire.",
-      "accroche": "De l'eau potable plus près des maisons"
+      "description": "Le COVIDEBA a déjà construit un premier réseau d'eau potable. Ce projet l'étend vers les quartiers qui en sont encore éloignés, pour que plus de familles aient de l'eau potable près de chez elles. Le tracé et le coût seront précisés avec le COVIDEBA.",
+      "accroche": "Rapprocher l'eau potable des familles"
     }
   },
   "exemple": "exemple",
@@ -464,5 +464,10 @@
         ]
       }
     }
+  },
+  "projet": {
+    "atteint": "de l'objectif atteint",
+    "contributeurs": "contributeurs",
+    "reste": "reste à collecter"
   }
 }

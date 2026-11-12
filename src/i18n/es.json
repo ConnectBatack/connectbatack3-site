@@ -61,27 +61,27 @@
   "projets": {
     "dispensaire": {
       "categorie": "Salud",
-      "titre": "Puesta en marcha del centro de salud",
-      "description": "Primero el tejado, después la instalación eléctrica y, por último, el material de análisis y de radiología.",
-      "accroche": "Abrir el centro de salud de la aldea"
+      "titre": "Terminar y equipar el centro de salud",
+      "description": "El edificio del centro de salud está construido, pero todavía no puede recibir pacientes. Primero hay que terminar el tejado, después instalar el cableado eléctrico y, por último, comprar el material de análisis y de radiología. Hoy el hospital más cercano está a 20 km: un centro de salud en funcionamiento evitará ese trayecto para la atención diaria.",
+      "accroche": "Atender a los habitantes en el corazón de la aldea"
     },
     "batteries": {
       "categorie": "Energía",
-      "titre": "Mantenimiento de las baterías solares",
-      "description": "Las baterías de la microrred alimentan el centro de salud. Hay que mantenerlas y, más adelante, sustituirlas.",
-      "accroche": "Mantener la luz y el frío en el centro de salud"
+      "titre": "Energía solar del centro de salud",
+      "description": "En enero de 2026, Connect Batack 2 equipó el centro de salud con paneles solares y baterías. Hacen funcionar el frigorífico que conserva las vacunas y la iluminación para la atención nocturna. Las baterías se desgastan: este proyecto financia su mantenimiento regular y, después, su sustitución, para que el centro de salud no dependa de una red eléctrica poco fiable.",
+      "accroche": "Contribuye a la autonomía energética del centro de salud"
     },
     "ecole": {
       "categorie": "Educación",
-      "titre": "Salario de un maestro",
-      "description": "Pagar a un maestro para que los niños tengan clase todo el año.",
-      "accroche": "Un maestro pagado todo el año"
+      "titre": "Educación en la escuela primaria",
+      "description": "Batack tiene escuelas, pero sus aulas son oscuras y estrechas. Además, el COVIDEBA tiene que pagar cada mes a los docentes. Este proyecto financia el salario de un maestro, para que los niños de primaria tengan clase todo el año.",
+      "accroche": "Garantizar la educación básica a los niños de primaria"
     },
     "eau": {
       "categorie": "Agua",
       "titre": "Acceso al agua potable",
-      "description": "Ampliar la red de agua potable que el COVIDEBA empezó a construir.",
-      "accroche": "Agua potable más cerca de casa"
+      "description": "El COVIDEBA ya construyó una primera red de agua potable. Este proyecto la amplía hacia los barrios que todavía están lejos, para que más familias tengan agua potable cerca de casa. El trazado y el coste se definirán con el COVIDEBA.",
+      "accroche": "Acercar el agua potable a las familias"
     }
   },
   "exemple": "ejemplo",
@@ -464,5 +464,10 @@
         ]
       }
     }
+  },
+  "projet": {
+    "atteint": "del objetivo alcanzado",
+    "contributeurs": "donantes",
+    "reste": "por recaudar"
   }
 }

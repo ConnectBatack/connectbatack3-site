@@ -5,6 +5,7 @@ import { chargerDictionnaire } from "@/i18n/dictionnaires";
 import { projets, cheminPhoto } from "@/donnees/projets";
 import { langues } from "@/i18n/config";
 import Apparition from "@/components/Apparition";
+import Compteur from "@/components/Compteur";
 
 const formatEuro = (lang, n) =>
   new Intl.NumberFormat(lang, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
@@ -55,6 +56,20 @@ export default async function PageProjet({ params }) {
           <p className="progression-texte">
             <strong>{formatEuro(lang, projet.collecte)}</strong> {a.collecte} {formatEuro(lang, projet.objectif)}
           </p>
+          <ul className="stats-projet">
+            <li>
+              <Compteur valeur={pourcent} langue={lang} pourcentage />
+              <span>{dict.projet.atteint}</span>
+            </li>
+            <li>
+              <Compteur valeur={projet.contributeurs} langue={lang} />
+              <span>{dict.projet.contributeurs}</span>
+            </li>
+            <li>
+              <Compteur valeur={Math.max(0, projet.objectif - projet.collecte)} langue={lang} devise />
+              <span>{dict.projet.reste}</span>
+            </li>
+          </ul>
           <p className="note-exemple">{dict.noteExemple}</p>
           <div className="projet-actions">
             <Link className="bouton bouton-principal bouton-grand" href={`/${lang}/don?projet=${projet.id}`}>

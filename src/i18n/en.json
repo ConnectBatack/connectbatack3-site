@@ -61,27 +61,27 @@
   "projets": {
     "dispensaire": {
       "categorie": "Health",
-      "titre": "Opening the health centre",
-      "description": "First the roof, then the electrical wiring, then the laboratory and X-ray equipment.",
-      "accroche": "Open the village health centre"
+      "titre": "Complete and equip the health centre",
+      "description": "The health centre building is built, but it cannot welcome patients yet. The roof must be finished first, then the electrical wiring installed, and finally the laboratory and X-ray equipment bought. Today the nearest hospital is 20 km away: a working health centre will spare people this journey for everyday care.",
+      "accroche": "Care for people in the heart of the village"
     },
     "batteries": {
       "categorie": "Energy",
-      "titre": "Solar battery maintenance",
-      "description": "The microgrid batteries power the health centre. They must be maintained, then replaced.",
-      "accroche": "Keep light and cold storage at the health centre"
+      "titre": "Solar power for the health centre",
+      "description": "In January 2026, Connect Batack 2 equipped the health centre with solar panels and batteries. They power the refrigerator that stores vaccines and the lighting for night-time care. Batteries wear out: this project funds their regular maintenance, then their replacement, so that the health centre does not depend on an unreliable power grid.",
+      "accroche": "Help the health centre become energy self-sufficient"
     },
     "ecole": {
       "categorie": "Education",
-      "titre": "A teacher's salary",
-      "description": "Pay a teacher so that the children have classes all year round.",
-      "accroche": "A teacher paid all year round"
+      "titre": "Primary school education",
+      "description": "Batack has schools, but their classrooms are dark and cramped. The COVIDEBA also has to pay teachers every month. This project funds a teacher's salary, so that primary school children have classes all year round.",
+      "accroche": "Guarantee basic education for primary school children"
     },
     "eau": {
       "categorie": "Water",
       "titre": "Access to drinking water",
-      "description": "Extend the drinking water network that the COVIDEBA has started to build.",
-      "accroche": "Clean water closer to home"
+      "description": "The COVIDEBA has already built a first drinking water network. This project extends it to the areas that are still far from it, so that more families have drinking water near their homes. The route and the cost will be set with the COVIDEBA.",
+      "accroche": "Bring drinking water closer to families"
     }
   },
   "exemple": "example",
@@ -464,5 +464,10 @@
         ]
       }
     }
+  },
+  "projet": {
+    "atteint": "of the goal reached",
+    "contributeurs": "contributors",
+    "reste": "still to raise"
   }
 }
