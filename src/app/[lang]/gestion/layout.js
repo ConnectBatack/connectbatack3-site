@@ -27,6 +27,7 @@ export default async function MiseEnPageGestion({ children, params }) {
             lang={lang}
             liens={[
               { href: `/${lang}/gestion`, texte: g.menu.tableau },
+              { href: `/${lang}/gestion/poids`, texte: g.menu.poids },
               { href: `/${lang}/gestion/plan`, texte: g.menu.plan },
               { href: `/${lang}/gestion/registre`, texte: g.menu.registre },
             ]}

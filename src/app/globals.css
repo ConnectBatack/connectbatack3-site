@@ -366,7 +366,27 @@ img { max-width: 100%; }
 .dons-mois .champ { font-weight: 500; font-size: 0.9rem; }
 .tableau-saisie input { width: 100%; min-width: 70px; padding: 8px 10px; border: 1px solid #a9b7b1; border-radius: 4px; font: inherit; background: #fff; }
 .tableau-saisie td { padding: 6px; }
-.tableau-saisie td:nth-child(2) input { min-width: 220px; }
+.planificateur .tableau-saisie td:nth-child(2) input { min-width: 220px; }
+.outil-ahp .tableau-saisie input { max-width: 90px; }
+.actions-taches { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 14px; }
+.actions-taches .bouton-sombre { margin-top: 0; }
+
+/* ---------- AHP ---------- */
+.outil-ahp section { margin-bottom: 8px; }
+.liste-criteres { list-style: none; padding: 0; margin: 0 0 14px; display: grid; gap: 8px; max-width: 520px; }
+.liste-criteres li { display: flex; gap: 12px; align-items: center; }
+.liste-criteres input { flex: 1; padding: 10px 12px; border: 1px solid #a9b7b1; border-radius: 4px; font: inherit; background: #fff; }
+.liste-paires { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.liste-paires li { padding: 16px 18px; background: #fff; border: 1px solid var(--trait); border-radius: var(--rayon); }
+.paire-noms { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; }
+.liste-paires input[type="range"] { width: 100%; margin: 10px 0 4px; accent-color: var(--principal); }
+.paire-phrase { margin: 0; color: var(--gris); text-align: center; font-size: 0.95rem; }
+.poids-criteres { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 10px; max-width: 640px; }
+.poids-criteres li { display: grid; grid-template-columns: minmax(120px, 1fr) 2fr 64px; gap: 12px; align-items: center; }
+.barre-poids { height: 10px; background: var(--trait); }
+.barre-poids span { display: block; height: 100%; background: var(--principal); transition: width 0.3s ease; }
+.poids-criteres b { text-align: right; font-variant-numeric: tabular-nums; }
+
 .actions-plan { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin: 32px 0 12px; }
 .resultat-plan { margin-top: 24px; padding-top: 8px; border-top: 2px solid var(--principal); }
 .ligne-mois1 td { background: var(--vert-clair); font-weight: 600; }

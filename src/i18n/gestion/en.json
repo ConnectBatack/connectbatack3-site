@@ -6,7 +6,8 @@
     "plan": "Investment plan",
     "registre": "Register",
     "site": "Back to the site",
-    "deconnexion": "Log out"
+    "deconnexion": "Log out",
+    "poids": "Task weights (AHP)"
   },
   "utilisateur": "Logged in as: COVIDEBA member (mock-up)",
   "tableau": {
@@ -67,7 +68,10 @@
     "importer": "Import an instance (JSON)",
     "importErreur": "Invalid file:",
     "reinitialiser": "Back to the example",
-    "exemple": "Example tasks, costs and donations, made up for the mock-up."
+    "exemple": "Example tasks, costs and donations, made up for the mock-up.",
+    "appliquerAhp": "Apply the AHP weights",
+    "ahpApplique": "AHP weights applied to the tasks.",
+    "ahpAbsent": "No AHP weights saved: go to the \"Task weights (AHP)\" page first."
   },
   "registre": {
     "titre": "Register",
@@ -89,5 +93,37 @@
     "nouvelle": "New entry",
     "nouvelleMaquette": "Mock-up: entry will be available with the database.",
     "parite": "Fixed rate: €1 = 655.957 FCFA."
+  },
+  "poids": {
+    "titre": "Task weights (AHP)",
+    "intro": "The COVIDEBA compares the criteria in pairs. The AHP method derives the weight of each criterion, then the weight of each task, which the solver then uses.",
+    "criteresTitre": "1. The criteria",
+    "criteresAide": "Rename, add or delete criteria (from 2 to 10). The final names will be chosen by the COVIDEBA.",
+    "critere": "Criterion",
+    "ajouterCritere": "Add a criterion",
+    "supprimer": "Delete",
+    "comparaisonsTitre": "2. Compare the criteria in pairs",
+    "comparaisonsAide": "For each pair, move the slider towards the criterion that matters more. In the middle, both matter equally.",
+    "egal": "Both matter equally",
+    "niveaux": {
+      "1": "slightly",
+      "2": "moderately",
+      "3": "clearly",
+      "4": "much",
+      "5": "extremely"
+    },
+    "phrase": "{a} matters {niveau} more than {b}",
+    "resultatTitre": "3. Criteria weights",
+    "coherence": "Consistency ratio (CR):",
+    "coherent": "The comparisons are consistent (CR less than or equal to 0.1).",
+    "incoherent": "The comparisons contradict each other (CR above 0.1): review them before using the weights.",
+    "deuxCriteres": "With two criteria, the comparisons are always consistent.",
+    "notesTitre": "4. Score the tasks",
+    "notesAide": "Give each task a score from 0 to 10 on each criterion. The task weight is the sum of its scores multiplied by the criteria weights.",
+    "tache": "Task",
+    "poidsTache": "Task weight",
+    "enregistrer": "Use these weights in the plan",
+    "enregistre": "Weights saved. On the \"Investment plan\" page, click \"Apply the AHP weights\".",
+    "bloque": "Fix the comparisons first: the CR is above 0.1."
   }
 }

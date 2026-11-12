@@ -7,7 +7,7 @@
     "build": "node scripts/copier-highs.mjs && next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test \"tests/*.test.mjs\""
+    "test": "node --test --test-concurrency=1 \"tests/*.test.mjs\""
   },
   "dependencies": {
     "highs": "1.15.4",

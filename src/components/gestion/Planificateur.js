@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { validerInstance } from "@/lib/solveur/modele";
+import { CLE_POIDS_AHP } from "@/components/gestion/OutilAhp";
 
 const LIMITE_TEMPS_S = 30;
 
@@ -85,6 +86,19 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
     URL.revokeObjectURL(lien.href);
   }
 
+  // Reprend les poids w_i calculés sur la page AHP (enregistrés dans ce navigateur).
+  function appliquerPoidsAhp() {
+    let valeurs = null;
+    try {
+      valeurs = JSON.parse(localStorage.getItem(CLE_POIDS_AHP) ?? "null");
+    } catch {
+      valeurs = null;
+    }
+    if (!valeurs) return setMessage(t.ahpAbsent);
+    modifier({ taches: inst.taches.map((x) => (x.id in valeurs ? { ...x, poids: valeurs[x.id] } : x)) });
+    setMessage(t.ahpApplique);
+  }
+
   async function importer(fichier) {
     if (!fichier) return;
     try {
@@ -153,7 +167,10 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
             </tbody>
           </table>
         </div>
-        <button type="button" className="bouton bouton-contour bouton-sombre" onClick={ajouterTache}>{t.ajouter}</button>
+        <div className="actions-taches">
+          <button type="button" className="bouton bouton-contour bouton-sombre" onClick={ajouterTache}>{t.ajouter}</button>
+          <button type="button" className="bouton-texte" onClick={appliquerPoidsAhp}>{t.appliquerAhp}</button>
+        </div>
       </section>
 
       <div className="actions-plan">

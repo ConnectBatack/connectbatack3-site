@@ -6,7 +6,8 @@
     "plan": "Plan d'investissement",
     "registre": "Registre",
     "site": "Retour au site",
-    "deconnexion": "Se déconnecter"
+    "deconnexion": "Se déconnecter",
+    "poids": "Poids des tâches (AHP)"
   },
   "utilisateur": "Connecté en tant que : membre du COVIDEBA (maquette)",
   "tableau": {
@@ -67,7 +68,10 @@
     "importer": "Importer une instance (JSON)",
     "importErreur": "Fichier invalide :",
     "reinitialiser": "Revenir à l'exemple",
-    "exemple": "Tâches, coûts et dons d'exemple, inventés pour la maquette."
+    "exemple": "Tâches, coûts et dons d'exemple, inventés pour la maquette.",
+    "appliquerAhp": "Appliquer les poids AHP",
+    "ahpApplique": "Poids AHP appliqués aux tâches.",
+    "ahpAbsent": "Aucun poids AHP enregistré : passez d'abord par la page « Poids des tâches (AHP) »."
   },
   "registre": {
     "titre": "Registre",
@@ -89,5 +93,37 @@
     "nouvelle": "Nouvelle écriture",
     "nouvelleMaquette": "Maquette : la saisie sera disponible avec la base de données.",
     "parite": "Parité fixe : 1 € = 655,957 FCFA."
+  },
+  "poids": {
+    "titre": "Poids des tâches (AHP)",
+    "intro": "Le COVIDEBA compare les critères deux à deux. La méthode AHP en déduit le poids de chaque critère, puis le poids de chaque tâche, que le solveur utilise ensuite.",
+    "criteresTitre": "1. Les critères",
+    "criteresAide": "Renommez, ajoutez ou supprimez des critères (de 2 à 10). Les noms définitifs seront choisis par le COVIDEBA.",
+    "critere": "Critère",
+    "ajouterCritere": "Ajouter un critère",
+    "supprimer": "Supprimer",
+    "comparaisonsTitre": "2. Comparer les critères deux à deux",
+    "comparaisonsAide": "Pour chaque paire, déplacez le curseur vers le critère qui compte le plus. Au centre, les deux comptent autant.",
+    "egal": "Les deux comptent autant",
+    "niveaux": {
+      "1": "un peu",
+      "2": "modérément",
+      "3": "nettement",
+      "4": "beaucoup",
+      "5": "extrêmement"
+    },
+    "phrase": "{a} compte {niveau} plus que {b}",
+    "resultatTitre": "3. Poids des critères",
+    "coherence": "Ratio de cohérence (CR) :",
+    "coherent": "Les comparaisons sont cohérentes (CR inférieur ou égal à 0,1).",
+    "incoherent": "Les comparaisons se contredisent (CR supérieur à 0,1) : revoyez-les avant d'utiliser les poids.",
+    "deuxCriteres": "Avec deux critères, les comparaisons sont toujours cohérentes.",
+    "notesTitre": "4. Noter les tâches",
+    "notesAide": "Donnez à chaque tâche une note de 0 à 10 sur chaque critère. Le poids de la tâche est la somme de ses notes multipliées par le poids des critères.",
+    "tache": "Tâche",
+    "poidsTache": "Poids de la tâche",
+    "enregistrer": "Utiliser ces poids dans le plan",
+    "enregistre": "Poids enregistrés. Sur la page « Plan d'investissement », cliquez sur « Appliquer les poids AHP ».",
+    "bloque": "Corrigez d'abord les comparaisons : le CR dépasse 0,1."
   }
 }
