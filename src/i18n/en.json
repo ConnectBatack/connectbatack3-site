@@ -62,14 +62,14 @@
     "dispensaire": {
       "categorie": "Health",
       "titre": "Complete and equip the health centre",
-      "description": "The health centre building is built, but it cannot welcome patients yet. The roof must be finished first, then the electrical wiring installed, and finally the laboratory and X-ray equipment bought. Today the nearest hospital is 20 km away: a working health centre will spare people this journey for everyday care.",
-      "accroche": "Care for people in the heart of the village"
+      "description": "Today, the people of Batack have to travel more than 20 km to reach the nearest health centre. Every consultation, even for everyday care, means making this long journey. The health centre building has already been built in the village, but it cannot welcome patients yet. To open it, the roof must be finished, the electrical wiring installed, and then the laboratory and X-ray equipment bought.",
+      "accroche": "Provide local healthcare for residents"
     },
     "batteries": {
       "categorie": "Energy",
       "titre": "Solar power for the health centre",
       "description": "In January 2026, Connect Batack 2 equipped the health centre with solar panels and batteries. They power the refrigerator that stores vaccines and the lighting for night-time care. Batteries wear out: this project funds their regular maintenance, then their replacement, so that the health centre does not depend on an unreliable power grid.",
-      "accroche": "Help the health centre become energy self-sufficient"
+      "accroche": "Ensure the health centre's energy self-sufficiency"
     },
     "ecole": {
       "categorie": "Education",
@@ -81,7 +81,7 @@
       "categorie": "Water",
       "titre": "Access to drinking water",
       "description": "The COVIDEBA has already built a first drinking water network. This project extends it to the areas that are still far from it, so that more families have drinking water near their homes. The route and the cost will be set with the COVIDEBA.",
-      "accroche": "Bring drinking water closer to families"
+      "accroche": "Make drinking water accessible to all"
     }
   },
   "exemple": "example",
@@ -469,5 +469,21 @@
     "atteint": "of the goal reached",
     "contributeurs": "contributors",
     "reste": "still to raise"
+  },
+  "partage": {
+    "bouton": "Share this project",
+    "copie": "Link copied: you can paste it into a message.",
+    "texte": "Support this project in the village of Batack:"
+  },
+  "suivi": {
+    "titre": "Get progress updates",
+    "texte": "Receive an email when this project moves forward: a new step completed, an expense published with its proof.",
+    "email": "Email address",
+    "consentement": "I agree to receive these emails. I can unsubscribe at any time.",
+    "bouton": "Sign up",
+    "nonActive": "Sign-up is not active yet: this page is a preview.",
+    "erreurEmail": "Enter a valid email address.",
+    "erreurConsentement": "Tick the box to accept the emails.",
+    "merci": "Thank you, your sign-up has been saved."
   }
 }

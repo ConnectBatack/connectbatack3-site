@@ -241,7 +241,14 @@ img { max-width: 100%; }
 /* ---------- page projet ---------- */
 .projet-photo { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--rayon); margin-bottom: 28px; }
 .projet-photo img { object-fit: cover; }
-.projet-actions { margin-top: 28px; }
+.projet-actions { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.projet-actions .bouton-sombre { margin-top: 0; }
+.projet-actions .aide { flex-basis: 100%; margin: 0; }
+.formulaire-suivi { margin-top: 48px; padding: 28px; background: var(--fond-teinte); border-radius: var(--rayon); }
+.formulaire-suivi h3 { margin-bottom: 6px; }
+.suivi-ligne { display: flex; gap: 10px; align-items: flex-start; }
+.suivi-ligne .champ { flex: 1; margin-bottom: 8px; }
+@media (max-width: 560px) { .suivi-ligne { flex-direction: column; align-items: stretch; } }
 .stats-projet { list-style: none; margin: 28px 0 8px; padding: 22px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; border-top: 1px solid var(--trait); border-bottom: 1px solid var(--trait); }
 .stats-projet strong { display: block; font-size: clamp(1.6rem, 3.5vw, 2.3rem); font-weight: 800; color: var(--principal); line-height: 1.1; font-variant-numeric: tabular-nums; }
 .stats-projet span { color: var(--gris); font-size: 0.95rem; }

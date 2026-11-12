@@ -62,14 +62,14 @@
     "dispensaire": {
       "categorie": "Santé",
       "titre": "Achever et équiper le dispensaire",
-      "description": "Le bâtiment du dispensaire est construit, mais il ne peut pas encore accueillir de patients. Il faut d'abord terminer la toiture, puis installer le câblage électrique, et enfin acheter le matériel d'analyse et de radiologie. Aujourd'hui, l'hôpital le plus proche est à 20 km : un dispensaire en service évitera ce trajet pour les soins courants.",
-      "accroche": "Soigner les habitants au cœur du village"
+      "description": "Aujourd'hui, les habitants de Batack doivent parcourir plus de 20 km pour rejoindre le centre de santé le plus proche. Chaque consultation, même pour des soins courants, impose ce long trajet. Le bâtiment du dispensaire est déjà construit au village, mais il ne peut pas encore accueillir de patients. Pour l'ouvrir, il faut terminer la toiture, installer le câblage électrique, puis acheter le matériel d'analyse et de radiologie.",
+      "accroche": "Offrir des soins de santé de proximité aux habitants"
     },
     "batteries": {
       "categorie": "Énergie",
       "titre": "Énergie solaire du dispensaire",
       "description": "En janvier 2026, Connect Batack 2 a équipé le dispensaire de panneaux solaires et de batteries. Ils font fonctionner le réfrigérateur qui conserve les vaccins et l'éclairage des soins de nuit. Les batteries s'usent : ce projet finance leur entretien régulier, puis leur remplacement, pour que le dispensaire ne dépende pas d'un réseau électrique peu fiable.",
-      "accroche": "Contribuez à l'autonomie énergétique du dispensaire"
+      "accroche": "Assurer l'autonomie énergétique du dispensaire"
     },
     "ecole": {
       "categorie": "Éducation",
@@ -81,7 +81,7 @@
       "categorie": "Eau",
       "titre": "Accès à l'eau potable",
       "description": "Le COVIDEBA a déjà construit un premier réseau d'eau potable. Ce projet l'étend vers les quartiers qui en sont encore éloignés, pour que plus de familles aient de l'eau potable près de chez elles. Le tracé et le coût seront précisés avec le COVIDEBA.",
-      "accroche": "Rapprocher l'eau potable des familles"
+      "accroche": "Rendre l'eau potable accessible à tous"
     }
   },
   "exemple": "exemple",
@@ -469,5 +469,21 @@
     "atteint": "de l'objectif atteint",
     "contributeurs": "contributeurs",
     "reste": "reste à collecter"
+  },
+  "partage": {
+    "bouton": "Partager ce projet",
+    "copie": "Lien copié : vous pouvez le coller dans un message.",
+    "texte": "Soutenez ce projet du village de Batack :"
+  },
+  "suivi": {
+    "titre": "Être informé de l'avancement",
+    "texte": "Recevez un e-mail quand ce projet avance : nouvelle étape franchie, dépense publiée avec son justificatif.",
+    "email": "Adresse e-mail",
+    "consentement": "J'accepte de recevoir ces e-mails. Je peux me désinscrire à tout moment.",
+    "bouton": "M'inscrire",
+    "nonActive": "L'inscription n'est pas encore activée : cette page est une préversion.",
+    "erreurEmail": "Indiquez une adresse e-mail valide.",
+    "erreurConsentement": "Cochez la case pour accepter les e-mails.",
+    "merci": "Merci, votre inscription est enregistrée."
   }
 }

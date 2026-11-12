@@ -62,14 +62,14 @@
     "dispensaire": {
       "categorie": "Gezondheid",
       "titre": "Het gezondheidscentrum afwerken en uitrusten",
-      "description": "Het gebouw van het gezondheidscentrum staat er, maar het kan nog geen patiënten ontvangen. Eerst moet het dak af, daarna komt de elektrische bedrading, en ten slotte het materiaal voor analyses en radiologie. Vandaag ligt het dichtstbijzijnde ziekenhuis op 20 km: een werkend gezondheidscentrum bespaart de inwoners die rit voor de gewone zorg.",
-      "accroche": "Zorg voor de inwoners in het hart van het dorp"
+      "description": "Vandaag moeten de inwoners van Batack meer dan 20 km afleggen om het dichtstbijzijnde gezondheidscentrum te bereiken. Elke consultatie, ook voor gewone zorg, betekent die lange verplaatsing. Het gebouw van het gezondheidscentrum staat al in het dorp, maar het kan nog geen patiënten ontvangen. Om het te openen, moet het dak af, moet de elektrische bedrading geplaatst worden en moet daarna het materiaal voor analyses en radiologie aangekocht worden.",
+      "accroche": "Zorg dicht bij huis bieden aan de inwoners"
     },
     "batteries": {
       "categorie": "Energie",
       "titre": "Zonne-energie voor het gezondheidscentrum",
       "description": "In januari 2026 heeft Connect Batack 2 het gezondheidscentrum uitgerust met zonnepanelen en batterijen. Ze laten de koelkast voor vaccins en de verlichting voor de zorg 's nachts werken. Batterijen slijten: dit project financiert hun regelmatig onderhoud en later hun vervanging, zodat het gezondheidscentrum niet afhangt van een onbetrouwbaar elektriciteitsnet.",
-      "accroche": "Help het gezondheidscentrum energie-onafhankelijk te worden"
+      "accroche": "De energie-onafhankelijkheid van het gezondheidscentrum verzekeren"
     },
     "ecole": {
       "categorie": "Onderwijs",
@@ -81,7 +81,7 @@
       "categorie": "Water",
       "titre": "Toegang tot drinkwater",
       "description": "Het COVIDEBA heeft al een eerste drinkwaternet aangelegd. Dit project breidt het uit naar de wijken die er nog ver van liggen, zodat meer gezinnen drinkwater dicht bij huis hebben. Het tracé en de kosten worden met het COVIDEBA vastgelegd.",
-      "accroche": "Drinkwater dichter bij de gezinnen brengen"
+      "accroche": "Drinkwater toegankelijk maken voor iedereen"
     }
   },
   "exemple": "voorbeeld",
@@ -469,5 +469,21 @@
     "atteint": "van het doel bereikt",
     "contributeurs": "gevers",
     "reste": "nog op te halen"
+  },
+  "partage": {
+    "bouton": "Dit project delen",
+    "copie": "Link gekopieerd: u kunt hem in een bericht plakken.",
+    "texte": "Steun dit project van het dorp Batack:"
+  },
+  "suivi": {
+    "titre": "Op de hoogte blijven",
+    "texte": "Ontvang een e-mail wanneer dit project vooruitgaat: een nieuwe stap gezet, een uitgave gepubliceerd met het bewijsstuk.",
+    "email": "E-mailadres",
+    "consentement": "Ik ga akkoord met het ontvangen van deze e-mails. Ik kan me op elk moment uitschrijven.",
+    "bouton": "Inschrijven",
+    "nonActive": "Inschrijven is nog niet geactiveerd: deze pagina is een voorlopige versie.",
+    "erreurEmail": "Vul een geldig e-mailadres in.",
+    "erreurConsentement": "Vink het vakje aan om de e-mails te aanvaarden.",
+    "merci": "Bedankt, uw inschrijving is geregistreerd."
   }
 }

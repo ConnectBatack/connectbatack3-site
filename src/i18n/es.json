@@ -62,14 +62,14 @@
     "dispensaire": {
       "categorie": "Salud",
       "titre": "Terminar y equipar el centro de salud",
-      "description": "El edificio del centro de salud está construido, pero todavía no puede recibir pacientes. Primero hay que terminar el tejado, después instalar el cableado eléctrico y, por último, comprar el material de análisis y de radiología. Hoy el hospital más cercano está a 20 km: un centro de salud en funcionamiento evitará ese trayecto para la atención diaria.",
-      "accroche": "Atender a los habitantes en el corazón de la aldea"
+      "description": "Hoy, los habitantes de Batack tienen que recorrer más de 20 km para llegar al centro de salud más cercano. Cada consulta, incluso para la atención diaria, obliga a hacer este largo trayecto. El edificio del centro de salud ya está construido en la aldea, pero todavía no puede recibir pacientes. Para abrirlo, hay que terminar el tejado, instalar el cableado eléctrico y, después, comprar el material de análisis y de radiología.",
+      "accroche": "Ofrecer atención sanitaria de proximidad a los habitantes"
     },
     "batteries": {
       "categorie": "Energía",
       "titre": "Energía solar del centro de salud",
       "description": "En enero de 2026, Connect Batack 2 equipó el centro de salud con paneles solares y baterías. Hacen funcionar el frigorífico que conserva las vacunas y la iluminación para la atención nocturna. Las baterías se desgastan: este proyecto financia su mantenimiento regular y, después, su sustitución, para que el centro de salud no dependa de una red eléctrica poco fiable.",
-      "accroche": "Contribuye a la autonomía energética del centro de salud"
+      "accroche": "Asegurar la autonomía energética del centro de salud"
     },
     "ecole": {
       "categorie": "Educación",
@@ -81,7 +81,7 @@
       "categorie": "Agua",
       "titre": "Acceso al agua potable",
       "description": "El COVIDEBA ya construyó una primera red de agua potable. Este proyecto la amplía hacia los barrios que todavía están lejos, para que más familias tengan agua potable cerca de casa. El trazado y el coste se definirán con el COVIDEBA.",
-      "accroche": "Acercar el agua potable a las familias"
+      "accroche": "Hacer que el agua potable sea accesible para todos"
     }
   },
   "exemple": "ejemplo",
@@ -469,5 +469,21 @@
     "atteint": "del objetivo alcanzado",
     "contributeurs": "donantes",
     "reste": "por recaudar"
+  },
+  "partage": {
+    "bouton": "Compartir este proyecto",
+    "copie": "Enlace copiado: puedes pegarlo en un mensaje.",
+    "texte": "Apoya este proyecto de la aldea de Batack:"
+  },
+  "suivi": {
+    "titre": "Recibir noticias del avance",
+    "texte": "Recibe un correo cuando este proyecto avance: una nueva etapa cumplida, un gasto publicado con su justificante.",
+    "email": "Correo electrónico",
+    "consentement": "Acepto recibir estos correos. Puedo darme de baja en cualquier momento.",
+    "bouton": "Suscribirme",
+    "nonActive": "La suscripción todavía no está activada: esta página es una versión preliminar.",
+    "erreurEmail": "Indica un correo electrónico válido.",
+    "erreurConsentement": "Marca la casilla para aceptar los correos.",
+    "merci": "Gracias, tu suscripción se ha registrado."
   }
 }

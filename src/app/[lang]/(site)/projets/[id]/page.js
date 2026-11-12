@@ -6,6 +6,8 @@ import { projets, cheminPhoto } from "@/donnees/projets";
 import { langues } from "@/i18n/config";
 import Apparition from "@/components/Apparition";
 import Compteur from "@/components/Compteur";
+import BoutonPartage from "@/components/BoutonPartage";
+import FormulaireSuivi from "@/components/FormulaireSuivi";
 
 const formatEuro = (lang, n) =>
   new Intl.NumberFormat(lang, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
@@ -75,8 +77,10 @@ export default async function PageProjet({ params }) {
             <Link className="bouton bouton-principal bouton-grand" href={`/${lang}/don?projet=${projet.id}`}>
               {a.soutenir}
             </Link>
+            <BoutonPartage t={dict.partage} titre={t.titre} />
           </div>
         </Apparition>
+        <FormulaireSuivi t={dict.suivi} projet={projet.id} langue={lang} />
       </section>
     </>
   );
