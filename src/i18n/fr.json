@@ -160,7 +160,14 @@
   "connexion": {
     "titre": "Espace COVIDEBA",
     "texte": "Cet espace servira aux membres du COVIDEBA et aux encadrants : registre de l'argent, tâches et calcul du plan d'investissement. Il est en cours de construction.",
-    "donateur": "Pour donner, aucun compte n'est nécessaire."
+    "donateur": "Pour donner, aucun compte n'est nécessaire.",
+    "email": "Adresse e-mail",
+    "motDePasse": "Mot de passe",
+    "bouton": "Se connecter",
+    "oubli": "Mot de passe oublié ?",
+    "oubliTexte": "Demandez à un responsable du COVIDEBA de réinitialiser votre accès.",
+    "maquette": "Maquette : la vraie connexion sera ajoutée par l'équipe. Pour l'instant, n'importe quel identifiant permet d'entrer, et seules des données fictives sont affichées.",
+    "reserve": "Espace réservé aux membres du COVIDEBA et aux encadrants."
   },
   "pied": {
     "texte": "ConnectBatack 3 : COVIDEBA, Faculté polytechnique de Mons (UMONS) et ENSPY.",

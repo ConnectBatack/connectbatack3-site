@@ -5,7 +5,9 @@ const estDev = process.env.NODE_ENV === "development";
 
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${estDev ? " 'unsafe-eval'" : ""}`,
+  // 'wasm-unsafe-eval' autorise seulement la compilation de WebAssembly (solveur HiGHS), pas eval().
+  `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'${estDev ? " 'unsafe-eval'" : ""}`,
+  "worker-src 'self' blob:",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self'",

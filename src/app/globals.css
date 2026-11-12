@@ -296,6 +296,65 @@ img { max-width: 100%; }
 .pied a { text-decoration: none; }
 .pied a:hover { text-decoration: underline; }
 
+/* ---------- connexion ---------- */
+.formulaire-connexion { display: grid; gap: 4px; max-width: 420px; margin: 24px 0; }
+.formulaire-connexion .bouton-grand, .formulaire-connexion .bouton-texte { justify-self: start; }
+.formulaire-connexion .bouton-grand { margin-bottom: 8px; }
+.aide-donateur { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--trait); }
+
+/* ---------- utilitaires ---------- */
+.visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.bouton-texte { padding: 8px 0; border: 0; background: none; font: inherit; font-weight: 700; color: var(--principal); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.bouton-sombre { color: var(--encre); margin-top: 14px; }
+.nombre { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- espace de gestion ---------- */
+.gestion { min-height: 100vh; background: var(--fond-teinte); }
+.gestion-cadre { display: grid; grid-template-columns: 250px 1fr; min-height: calc(100vh - 32px); }
+.gestion-menu { display: flex; flex-direction: column; gap: 28px; padding: 24px 20px; background: var(--vert-nuit); color: #fff; }
+.gestion-menu .logo strong { color: #fff; }
+.gestion-menu .logo small { color: rgba(255, 255, 255, 0.75); }
+.gestion-liens { display: grid; gap: 4px; }
+.gestion-liens a { padding: 10px 12px; border-radius: var(--rayon); text-decoration: none; font-weight: 600; }
+.gestion-liens a:hover { background: rgba(255, 255, 255, 0.08); }
+.gestion-liens a[aria-current="page"] { background: var(--or); color: var(--encre); }
+.gestion-menu-bas { margin-top: auto; display: grid; gap: 8px; font-size: 0.9rem; }
+.gestion-menu-bas p { margin: 0; color: rgba(255, 255, 255, 0.75); }
+.gestion-menu-bas a { text-decoration: none; }
+.gestion-menu-bas a:hover { text-decoration: underline; }
+.gestion-langues { display: flex; gap: 8px; }
+.gestion-langues a { padding: 2px 8px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 4px; }
+.gestion-langues a[aria-current="true"] { background: #fff; color: var(--encre); }
+.gestion-contenu { padding: 40px clamp(16px, 4vw, 56px) 80px; max-width: 1200px; }
+.gestion-contenu h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+.gestion-contenu h2 { font-size: 1.3rem; margin-top: 40px; }
+.gestion-intro { max-width: 46em; color: var(--gris); }
+.gestion .tableau { background: #fff; }
+.indicateurs { list-style: none; padding: 0; margin: 20px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.indicateurs li { padding: 18px; background: #fff; border: 1px solid var(--trait); border-radius: var(--rayon); }
+.indicateurs span { display: block; font-size: 0.85rem; color: var(--gris); }
+.indicateurs strong { display: block; margin-top: 6px; font-size: 1.7rem; font-variant-numeric: tabular-nums; }
+.liste-actions { padding-left: 1.2em; }
+.liste-actions li { margin-bottom: 6px; }
+.etat { font-size: 0.85rem; font-weight: 700; }
+.etat-a_contresigner { color: var(--erreur); }
+.etat-validee { color: var(--principal); }
+.tableau code { font-size: 0.8rem; color: var(--gris); }
+
+.champs-ligne { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0 16px; }
+.dons-mois { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0 12px; }
+.dons-mois legend { font-weight: 700; margin-bottom: 8px; }
+.dons-mois .champ { font-weight: 500; font-size: 0.9rem; }
+.tableau-saisie input { width: 100%; min-width: 70px; padding: 8px 10px; border: 1px solid #a9b7b1; border-radius: 4px; font: inherit; background: #fff; }
+.tableau-saisie td { padding: 6px; }
+.tableau-saisie td:nth-child(2) input { min-width: 220px; }
+.actions-plan { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin: 32px 0 12px; }
+.resultat-plan { margin-top: 24px; padding-top: 8px; border-top: 2px solid var(--principal); }
+.ligne-mois1 td { background: var(--vert-clair); font-weight: 600; }
+.barre-solde { position: relative; display: inline-block; vertical-align: middle; width: 90px; height: 8px; margin-right: 10px; background: var(--trait); }
+.barre-solde span { position: absolute; left: 0; top: 0; bottom: 0; background: var(--principal); }
+.barre-solde i { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--erreur); }
+
 /* ---------- téléphone ---------- */
 @media (max-width: 900px) {
   .navigation { display: none; }
@@ -312,6 +371,10 @@ img { max-width: 100%; }
   .choix-montant { grid-template-columns: repeat(2, 1fr); }
   .champs-deux { grid-template-columns: 1fr; gap: 0; }
   .section { padding-top: 64px; padding-bottom: 64px; }
+  .gestion-cadre { grid-template-columns: 1fr; }
+  .gestion-menu { gap: 14px; }
+  .gestion-liens { grid-auto-flow: column; overflow-x: auto; }
+  .gestion-menu-bas { margin-top: 0; }
 }
 
 /* Moins de mouvement si l'utilisateur l'a demandé dans son système. */

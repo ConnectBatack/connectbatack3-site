@@ -1,0 +1,93 @@
+{
+  "maquette": "Maquette de l'espace de gestion : données fictives, aucune connexion réelle. Ne saisissez aucune donnée réelle.",
+  "titreEspace": "Espace COVIDEBA",
+  "menu": {
+    "tableau": "Tableau de bord",
+    "plan": "Plan d'investissement",
+    "registre": "Registre",
+    "site": "Retour au site",
+    "deconnexion": "Se déconnecter"
+  },
+  "utilisateur": "Connecté en tant que : membre du COVIDEBA (maquette)",
+  "tableau": {
+    "titre": "Tableau de bord",
+    "solde": "Solde en caisse",
+    "reserve": "Réserve minimale",
+    "donsMois": "Dons attendus ce mois",
+    "aContresigner": "Écritures à contresigner",
+    "actionsTitre": "À faire",
+    "actionPlan": "Recalculer le plan avec le solde actuel",
+    "actionContresigner": "Contresigner la cotisation Mobile Money du 6 novembre",
+    "derniersTitre": "Derniers mouvements",
+    "voirRegistre": "Voir tout le registre"
+  },
+  "plan": {
+    "titre": "Plan d'investissement",
+    "intro": "Le solveur propose l'ordre des dépenses qui apporte le plus de bénéfice, sans jamais descendre sous la réserve. Le comité reste libre de valider ou non le plan.",
+    "parametres": "Paramètres",
+    "h": "Horizon (mois)",
+    "S0": "Solde de départ (€)",
+    "Smin": "Réserve minimale (€)",
+    "delta": "Taux d'urgence",
+    "dons": "Dons prévus par mois (€)",
+    "mois": "Mois",
+    "taches": "Tâches candidates",
+    "colonnes": {
+      "libelle": "Tâche",
+      "cout": "Coût (€)",
+      "duree": "Durée (mois)",
+      "poids": "Poids",
+      "apres": "Après"
+    },
+    "ajouter": "Ajouter une tâche",
+    "supprimer": "Supprimer",
+    "aucune": "aucune",
+    "calculer": "Calculer le plan",
+    "calcul": "Calcul en cours…",
+    "chargement": "Chargement du solveur (3,5 Mo, la première fois seulement)…",
+    "resultatTitre": "Plan proposé",
+    "valeur": "Valeur du plan",
+    "temps": "Temps de calcul",
+    "optimal": "Plan optimal.",
+    "limiteTemps": "Limite de temps atteinte : meilleur plan trouvé, pas prouvé optimal.",
+    "infaisable": "Aucun plan possible : le solde passe sous la réserve même sans aucune dépense.",
+    "erreur": "Le calcul n'a pas pu se faire :",
+    "calendrier": {
+      "mois": "Mois",
+      "lancees": "Tâches lancées",
+      "depenses": "Dépenses (€)",
+      "dons": "Dons prévus (€)",
+      "solde": "Solde en fin de mois (€)"
+    },
+    "nonLancees": "Non lancées dans l'horizon :",
+    "mois1": "Seul le mois 1 engage de l'argent. Les mois suivants seront revus au prochain calcul.",
+    "valider": "Valider le plan",
+    "valide": "Maquette : la validation sera enregistrée quand la base de données existera.",
+    "exporter": "Télécharger l'instance (JSON)",
+    "importer": "Importer une instance (JSON)",
+    "importErreur": "Fichier invalide :",
+    "reinitialiser": "Revenir à l'exemple",
+    "exemple": "Tâches, coûts et dons d'exemple, inventés pour la maquette."
+  },
+  "registre": {
+    "titre": "Registre",
+    "intro": "Chaque mouvement d'argent est une écriture. Une écriture n'est jamais modifiée ni effacée : une erreur se corrige par une écriture de compensation. Chaque écriture est chaînée à la précédente par une empreinte (hash).",
+    "colonnes": {
+      "numero": "N°",
+      "date": "Date",
+      "libelle": "Libellé",
+      "compte": "Compte",
+      "entree": "Entrée",
+      "sortie": "Sortie",
+      "etat": "État",
+      "hash": "Empreinte"
+    },
+    "etats": {
+      "validee": "Validée",
+      "a_contresigner": "À contresigner"
+    },
+    "nouvelle": "Nouvelle écriture",
+    "nouvelleMaquette": "Maquette : la saisie sera disponible avec la base de données.",
+    "parite": "Parité fixe : 1 € = 655,957 FCFA."
+  }
+}

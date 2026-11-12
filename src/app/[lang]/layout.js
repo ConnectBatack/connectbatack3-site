@@ -1,10 +1,7 @@
 import { DM_Sans } from "next/font/google";
 import "../globals.css";
 import { langues } from "@/i18n/config";
-import { chargerDictionnaire, chargerTextesChangementLangue } from "@/i18n/dictionnaires";
-import EnTete from "@/components/EnTete";
-import PiedDePage from "@/components/PiedDePage";
-import BoutonLangue from "@/components/BoutonLangue";
+import { chargerDictionnaire } from "@/i18n/dictionnaires";
 
 const police = DM_Sans({ subsets: ["latin"], variable: "--police" });
 
@@ -24,20 +21,13 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function MiseEnPage({ children, params }) {
+// Mise en page racine, commune à la vitrine (dossier « (site) ») et à l'espace de gestion (« gestion »).
+export default async function MiseEnPageRacine({ children, params }) {
   const { lang } = await params;
-  const dict = await chargerDictionnaire(lang);
-  const textesLangue = await chargerTextesChangementLangue();
-
+  await chargerDictionnaire(lang); // renvoie une page 404 si la langue est inconnue
   return (
     <html lang={lang} className={police.variable}>
-      <body>
-        <p className="bandeau-preversion">{dict.preversion}</p>
-        <EnTete dict={dict} lang={lang} />
-        <main id="contenu">{children}</main>
-        <PiedDePage dict={dict} lang={lang} />
-        <BoutonLangue langue={lang} textes={textesLangue} />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

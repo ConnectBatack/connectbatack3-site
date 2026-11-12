@@ -1,0 +1,93 @@
+{
+  "maquette": "Mock-up of the management area: fictitious data, no real login. Do not enter any real data.",
+  "titreEspace": "COVIDEBA area",
+  "menu": {
+    "tableau": "Dashboard",
+    "plan": "Investment plan",
+    "registre": "Register",
+    "site": "Back to the site",
+    "deconnexion": "Log out"
+  },
+  "utilisateur": "Logged in as: COVIDEBA member (mock-up)",
+  "tableau": {
+    "titre": "Dashboard",
+    "solde": "Cash balance",
+    "reserve": "Minimum reserve",
+    "donsMois": "Donations expected this month",
+    "aContresigner": "Entries awaiting countersignature",
+    "actionsTitre": "To do",
+    "actionPlan": "Recalculate the plan with the current balance",
+    "actionContresigner": "Countersign the Mobile Money contribution of 6 November",
+    "derniersTitre": "Latest transactions",
+    "voirRegistre": "See the full register"
+  },
+  "plan": {
+    "titre": "Investment plan",
+    "intro": "The solver suggests the order of expenses that brings the most benefit, without ever going below the reserve. The committee remains free to approve the plan or not.",
+    "parametres": "Parameters",
+    "h": "Horizon (months)",
+    "S0": "Starting balance (€)",
+    "Smin": "Minimum reserve (€)",
+    "delta": "Urgency rate",
+    "dons": "Expected donations per month (€)",
+    "mois": "Month",
+    "taches": "Candidate tasks",
+    "colonnes": {
+      "libelle": "Task",
+      "cout": "Cost (€)",
+      "duree": "Duration (months)",
+      "poids": "Weight",
+      "apres": "After"
+    },
+    "ajouter": "Add a task",
+    "supprimer": "Delete",
+    "aucune": "none",
+    "calculer": "Calculate the plan",
+    "calcul": "Calculating…",
+    "chargement": "Loading the solver (3.5 MB, first time only)…",
+    "resultatTitre": "Proposed plan",
+    "valeur": "Plan value",
+    "temps": "Calculation time",
+    "optimal": "Optimal plan.",
+    "limiteTemps": "Time limit reached: best plan found, not proven optimal.",
+    "infaisable": "No possible plan: the balance falls below the reserve even with no expense.",
+    "erreur": "The calculation could not be done:",
+    "calendrier": {
+      "mois": "Month",
+      "lancees": "Tasks started",
+      "depenses": "Expenses (€)",
+      "dons": "Expected donations (€)",
+      "solde": "End-of-month balance (€)"
+    },
+    "nonLancees": "Not started within the horizon:",
+    "mois1": "Only month 1 commits money. The following months will be reviewed at the next calculation.",
+    "valider": "Approve the plan",
+    "valide": "Mock-up: the approval will be saved once the database exists.",
+    "exporter": "Download the instance (JSON)",
+    "importer": "Import an instance (JSON)",
+    "importErreur": "Invalid file:",
+    "reinitialiser": "Back to the example",
+    "exemple": "Example tasks, costs and donations, made up for the mock-up."
+  },
+  "registre": {
+    "titre": "Register",
+    "intro": "Every money movement is an entry. An entry is never changed or deleted: a mistake is corrected by an offsetting entry. Each entry is chained to the previous one by a fingerprint (hash).",
+    "colonnes": {
+      "numero": "No.",
+      "date": "Date",
+      "libelle": "Description",
+      "compte": "Account",
+      "entree": "In",
+      "sortie": "Out",
+      "etat": "Status",
+      "hash": "Fingerprint"
+    },
+    "etats": {
+      "validee": "Approved",
+      "a_contresigner": "Awaiting countersignature"
+    },
+    "nouvelle": "New entry",
+    "nouvelleMaquette": "Mock-up: entry will be available with the database.",
+    "parite": "Fixed rate: €1 = 655.957 FCFA."
+  }
+}

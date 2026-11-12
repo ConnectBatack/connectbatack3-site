@@ -160,7 +160,14 @@
   "connexion": {
     "titre": "Espacio COVIDEBA",
     "texte": "Este espacio servirá a los miembros del COVIDEBA y a los supervisores: registro del dinero, tareas y cálculo del plan de inversión. Está en construcción.",
-    "donateur": "Para donar no necesitas una cuenta."
+    "donateur": "Para donar no necesitas una cuenta.",
+    "email": "Correo electrónico",
+    "motDePasse": "Contraseña",
+    "bouton": "Iniciar sesión",
+    "oubli": "¿Has olvidado tu contraseña?",
+    "oubliTexte": "Pide a un responsable del COVIDEBA que restablezca tu acceso.",
+    "maquette": "Maqueta: el equipo añadirá el inicio de sesión real. Por ahora, cualquier identificador permite entrar y solo se muestran datos ficticios.",
+    "reserve": "Espacio reservado a los miembros del COVIDEBA y a los supervisores."
   },
   "pied": {
     "texte": "ConnectBatack 3: COVIDEBA, Facultad Politécnica de Mons (UMONS) y ENSPY.",

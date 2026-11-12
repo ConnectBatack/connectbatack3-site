@@ -160,7 +160,14 @@
   "connexion": {
     "titre": "COVIDEBA-ruimte",
     "texte": "Deze ruimte is bedoeld voor de leden van het COVIDEBA en de begeleiders: register van het geld, taken en berekening van het investeringsplan. Ze is in aanbouw.",
-    "donateur": "Om te doneren hebt u geen account nodig."
+    "donateur": "Om te doneren hebt u geen account nodig.",
+    "email": "E-mailadres",
+    "motDePasse": "Wachtwoord",
+    "bouton": "Aanmelden",
+    "oubli": "Wachtwoord vergeten?",
+    "oubliTexte": "Vraag een verantwoordelijke van het COVIDEBA om uw toegang opnieuw in te stellen.",
+    "maquette": "Maquette: het team voegt de echte aanmelding later toe. Voorlopig geven alle gegevens toegang en worden alleen fictieve gegevens getoond.",
+    "reserve": "Ruimte voorbehouden aan de leden van het COVIDEBA en de begeleiders."
   },
   "pied": {
     "texte": "ConnectBatack 3: COVIDEBA, Polytechnische Faculteit van Bergen (UMONS) en ENSPY.",

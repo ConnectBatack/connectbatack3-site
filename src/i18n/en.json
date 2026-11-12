@@ -160,7 +160,14 @@
   "connexion": {
     "titre": "COVIDEBA area",
     "texte": "This area will be used by COVIDEBA members and supervisors: money register, tasks and calculation of the investment plan. It is under construction.",
-    "donateur": "You do not need an account to donate."
+    "donateur": "You do not need an account to donate.",
+    "email": "Email address",
+    "motDePasse": "Password",
+    "bouton": "Log in",
+    "oubli": "Forgot your password?",
+    "oubliTexte": "Ask a COVIDEBA officer to reset your access.",
+    "maquette": "Mock-up: the real login will be added by the team. For now, any credentials let you in, and only fictitious data is shown.",
+    "reserve": "Area reserved for COVIDEBA members and supervisors."
   },
   "pied": {
     "texte": "ConnectBatack 3: COVIDEBA, Faculty of Engineering of Mons (UMONS) and ENSPY.",
