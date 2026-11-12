@@ -45,7 +45,7 @@
     "aucune": "none",
     "calculer": "Calculate the plan",
     "calcul": "Calculating…",
-    "chargement": "Loading the solver (3.5 MB, first time only)…",
+    "chargement": "Loading the solver (1.2 MB, first time only)…",
     "resultatTitre": "Proposed plan",
     "valeur": "Plan value",
     "temps": "Calculation time",
@@ -71,7 +71,37 @@
     "exemple": "Example tasks, costs and donations, made up for the mock-up.",
     "appliquerAhp": "Apply the AHP weights",
     "ahpApplique": "AHP weights applied to the tasks.",
-    "ahpAbsent": "No AHP weights saved: go to the \"Task weights (AHP)\" page first."
+    "ahpAbsent": "No AHP weights saved: go to the \"Task weights (AHP)\" page first.",
+    "arreter": "Stop the calculation",
+    "arrete": "Calculation stopped.",
+    "erreurWorker": "The solver could not load or stopped. Check the connection, then run the calculation again.",
+    "limiteSansPlan": "Time limit reached without finding a plan. Reduce the horizon or the number of tasks, then try again.",
+    "fichierTropGros": "File too large (1 MB at most).",
+    "erreurs": {
+      "instance": "The file does not contain an instance.",
+      "h": "The horizon must be a whole number of months, from 1 to {max}.",
+      "nombre": "{champ} must be a positive number or zero.",
+      "delta_max": "The urgency rate cannot exceed {max}.",
+      "montant_max": "{champ} cannot exceed €{max}.",
+      "D": "One expected donation per month of the horizon is needed, positive or zero (at most €{max}).",
+      "nb_taches": "Between 1 and {max} tasks are needed.",
+      "tache_objet": "Task no. {index} is malformed.",
+      "id": "Task no. {index} must have a whole-number identifier.",
+      "id_double": "Identifier {id} is used twice.",
+      "cout": "Invalid cost for task {id} (positive or zero, at most €{max}).",
+      "duree": "Invalid duration for task {id} (at least 1 month).",
+      "poids": "Invalid weight for task {id} (positive or zero, at most {max}).",
+      "precedences_liste": "Precedences must be a list.",
+      "nb_precedences": "There are too many precedences (at most {max}).",
+      "precedence": "Invalid precedence: {valeur}.",
+      "boucle": "Task {id} cannot precede itself.",
+      "precedence_double": "Duplicate precedence: {valeur}.",
+      "cycle": "The precedences form a cycle: none of the tasks involved could start.",
+      "autres": "… and {n} more errors.",
+      "solveur": "The solver returned an unexpected status ({detail}).",
+      "plan_incoherent": "The plan returned by the solver does not respect the model ({detail}). It is not shown.",
+      "inconnue": "Unknown error."
+    }
   },
   "registre": {
     "titre": "Register",
@@ -124,6 +154,7 @@
     "poidsTache": "Task weight",
     "enregistrer": "Use these weights in the plan",
     "enregistre": "Weights saved. On the \"Investment plan\" page, click \"Apply the AHP weights\".",
-    "bloque": "Fix the comparisons first: the CR is above 0.1."
+    "bloque": "Fix the comparisons first: the CR is above 0.1.",
+    "erreurStockage": "The weights could not be saved in this browser (local storage unavailable)."
   }
 }

@@ -1,0 +1,20 @@
+{
+  "nom": "exemple_v5_5_toiture_frigo_pompe",
+  "h": 3,
+  "S0": 1200,
+  "Smin": 200,
+  "delta": 0.10,
+  "D": [600, 600, 600],
+  "taches": [
+    { "id": 1, "libelle": "toiture", "cout": 1000, "duree": 2, "poids": 9 },
+    { "id": 2, "libelle": "frigo", "cout": 1500, "duree": 1, "poids": 8 },
+    { "id": 3, "libelle": "pompe", "cout": 800, "duree": 1, "poids": 7 }
+  ],
+  "precedences": [[1, 2]],
+  "resultat_attendu": {
+    "valeur": 15.61,
+    "lancements": [{ "id": 1, "mois": 1 }, { "id": 2, "mois": 3 }],
+    "soldes": [800, 1400, 500],
+    "nb_plans_realisables": 16
+  }
+}

@@ -63,7 +63,7 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
       localStorage.setItem(CLE_POIDS_AHP, JSON.stringify(valeurs));
       setMessage(t.enregistre);
     } catch {
-      setMessage(t.bloque);
+      setMessage(t.erreurStockage);
     }
   }
 
@@ -175,7 +175,7 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
           </table>
         </div>
         <button type="button" className="bouton bouton-principal" onClick={enregistrer}>{t.enregistrer}</button>
-        {message && <p className={coherent ? "message message-info" : "message message-erreur"} role="status">{message}</p>}
+        {message && <p className={message === t.enregistre ? "message message-info" : "message message-erreur"} role="status">{message}</p>}
       </section>
     </div>
   );

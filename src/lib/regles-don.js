@@ -13,26 +13,39 @@ export const montantsProposes = {
 };
 
 const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const estTexte = (v, max) => typeof v === "string" && v.length <= max;
 
 // Renvoie la liste des erreurs (codes) ; une liste vide veut dire que le don est valide.
+// Les types sont stricts : un montant doit être un nombre, pas un texte ni une liste.
 export function verifierDon(don) {
+  if (!don || typeof don !== "object" || Array.isArray(don)) return ["requete"];
   const erreurs = [];
-  const montant = Number(don.montant);
-  if (!Number.isInteger(montant) || montant < MONTANT_MIN || montant > MONTANT_MAX) {
-    erreurs.push("montant");
-  }
+  const m = don.montant;
+  if (typeof m !== "number" || !Number.isInteger(m) || m < MONTANT_MIN || m > MONTANT_MAX) erreurs.push("montant");
   if (!["ponctuel", "mensuel"].includes(don.frequence)) erreurs.push("frequence");
   if (!["bancontact", "carte"].includes(don.moyen)) erreurs.push("moyen");
   if (don.frequence === "mensuel" && don.moyen !== "carte") erreurs.push("moyen");
-  if (don.projet && !idsProjets.includes(don.projet)) erreurs.push("projet");
-  if (typeof don.nom !== "string" || don.nom.trim().length < 1 || don.nom.length > 100) {
-    erreurs.push("nom");
-  }
-  if (typeof don.prenom === "string" && don.prenom.length > 100) erreurs.push("prenom");
-  if (typeof don.email !== "string" || don.email.length > 254 || !reEmail.test(don.email)) {
-    erreurs.push("email");
-  }
+  if (don.projet !== undefined && don.projet !== "" && !idsProjets.includes(don.projet)) erreurs.push("projet");
+  if (!estTexte(don.nom, 100) || don.nom.trim().length < 1) erreurs.push("nom");
+  if (don.prenom !== undefined && !estTexte(don.prenom, 100)) erreurs.push("prenom");
+  if (!estTexte(don.email, 254) || !reEmail.test(don.email)) erreurs.push("email");
+  if (don.attestation !== undefined && typeof don.attestation !== "boolean") erreurs.push("attestation");
   if (don.conditions !== true) erreurs.push("conditions");
   if (!langues.includes(don.langue)) erreurs.push("langue");
   return erreurs;
+}
+
+// Copie propre d'un don déjà vérifié : seuls les champs attendus, avec leur type attendu.
+export function nettoyerDon(don) {
+  return {
+    montant: don.montant,
+    frequence: don.frequence,
+    moyen: don.moyen,
+    projet: don.projet || "",
+    prenom: (don.prenom ?? "").trim(),
+    nom: don.nom.trim(),
+    email: don.email.trim(),
+    attestation: don.attestation === true,
+    langue: don.langue,
+  };
 }

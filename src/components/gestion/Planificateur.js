@@ -5,6 +5,14 @@ import { validerInstance } from "@/lib/solveur/modele";
 import { CLE_POIDS_AHP } from "@/components/gestion/OutilAhp";
 
 const LIMITE_TEMPS_S = 30;
+const TAILLE_MAX_FICHIER = 1024 * 1024; // 1 Mo
+const CLES_INSTANCE = ["nom", "h", "S0", "Smin", "delta", "D", "taches", "precedences"];
+
+// Texte traduit d'une erreur { code, ...paramètres } renvoyée par le modèle.
+export function texteErreur(t, err) {
+  const modele = t.erreurs[err?.code] ?? t.erreurs.inconnue;
+  return modele.replace(/\{(\w+)\}/g, (_, cle) => (err?.[cle] !== undefined ? String(err[cle]) : ""));
+}
 
 // Écran de calcul du plan : paramètres, tâches, puis résultat du solveur HiGHS (dans un Web Worker).
 export default function Planificateur({ t, langue, instanceInitiale }) {
@@ -70,11 +78,27 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
         setResultat(data);
         setEtat("pret");
       };
+      // Worker impossible à charger ou arrêté brutalement : on rend la main à la personne.
+      worker.current.onerror = () => {
+        worker.current?.terminate();
+        worker.current = null;
+        premierCalcul.current = true;
+        setEtat("pret");
+        setMessage(t.erreurWorker);
+      };
     }
     setEtat(premierCalcul.current ? "chargement" : "calcul");
     premierCalcul.current = false;
     setResultat(null);
     worker.current.postMessage({ instance: inst, limiteTempsS: LIMITE_TEMPS_S });
+  }
+
+  function arreter() {
+    worker.current?.terminate();
+    worker.current = null;
+    premierCalcul.current = true;
+    setEtat("pret");
+    setMessage(t.arrete);
   }
 
   function exporter() {
@@ -101,14 +125,22 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
 
   async function importer(fichier) {
     if (!fichier) return;
+    if (fichier.size > TAILLE_MAX_FICHIER) return setMessage(`${t.importErreur} ${t.fichierTropGros}`);
+    let donnees;
     try {
-      const donnees = JSON.parse(await fichier.text());
-      const erreurs = validerInstance(donnees);
-      if (erreurs.length > 0) throw new Error(erreurs.join(" ; "));
-      modifier({ ...donnees, precedences: donnees.precedences ?? [] });
-    } catch (e) {
-      setMessage(`${t.importErreur} ${e.message}`);
+      donnees = JSON.parse(await fichier.text());
+    } catch {
+      return setMessage(`${t.importErreur} ${t.erreurs.instance}`);
     }
+    const propre = donnees && typeof donnees === "object" && !Array.isArray(donnees)
+      ? Object.fromEntries(CLES_INSTANCE.filter((c) => c in donnees).map((c) => [c, donnees[c]]))
+      : null;
+    if (propre && propre.precedences === undefined) propre.precedences = [];
+    const erreurs = validerInstance(propre);
+    if (erreurs.length > 0) {
+      return setMessage(`${t.importErreur} ${erreurs.slice(0, 5).map((e) => texteErreur(t, e)).join(" ")}`);
+    }
+    modifier(propre);
   }
 
   const libelle = (id) => inst.taches.find((x) => x.id === id)?.libelle || `#${id}`;
@@ -156,12 +188,12 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
               {inst.taches.map((tache, k) => (
                 <tr key={tache.id}>
                   <td>{tache.id}</td>
-                  <td><input aria-label={t.colonnes.libelle} value={tache.libelle} onChange={(e) => changerTache(k, "libelle", e.target.value)} /></td>
-                  <td><input aria-label={t.colonnes.cout} type="number" min="0" value={tache.cout} onChange={(e) => changerTache(k, "cout", e.target.value)} /></td>
-                  <td><input aria-label={t.colonnes.duree} type="number" min="1" value={tache.duree} onChange={(e) => changerTache(k, "duree", e.target.value)} /></td>
-                  <td><input aria-label={t.colonnes.poids} type="number" min="0" step="0.1" value={tache.poids} onChange={(e) => changerTache(k, "poids", e.target.value)} /></td>
-                  <td><ChampPredecesseurs key={predecesseurs(tache.id)} valeur={predecesseurs(tache.id)} placeholder={t.aucune} libelle={t.colonnes.apres} surValidation={(v) => changerPredecesseurs(tache.id, v)} /></td>
-                  <td><button type="button" className="bouton-texte" onClick={() => supprimerTache(tache.id)}>{t.supprimer}</button></td>
+                  <td><input aria-label={`${t.colonnes.libelle} #${tache.id}`} value={tache.libelle} onChange={(e) => changerTache(k, "libelle", e.target.value)} /></td>
+                  <td><input aria-label={`${t.colonnes.cout} : ${tache.libelle || `#${tache.id}`}`} type="number" min="0" value={tache.cout} onChange={(e) => changerTache(k, "cout", e.target.value)} /></td>
+                  <td><input aria-label={`${t.colonnes.duree} : ${tache.libelle || `#${tache.id}`}`} type="number" min="1" value={tache.duree} onChange={(e) => changerTache(k, "duree", e.target.value)} /></td>
+                  <td><input aria-label={`${t.colonnes.poids} : ${tache.libelle || `#${tache.id}`}`} type="number" min="0" step="0.1" value={tache.poids} onChange={(e) => changerTache(k, "poids", e.target.value)} /></td>
+                  <td><ChampPredecesseurs key={predecesseurs(tache.id)} valeur={predecesseurs(tache.id)} placeholder={t.aucune} libelle={`${t.colonnes.apres} : ${tache.libelle || `#${tache.id}`}`} surValidation={(v) => changerPredecesseurs(tache.id, v)} /></td>
+                  <td><button type="button" className="bouton-texte" aria-label={`${t.supprimer} : ${tache.libelle || `#${tache.id}`}`} onClick={() => supprimerTache(tache.id)}>{t.supprimer}</button></td>
                 </tr>
               ))}
             </tbody>
@@ -177,6 +209,7 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
         <button type="button" className="bouton bouton-principal bouton-grand" onClick={calculer} disabled={calculEnCours}>
           {calculEnCours ? t.calcul : t.calculer}
         </button>
+        {calculEnCours && <button type="button" className="bouton-texte" onClick={arreter}>{t.arreter}</button>}
         <button type="button" className="bouton-texte" onClick={exporter}>{t.exporter}</button>
         <label className="bouton-texte">
           {t.importer}
@@ -185,7 +218,7 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
         <button type="button" className="bouton-texte" onClick={() => modifier(instanceInitiale)}>{t.reinitialiser}</button>
       </div>
       {etat === "chargement" && <p className="aide" aria-live="polite">{t.chargement}</p>}
-      {message && <p className="message message-erreur" role="alert">{message}</p>}
+      {message && <p className="message message-erreur" role="status">{message}</p>}
 
       {resultat && <Resultat resultat={resultat} inst={inst} t={t} euro={euro} libelle={libelle} />}
     </div>
@@ -205,11 +238,12 @@ function Resultat({ resultat, inst, t, euro, libelle }) {
   const [valide, setValide] = useState(false);
 
   if (resultat.statut === "infaisable") return <p className="message message-erreur" role="alert">{t.infaisable}</p>;
+  if (resultat.statut === "limite_temps_sans_plan") return <p className="message message-erreur" role="alert">{t.limiteSansPlan}</p>;
   if (resultat.statut === "erreur") {
     return (
       <div className="message message-erreur" role="alert">
         {t.erreur}
-        <ul>{(resultat.erreurs ?? [resultat.detail]).map((e) => <li key={e}>{e}</li>)}</ul>
+        <ul>{(resultat.erreurs ?? []).map((e, k) => <li key={k}>{texteErreur(t, e)}</li>)}</ul>
       </div>
     );
   }
@@ -219,9 +253,9 @@ function Resultat({ resultat, inst, t, euro, libelle }) {
   const nonLancees = inst.taches.filter((x) => !lancees.has(x.id));
 
   return (
-    <section className="resultat-plan" aria-live="polite">
+    <section className="resultat-plan">
       <h2>{t.resultatTitre}</h2>
-      <p className={resultat.statut === "optimal" ? "message message-info" : "message message-erreur"}>
+      <p className={resultat.statut === "optimal" ? "message message-info" : "message message-erreur"} role="status">
         {resultat.statut === "optimal" ? t.optimal : t.limiteTemps}
       </p>
       <ul className="indicateurs">

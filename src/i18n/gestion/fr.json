@@ -45,7 +45,7 @@
     "aucune": "aucune",
     "calculer": "Calculer le plan",
     "calcul": "Calcul en cours…",
-    "chargement": "Chargement du solveur (3,5 Mo, la première fois seulement)…",
+    "chargement": "Chargement du solveur (1,2 Mo, la première fois seulement)…",
     "resultatTitre": "Plan proposé",
     "valeur": "Valeur du plan",
     "temps": "Temps de calcul",
@@ -71,7 +71,37 @@
     "exemple": "Tâches, coûts et dons d'exemple, inventés pour la maquette.",
     "appliquerAhp": "Appliquer les poids AHP",
     "ahpApplique": "Poids AHP appliqués aux tâches.",
-    "ahpAbsent": "Aucun poids AHP enregistré : passez d'abord par la page « Poids des tâches (AHP) »."
+    "ahpAbsent": "Aucun poids AHP enregistré : passez d'abord par la page « Poids des tâches (AHP) ».",
+    "arreter": "Arrêter le calcul",
+    "arrete": "Calcul arrêté.",
+    "erreurWorker": "Le solveur n'a pas pu se charger ou s'est arrêté. Vérifiez la connexion, puis relancez le calcul.",
+    "limiteSansPlan": "Limite de temps atteinte sans trouver de plan. Réduisez l'horizon ou le nombre de tâches, puis relancez.",
+    "fichierTropGros": "Fichier trop volumineux (1 Mo au plus).",
+    "erreurs": {
+      "instance": "Le fichier ne contient pas une instance.",
+      "h": "L'horizon doit être un nombre entier de mois, de 1 à {max}.",
+      "nombre": "{champ} doit être un nombre positif ou nul.",
+      "delta_max": "Le taux d'urgence ne peut pas dépasser {max}.",
+      "montant_max": "{champ} ne peut pas dépasser {max} €.",
+      "D": "Il faut un don prévu par mois de l'horizon, positif ou nul (au plus {max} €).",
+      "nb_taches": "Il faut entre 1 et {max} tâches.",
+      "tache_objet": "La tâche n°{index} est mal formée.",
+      "id": "La tâche n°{index} doit avoir un identifiant entier.",
+      "id_double": "L'identifiant {id} est utilisé deux fois.",
+      "cout": "Coût invalide pour la tâche {id} (positif ou nul, au plus {max} €).",
+      "duree": "Durée invalide pour la tâche {id} (au moins 1 mois).",
+      "poids": "Poids invalide pour la tâche {id} (positif ou nul, au plus {max}).",
+      "precedences_liste": "Les précédences doivent être une liste.",
+      "nb_precedences": "Il y a trop de précédences (au plus {max}).",
+      "precedence": "Précédence invalide : {valeur}.",
+      "boucle": "La tâche {id} ne peut pas se précéder elle-même.",
+      "precedence_double": "Précédence en double : {valeur}.",
+      "cycle": "Les précédences forment un cycle : aucune des tâches concernées ne pourrait démarrer.",
+      "autres": "… et {n} autres erreurs.",
+      "solveur": "Le solveur a renvoyé un état inattendu ({detail}).",
+      "plan_incoherent": "Le plan renvoyé par le solveur ne respecte pas le modèle ({detail}). Il n'est pas affiché.",
+      "inconnue": "Erreur inconnue."
+    }
   },
   "registre": {
     "titre": "Registre",
@@ -124,6 +154,7 @@
     "poidsTache": "Poids de la tâche",
     "enregistrer": "Utiliser ces poids dans le plan",
     "enregistre": "Poids enregistrés. Sur la page « Plan d'investissement », cliquez sur « Appliquer les poids AHP ».",
-    "bloque": "Corrigez d'abord les comparaisons : le CR dépasse 0,1."
+    "bloque": "Corrigez d'abord les comparaisons : le CR dépasse 0,1.",
+    "erreurStockage": "Les poids n'ont pas pu être enregistrés dans ce navigateur (stockage local indisponible)."
   }
 }

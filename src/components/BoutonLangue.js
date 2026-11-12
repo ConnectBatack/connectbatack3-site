@@ -27,7 +27,7 @@ export default function BoutonLangue({ langue, textes }) {
   }
 
   function confirmer() {
-    document.cookie = `langue=${cible}; path=/; max-age=31536000; SameSite=Lax`;
+    document.cookie = `langue=${cible}; path=/; max-age=31536000; SameSite=Lax${location.protocol === "https:" ? "; Secure" : ""}`;
     const reste = chemin.replace(/^\/[a-z]{2}(?=\/|$)/, "");
     router.push(`/${cible}${reste}`);
     setCible(null);
