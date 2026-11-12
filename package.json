@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/copier-highs.mjs",
-    "dev": "next dev",
-    "prebuild": "node scripts/copier-highs.mjs",
-    "build": "next build",
+    "dev": "node scripts/copier-highs.mjs && next dev",
+    "build": "node scripts/copier-highs.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "test": "node --test \"tests/*.test.mjs\""
