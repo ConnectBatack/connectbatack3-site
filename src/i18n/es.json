@@ -125,6 +125,19 @@
       "conditions": "Acepta las condiciones para continuar.",
       "nonConfigure": "El pago en línea todavía no está activado: esta página es una versión preliminar.",
       "serveur": "No se pudo iniciar el pago. Inténtalo de nuevo dentro de un momento."
+    },
+    "faq": {
+      "titre": "Preguntas frecuentes",
+      "q1": "¿Hace falta una cuenta para donar?",
+      "r1": "Puedes donar sin crear una cuenta, una sola vez o cada mes.",
+      "q2": "¿Están seguros mis datos bancarios?",
+      "r2": "El pago se hace a través de Stripe, un proveedor de pagos seguro. Tus datos bancarios nunca pasan por este sitio.",
+      "q3": "¿Puedo cancelar una donación mensual?",
+      "r3": "El procedimiento para cancelar una donación mensual se detallará más adelante.",
+      "q4": "¿Cómo recibo un certificado fiscal?",
+      "r4": "El certificado lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal. Es posible que se pidan otros datos, por ejemplo el número de registro nacional en Bélgica.",
+      "q5": "¿Para qué sirve mi donación si no elijo un proyecto?",
+      "r5": "Tu donación va al fondo general. Se destina a donde la necesidad es más urgente."
     }
   },
   "merci": {
@@ -134,7 +147,7 @@
   },
   "connexion": {
     "titre": "Espacio COVIDEBA",
-    "texte": "Este espacio servirá a los miembros del COVIDEBA y a los supervisores: registro del dinero, tareas y plan de inversión. Está en construcción.",
+    "texte": "Este espacio servirá a los miembros del COVIDEBA y a los supervisores: registro del dinero, tareas y cálculo del plan de inversión. Está en construcción.",
     "donateur": "Para donar no necesitas una cuenta."
   },
   "pied": {

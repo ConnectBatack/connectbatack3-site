@@ -20,7 +20,7 @@
     "boutonProjets": "See the projects",
     "projetsTitre": "Current projects",
     "projetsIntro": "The village committee decides the order of the work. The amounts shown are examples until the COVIDEBA provides the real figures.",
-    "collecte": "raised of",
+    "collecte": "raised out of",
     "soutenir": "Support this project",
     "impactTitre": "What your donation makes possible",
     "impactIntro": "One amount, one specific use. These links are examples and will be replaced by real costs.",
@@ -94,7 +94,7 @@
         "10": "helps buy basic medicines every month",
         "20": "helps maintain the batteries every month",
         "35": "helps pay a teacher every month",
-        "50": "helps the health centre works every month"
+        "50": "helps fund the health centre works every month"
       }
     },
     "contexteAutre": "Your donation goes to the project you choose, or to the general fund if you do not choose one.",
@@ -125,6 +125,19 @@
       "conditions": "Accept the terms to continue.",
       "nonConfigure": "Online payment is not active yet: this page is a preview.",
       "serveur": "The payment could not start. Please try again in a moment."
+    },
+    "faq": {
+      "titre": "Frequently asked questions",
+      "q1": "Do I need an account to donate?",
+      "r1": "You can donate without creating an account, once or every month.",
+      "q2": "Are my bank details secure?",
+      "r2": "Payment goes through Stripe, a secure payment provider. Your bank details never pass through this site.",
+      "q3": "Can I stop a monthly donation?",
+      "r3": "The procedure for stopping a monthly donation will be specified later.",
+      "q4": "How do I get a tax certificate?",
+      "r4": "The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address. Other information may be requested, such as the national register number in Belgium.",
+      "q5": "What happens to my donation if I do not choose a project?",
+      "r5": "Your donation goes to the general fund. It is used where the need is most urgent."
     }
   },
   "merci": {
@@ -134,7 +147,7 @@
   },
   "connexion": {
     "titre": "COVIDEBA area",
-    "texte": "This area will be used by COVIDEBA members and supervisors: money register, tasks and investment plan. It is under construction.",
+    "texte": "This area will be used by COVIDEBA members and supervisors: money register, tasks and calculation of the investment plan. It is under construction.",
     "donateur": "You do not need an account to donate."
   },
   "pied": {

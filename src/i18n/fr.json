@@ -125,6 +125,19 @@
       "conditions": "Acceptez les conditions pour continuer.",
       "nonConfigure": "Le paiement en ligne n'est pas encore activé : cette page est une préversion.",
       "serveur": "Le paiement n'a pas pu démarrer. Réessayez dans un instant."
+    },
+    "faq": {
+      "titre": "Questions fréquentes",
+      "q1": "Faut-il un compte pour donner ?",
+      "r1": "Vous pouvez donner sans créer de compte, une fois ou chaque mois.",
+      "q2": "Mes données bancaires sont-elles en sécurité ?",
+      "r2": "Le paiement passe par Stripe, un prestataire de paiement sécurisé. Vos données bancaires ne passent jamais par ce site.",
+      "q3": "Puis-je arrêter un don mensuel ?",
+      "r3": "La procédure pour arrêter un don mensuel sera précisée ultérieurement.",
+      "q4": "Comment recevoir une attestation fiscale ?",
+      "r4": "L'attestation est délivrée au début de l'année suivante par l'institution agréée qui reçoit les dons. Stripe vous demandera votre adresse postale. D'autres informations pourront être demandées, par exemple le numéro de registre national en Belgique.",
+      "q5": "À quoi sert mon don si je ne choisis pas de projet ?",
+      "r5": "Votre don rejoint le fonds général. Il est affecté là où le besoin est le plus urgent."
     }
   },
   "merci": {

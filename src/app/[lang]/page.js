@@ -33,7 +33,11 @@ export default async function Accueil({ params }) {
             <p className="carte-categorie">
               {a.prochainBesoin} <span className="badge-exemple">{dict.exemple}</span>
             </p>
-            <h2>{a.besoinTitre}</h2>
+            <h2>
+              <Link href={`/${lang}/projets/dispensaire`} className="lien-titre">
+                {a.besoinTitre}
+              </Link>
+            </h2>
             <p>{a.besoinTexte}</p>
             <div className="progression" role="progressbar" aria-valuenow={35} aria-valuemin={0} aria-valuemax={100}>
               <span className="progression-barre" style={{ "--p": "35%" }} />
@@ -62,7 +66,11 @@ export default async function Accueil({ params }) {
                 <p className="carte-categorie">
                   {t.categorie} <span className="badge-exemple">{dict.exemple}</span>
                 </p>
-                <h3>{t.titre}</h3>
+                <h3>
+                  <Link href={`/${lang}/projets/${p.id}`} className="lien-titre">
+                    {t.titre}
+                  </Link>
+                </h3>
                 <p>{t.description}</p>
                 <div
                   className="progression"

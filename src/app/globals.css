@@ -188,6 +188,18 @@ a { color: inherit; }
 
 .apropos { max-width: 46em; }
 
+/* Titres de carte cliquables (mènent à la page du projet). */
+.lien-titre { text-decoration: none; transition: color 0.15s ease; }
+.lien-titre:hover { color: var(--rouge); text-decoration: underline; text-underline-offset: 4px; }
+.projet-actions { margin-top: 32px; }
+
+/* Questions fréquentes de la page de don. */
+.faq { display: flex; flex-direction: column; gap: 12px; }
+.faq details { padding: 16px 20px; border: 1px solid var(--trait); border-radius: var(--rayon); }
+.faq details[open] { border-color: var(--turquoise); }
+.faq summary { font-weight: 700; cursor: pointer; }
+.faq details p { margin: 10px 0 0; color: var(--gris); }
+
 .appel { padding: 72px 16px; text-align: center; background: var(--rouge); color: #fff; }
 .appel p { opacity: 0.92; }
 

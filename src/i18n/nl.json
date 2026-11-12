@@ -20,7 +20,7 @@
     "boutonProjets": "Bekijk de projecten",
     "projetsTitre": "Lopende projecten",
     "projetsIntro": "Het dorpscomité bepaalt de volgorde van de werken. De getoonde bedragen zijn voorbeelden, in afwachting van de cijfers van het COVIDEBA.",
-    "collecte": "ingezameld van",
+    "collecte": "opgehaald van de",
     "soutenir": "Steun dit project",
     "impactTitre": "Wat uw gift mogelijk maakt",
     "impactIntro": "Eén bedrag, één concreet gebruik. Deze koppelingen zijn voorbeelden en worden vervangen door de echte kosten.",
@@ -46,7 +46,7 @@
     ],
     "appelTitre": "Eén gift, één concrete stap",
     "appelTexte": "U kunt doneren zonder account, eenmalig of elke maand.",
-    "prochainBesoin": "Volgende nood om te financieren",
+    "prochainBesoin": "Volgende te financieren behoefte",
     "besoinTitre": "Dak van het gezondheidscentrum",
     "besoinTexte": "Eerste stap van de werken: het gebouw beschermen voordat de elektriciteit en het medisch materiaal geïnstalleerd worden."
   },
@@ -94,11 +94,11 @@
         "10": "draagt elke maand bij aan basisgeneesmiddelen",
         "20": "draagt elke maand bij aan het onderhoud van de batterijen",
         "35": "draagt elke maand bij aan het loon van een leerkracht",
-        "50": "draagt elke maand bij aan de werken aan het gezondheidscentrum"
+        "50": "draagt elke maand bij aan de bouwwerken van het gezondheidscentrum"
       }
     },
     "contexteAutre": "Uw gift gaat naar het gekozen project, of naar het algemene fonds als u geen project kiest.",
-    "projetTitre": "Mijn gift bestemmen",
+    "projetTitre": "Bestemming van mijn gift",
     "projetGeneral": "Waar de nood het hoogst is",
     "suivant": "Volgende",
     "precedent": "Vorige",
@@ -125,6 +125,19 @@
       "conditions": "Aanvaard de voorwaarden om verder te gaan.",
       "nonConfigure": "Online betalen is nog niet geactiveerd: deze pagina is een voorlopige versie.",
       "serveur": "De betaling kon niet starten. Probeer het zo meteen opnieuw."
+    },
+    "faq": {
+      "titre": "Veelgestelde vragen",
+      "q1": "Heb ik een account nodig om te doneren?",
+      "r1": "U kunt doneren zonder account, eenmalig of elke maand.",
+      "q2": "Zijn mijn bankgegevens veilig?",
+      "r2": "De betaling verloopt via Stripe, een beveiligde betaaldienst. Uw bankgegevens komen nooit op deze site terecht.",
+      "q3": "Kan ik een maandelijkse gift stopzetten?",
+      "r3": "De procedure om een maandelijkse gift stop te zetten wordt later verduidelijkt.",
+      "q4": "Hoe ontvang ik een fiscaal attest?",
+      "r4": "Het attest wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres. Er kunnen andere gegevens gevraagd worden, bijvoorbeeld het rijksregisternummer in België.",
+      "q5": "Waarvoor dient mijn gift als ik geen project kies?",
+      "r5": "Uw gift gaat naar het algemene fonds. Ze wordt gebruikt waar de nood het hoogst is."
     }
   },
   "merci": {
@@ -134,7 +147,7 @@
   },
   "connexion": {
     "titre": "COVIDEBA-ruimte",
-    "texte": "Deze ruimte is bedoeld voor de leden van het COVIDEBA en de begeleiders: register van het geld, taken en investeringsplan. Ze is in aanbouw.",
+    "texte": "Deze ruimte is bedoeld voor de leden van het COVIDEBA en de begeleiders: register van het geld, taken en berekening van het investeringsplan. Ze is in aanbouw.",
     "donateur": "Om te doneren hebt u geen account nodig."
   },
   "pied": {
