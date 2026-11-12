@@ -128,7 +128,7 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
           </div>
           <p className="contexte-montant" aria-live="polite">
             {don.autre === "" && <strong>{format(don.montant)} </strong>}
-            {contexte} <span className="badge-exemple">{exemple}</span>
+            {contexte} <span className="note-exemple">({exemple})</span>
           </p>
 
           <label className="champ">

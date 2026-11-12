@@ -1,16 +1,20 @@
 {
   "meta": {
-    "titre": "ConnectBatack 3 : soutenir le village de Batack",
+    "titre": "ConnectBatack 3 : soutenir le village de Batack",
     "description": "Financez la mise en service du dispensaire de Batack, au Cameroun, et suivez à quoi sert chaque don."
   },
-  "preversion": "Préversion du site : les chiffres sont des exemples et aucun paiement réel n'est possible.",
+  "preversion": "Préversion du site : les chiffres sont des exemples et aucun paiement réel n'est possible.",
   "nav": {
     "projets": "Projets",
     "fonctionnement": "Votre don",
     "apropos": "Qui sommes-nous",
     "don": "Faire un don",
     "connexion": "Espace COVIDEBA",
-    "accueil": "Retour à l'accueil"
+    "accueil": "Retour à l'accueil",
+    "histoire": "Notre histoire",
+    "transparence": "Transparence",
+    "menu": "Menu",
+    "diapos": "Choisir une photo"
   },
   "accueil": {
     "surtitre": "Batack, Ouest-Cameroun",
@@ -41,35 +45,43 @@
     ],
     "aproposTitre": "Qui sommes-nous",
     "aproposTexte": [
-      "Le COVIDEBA est le comité de développement du village de Batack. Il porte les projets du village : eau potable, écoles, santé.",
+      "Le COVIDEBA est le comité de développement du village de Batack. Il porte les projets du village : eau potable, écoles, santé.",
       "ConnectBatack 3 réunit le COVIDEBA, des étudiants de la Faculté polytechnique de Mons (UMONS) et l'École nationale supérieure polytechnique de Yaoundé (ENSPY). Les deux premières phases ont installé un microréseau solaire et construit le bâtiment du dispensaire."
     ],
     "appelTitre": "Un don, une étape concrète",
     "appelTexte": "Vous pouvez donner sans créer de compte, une fois ou chaque mois.",
     "prochainBesoin": "Prochain besoin à financer",
     "besoinTitre": "Toiture du dispensaire",
-    "besoinTexte": "Première étape des travaux : mettre le bâtiment à l'abri avant d'installer l'électricité et le matériel médical."
+    "besoinTexte": "Première étape des travaux : mettre le bâtiment à l'abri avant d'installer l'électricité et le matériel médical.",
+    "parallaxeTitre": "Trois phases, un même village",
+    "parallaxeTexte": "De la station de recharge solaire au dispensaire, chaque phase part d'un besoin exprimé par le village de Batack.",
+    "parallaxeLien": "Lire notre histoire",
+    "aproposLien": "Découvrir qui nous sommes"
   },
   "projets": {
     "dispensaire": {
       "categorie": "Santé",
       "titre": "Mise en service du dispensaire",
-      "description": "D'abord la toiture, puis le câblage électrique, puis le matériel d'analyse et de radiologie."
+      "description": "D'abord la toiture, puis le câblage électrique, puis le matériel d'analyse et de radiologie.",
+      "accroche": "Ouvrir le dispensaire du village"
     },
     "batteries": {
       "categorie": "Énergie",
       "titre": "Entretien des batteries solaires",
-      "description": "Les batteries du microréseau alimentent le dispensaire. Elles doivent être entretenues, puis remplacées."
+      "description": "Les batteries du microréseau alimentent le dispensaire. Elles doivent être entretenues, puis remplacées.",
+      "accroche": "Garder la lumière et le froid au dispensaire"
     },
     "ecole": {
       "categorie": "Éducation",
       "titre": "Salaire d'un instituteur",
-      "description": "Payer un instituteur pour que les enfants aient classe toute l'année."
+      "description": "Payer un instituteur pour que les enfants aient classe toute l'année.",
+      "accroche": "Un instituteur payé toute l'année"
     },
     "eau": {
       "categorie": "Eau",
       "titre": "Accès à l'eau potable",
-      "description": "Étendre le réseau d'eau potable que le COVIDEBA a commencé à construire."
+      "description": "Étendre le réseau d'eau potable que le COVIDEBA a commencé à construire.",
+      "accroche": "De l'eau potable plus près des maisons"
     }
   },
   "exemple": "exemple",
@@ -123,20 +135,20 @@
       "nom": "Indiquez votre nom de famille.",
       "email": "Indiquez une adresse e-mail valide.",
       "conditions": "Acceptez les conditions pour continuer.",
-      "nonConfigure": "Le paiement en ligne n'est pas encore activé : cette page est une préversion.",
+      "nonConfigure": "Le paiement en ligne n'est pas encore activé : cette page est une préversion.",
       "serveur": "Le paiement n'a pas pu démarrer. Réessayez dans un instant."
     },
     "faq": {
       "titre": "Questions fréquentes",
-      "q1": "Faut-il un compte pour donner ?",
+      "q1": "Faut-il un compte pour donner ?",
       "r1": "Vous pouvez donner sans créer de compte, une fois ou chaque mois.",
-      "q2": "Mes données bancaires sont-elles en sécurité ?",
+      "q2": "Mes données bancaires sont-elles en sécurité ?",
       "r2": "Le paiement passe par Stripe, un prestataire de paiement sécurisé. Vos données bancaires ne passent jamais par ce site.",
-      "q3": "Puis-je arrêter un don mensuel ?",
+      "q3": "Puis-je arrêter un don mensuel ?",
       "r3": "La procédure pour arrêter un don mensuel sera précisée ultérieurement.",
-      "q4": "Comment recevoir une attestation fiscale ?",
+      "q4": "Comment recevoir une attestation fiscale ?",
       "r4": "L'attestation est délivrée au début de l'année suivante par l'institution agréée qui reçoit les dons. Stripe vous demandera votre adresse postale. D'autres informations pourront être demandées, par exemple le numéro de registre national en Belgique.",
-      "q5": "À quoi sert mon don si je ne choisis pas de projet ?",
+      "q5": "À quoi sert mon don si je ne choisis pas de projet ?",
       "r5": "Votre don rejoint le fonds général. Il est affecté là où le besoin est le plus urgent."
     }
   },
@@ -147,12 +159,15 @@
   },
   "connexion": {
     "titre": "Espace COVIDEBA",
-    "texte": "Cet espace servira aux membres du COVIDEBA et aux encadrants : registre de l'argent, tâches et calcul du plan d'investissement. Il est en cours de construction.",
+    "texte": "Cet espace servira aux membres du COVIDEBA et aux encadrants : registre de l'argent, tâches et calcul du plan d'investissement. Il est en cours de construction.",
     "donateur": "Pour donner, aucun compte n'est nécessaire."
   },
   "pied": {
-    "texte": "ConnectBatack 3 : COVIDEBA, Faculté polytechnique de Mons (UMONS) et ENSPY.",
-    "droits": "© 2026 COVIDEBA"
+    "texte": "ConnectBatack 3 : COVIDEBA, Faculté polytechnique de Mons (UMONS) et ENSPY.",
+    "droits": "© 2026 COVIDEBA",
+    "projet": "Le projet",
+    "informations": "Informations",
+    "suivre": "Suivre le projet"
   },
   "changementLangue": {
     "bouton": "Langue",
@@ -160,5 +175,286 @@
     "texte": "Le français est la langue d'origine de ce site.",
     "annuler": "Annuler",
     "continuer": "Continuer"
+  },
+  "aCompleter": "à compléter",
+  "noteExemple": "Montants d'exemple, en attendant les chiffres du COVIDEBA.",
+  "photos": {
+    "batack-paysage": "Paysage du village de Batack",
+    "dispensaire-exterieur": "Le bâtiment du dispensaire de Batack",
+    "dispensaire-interieur": "Intérieur du dispensaire, encore en travaux",
+    "installation-electrique": "Étudiants et techniciens pendant l'installation solaire au dispensaire, janvier 2026",
+    "cablage": "Câblage du tableau électrique du dispensaire",
+    "panneau-solaire": "Panneau solaire installé au dispensaire",
+    "frigo-solaire": "Le réfrigérateur solaire pour les vaccins",
+    "ecole-publique": "Élèves et enseignants devant l'école publique de Batack",
+    "salle-de-classe": "Une salle de classe de Batack",
+    "marche": "La place du marché en construction",
+    "elevage": "L'élevage de porcs du village",
+    "pisciculture": "Les bassins de pisciculture",
+    "accueil-chants": "Accueil de l'équipe par des chants traditionnels à Batack",
+    "station-recharge": "L'équipe devant la station de recharge solaire de Connect Batack 1",
+    "equipe-dispensaire": "L'équipe au dispensaire pendant la mission de janvier 2026",
+    "equipe-batack": "Les équipes de Mons et de Yaoundé à Batack, janvier 2026",
+    "rencontre-village": "Rencontre à Batack pendant la mission de janvier 2026",
+    "carte-cameroun": "Carte du Cameroun situant Batack"
+  },
+  "histoire": {
+    "titre": "Notre histoire",
+    "intro": "Depuis 2024, des étudiants ingénieurs de Mons et de Yaoundé travaillent avec le comité du village de Batack. Chaque phase part d'un besoin exprimé par le village, et la suivante vérifie que la précédente fonctionne toujours.",
+    "friseTitre": "Les grandes étapes",
+    "etapes": [
+      {
+        "date": "2017",
+        "titre": "Un partenariat entre écoles d'ingénieurs",
+        "texte": "La Faculté polytechnique de Mons commence à travailler avec quatre universités camerounaises, à Yaoundé et à Douala, sur la formation des ingénieurs. Ces échanges font connaître les besoins de villages éloignés des villes, dont Batack."
+      },
+      {
+        "date": "2024",
+        "titre": "Lancement de Connect Batack",
+        "texte": "Les premiers microprojets étudiants sont lancés avec le soutien de l'ARES. Ils réunissent la Faculté polytechnique de Mons (UMONS), l'École nationale supérieure polytechnique de Yaoundé (ENSPY) et le COVIDEBA."
+      },
+      {
+        "date": "Connect Batack 1",
+        "titre": "Une station de recharge solaire",
+        "texte": "Première réalisation : une station de recharge solaire publique, pour charger téléphones et lampes dans un village sans réseau électrique fiable. Un an plus tard, l'équipe suivante a vérifié qu'elle fonctionnait toujours.",
+        "photo": "station-recharge",
+        "dateACompleter": true
+      },
+      {
+        "date": "Janvier 2026",
+        "titre": "Connect Batack 2 : l'énergie au dispensaire",
+        "texte": "Du 24 au 30 janvier 2026, l'équipe installe au dispensaire un système solaire autonome : un réfrigérateur pour conserver les vaccins et de l'éclairage pour les soins de nuit. Le travail se fait avec des techniciens locaux et le COVIDEBA, pour que le village puisse entretenir l'installation.",
+        "photo": "installation-electrique"
+      },
+      {
+        "date": "2026-2027",
+        "titre": "Connect Batack 3 : financer et planifier",
+        "texte": "Le dispensaire est bâti mais pas encore en service, et l'hôpital le plus proche est à 20 km. Cette dernière phase avec l'UMONS crée ce site de dons, prépare le dossier technique du dispensaire et cherche des financements durables, en Europe comme au Cameroun. Une mission au village est prévue en janvier 2027.",
+        "photo": "dispensaire-exterieur"
+      }
+    ],
+    "aujourdhuiTitre": "Batack aujourd'hui",
+    "aujourdhuiIntro": "Batack est un village du pays bamiléké, dans les hauts plateaux de l'Ouest du Cameroun. Ses habitants, qui se nomment eux-mêmes le « petit peuple de Batack », ont déjà mené plusieurs projets.",
+    "lieux": [
+      {
+        "photo": "ecole-publique",
+        "titre": "Les écoles",
+        "texte": "Une école primaire avec une salle informatique, puis une école maternelle construite avec l'appui de la coopération italienne."
+      },
+      {
+        "photo": "salle-de-classe",
+        "titre": "Les salles de classe",
+        "texte": "Sombres et étroites : un besoin relevé lors du diagnostic de janvier 2026."
+      },
+      {
+        "photo": "marche",
+        "titre": "La place du marché",
+        "texte": "En construction lors de la mission de janvier 2026."
+      },
+      {
+        "photo": "elevage",
+        "titre": "L'élevage",
+        "texte": "L'élevage de porcs fait partie des activités du village."
+      },
+      {
+        "photo": "pisciculture",
+        "titre": "La pisciculture",
+        "texte": "Des bassins d'élevage de poissons."
+      },
+      {
+        "photo": "dispensaire-interieur",
+        "titre": "Le dispensaire",
+        "texte": "Le bâtiment existe. Il reste à le rendre fonctionnel."
+      }
+    ],
+    "appelTitre": "La suite s'écrit avec vous",
+    "appelTexte": "Chaque don finance une étape concrète, publiée ensuite sur ce site."
+  },
+  "transparence": {
+    "titre": "Transparence",
+    "intro": "Vous devez pouvoir vérifier ce que devient chaque euro. Cette page réunit les montants reçus, les dépenses et la façon dont le comité décide.",
+    "chiffresTitre": "En chiffres",
+    "chiffres": [
+      "collectés",
+      "dons reçus",
+      "dépenses publiées"
+    ],
+    "miseAJour": "Chiffres d'exemple. Ils seront calculés automatiquement à partir du registre.",
+    "repartitionTitre": "Que devient votre don ?",
+    "repartitionIntro": "Votre don se répartit en trois parts. Les pourcentages ci-dessous sont des exemples : les vrais chiffres seront publiés après la première année.",
+    "parts": [
+      "Projets du village",
+      "Frais de paiement (Stripe, banque)",
+      "Autres frais (site, transferts vers le Cameroun)"
+    ],
+    "methode": "Méthode : les frais de paiement sont ceux que facturent Stripe et la banque. Les autres frais comprennent l'hébergement du site et les transferts d'argent vers le Cameroun. Il n'existe pas de définition unique des « frais » : nous indiquerons toujours ce que chaque part contient.",
+    "registreTitre": "Le registre des dépenses",
+    "registreIntro": "Chaque dépense importante est publiée avec sa facture ou une photo, et avec le compte rendu de la réunion du COVIDEBA qui l'a validée. Une écriture n'est jamais effacée : une erreur est corrigée par une nouvelle écriture, visible elle aussi.",
+    "colonnes": [
+      "Date",
+      "Dépense",
+      "Projet",
+      "Montant",
+      "Justificatif"
+    ],
+    "registreVide": "Les premières dépenses apparaîtront ici dès la mise en service de l'espace de gestion.",
+    "decisionTitre": "Comment le comité décide",
+    "decisionPoints": [
+      "Les priorités sont fixées par le COVIDEBA, avec les soignants du village.",
+      "Un outil de calcul propose l'ordre des dépenses en respectant l'ordre des travaux : on pose la toiture avant d'installer le matériel médical.",
+      "Une réserve de sécurité, fixée par la chefferie, reste toujours en caisse.",
+      "La décision finale appartient au comité : l'outil propose, le comité décide."
+    ],
+    "rapportsTitre": "Rapports",
+    "rapportsTexte": "Un bilan annuel, avec les comptes, sera publié ici au format PDF."
+  },
+  "apropos": {
+    "titre": "Qui sommes-nous",
+    "intro": "Ce site est édité par le comité du village. Des étudiants ingénieurs de Belgique et du Cameroun l'ont conçu avec lui.",
+    "covidebaTitre": "Le COVIDEBA",
+    "covidebaTexte": [
+      "Le Comité de Développement du Village Batack (COVIDEBA) réunit des habitants et des membres de la communauté de Batack. Il porte les projets du village et décide de l'usage des fonds.",
+      "Il est présidé par le Dr Anatole Chengoué."
+    ],
+    "equipesTitre": "Les équipes étudiantes",
+    "equipesTexte": "Connect Batack 3 réunit des étudiants de la Faculté polytechnique de l'Université de Mons (informatique et gestion, mécanique, énergie) et de l'École nationale supérieure polytechnique de Yaoundé (génie industriel, mécanique, informatique).",
+    "etudiants": "La liste des membres sera publiée prochainement.",
+    "encadrantsTitre": "L'encadrement",
+    "roles": {
+      "dehombreux": "Faculté polytechnique de Mons (UMONS)",
+      "fokam": "École nationale supérieure polytechnique de Yaoundé (ENSPY)",
+      "chengoue": "Président du COVIDEBA"
+    },
+    "partenairesTitre": "Partenaires et financeurs",
+    "partenaires": {
+      "ares": "Académie de recherche et d'enseignement supérieur. Finance les microprojets étudiants de coopération.",
+      "solarly": "Entreprise spécialisée dans l'énergie solaire, partenaire de l'installation de janvier 2026."
+    },
+    "charteTitre": "Notre charte",
+    "charteIntro": "Les équipes de Mons et de Yaoundé travaillent selon cinq principes.",
+    "charte": [
+      "Respect mutuel : chaque membre est un partenaire à part entière, et les différences de culture sont une richesse.",
+      "Ponctualité et respect des engagements.",
+      "Décisions partagées : les décisions importantes sont discutées et validées par les deux équipes.",
+      "Reconnaissance du travail de chacun et des réussites, même petites.",
+      "Disponibilité et transparence : chacun prévient à l'avance en cas d'absence, de retard ou de difficulté."
+    ]
+  },
+  "legal": {
+    "avertissement": "Version provisoire. Ce texte sera relu et complété avant l'ouverture des dons réels.",
+    "miseAJour": "Dernière mise à jour : 12 novembre 2026",
+    "pages": {
+      "mentions-legales": {
+        "titre": "Mentions légales",
+        "sections": [
+          {
+            "titre": "Éditeur",
+            "texte": [
+              "Comité de Développement du Village Batack (COVIDEBA), Batack, Ouest-Cameroun.",
+              "Président : Dr Anatole Chengoué.",
+              "Contact : adresse e-mail à compléter."
+            ]
+          },
+          {
+            "titre": "Conception",
+            "texte": [
+              "Site conçu par les étudiants du projet Connect Batack 3 : Faculté polytechnique de l'Université de Mons et École nationale supérieure polytechnique de Yaoundé."
+            ]
+          },
+          {
+            "titre": "Hébergement",
+            "texte": [
+              "Vercel Inc., États-Unis (vercel.com). Adresse postale à compléter."
+            ]
+          },
+          {
+            "titre": "Photos",
+            "texte": [
+              "Photos des missions Connect Batack, publiées avec l'accord des personnes photographiées."
+            ]
+          }
+        ]
+      },
+      "confidentialite": {
+        "titre": "Politique de confidentialité",
+        "sections": [
+          {
+            "titre": "Responsable du traitement",
+            "texte": [
+              "Le COVIDEBA, éditeur du site (voir les mentions légales)."
+            ]
+          },
+          {
+            "titre": "Données collectées",
+            "texte": [
+              "Lors d'un don : votre nom, votre prénom (facultatif) et votre adresse e-mail.",
+              "Si vous demandez une attestation fiscale : votre adresse postale, collectée par Stripe.",
+              "Vos données bancaires sont saisies uniquement chez Stripe. Ce site ne les reçoit jamais."
+            ]
+          },
+          {
+            "titre": "Utilisation",
+            "texte": [
+              "Traiter votre don, vous envoyer un reçu et, si vous l'avez demandée, permettre l'envoi de l'attestation fiscale par l'institution agréée qui reçoit les dons."
+            ]
+          },
+          {
+            "titre": "Durée de conservation",
+            "texte": [
+              "À compléter."
+            ]
+          },
+          {
+            "titre": "Cookies",
+            "texte": [
+              "Le site utilise un seul cookie, « langue », qui retient la langue choisie pendant un an. Il n'y a ni cookie publicitaire ni outil de suivi."
+            ]
+          },
+          {
+            "titre": "Vos droits",
+            "texte": [
+              "Vous pouvez demander l'accès à vos données, leur correction ou leur suppression, en écrivant à l'adresse indiquée dans les mentions légales.",
+              "Vous pouvez aussi déposer une plainte auprès de l'Autorité de protection des données (Belgique)."
+            ]
+          }
+        ]
+      },
+      "conditions": {
+        "titre": "Conditions d'utilisation",
+        "sections": [
+          {
+            "titre": "Objet",
+            "texte": [
+              "Ce site présente les projets du village de Batack et permet de les soutenir par un don."
+            ]
+          },
+          {
+            "titre": "Dons",
+            "texte": [
+              "Les dons sont libres, ponctuels ou mensuels. Un don mensuel peut être arrêté : la procédure sera précisée.",
+              "En cas d'erreur de montant, contactez-nous : le don pourra être remboursé tant qu'il n'a pas été transféré au COVIDEBA."
+            ]
+          },
+          {
+            "titre": "Attestation fiscale",
+            "texte": [
+              "L'attestation est délivrée par l'institution agréée qui reçoit les dons, selon ses conditions et la loi en vigueur."
+            ]
+          },
+          {
+            "titre": "Informations publiées",
+            "texte": [
+              "Pendant la préversion, les montants et les projets affichés sont des exemples."
+            ]
+          },
+          {
+            "titre": "Modifications",
+            "texte": [
+              "Ces conditions peuvent évoluer. La date de la dernière mise à jour est indiquée en haut de la page."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

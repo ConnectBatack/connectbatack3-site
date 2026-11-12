@@ -35,7 +35,7 @@ export default async function MiseEnPage({ children, params }) {
         <p className="bandeau-preversion">{dict.preversion}</p>
         <EnTete dict={dict} lang={lang} />
         <main id="contenu">{children}</main>
-        <PiedDePage dict={dict} />
+        <PiedDePage dict={dict} lang={lang} />
         <BoutonLangue langue={lang} textes={textesLangue} />
       </body>
     </html>

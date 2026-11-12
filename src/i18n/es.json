@@ -10,7 +10,11 @@
     "apropos": "Quiénes somos",
     "don": "Donar",
     "connexion": "Espacio COVIDEBA",
-    "accueil": "Volver al inicio"
+    "accueil": "Volver al inicio",
+    "histoire": "Nuestra historia",
+    "transparence": "Transparencia",
+    "menu": "Menú",
+    "diapos": "Elegir una foto"
   },
   "accueil": {
     "surtitre": "Batack, oeste de Camerún",
@@ -48,28 +52,36 @@
     "appelTexte": "Puedes donar sin crear una cuenta, una sola vez o cada mes.",
     "prochainBesoin": "Próxima necesidad que financiar",
     "besoinTitre": "Tejado del centro de salud",
-    "besoinTexte": "Primera etapa de las obras: proteger el edificio antes de instalar la electricidad y el material médico."
+    "besoinTexte": "Primera etapa de las obras: proteger el edificio antes de instalar la electricidad y el material médico.",
+    "parallaxeTitre": "Tres fases, una misma aldea",
+    "parallaxeTexte": "De la estación de carga solar al centro de salud, cada fase parte de una necesidad expresada por la aldea de Batack.",
+    "parallaxeLien": "Leer nuestra historia",
+    "aproposLien": "Conocer quiénes somos"
   },
   "projets": {
     "dispensaire": {
       "categorie": "Salud",
       "titre": "Puesta en marcha del centro de salud",
-      "description": "Primero el tejado, después la instalación eléctrica y, por último, el material de análisis y de radiología."
+      "description": "Primero el tejado, después la instalación eléctrica y, por último, el material de análisis y de radiología.",
+      "accroche": "Abrir el centro de salud de la aldea"
     },
     "batteries": {
       "categorie": "Energía",
       "titre": "Mantenimiento de las baterías solares",
-      "description": "Las baterías de la microrred alimentan el centro de salud. Hay que mantenerlas y, más adelante, sustituirlas."
+      "description": "Las baterías de la microrred alimentan el centro de salud. Hay que mantenerlas y, más adelante, sustituirlas.",
+      "accroche": "Mantener la luz y el frío en el centro de salud"
     },
     "ecole": {
       "categorie": "Educación",
       "titre": "Salario de un maestro",
-      "description": "Pagar a un maestro para que los niños tengan clase todo el año."
+      "description": "Pagar a un maestro para que los niños tengan clase todo el año.",
+      "accroche": "Un maestro pagado todo el año"
     },
     "eau": {
       "categorie": "Agua",
       "titre": "Acceso al agua potable",
-      "description": "Ampliar la red de agua potable que el COVIDEBA empezó a construir."
+      "description": "Ampliar la red de agua potable que el COVIDEBA empezó a construir.",
+      "accroche": "Agua potable más cerca de casa"
     }
   },
   "exemple": "ejemplo",
@@ -152,7 +164,10 @@
   },
   "pied": {
     "texte": "ConnectBatack 3: COVIDEBA, Facultad Politécnica de Mons (UMONS) y ENSPY.",
-    "droits": "© 2026 COVIDEBA"
+    "droits": "© 2026 COVIDEBA",
+    "projet": "El proyecto",
+    "informations": "Información",
+    "suivre": "Seguir el proyecto"
   },
   "changementLangue": {
     "bouton": "Idioma",
@@ -160,5 +175,286 @@
     "texte": "Estas páginas se han traducido del francés. Si ves un error, avísanos, por favor.",
     "annuler": "Cancelar",
     "continuer": "Continuar"
+  },
+  "aCompleter": "por completar",
+  "noteExemple": "Importes de ejemplo, a la espera de las cifras del COVIDEBA.",
+  "photos": {
+    "batack-paysage": "Paisaje de la aldea de Batack",
+    "dispensaire-exterieur": "El edificio del centro de salud de Batack",
+    "dispensaire-interieur": "Interior del centro de salud, todavía en obras",
+    "installation-electrique": "Estudiantes y técnicos durante la instalación solar en el centro de salud, enero de 2026",
+    "cablage": "Cableado del cuadro eléctrico del centro de salud",
+    "panneau-solaire": "Panel solar instalado en el centro de salud",
+    "frigo-solaire": "El frigorífico solar para las vacunas",
+    "ecole-publique": "Alumnos y docentes delante de la escuela pública de Batack",
+    "salle-de-classe": "Un aula de Batack",
+    "marche": "La plaza del mercado en construcción",
+    "elevage": "La cría de cerdos de la aldea",
+    "pisciculture": "Los estanques de piscicultura",
+    "accueil-chants": "Recibimiento del equipo con cantos tradicionales en Batack",
+    "station-recharge": "El equipo delante de la estación de carga solar de Connect Batack 1",
+    "equipe-dispensaire": "El equipo en el centro de salud durante la misión de enero de 2026",
+    "equipe-batack": "Los equipos de Mons y de Yaundé en Batack, enero de 2026",
+    "rencontre-village": "Encuentro en Batack durante la misión de enero de 2026",
+    "carte-cameroun": "Mapa de Camerún con la ubicación de Batack"
+  },
+  "histoire": {
+    "titre": "Nuestra historia",
+    "intro": "Desde 2024, estudiantes de ingeniería de Mons y de Yaundé trabajan con el comité de la aldea de Batack. Cada fase parte de una necesidad expresada por la aldea, y la siguiente comprueba que la anterior sigue funcionando.",
+    "friseTitre": "Las grandes etapas",
+    "etapes": [
+      {
+        "date": "2017",
+        "titre": "Una colaboración entre escuelas de ingeniería",
+        "texte": "La Facultad Politécnica de Mons empieza a trabajar con cuatro universidades cameruneses, en Yaundé y en Duala, sobre la formación de ingenieros. Estos intercambios dan a conocer las necesidades de aldeas alejadas de las ciudades, entre ellas Batack."
+      },
+      {
+        "date": "2024",
+        "titre": "Nace Connect Batack",
+        "texte": "Se ponen en marcha los primeros microproyectos estudiantiles con el apoyo de la ARES. Reúnen a la Facultad Politécnica de Mons (UMONS), a la Escuela Nacional Superior Politécnica de Yaundé (ENSPY) y al COVIDEBA."
+      },
+      {
+        "date": "Connect Batack 1",
+        "titre": "Una estación de carga solar",
+        "texte": "Primera realización: una estación pública de carga solar para teléfonos y lámparas, en una aldea sin una red eléctrica fiable. Un año después, el equipo siguiente comprobó que seguía funcionando.",
+        "photo": "station-recharge",
+        "dateACompleter": true
+      },
+      {
+        "date": "Enero de 2026",
+        "titre": "Connect Batack 2: energía para el centro de salud",
+        "texte": "Del 24 al 30 de enero de 2026, el equipo instala en el centro de salud un sistema solar autónomo: un frigorífico para conservar las vacunas e iluminación para la atención nocturna. El trabajo se hace con técnicos locales y el COVIDEBA, para que la aldea pueda mantener la instalación.",
+        "photo": "installation-electrique"
+      },
+      {
+        "date": "2026-2027",
+        "titre": "Connect Batack 3: financiar y planificar",
+        "texte": "El centro de salud está construido pero aún no funciona, y el hospital más cercano está a 20 km. Esta última fase con la UMONS crea este sitio de donaciones, prepara el expediente técnico del centro de salud y busca financiación duradera, en Europa y en Camerún. Está prevista una misión a la aldea en enero de 2027.",
+        "photo": "dispensaire-exterieur"
+      }
+    ],
+    "aujourdhuiTitre": "Batack hoy",
+    "aujourdhuiIntro": "Batack es una aldea del país bamileké, en las tierras altas del oeste de Camerún. Sus habitantes, que se llaman a sí mismos el «pequeño pueblo de Batack», ya han llevado a cabo varios proyectos.",
+    "lieux": [
+      {
+        "photo": "ecole-publique",
+        "titre": "Las escuelas",
+        "texte": "Una escuela primaria con una sala de informática y, después, una escuela infantil construida con el apoyo de la cooperación italiana."
+      },
+      {
+        "photo": "salle-de-classe",
+        "titre": "Las aulas",
+        "texte": "Oscuras y estrechas: una necesidad detectada en el diagnóstico de enero de 2026."
+      },
+      {
+        "photo": "marche",
+        "titre": "La plaza del mercado",
+        "texte": "En construcción durante la misión de enero de 2026."
+      },
+      {
+        "photo": "elevage",
+        "titre": "La ganadería",
+        "texte": "La cría de cerdos es una de las actividades de la aldea."
+      },
+      {
+        "photo": "pisciculture",
+        "titre": "La piscicultura",
+        "texte": "Estanques para la cría de peces."
+      },
+      {
+        "photo": "dispensaire-interieur",
+        "titre": "El centro de salud",
+        "texte": "El edificio existe. Falta ponerlo en funcionamiento."
+      }
+    ],
+    "appelTitre": "Lo que viene depende de ti",
+    "appelTexte": "Cada donación financia una etapa concreta, que luego se publica en este sitio."
+  },
+  "transparence": {
+    "titre": "Transparencia",
+    "intro": "Debes poder comprobar qué pasa con cada euro. Esta página reúne los importes recibidos, los gastos y la forma en que decide el comité.",
+    "chiffresTitre": "En cifras",
+    "chiffres": [
+      "recaudados",
+      "donaciones recibidas",
+      "gastos publicados"
+    ],
+    "miseAJour": "Cifras de ejemplo. Se calcularán automáticamente a partir del registro.",
+    "repartitionTitre": "¿Qué pasa con tu donación?",
+    "repartitionIntro": "Tu donación se reparte en tres partes. Los porcentajes de abajo son ejemplos: las cifras reales se publicarán tras el primer año.",
+    "parts": [
+      "Proyectos de la aldea",
+      "Comisiones de pago (Stripe, banco)",
+      "Otros gastos (sitio web, transferencias a Camerún)"
+    ],
+    "methode": "Método: las comisiones de pago son las que cobran Stripe y el banco. Los otros gastos incluyen el alojamiento del sitio web y las transferencias de dinero a Camerún. No existe una definición única de «gastos»: siempre indicaremos qué contiene cada parte.",
+    "registreTitre": "El registro de gastos",
+    "registreIntro": "Cada gasto importante se publica con su factura o una foto, y con el acta de la reunión del COVIDEBA que lo aprobó. Un asiento nunca se borra: un error se corrige con un nuevo asiento, también visible.",
+    "colonnes": [
+      "Fecha",
+      "Gasto",
+      "Proyecto",
+      "Importe",
+      "Justificante"
+    ],
+    "registreVide": "Los primeros gastos aparecerán aquí en cuanto funcione el espacio de gestión.",
+    "decisionTitre": "Cómo decide el comité",
+    "decisionPoints": [
+      "Las prioridades las fija el COVIDEBA, junto con el personal sanitario de la aldea.",
+      "Una herramienta de cálculo propone el orden de los gastos respetando el orden de las obras: el tejado va antes que el material médico.",
+      "Siempre se mantiene en caja una reserva de seguridad, fijada por la jefatura.",
+      "La decisión final corresponde al comité: la herramienta propone, el comité decide."
+    ],
+    "rapportsTitre": "Informes",
+    "rapportsTexte": "Aquí se publicará en PDF un balance anual, con las cuentas."
+  },
+  "apropos": {
+    "titre": "Quiénes somos",
+    "intro": "Este sitio lo edita el comité de la aldea. Estudiantes de ingeniería de Bélgica y de Camerún lo diseñaron junto con el comité.",
+    "covidebaTitre": "El COVIDEBA",
+    "covidebaTexte": [
+      "El Comité de Desarrollo de la Aldea de Batack (COVIDEBA) reúne a habitantes y miembros de la comunidad de Batack. Lleva los proyectos de la aldea y decide cómo se usan los fondos.",
+      "Lo preside el Dr. Anatole Chengoué."
+    ],
+    "equipesTitre": "Los equipos de estudiantes",
+    "equipesTexte": "Connect Batack 3 reúne a estudiantes de la Facultad Politécnica de la Universidad de Mons (informática y gestión, mecánica, energía) y de la Escuela Nacional Superior Politécnica de Yaundé (ingeniería industrial, mecánica, informática).",
+    "etudiants": "La lista de miembros se publicará próximamente.",
+    "encadrantsTitre": "La supervisión",
+    "roles": {
+      "dehombreux": "Facultad Politécnica de Mons (UMONS)",
+      "fokam": "Escuela Nacional Superior Politécnica de Yaundé (ENSPY)",
+      "chengoue": "Presidente del COVIDEBA"
+    },
+    "partenairesTitre": "Socios y financiadores",
+    "partenaires": {
+      "ares": "Academia de Investigación y Enseñanza Superior (Bélgica). Financia los microproyectos estudiantiles de cooperación.",
+      "solarly": "Empresa especializada en energía solar, socia de la instalación de enero de 2026."
+    },
+    "charteTitre": "Nuestra carta",
+    "charteIntro": "Los equipos de Mons y de Yaundé trabajan según cinco principios.",
+    "charte": [
+      "Respeto mutuo: cada miembro es un socio de pleno derecho, y las diferencias culturales son una riqueza.",
+      "Puntualidad y cumplimiento de los compromisos.",
+      "Decisiones compartidas: las decisiones importantes se debaten y las aprueban ambos equipos.",
+      "Reconocimiento del trabajo de cada uno y de los logros, incluso los pequeños.",
+      "Disponibilidad y transparencia: cada uno avisa con antelación en caso de ausencia, retraso o dificultad."
+    ]
+  },
+  "legal": {
+    "avertissement": "Versión provisional. Este texto se revisará y completará antes de abrir las donaciones reales.",
+    "miseAJour": "Última actualización: 12 de noviembre de 2026",
+    "pages": {
+      "mentions-legales": {
+        "titre": "Aviso legal",
+        "sections": [
+          {
+            "titre": "Editor",
+            "texte": [
+              "Comité de Desarrollo de la Aldea de Batack (COVIDEBA), Batack, oeste de Camerún.",
+              "Presidente: Dr. Anatole Chengoué.",
+              "Contacto: dirección de correo electrónico por completar."
+            ]
+          },
+          {
+            "titre": "Diseño",
+            "texte": [
+              "Sitio diseñado por los estudiantes del proyecto Connect Batack 3: Facultad Politécnica de la Universidad de Mons y Escuela Nacional Superior Politécnica de Yaundé."
+            ]
+          },
+          {
+            "titre": "Alojamiento",
+            "texte": [
+              "Vercel Inc., Estados Unidos (vercel.com). Dirección postal por completar."
+            ]
+          },
+          {
+            "titre": "Fotos",
+            "texte": [
+              "Fotos de las misiones Connect Batack, publicadas con el consentimiento de las personas fotografiadas."
+            ]
+          }
+        ]
+      },
+      "confidentialite": {
+        "titre": "Política de privacidad",
+        "sections": [
+          {
+            "titre": "Responsable del tratamiento",
+            "texte": [
+              "El COVIDEBA, editor del sitio (ver el aviso legal)."
+            ]
+          },
+          {
+            "titre": "Datos recogidos",
+            "texte": [
+              "Al donar: tu apellido, tu nombre (opcional) y tu correo electrónico.",
+              "Si pides un certificado fiscal: tu dirección postal, recogida por Stripe.",
+              "Tus datos bancarios solo se introducen en Stripe. Este sitio nunca los recibe."
+            ]
+          },
+          {
+            "titre": "Uso",
+            "texte": [
+              "Tramitar tu donación, enviarte un recibo y, si lo pediste, permitir que la institución autorizada que recibe las donaciones te envíe el certificado fiscal."
+            ]
+          },
+          {
+            "titre": "Plazo de conservación",
+            "texte": [
+              "Por completar."
+            ]
+          },
+          {
+            "titre": "Cookies",
+            "texte": [
+              "El sitio usa una sola cookie, «langue», que recuerda el idioma elegido durante un año. No hay cookies publicitarias ni herramientas de seguimiento."
+            ]
+          },
+          {
+            "titre": "Tus derechos",
+            "texte": [
+              "Puedes pedir el acceso a tus datos, su corrección o su supresión escribiendo a la dirección indicada en el aviso legal.",
+              "También puedes presentar una reclamación ante la Autoridad de Protección de Datos (Bélgica)."
+            ]
+          }
+        ]
+      },
+      "conditions": {
+        "titre": "Condiciones de uso",
+        "sections": [
+          {
+            "titre": "Objeto",
+            "texte": [
+              "Este sitio presenta los proyectos de la aldea de Batack y permite apoyarlos con una donación."
+            ]
+          },
+          {
+            "titre": "Donaciones",
+            "texte": [
+              "Las donaciones son libres, puntuales o mensuales. Una donación mensual se puede cancelar: el procedimiento se detallará.",
+              "Si te equivocaste de importe, contáctanos: la donación podrá reembolsarse mientras no se haya transferido al COVIDEBA."
+            ]
+          },
+          {
+            "titre": "Certificado fiscal",
+            "texte": [
+              "El certificado lo emite la institución autorizada que recibe las donaciones, según sus condiciones y la ley vigente."
+            ]
+          },
+          {
+            "titre": "Información publicada",
+            "texte": [
+              "Durante la versión preliminar, los importes y proyectos mostrados son ejemplos."
+            ]
+          },
+          {
+            "titre": "Cambios",
+            "texte": [
+              "Estas condiciones pueden cambiar. La fecha de la última actualización figura al principio de la página."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

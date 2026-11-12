@@ -10,7 +10,11 @@
     "apropos": "Over ons",
     "don": "Doneren",
     "connexion": "COVIDEBA-ruimte",
-    "accueil": "Terug naar de startpagina"
+    "accueil": "Terug naar de startpagina",
+    "histoire": "Ons verhaal",
+    "transparence": "Transparantie",
+    "menu": "Menu",
+    "diapos": "Kies een foto"
   },
   "accueil": {
     "surtitre": "Batack, West-Kameroen",
@@ -48,28 +52,36 @@
     "appelTexte": "U kunt doneren zonder account, eenmalig of elke maand.",
     "prochainBesoin": "Volgende te financieren behoefte",
     "besoinTitre": "Dak van het gezondheidscentrum",
-    "besoinTexte": "Eerste stap van de werken: het gebouw beschermen voordat de elektriciteit en het medisch materiaal geïnstalleerd worden."
+    "besoinTexte": "Eerste stap van de werken: het gebouw beschermen voordat de elektriciteit en het medisch materiaal geïnstalleerd worden.",
+    "parallaxeTitre": "Drie fasen, één dorp",
+    "parallaxeTexte": "Van het oplaadstation op zonne-energie tot het gezondheidscentrum: elke fase vertrekt van een behoefte die het dorp Batack zelf heeft aangegeven.",
+    "parallaxeLien": "Lees ons verhaal",
+    "aproposLien": "Ontdek wie we zijn"
   },
   "projets": {
     "dispensaire": {
       "categorie": "Gezondheid",
       "titre": "Ingebruikname van het gezondheidscentrum",
-      "description": "Eerst het dak, dan de elektrische bedrading, en daarna het materiaal voor analyses en radiologie."
+      "description": "Eerst het dak, dan de elektrische bedrading, en daarna het materiaal voor analyses en radiologie.",
+      "accroche": "Het gezondheidscentrum van het dorp openen"
     },
     "batteries": {
       "categorie": "Energie",
       "titre": "Onderhoud van de zonnebatterijen",
-      "description": "De batterijen van het microgrid voeden het gezondheidscentrum. Ze moeten onderhouden en later vervangen worden."
+      "description": "De batterijen van het microgrid voeden het gezondheidscentrum. Ze moeten onderhouden en later vervangen worden.",
+      "accroche": "Licht en koeling in het gezondheidscentrum behouden"
     },
     "ecole": {
       "categorie": "Onderwijs",
       "titre": "Loon van een leerkracht",
-      "description": "Een leerkracht betalen zodat de kinderen het hele jaar les hebben."
+      "description": "Een leerkracht betalen zodat de kinderen het hele jaar les hebben.",
+      "accroche": "Een leerkracht die het hele jaar betaald wordt"
     },
     "eau": {
       "categorie": "Water",
       "titre": "Toegang tot drinkwater",
-      "description": "Het drinkwaternet uitbreiden dat het COVIDEBA begonnen is aan te leggen."
+      "description": "Het drinkwaternet uitbreiden dat het COVIDEBA begonnen is aan te leggen.",
+      "accroche": "Drinkwater dichter bij huis"
     }
   },
   "exemple": "voorbeeld",
@@ -152,7 +164,10 @@
   },
   "pied": {
     "texte": "ConnectBatack 3: COVIDEBA, Polytechnische Faculteit van Bergen (UMONS) en ENSPY.",
-    "droits": "© 2026 COVIDEBA"
+    "droits": "© 2026 COVIDEBA",
+    "projet": "Het project",
+    "informations": "Informatie",
+    "suivre": "Het project volgen"
   },
   "changementLangue": {
     "bouton": "Taal",
@@ -160,5 +175,286 @@
     "texte": "Deze pagina's zijn vertaald uit het Frans. Ziet u een fout? Laat het ons weten.",
     "annuler": "Annuleren",
     "continuer": "Doorgaan"
+  },
+  "aCompleter": "aan te vullen",
+  "noteExemple": "Voorbeeldbedragen, in afwachting van de cijfers van het COVIDEBA.",
+  "photos": {
+    "batack-paysage": "Landschap van het dorp Batack",
+    "dispensaire-exterieur": "Het gebouw van het gezondheidscentrum van Batack",
+    "dispensaire-interieur": "Binnenkant van het gezondheidscentrum, nog in aanbouw",
+    "installation-electrique": "Studenten en technici tijdens de installatie van zonne-energie in het gezondheidscentrum, januari 2026",
+    "cablage": "Bekabeling van het elektrisch bord van het gezondheidscentrum",
+    "panneau-solaire": "Zonnepaneel op het gezondheidscentrum",
+    "frigo-solaire": "De koelkast op zonne-energie voor vaccins",
+    "ecole-publique": "Leerlingen en leerkrachten voor de openbare school van Batack",
+    "salle-de-classe": "Een klaslokaal in Batack",
+    "marche": "Het marktplein in aanbouw",
+    "elevage": "De varkenshouderij van het dorp",
+    "pisciculture": "De visvijvers",
+    "accueil-chants": "Het team wordt in Batack verwelkomd met traditionele liederen",
+    "station-recharge": "Het team voor het oplaadstation op zonne-energie van Connect Batack 1",
+    "equipe-dispensaire": "Het team in het gezondheidscentrum tijdens de missie van januari 2026",
+    "equipe-batack": "De teams uit Bergen en Yaoundé in Batack, januari 2026",
+    "rencontre-village": "Ontmoeting in Batack tijdens de missie van januari 2026",
+    "carte-cameroun": "Kaart van Kameroen met de ligging van Batack"
+  },
+  "histoire": {
+    "titre": "Ons verhaal",
+    "intro": "Sinds 2024 werken ingenieursstudenten uit Bergen en Yaoundé samen met het dorpscomité van Batack. Elke fase vertrekt van een behoefte van het dorp, en de volgende fase controleert of de vorige nog werkt.",
+    "friseTitre": "De belangrijkste stappen",
+    "etapes": [
+      {
+        "date": "2017",
+        "titre": "Een samenwerking tussen ingenieursscholen",
+        "texte": "De Polytechnische Faculteit van Bergen begint samen te werken met vier Kameroense universiteiten, in Yaoundé en Douala, rond de opleiding van ingenieurs. Zo komen de noden van dorpen ver van de steden aan het licht, waaronder Batack."
+      },
+      {
+        "date": "2024",
+        "titre": "Start van Connect Batack",
+        "texte": "De eerste microprojecten van studenten starten met de steun van ARES. Ze brengen de Polytechnische Faculteit van Bergen (UMONS), de Nationale Polytechnische Hogeschool van Yaoundé (ENSPY) en het COVIDEBA samen."
+      },
+      {
+        "date": "Connect Batack 1",
+        "titre": "Een oplaadstation op zonne-energie",
+        "texte": "Eerste realisatie: een openbaar oplaadstation op zonne-energie voor telefoons en lampen, in een dorp zonder betrouwbaar elektriciteitsnet. Een jaar later controleerde het volgende team dat het nog werkte.",
+        "photo": "station-recharge",
+        "dateACompleter": true
+      },
+      {
+        "date": "Januari 2026",
+        "titre": "Connect Batack 2: energie voor het gezondheidscentrum",
+        "texte": "Van 24 tot 30 januari 2026 installeert het team een autonoom zonnesysteem in het gezondheidscentrum: een koelkast om vaccins te bewaren en verlichting voor de zorg 's nachts. Het werk gebeurt samen met lokale technici en het COVIDEBA, zodat het dorp de installatie zelf kan onderhouden.",
+        "photo": "installation-electrique"
+      },
+      {
+        "date": "2026-2027",
+        "titre": "Connect Batack 3: financieren en plannen",
+        "texte": "Het gezondheidscentrum is gebouwd maar nog niet in gebruik, en het dichtstbijzijnde ziekenhuis ligt op 20 km. Deze laatste fase met UMONS bouwt deze donatiesite, bereidt het technisch dossier van het gezondheidscentrum voor en zoekt duurzame financiering, in Europa en in Kameroen. In januari 2027 is een missie naar het dorp gepland.",
+        "photo": "dispensaire-exterieur"
+      }
+    ],
+    "aujourdhuiTitre": "Batack vandaag",
+    "aujourdhuiIntro": "Batack is een dorp in het Bamileke-gebied, in de hooglanden van West-Kameroen. De inwoners, die zichzelf het \"kleine volk van Batack\" noemen, hebben al verschillende projecten uitgevoerd.",
+    "lieux": [
+      {
+        "photo": "ecole-publique",
+        "titre": "De scholen",
+        "texte": "Een lagere school met een computerlokaal, en daarna een kleuterschool gebouwd met de steun van de Italiaanse ontwikkelingssamenwerking."
+      },
+      {
+        "photo": "salle-de-classe",
+        "titre": "De klaslokalen",
+        "texte": "Donker en krap: een nood die tijdens de analyse van januari 2026 werd vastgesteld."
+      },
+      {
+        "photo": "marche",
+        "titre": "Het marktplein",
+        "texte": "In aanbouw tijdens de missie van januari 2026."
+      },
+      {
+        "photo": "elevage",
+        "titre": "De veeteelt",
+        "texte": "Varkenshouderij is een van de activiteiten van het dorp."
+      },
+      {
+        "photo": "pisciculture",
+        "titre": "De viskweek",
+        "texte": "Vijvers om vis te kweken."
+      },
+      {
+        "photo": "dispensaire-interieur",
+        "titre": "Het gezondheidscentrum",
+        "texte": "Het gebouw staat er. Het moet nog in gebruik genomen worden."
+      }
+    ],
+    "appelTitre": "Het vervolg schrijven we samen met u",
+    "appelTexte": "Elke gift financiert een concrete stap, die daarna op deze site wordt gepubliceerd."
+  },
+  "transparence": {
+    "titre": "Transparantie",
+    "intro": "U moet kunnen nagaan wat er met elke euro gebeurt. Deze pagina toont de ontvangen bedragen, de uitgaven en hoe het comité beslist.",
+    "chiffresTitre": "In cijfers",
+    "chiffres": [
+      "opgehaald",
+      "ontvangen giften",
+      "gepubliceerde uitgaven"
+    ],
+    "miseAJour": "Voorbeeldcijfers. Ze worden automatisch berekend op basis van het register.",
+    "repartitionTitre": "Wat gebeurt er met uw gift?",
+    "repartitionIntro": "Uw gift wordt in drie delen verdeeld. De percentages hieronder zijn voorbeelden: de echte cijfers worden na het eerste jaar gepubliceerd.",
+    "parts": [
+      "Projecten van het dorp",
+      "Betaalkosten (Stripe, bank)",
+      "Andere kosten (website, overschrijvingen naar Kameroen)"
+    ],
+    "methode": "Methode: de betaalkosten zijn de kosten die Stripe en de bank aanrekenen. De andere kosten omvatten de hosting van de website en de overschrijvingen naar Kameroen. Er bestaat geen eenduidige definitie van \"kosten\": we vermelden altijd wat elk deel bevat.",
+    "registreTitre": "Het uitgavenregister",
+    "registreIntro": "Elke belangrijke uitgave wordt gepubliceerd met de factuur of een foto, en met het verslag van de vergadering van het COVIDEBA die ze heeft goedgekeurd. Een boeking wordt nooit gewist: een fout wordt rechtgezet met een nieuwe boeking, die ook zichtbaar is.",
+    "colonnes": [
+      "Datum",
+      "Uitgave",
+      "Project",
+      "Bedrag",
+      "Bewijsstuk"
+    ],
+    "registreVide": "De eerste uitgaven verschijnen hier zodra de beheerruimte in gebruik is.",
+    "decisionTitre": "Hoe het comité beslist",
+    "decisionPoints": [
+      "De prioriteiten worden vastgelegd door het COVIDEBA, samen met de zorgverleners van het dorp.",
+      "Een rekeninstrument stelt de volgorde van de uitgaven voor en houdt rekening met de volgorde van de werken: eerst het dak, dan het medisch materiaal.",
+      "Er blijft altijd een veiligheidsreserve in kas, vastgelegd door het dorpshoofd.",
+      "De eindbeslissing ligt bij het comité: het instrument stelt voor, het comité beslist."
+    ],
+    "rapportsTitre": "Verslagen",
+    "rapportsTexte": "Een jaarverslag met de rekeningen wordt hier als pdf gepubliceerd."
+  },
+  "apropos": {
+    "titre": "Over ons",
+    "intro": "Deze site wordt uitgegeven door het dorpscomité. Ingenieursstudenten uit België en Kameroen hebben hem samen met het comité ontworpen.",
+    "covidebaTitre": "Het COVIDEBA",
+    "covidebaTexte": [
+      "Het Ontwikkelingscomité van het Dorp Batack (COVIDEBA) brengt inwoners en leden van de gemeenschap van Batack samen. Het draagt de projecten van het dorp en beslist hoe de middelen worden gebruikt.",
+      "Voorzitter is dr. Anatole Chengoué."
+    ],
+    "equipesTitre": "De studententeams",
+    "equipesTexte": "Connect Batack 3 brengt studenten samen van de Polytechnische Faculteit van de Universiteit van Bergen (informatica en beheer, mechanica, energie) en van de Nationale Polytechnische Hogeschool van Yaoundé (industriële ingenieurswetenschappen, mechanica, informatica).",
+    "etudiants": "De ledenlijst wordt binnenkort gepubliceerd.",
+    "encadrantsTitre": "Begeleiding",
+    "roles": {
+      "dehombreux": "Polytechnische Faculteit van Bergen (UMONS)",
+      "fokam": "Nationale Polytechnische Hogeschool van Yaoundé (ENSPY)",
+      "chengoue": "Voorzitter van het COVIDEBA"
+    },
+    "partenairesTitre": "Partners en financiers",
+    "partenaires": {
+      "ares": "Academie voor Onderzoek en Hoger Onderwijs (België). Financiert microprojecten van studenten in ontwikkelingssamenwerking.",
+      "solarly": "Bedrijf gespecialiseerd in zonne-energie, partner van de installatie van januari 2026."
+    },
+    "charteTitre": "Ons charter",
+    "charteIntro": "De teams uit Bergen en Yaoundé werken volgens vijf principes.",
+    "charte": [
+      "Wederzijds respect: elk lid is een volwaardige partner, en culturele verschillen zijn een rijkdom.",
+      "Stiptheid en het nakomen van afspraken.",
+      "Gedeelde beslissingen: belangrijke beslissingen worden besproken en goedgekeurd door beide teams.",
+      "Erkenning voor ieders werk en voor elk succes, ook de kleine.",
+      "Beschikbaarheid en transparantie: iedereen meldt vooraf een afwezigheid, vertraging of moeilijkheid."
+    ]
+  },
+  "legal": {
+    "avertissement": "Voorlopige versie. Deze tekst wordt nagelezen en aangevuld voordat echte giften mogelijk zijn.",
+    "miseAJour": "Laatst bijgewerkt: 12 november 2026",
+    "pages": {
+      "mentions-legales": {
+        "titre": "Wettelijke vermeldingen",
+        "sections": [
+          {
+            "titre": "Uitgever",
+            "texte": [
+              "Ontwikkelingscomité van het Dorp Batack (COVIDEBA), Batack, West-Kameroen.",
+              "Voorzitter: dr. Anatole Chengoué.",
+              "Contact: e-mailadres aan te vullen."
+            ]
+          },
+          {
+            "titre": "Ontwerp",
+            "texte": [
+              "Site ontworpen door de studenten van het project Connect Batack 3: Polytechnische Faculteit van de Universiteit van Bergen en Nationale Polytechnische Hogeschool van Yaoundé."
+            ]
+          },
+          {
+            "titre": "Hosting",
+            "texte": [
+              "Vercel Inc., Verenigde Staten (vercel.com). Postadres aan te vullen."
+            ]
+          },
+          {
+            "titre": "Foto's",
+            "texte": [
+              "Foto's van de Connect Batack-missies, gepubliceerd met toestemming van de gefotografeerde personen."
+            ]
+          }
+        ]
+      },
+      "confidentialite": {
+        "titre": "Privacybeleid",
+        "sections": [
+          {
+            "titre": "Verwerkingsverantwoordelijke",
+            "texte": [
+              "Het COVIDEBA, uitgever van de site (zie de wettelijke vermeldingen)."
+            ]
+          },
+          {
+            "titre": "Verzamelde gegevens",
+            "texte": [
+              "Bij een gift: uw achternaam, uw voornaam (facultatief) en uw e-mailadres.",
+              "Als u een fiscaal attest vraagt: uw postadres, verzameld door Stripe.",
+              "Uw bankgegevens worden alleen bij Stripe ingevoerd. Deze site ontvangt ze nooit."
+            ]
+          },
+          {
+            "titre": "Gebruik",
+            "texte": [
+              "Uw gift verwerken, u een ontvangstbewijs sturen en, als u erom gevraagd hebt, de erkende instelling die de giften ontvangt in staat stellen u een fiscaal attest te sturen."
+            ]
+          },
+          {
+            "titre": "Bewaartermijn",
+            "texte": [
+              "Aan te vullen."
+            ]
+          },
+          {
+            "titre": "Cookies",
+            "texte": [
+              "De site gebruikt één cookie, \"langue\", die de gekozen taal een jaar lang onthoudt. Er zijn geen advertentiecookies en geen volgsystemen."
+            ]
+          },
+          {
+            "titre": "Uw rechten",
+            "texte": [
+              "U kunt inzage, verbetering of verwijdering van uw gegevens vragen door te schrijven naar het adres in de wettelijke vermeldingen.",
+              "U kunt ook een klacht indienen bij de Gegevensbeschermingsautoriteit (België)."
+            ]
+          }
+        ]
+      },
+      "conditions": {
+        "titre": "Gebruiksvoorwaarden",
+        "sections": [
+          {
+            "titre": "Doel",
+            "texte": [
+              "Deze site stelt de projecten van het dorp Batack voor en maakt het mogelijk ze met een gift te steunen."
+            ]
+          },
+          {
+            "titre": "Giften",
+            "texte": [
+              "Giften zijn vrijwillig, eenmalig of maandelijks. Een maandelijkse gift kan worden stopgezet: de procedure wordt nog verduidelijkt.",
+              "Hebt u zich in het bedrag vergist, neem dan contact met ons op: de gift kan worden terugbetaald zolang ze niet aan het COVIDEBA is overgemaakt."
+            ]
+          },
+          {
+            "titre": "Fiscaal attest",
+            "texte": [
+              "Het attest wordt uitgereikt door de erkende instelling die de giften ontvangt, volgens haar voorwaarden en de geldende wet."
+            ]
+          },
+          {
+            "titre": "Gepubliceerde informatie",
+            "texte": [
+              "Tijdens de voorlopige versie zijn de getoonde bedragen en projecten voorbeelden."
+            ]
+          },
+          {
+            "titre": "Wijzigingen",
+            "texte": [
+              "Deze voorwaarden kunnen wijzigen. De datum van de laatste wijziging staat bovenaan de pagina."
+            ]
+          }
+        ]
+      }
+    }
   }
 }

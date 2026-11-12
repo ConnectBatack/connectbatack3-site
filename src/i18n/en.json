@@ -10,7 +10,11 @@
     "apropos": "About us",
     "don": "Donate",
     "connexion": "COVIDEBA area",
-    "accueil": "Back to home"
+    "accueil": "Back to home",
+    "histoire": "Our story",
+    "transparence": "Transparency",
+    "menu": "Menu",
+    "diapos": "Choose a photo"
   },
   "accueil": {
     "surtitre": "Batack, West Cameroon",
@@ -48,28 +52,36 @@
     "appelTexte": "You can donate without creating an account, once or every month.",
     "prochainBesoin": "Next need to fund",
     "besoinTitre": "Health centre roof",
-    "besoinTexte": "First step of the works: protect the building before installing electricity and medical equipment."
+    "besoinTexte": "First step of the works: protect the building before installing electricity and medical equipment.",
+    "parallaxeTitre": "Three phases, one village",
+    "parallaxeTexte": "From the solar charging station to the health centre, each phase starts from a need expressed by the village of Batack.",
+    "parallaxeLien": "Read our story",
+    "aproposLien": "Find out who we are"
   },
   "projets": {
     "dispensaire": {
       "categorie": "Health",
       "titre": "Opening the health centre",
-      "description": "First the roof, then the electrical wiring, then the laboratory and X-ray equipment."
+      "description": "First the roof, then the electrical wiring, then the laboratory and X-ray equipment.",
+      "accroche": "Open the village health centre"
     },
     "batteries": {
       "categorie": "Energy",
       "titre": "Solar battery maintenance",
-      "description": "The microgrid batteries power the health centre. They must be maintained, then replaced."
+      "description": "The microgrid batteries power the health centre. They must be maintained, then replaced.",
+      "accroche": "Keep light and cold storage at the health centre"
     },
     "ecole": {
       "categorie": "Education",
       "titre": "A teacher's salary",
-      "description": "Pay a teacher so that the children have classes all year round."
+      "description": "Pay a teacher so that the children have classes all year round.",
+      "accroche": "A teacher paid all year round"
     },
     "eau": {
       "categorie": "Water",
       "titre": "Access to drinking water",
-      "description": "Extend the drinking water network that the COVIDEBA has started to build."
+      "description": "Extend the drinking water network that the COVIDEBA has started to build.",
+      "accroche": "Clean water closer to home"
     }
   },
   "exemple": "example",
@@ -152,7 +164,10 @@
   },
   "pied": {
     "texte": "ConnectBatack 3: COVIDEBA, Faculty of Engineering of Mons (UMONS) and ENSPY.",
-    "droits": "© 2026 COVIDEBA"
+    "droits": "© 2026 COVIDEBA",
+    "projet": "The project",
+    "informations": "Information",
+    "suivre": "Follow the project"
   },
   "changementLangue": {
     "bouton": "Language",
@@ -160,5 +175,286 @@
     "texte": "These pages were translated from French. If you notice a mistake, please let us know.",
     "annuler": "Cancel",
     "continuer": "Continue"
+  },
+  "aCompleter": "to be completed",
+  "noteExemple": "Example amounts, until the COVIDEBA provides the real figures.",
+  "photos": {
+    "batack-paysage": "Landscape of the village of Batack",
+    "dispensaire-exterieur": "The Batack health centre building",
+    "dispensaire-interieur": "Inside the health centre, still under construction",
+    "installation-electrique": "Students and technicians installing solar power at the health centre, January 2026",
+    "cablage": "Wiring the health centre's electrical panel",
+    "panneau-solaire": "Solar panel installed at the health centre",
+    "frigo-solaire": "The solar refrigerator for vaccines",
+    "ecole-publique": "Pupils and teachers in front of the Batack public school",
+    "salle-de-classe": "A classroom in Batack",
+    "marche": "The market square under construction",
+    "elevage": "The village pig farm",
+    "pisciculture": "The fish farming ponds",
+    "accueil-chants": "The team welcomed with traditional songs in Batack",
+    "station-recharge": "The team in front of the Connect Batack 1 solar charging station",
+    "equipe-dispensaire": "The team at the health centre during the January 2026 mission",
+    "equipe-batack": "The Mons and Yaoundé teams in Batack, January 2026",
+    "rencontre-village": "Meeting in Batack during the January 2026 mission",
+    "carte-cameroun": "Map of Cameroon showing Batack"
+  },
+  "histoire": {
+    "titre": "Our story",
+    "intro": "Since 2024, engineering students from Mons and Yaoundé have been working with the Batack village committee. Each phase starts from a need expressed by the village, and the next one checks that the previous one still works.",
+    "friseTitre": "Key milestones",
+    "etapes": [
+      {
+        "date": "2017",
+        "titre": "A partnership between engineering schools",
+        "texte": "The Faculty of Engineering of Mons starts working with four Cameroonian universities, in Yaoundé and Douala, on engineering education. These exchanges bring to light the needs of villages far from cities, including Batack."
+      },
+      {
+        "date": "2024",
+        "titre": "Connect Batack begins",
+        "texte": "The first student microprojects are launched with the support of ARES. They bring together the Faculty of Engineering of Mons (UMONS), the National Advanced School of Engineering of Yaoundé (ENSPY) and the COVIDEBA."
+      },
+      {
+        "date": "Connect Batack 1",
+        "titre": "A solar charging station",
+        "texte": "First achievement: a public solar charging station for phones and lamps, in a village without a reliable power grid. A year later, the next team checked that it was still working.",
+        "photo": "station-recharge",
+        "dateACompleter": true
+      },
+      {
+        "date": "January 2026",
+        "titre": "Connect Batack 2: power for the health centre",
+        "texte": "From 24 to 30 January 2026, the team installs a stand-alone solar system at the health centre: a refrigerator to store vaccines and lighting for night-time care. The work is done with local technicians and the COVIDEBA, so that the village can maintain the installation.",
+        "photo": "installation-electrique"
+      },
+      {
+        "date": "2026-2027",
+        "titre": "Connect Batack 3: funding and planning",
+        "texte": "The health centre is built but not yet in service, and the nearest hospital is 20 km away. This last phase with UMONS creates this donation site, prepares the technical file for the health centre and looks for lasting funding, in Europe and in Cameroon. A mission to the village is planned for January 2027.",
+        "photo": "dispensaire-exterieur"
+      }
+    ],
+    "aujourdhuiTitre": "Batack today",
+    "aujourdhuiIntro": "Batack is a village in Bamileke country, in the highlands of West Cameroon. Its inhabitants, who call themselves the \"little people of Batack\", have already carried out several projects.",
+    "lieux": [
+      {
+        "photo": "ecole-publique",
+        "titre": "The schools",
+        "texte": "A primary school with a computer room, then a nursery school built with the support of Italian cooperation."
+      },
+      {
+        "photo": "salle-de-classe",
+        "titre": "The classrooms",
+        "texte": "Dark and cramped: a need identified during the January 2026 assessment."
+      },
+      {
+        "photo": "marche",
+        "titre": "The market square",
+        "texte": "Under construction during the January 2026 mission."
+      },
+      {
+        "photo": "elevage",
+        "titre": "Livestock",
+        "texte": "Pig farming is one of the village's activities."
+      },
+      {
+        "photo": "pisciculture",
+        "titre": "Fish farming",
+        "texte": "Ponds for raising fish."
+      },
+      {
+        "photo": "dispensaire-interieur",
+        "titre": "The health centre",
+        "texte": "The building exists. It still needs to be made operational."
+      }
+    ],
+    "appelTitre": "What comes next depends on you",
+    "appelTexte": "Each donation funds a concrete step, which is then published on this site."
+  },
+  "transparence": {
+    "titre": "Transparency",
+    "intro": "You should be able to check what happens to every euro. This page brings together the amounts received, the expenses and the way the committee decides.",
+    "chiffresTitre": "In figures",
+    "chiffres": [
+      "raised",
+      "donations received",
+      "expenses published"
+    ],
+    "miseAJour": "Example figures. They will be calculated automatically from the register.",
+    "repartitionTitre": "What happens to your donation?",
+    "repartitionIntro": "Your donation is split into three parts. The percentages below are examples: the real figures will be published after the first year.",
+    "parts": [
+      "Village projects",
+      "Payment fees (Stripe, bank)",
+      "Other costs (website, transfers to Cameroon)"
+    ],
+    "methode": "Method: payment fees are those charged by Stripe and the bank. Other costs include website hosting and money transfers to Cameroon. There is no single definition of \"costs\": we will always state what each part contains.",
+    "registreTitre": "The expense register",
+    "registreIntro": "Every significant expense is published with its invoice or a photo, and with the minutes of the COVIDEBA meeting that approved it. An entry is never deleted: a mistake is corrected by a new entry, which is also visible.",
+    "colonnes": [
+      "Date",
+      "Expense",
+      "Project",
+      "Amount",
+      "Proof"
+    ],
+    "registreVide": "The first expenses will appear here once the management area is up and running.",
+    "decisionTitre": "How the committee decides",
+    "decisionPoints": [
+      "Priorities are set by the COVIDEBA, together with the village health workers.",
+      "A calculation tool suggests the order of expenses while respecting the order of the works: the roof comes before the medical equipment.",
+      "A safety reserve, set by the chieftaincy, always stays in the fund.",
+      "The final decision belongs to the committee: the tool suggests, the committee decides."
+    ],
+    "rapportsTitre": "Reports",
+    "rapportsTexte": "An annual report, with the accounts, will be published here as a PDF."
+  },
+  "apropos": {
+    "titre": "About us",
+    "intro": "This site is published by the village committee. Engineering students from Belgium and Cameroon designed it together with the committee.",
+    "covidebaTitre": "The COVIDEBA",
+    "covidebaTexte": [
+      "The Batack Village Development Committee (COVIDEBA) brings together residents and members of the Batack community. It leads the village projects and decides how funds are used.",
+      "It is chaired by Dr Anatole Chengoué."
+    ],
+    "equipesTitre": "The student teams",
+    "equipesTexte": "Connect Batack 3 brings together students from the Faculty of Engineering of the University of Mons (computer science and management, mechanics, energy) and from the National Advanced School of Engineering of Yaoundé (industrial engineering, mechanics, computer science).",
+    "etudiants": "The list of members will be published soon.",
+    "encadrantsTitre": "Supervision",
+    "roles": {
+      "dehombreux": "Faculty of Engineering of Mons (UMONS)",
+      "fokam": "National Advanced School of Engineering of Yaoundé (ENSPY)",
+      "chengoue": "Chair of the COVIDEBA"
+    },
+    "partenairesTitre": "Partners and funders",
+    "partenaires": {
+      "ares": "Academy of Research and Higher Education (Belgium). Funds student cooperation microprojects.",
+      "solarly": "Solar energy company, partner of the January 2026 installation."
+    },
+    "charteTitre": "Our charter",
+    "charteIntro": "The Mons and Yaoundé teams work according to five principles.",
+    "charte": [
+      "Mutual respect: each member is a full partner, and cultural differences are an asset.",
+      "Punctuality and keeping commitments.",
+      "Shared decisions: important decisions are discussed and approved by both teams.",
+      "Recognising everyone's work and every success, even small ones.",
+      "Availability and transparency: everyone gives advance notice of absence, delay or difficulty."
+    ]
+  },
+  "legal": {
+    "avertissement": "Provisional version. This text will be reviewed and completed before real donations open.",
+    "miseAJour": "Last updated: 12 November 2026",
+    "pages": {
+      "mentions-legales": {
+        "titre": "Legal notice",
+        "sections": [
+          {
+            "titre": "Publisher",
+            "texte": [
+              "Batack Village Development Committee (COVIDEBA), Batack, West Cameroon.",
+              "Chair: Dr Anatole Chengoué.",
+              "Contact: email address to be completed."
+            ]
+          },
+          {
+            "titre": "Design",
+            "texte": [
+              "Site designed by the students of the Connect Batack 3 project: Faculty of Engineering of the University of Mons and National Advanced School of Engineering of Yaoundé."
+            ]
+          },
+          {
+            "titre": "Hosting",
+            "texte": [
+              "Vercel Inc., United States (vercel.com). Postal address to be completed."
+            ]
+          },
+          {
+            "titre": "Photos",
+            "texte": [
+              "Photos from the Connect Batack missions, published with the consent of the people photographed."
+            ]
+          }
+        ]
+      },
+      "confidentialite": {
+        "titre": "Privacy policy",
+        "sections": [
+          {
+            "titre": "Data controller",
+            "texte": [
+              "The COVIDEBA, publisher of the site (see the legal notice)."
+            ]
+          },
+          {
+            "titre": "Data collected",
+            "texte": [
+              "When you donate: your last name, your first name (optional) and your email address.",
+              "If you ask for a tax certificate: your postal address, collected by Stripe.",
+              "Your bank details are entered only on Stripe. This site never receives them."
+            ]
+          },
+          {
+            "titre": "Use",
+            "texte": [
+              "To process your donation, send you a receipt and, if you asked for it, allow the approved institution that receives donations to send you a tax certificate."
+            ]
+          },
+          {
+            "titre": "Retention period",
+            "texte": [
+              "To be completed."
+            ]
+          },
+          {
+            "titre": "Cookies",
+            "texte": [
+              "The site uses a single cookie, \"langue\", which remembers your chosen language for one year. There are no advertising cookies and no tracking tools."
+            ]
+          },
+          {
+            "titre": "Your rights",
+            "texte": [
+              "You can ask to access, correct or delete your data by writing to the address given in the legal notice.",
+              "You can also file a complaint with the Data Protection Authority (Belgium)."
+            ]
+          }
+        ]
+      },
+      "conditions": {
+        "titre": "Terms of use",
+        "sections": [
+          {
+            "titre": "Purpose",
+            "texte": [
+              "This site presents the projects of the village of Batack and lets you support them with a donation."
+            ]
+          },
+          {
+            "titre": "Donations",
+            "texte": [
+              "Donations are voluntary, one-off or monthly. A monthly donation can be stopped: the procedure will be specified.",
+              "If you made a mistake in the amount, contact us: the donation can be refunded as long as it has not been transferred to the COVIDEBA."
+            ]
+          },
+          {
+            "titre": "Tax certificate",
+            "texte": [
+              "The certificate is issued by the approved institution that receives donations, under its own conditions and the law in force."
+            ]
+          },
+          {
+            "titre": "Published information",
+            "texte": [
+              "During the preview, the amounts and projects shown are examples."
+            ]
+          },
+          {
+            "titre": "Changes",
+            "texte": [
+              "These terms may change. The date of the last update is shown at the top of the page."
+            ]
+          }
+        ]
+      }
+    }
   }
 }
