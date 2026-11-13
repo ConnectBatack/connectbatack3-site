@@ -7,7 +7,7 @@ Pio prend en charge la connexion et le backend. Ce document propose une base pou
 | Fichier | Rôle aujourd'hui (maquette) | À faire |
 |---|---|---|
 | `src/lib/session.js` | `lireSession()` renvoie toujours un utilisateur fictif | lire et vérifier la vraie session ; renvoyer `null` si elle est absente ou expirée |
-| `src/app/[lang]/gestion/layout.js` | redirige déjà vers `/connexion` si `lireSession()` renvoie `null` | rien de plus pour la redirection ; vérifier aussi le **rôle** page par page |
+| `src/lib/session.js`, fonction `exigerSession(lang, roles)` | appelée au début de chaque page de gestion ; redirige vers `/connexion` s'il n'y a pas de session ou si le rôle n'est pas autorisé | passer la liste des rôles autorisés page par page (par exemple, seul le trésorier saisit les écritures) |
 | `src/components/FormulaireConnexion.js` | n'envoie rien, mène directement à la gestion | appeler la vraie route de connexion |
 | `src/proxy.js` | ajoute la langue à l'adresse | facultatif : redirection rapide si aucun cookie de session (la documentation de Next.js 16 réserve le proxy à ce genre de vérification « optimiste ») |
 
@@ -50,6 +50,13 @@ Les comptes sont **créés par un responsable**, sans inscription libre. Les don
 - **Supabase Auth**, si la base de données est sur Supabase.
 
 Il faut vérifier que la bibliothèque choisie est **toujours maintenue**, et qu'elle est compatible avec Next.js 16 : `proxy.js` remplace `middleware.js`, et `params` est asynchrone.
+
+## Registre de l'argent : deux idées pour la base de données
+
+Ces deux idées viennent d'un document qu'un camarade a partagé (`tips_perso.md`). Elles concernent la base de données plutôt que la connexion.
+
+1. **Un statut pour chaque écriture saisie à la main**, par exemple un don remis en liquide ou un paiement Mobile Money : *en attente*, *validée* ou *rejetée*. On enregistre aussi **qui** l'a validée ou rejetée, **quand**, et le **motif** en cas de rejet. Seules les écritures validées comptent dans les soldes. Cela rejoint la contresignature prévue dans les diagrammes UML et rend le registre plus transparent.
+2. **Les montants en valeurs exactes** : un type décimal en base (par exemple `NUMERIC(15,2)` pour les euros), ou des nombres entiers en centimes. Jamais de nombres à virgule flottante, qui produisent des erreurs d'arrondi (en JavaScript, 0,1 + 0,2 donne 0,30000000000000004). Pour le franc CFA, qui n'a pas de centimes, un entier suffit. La conversion se fait à la parité fixe : 1 € = 655,957 FCFA.
 
 ## Données personnelles (RGPD)
 
