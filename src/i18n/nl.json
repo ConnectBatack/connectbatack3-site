@@ -15,8 +15,6 @@
     "transparence": "Transparantie",
     "menu": "Menu",
     "diapos": "Kies een foto",
-    "diaporamaPause": "Pauzeren",
-    "diaporamaLecture": "Hervatten",
     "allerContenu": "Naar de inhoud"
   },
   "accueil": {
@@ -48,12 +46,12 @@
     ],
     "aproposTitre": "Over ons",
     "aproposTexte": [
-      "Het COVIDEBA is het ontwikkelingscomité van het dorp Batack. Het draagt de projecten van het dorp: drinkwater, scholen, gezondheid.",
+      "Het COVIDEBA is het ontwikkelingscomité van het dorp Batack. Het leidt de projecten van het dorp: drinkwater, scholen, gezondheid.",
       "ConnectBatack 3 brengt het COVIDEBA samen met studenten van de Polytechnische Faculteit van Bergen (UMONS) en de Nationale Polytechnische Hogeschool van Yaoundé (ENSPY). De eerste twee fasen hebben een zonne-microgrid geïnstalleerd en het gebouw van het gezondheidscentrum gebouwd."
     ],
     "appelTitre": "Eén gift, één concrete stap",
     "appelTexte": "U kunt doneren zonder account.",
-    "prochainBesoin": "Volgende te financieren behoefte",
+    "prochainBesoin": "Eerstvolgende behoefte",
     "besoinTitre": "Dak van het gezondheidscentrum",
     "besoinTexte": "Eerste stap van de werken: het gebouw beschermen voordat de elektriciteit en het medisch materiaal geïnstalleerd worden.",
     "parallaxeTitre": "Drie fasen, één dorp",
@@ -165,14 +163,14 @@
   },
   "connexion": {
     "titre": "COVIDEBA-ruimte",
-    "texte": "Deze ruimte is bedoeld voor de leden van het COVIDEBA en de begeleiders: register van het geld, taken en berekening van het investeringsplan. Ze is in aanbouw.",
+    "texte": "Deze ruimte is bedoeld voor de leden van het COVIDEBA en de begeleiders: financieel register, taken en berekening van het investeringsplan. Ze is in aanbouw.",
     "donateur": "Om te doneren hebt u geen account nodig.",
     "email": "E-mailadres",
     "motDePasse": "Wachtwoord",
     "bouton": "Aanmelden",
     "oubli": "Wachtwoord vergeten?",
     "oubliTexte": "Vraag een verantwoordelijke van het COVIDEBA om uw toegang opnieuw in te stellen.",
-    "maquette": "Maquette: het team voegt de echte aanmelding later toe. Voorlopig geven alle gegevens toegang en worden alleen fictieve gegevens getoond.",
+    "maquette": "Demoversie: het team voegt de echte aanmelding later toe. Voorlopig geven alle gegevens toegang en worden alleen fictieve gegevens getoond.",
     "reserve": "Ruimte voorbehouden aan de leden van het COVIDEBA en de begeleiders."
   },
   "pied": {
@@ -327,7 +325,7 @@
     "intro": "Deze site wordt uitgegeven door het dorpscomité. Ingenieursstudenten uit België en Kameroen hebben hem samen met het comité ontworpen.",
     "covidebaTitre": "Het COVIDEBA",
     "covidebaTexte": [
-      "Het Ontwikkelingscomité van het Dorp Batack (COVIDEBA) brengt inwoners en leden van de gemeenschap van Batack samen. Het draagt de projecten van het dorp en beslist hoe de middelen worden gebruikt.",
+      "Het Ontwikkelingscomité van het Dorp Batack (COVIDEBA) brengt inwoners en leden van de gemeenschap van Batack samen. Het leidt de projecten van het dorp en beslist hoe de middelen worden gebruikt.",
       "Voorzitter is dr. Anatole Chengoué."
     ],
     "equipesTitre": "De studententeams",
@@ -473,7 +471,7 @@
   },
   "projet": {
     "atteint": "van het doel bereikt",
-    "contributeurs": "gevers",
+    "contributeurs": "schenkers",
     "reste": "nog op te halen"
   },
   "partage": {

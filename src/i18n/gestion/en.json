@@ -52,7 +52,7 @@
     "optimal": "Optimal plan.",
     "limiteTemps": "Time limit reached: best plan found, not proven optimal.",
     "infaisable": "No possible plan: the balance falls below the reserve even with no expense.",
-    "erreur": "The calculation could not be done:",
+    "erreur": "The calculation could not be completed:",
     "calendrier": {
       "mois": "Month",
       "lancees": "Tasks started",
@@ -105,7 +105,7 @@
   },
   "registre": {
     "titre": "Register",
-    "intro": "Every money movement is an entry. An entry is never changed or deleted: a mistake is corrected by an offsetting entry. Each entry is chained to the previous one by a fingerprint (hash).",
+    "intro": "Every movement of money is recorded as an entry. An entry is never changed or deleted: a mistake is corrected by an offsetting entry. Each entry is chained to the previous one by a fingerprint (hash).",
     "colonnes": {
       "numero": "No.",
       "date": "Date",
@@ -121,8 +121,8 @@
       "a_contresigner": "Awaiting countersignature"
     },
     "nouvelle": "New entry",
-    "nouvelleMaquette": "Mock-up: entry will be available with the database.",
-    "parite": "Fixed rate: €1 = 655.957 FCFA."
+    "nouvelleMaquette": "Mock-up: data entry will be available once the database exists.",
+    "parite": "Fixed exchange rate: €1 = 655.957 CFA francs."
   },
   "poids": {
     "titre": "Task weights (AHP)",

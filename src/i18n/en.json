@@ -15,8 +15,6 @@
     "transparence": "Transparency",
     "menu": "Menu",
     "diapos": "Choose a photo",
-    "diaporamaPause": "Pause",
-    "diaporamaLecture": "Play",
     "allerContenu": "Skip to content"
   },
   "accueil": {
@@ -53,7 +51,7 @@
     ],
     "appelTitre": "One donation, one concrete step",
     "appelTexte": "You can donate without creating an account.",
-    "prochainBesoin": "Next need to fund",
+    "prochainBesoin": "Next funding need",
     "besoinTitre": "Health centre roof",
     "besoinTexte": "First step of the works: protect the building before installing electricity and medical equipment.",
     "parallaxeTitre": "Three phases, one village",
@@ -127,8 +125,8 @@
     "conditions": "I accept the {conditions} and the {confidentialite}.",
     "paiementTitre": "Payment method",
     "bancontact": "Bancontact",
-    "carte": "Bank card",
-    "mensuelCarte": "Monthly donations are made by bank card.",
+    "carte": "Credit or debit card",
+    "mensuelCarte": "Monthly donations are made by card.",
     "securite": "Payment is processed by Stripe on a secure page. Your bank details do not pass through this site.",
     "recapitulatif": "Summary",
     "confirmer": "Confirm my donation",
@@ -165,7 +163,7 @@
   },
   "connexion": {
     "titre": "COVIDEBA area",
-    "texte": "This area will be used by COVIDEBA members and supervisors: money register, tasks and calculation of the investment plan. It is under construction.",
+    "texte": "This area will be used by COVIDEBA members and supervisors: financial register, tasks and calculation of the investment plan. It is under construction.",
     "donateur": "You do not need an account to donate.",
     "email": "Email address",
     "motDePasse": "Password",
@@ -220,12 +218,12 @@
       {
         "date": "2017",
         "titre": "A partnership between engineering schools",
-        "texte": "The Faculty of Engineering of Mons starts working with four Cameroonian universities, in Yaoundé and Douala, on engineering education. These exchanges bring to light the needs of villages far from cities, including Batack."
+        "texte": "The Faculty of Engineering of Mons started working with four Cameroonian universities, in Yaoundé and Douala, on engineering education. These exchanges brought to light the needs of villages far from cities, including Batack."
       },
       {
         "date": "2024",
         "titre": "Connect Batack begins",
-        "texte": "The first student microprojects are launched with the support of ARES. They bring together the Faculty of Engineering of Mons (UMONS), the National Advanced School of Engineering of Yaoundé (ENSPY) and the COVIDEBA."
+        "texte": "The first student microprojects were launched with the support of ARES. They brought together the Faculty of Engineering of Mons (UMONS), the National Advanced School of Engineering of Yaoundé (ENSPY) and the COVIDEBA."
       },
       {
         "date": "Connect Batack 1",
@@ -237,7 +235,7 @@
       {
         "date": "January 2026",
         "titre": "Connect Batack 2: power for the health centre",
-        "texte": "From 24 to 30 January 2026, the team installs a stand-alone solar system at the health centre: a refrigerator to store vaccines and lighting for night-time care. The work is done with local technicians and the COVIDEBA, so that the village can maintain the installation.",
+        "texte": "From 24 to 30 January 2026, the team installed a stand-alone solar system at the health centre: a refrigerator to store vaccines and lighting for night-time care. The work was done with local technicians and the COVIDEBA, so that the village can maintain the installation.",
         "photo": "installation-electrique"
       },
       {
@@ -248,7 +246,7 @@
       }
     ],
     "aujourdhuiTitre": "Batack today",
-    "aujourdhuiIntro": "Batack is a village in Bamileke country, in the highlands of West Cameroon. Its inhabitants, who call themselves the \"little people of Batack\", have already carried out several projects.",
+    "aujourdhuiIntro": "Batack is a village in the Bamileke region, in the highlands of West Cameroon. Its inhabitants, who call themselves the \"little people of Batack\", have already carried out several projects.",
     "lieux": [
       {
         "photo": "ecole-publique",
@@ -309,7 +307,7 @@
       "Expense",
       "Project",
       "Amount",
-      "Proof"
+      "Receipt"
     ],
     "registreVide": "The first expenses will appear here once the management area is up and running.",
     "decisionTitre": "How the committee decides",
@@ -483,7 +481,7 @@
   },
   "suivi": {
     "titre": "Get progress updates",
-    "texte": "Receive an email when this project moves forward: a new step completed, an expense published with its proof.",
+    "texte": "Receive an email when this project moves forward: a new step completed, an expense published with its receipt.",
     "email": "Email address",
     "consentement": "I agree to receive these emails. I can unsubscribe at any time.",
     "bouton": "Sign up",

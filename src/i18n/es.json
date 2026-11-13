@@ -15,8 +15,6 @@
     "transparence": "Transparencia",
     "menu": "Menú",
     "diapos": "Elegir una foto",
-    "diaporamaPause": "Pausar",
-    "diaporamaLecture": "Reanudar",
     "allerContenu": "Saltar al contenido"
   },
   "accueil": {
@@ -48,12 +46,12 @@
     ],
     "aproposTitre": "Quiénes somos",
     "aproposTexte": [
-      "El COVIDEBA es el comité de desarrollo de la aldea de Batack. Lleva los proyectos de la aldea: agua potable, escuelas, salud.",
+      "El COVIDEBA es el comité de desarrollo de la aldea de Batack. Impulsa los proyectos de la aldea: agua potable, escuelas, salud.",
       "ConnectBatack 3 reúne al COVIDEBA, a estudiantes de la Facultad Politécnica de Mons (UMONS) y a la Escuela Nacional Superior Politécnica de Yaundé (ENSPY). Las dos primeras fases instalaron una microrred solar y construyeron el edificio del centro de salud."
     ],
     "appelTitre": "Una donación, una etapa concreta",
     "appelTexte": "Puedes donar sin crear una cuenta.",
-    "prochainBesoin": "Próxima necesidad que financiar",
+    "prochainBesoin": "Próxima necesidad por financiar",
     "besoinTitre": "Tejado del centro de salud",
     "besoinTexte": "Primera etapa de las obras: proteger el edificio antes de instalar la electricidad y el material médico.",
     "parallaxeTitre": "Tres fases, una misma aldea",
@@ -184,7 +182,7 @@
   },
   "changementLangue": {
     "bouton": "Idioma",
-    "titre": "Bienvenido a las páginas en español",
+    "titre": "Te damos la bienvenida a las páginas en español",
     "texte": "Estas páginas se han traducido del francés. Si ves un error, avísanos, por favor.",
     "annuler": "Cancelar",
     "continuer": "Continuar"
@@ -327,7 +325,7 @@
     "intro": "Este sitio lo edita el comité de la aldea. Estudiantes de ingeniería de Bélgica y de Camerún lo diseñaron junto con el comité.",
     "covidebaTitre": "El COVIDEBA",
     "covidebaTexte": [
-      "El Comité de Desarrollo de la Aldea de Batack (COVIDEBA) reúne a habitantes y miembros de la comunidad de Batack. Lleva los proyectos de la aldea y decide cómo se usan los fondos.",
+      "El Comité de Desarrollo de la Aldea de Batack (COVIDEBA) reúne a habitantes y miembros de la comunidad de Batack. Impulsa los proyectos de la aldea y decide cómo se usan los fondos.",
       "Lo preside el Dr. Anatole Chengoué."
     ],
     "equipesTitre": "Los equipos de estudiantes",
@@ -342,9 +340,9 @@
     "partenairesTitre": "Socios y financiadores",
     "partenaires": {
       "ares": "Academia de Investigación y Enseñanza Superior (Bélgica). Financia los microproyectos estudiantiles de cooperación.",
-      "solarly": "Empresa especializada en energía solar, socia de la instalación de enero de 2026."
+      "solarly": "Empresa especializada en energía solar, que colaboró en la instalación de enero de 2026."
     },
-    "charteTitre": "Nuestra carta",
+    "charteTitre": "Nuestros principios",
     "charteIntro": "Los equipos de Mons y de Yaundé trabajan según cinco principios.",
     "charte": [
       "Respeto mutuo: cada miembro es un socio de pleno derecho, y las diferencias culturales son una riqueza.",

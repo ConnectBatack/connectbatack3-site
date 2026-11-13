@@ -29,7 +29,7 @@ export default async function Accueil({ params }) {
     <>
       <section className="bandeau-photo">
         <Diaporama
-          t={{ libelle: dict.nav.diapos, pause: dict.nav.diaporamaPause, lecture: dict.nav.diaporamaLecture }}
+          t={{ libelle: dict.nav.diapos }}
           photos={photosAccueil.map((p) => ({ src: cheminPhoto(p), alt: dict.photos[p] }))}
         />
         <div className="bandeau-contenu">

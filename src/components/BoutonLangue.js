@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { langues, nomsLangues } from "@/i18n/config";
+import Drapeau from "@/components/Drapeau";
 
 // Sélecteur de langue fixé en bas de l'écran : il reste visible pendant le défilement.
 // Chaque langue est un vrai lien (il fonctionne sans JavaScript). Avec JavaScript, une fenêtre
@@ -71,6 +72,7 @@ export default function BoutonLangue({ langue, textes }) {
             {langues.map((l) => (
               <li key={l}>
                 <a href={`/${l}${reste}`} hrefLang={l} lang={l} aria-current={l === langue ? "true" : undefined} onClick={(e) => choisir(e, l)}>
+                  <Drapeau langue={l} />
                   {nomsLangues[l]}
                 </a>
               </li>
@@ -78,6 +80,7 @@ export default function BoutonLangue({ langue, textes }) {
           </ul>
         )}
         <button type="button" ref={bouton} className="langue-bouton" aria-expanded={ouvert} onClick={() => setOuvert(!ouvert)}>
+          <Drapeau langue={langue} />
           {langue.toUpperCase()}
           <span className="visuellement-cache">, {textes[langue].bouton} : {nomsLangues[langue]}</span>
         </button>

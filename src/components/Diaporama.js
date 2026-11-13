@@ -14,7 +14,7 @@ function connexionEconome() {
 // Photos de fond qui se succèdent en fondu. Seule la photo affichée est chargée, plus la suivante
 // juste avant le changement : les autres ne coûtent rien en données mobiles.
 // Le défilement s'arrête si le visiteur demande moins de mouvement, s'il est sur une connexion
-// lente, s'il appuie sur pause, ou s'il choisit une photo.
+// lente, ou s'il choisit une photo avec les points.
 export default function Diaporama({ photos, intervalle = 6000, t }) {
   const [active, setActive] = useState(0);
   const [pause, setPause] = useState(false);
@@ -68,9 +68,6 @@ export default function Diaporama({ photos, intervalle = 6000, t }) {
       )}
       {photos.length > 1 && (
         <div className="diapo-commandes" role="group" aria-label={t.libelle}>
-          <button type="button" className="diapo-pause" aria-pressed={pause} onClick={() => setPause(!pause)}>
-            {pause ? t.lecture : t.pause}
-          </button>
           {photos.map((photo, i) => (
             <button
               key={photo.src}
