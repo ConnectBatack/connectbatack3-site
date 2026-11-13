@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // Bandeau photo : l'image se déplace plus lentement que la page pendant le défilement.
 // Effet désactivé si le visiteur a demandé moins de mouvement.
-export default function Parallaxe({ src, alt, children, vitesse = 0.18 }) {
+export default function Parallaxe({ src, alt, children, vitesse = 0.18, prioritaire = false }) {
   const bloc = useRef(null);
   const image = useRef(null);
 
@@ -38,7 +38,7 @@ export default function Parallaxe({ src, alt, children, vitesse = 0.18 }) {
   return (
     <section className="parallaxe" ref={bloc}>
       <div className="parallaxe-image" ref={image}>
-        <Image src={src} alt={alt} fill sizes="100vw" />
+        <Image src={src} alt={alt} fill sizes="100vw" {...(prioritaire ? { loading: "eager", fetchPriority: "high" } : {})} />
       </div>
       <div className="parallaxe-contenu">{children}</div>
     </section>

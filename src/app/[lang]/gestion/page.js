@@ -1,3 +1,4 @@
+import { exigerSession } from "@/lib/session";
 import Link from "next/link";
 import { chargerGestion, langueGestion } from "@/i18n/gestion";
 import { instanceExemple, ecrituresExemple } from "@/donnees/exemple-gestion";
@@ -5,6 +6,7 @@ import TableauEcritures from "@/components/gestion/TableauEcritures";
 
 export default async function TableauDeBord({ params }) {
   const { lang } = await params;
+  await exigerSession(lang); // vérification à chaque page, pas seulement dans la mise en page
   const g = await chargerGestion(lang);
   const l = langueGestion(lang);
   const t = g.tableau;

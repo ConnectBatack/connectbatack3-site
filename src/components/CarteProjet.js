@@ -14,13 +14,13 @@ export default function CarteProjet({ projet, dict, lang }) {
     <Apparition as="li">
       <Link className="carte" href={`/${lang}/projets/${projet.id}`}>
         <span className="carte-image">
-          <Image src={cheminPhoto(projet.photo)} alt="" fill sizes="(max-width: 900px) 100vw, 25vw" />
+          <Image src={cheminPhoto(projet.photo)} alt="" fill sizes="(max-width: 900px) 92vw, 25vw" />
         </span>
         <p className="carte-accroche">{t.accroche}</p>
         <span className="carte-bas">
           <span className="carte-categorie">{t.categorie}</span>
           <span className="carte-titre">{t.titre}</span>
-          <span className="progression" role="progressbar" aria-valuenow={pourcent} aria-valuemin={0} aria-valuemax={100}>
+          <span className="progression" role="progressbar" aria-label={t.titre} aria-valuenow={pourcent} aria-valuemin={0} aria-valuemax={100}>
             <span className="progression-barre" style={{ "--p": `${pourcent}%` }} />
           </span>
           <span className="carte-ligne">

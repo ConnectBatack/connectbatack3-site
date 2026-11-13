@@ -14,7 +14,10 @@
     "histoire": "Our story",
     "transparence": "Transparency",
     "menu": "Menu",
-    "diapos": "Choose a photo"
+    "diapos": "Choose a photo",
+    "diaporamaPause": "Pause",
+    "diaporamaLecture": "Play",
+    "allerContenu": "Skip to content"
   },
   "accueil": {
     "surtitre": "Batack, West Cameroon",
@@ -27,7 +30,7 @@
     "collecte": "raised out of",
     "soutenir": "Support this project",
     "impactTitre": "What your donation makes possible",
-    "impactIntro": "One amount, one specific use. These links are examples and will be replaced by real costs.",
+    "impactIntro": "One amount, one specific use. These amounts and uses are examples and will be replaced by real costs.",
     "etapesTitre": "What happens to your donation",
     "etapes": [
       {
@@ -121,7 +124,7 @@
     "obligatoire": "required",
     "attestation": "I would like a tax certificate",
     "attestationAide": "The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address. Other information may be requested, such as the national register number in Belgium.",
-    "conditions": "I accept the terms of use and the privacy policy.",
+    "conditions": "I accept the {conditions} and the {confidentialite}.",
     "paiementTitre": "Payment method",
     "bancontact": "Bancontact",
     "carte": "Bank card",
@@ -136,7 +139,8 @@
       "email": "Enter a valid email address.",
       "conditions": "Accept the terms to continue.",
       "nonConfigure": "Online payment is not active yet: this page is a preview.",
-      "serveur": "The payment could not start. Please try again in a moment."
+      "serveur": "The payment could not start. Please try again in a moment.",
+      "autre": "Some information in the form is not valid. Reload the page, then try again."
     },
     "faq": {
       "titre": "Frequently asked questions",
@@ -150,7 +154,9 @@
       "r4": "The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address. Other information may be requested, such as the national register number in Belgium.",
       "q5": "What happens to my donation if I do not choose a project?",
       "r5": "Your donation goes to the general fund. It is used where the need is most urgent."
-    }
+    },
+    "lienConditions": "terms of use",
+    "lienConfidentialite": "privacy policy"
   },
   "merci": {
     "titre": "Thank you for your donation",
@@ -484,6 +490,7 @@
     "nonActive": "Sign-up is not active yet: this page is a preview.",
     "erreurEmail": "Enter a valid email address.",
     "erreurConsentement": "Tick the box to accept the emails.",
-    "merci": "Thank you, your sign-up has been saved."
+    "merci": "Thank you, your sign-up has been saved.",
+    "lienConfidentialite": "How we use your address: privacy policy"
   }
 }

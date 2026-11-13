@@ -14,7 +14,10 @@
     "histoire": "Notre histoire",
     "transparence": "Transparence",
     "menu": "Menu",
-    "diapos": "Choisir une photo"
+    "diapos": "Choisir une photo",
+    "diaporamaPause": "Mettre en pause",
+    "diaporamaLecture": "Reprendre",
+    "allerContenu": "Aller au contenu"
   },
   "accueil": {
     "surtitre": "Batack, Ouest-Cameroun",
@@ -121,7 +124,7 @@
     "obligatoire": "obligatoire",
     "attestation": "Je souhaite une attestation fiscale",
     "attestationAide": "L'attestation est délivrée au début de l'année suivante par l'institution agréée qui reçoit les dons. Stripe vous demandera votre adresse postale. D'autres informations pourront être demandées, par exemple le numéro de registre national en Belgique.",
-    "conditions": "J'accepte les conditions d'utilisation et la politique de confidentialité.",
+    "conditions": "J'accepte les {conditions} et la {confidentialite}.",
     "paiementTitre": "Mode de paiement",
     "bancontact": "Bancontact",
     "carte": "Carte bancaire",
@@ -136,7 +139,8 @@
       "email": "Indiquez une adresse e-mail valide.",
       "conditions": "Acceptez les conditions pour continuer.",
       "nonConfigure": "Le paiement en ligne n'est pas encore activé : cette page est une préversion.",
-      "serveur": "Le paiement n'a pas pu démarrer. Réessayez dans un instant."
+      "serveur": "Le paiement n'a pas pu démarrer. Réessayez dans un instant.",
+      "autre": "Une information du formulaire n'est pas valide. Rechargez la page, puis réessayez."
     },
     "faq": {
       "titre": "Questions fréquentes",
@@ -150,7 +154,9 @@
       "r4": "L'attestation est délivrée au début de l'année suivante par l'institution agréée qui reçoit les dons. Stripe vous demandera votre adresse postale. D'autres informations pourront être demandées, par exemple le numéro de registre national en Belgique.",
       "q5": "À quoi sert mon don si je ne choisis pas de projet ?",
       "r5": "Votre don rejoint le fonds général. Il est affecté là où le besoin est le plus urgent."
-    }
+    },
+    "lienConditions": "conditions d'utilisation",
+    "lienConfidentialite": "politique de confidentialité"
   },
   "merci": {
     "titre": "Merci pour votre don",
@@ -484,6 +490,7 @@
     "nonActive": "L'inscription n'est pas encore activée : cette page est une préversion.",
     "erreurEmail": "Indiquez une adresse e-mail valide.",
     "erreurConsentement": "Cochez la case pour accepter les e-mails.",
-    "merci": "Merci, votre inscription est enregistrée."
+    "merci": "Merci, votre inscription est enregistrée.",
+    "lienConfidentialite": "Comment nous utilisons votre adresse : politique de confidentialité"
   }
 }

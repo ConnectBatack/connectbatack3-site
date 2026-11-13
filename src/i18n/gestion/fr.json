@@ -156,5 +156,6 @@
     "enregistre": "Poids enregistrés. Sur la page « Plan d'investissement », cliquez sur « Appliquer les poids AHP ».",
     "bloque": "Corrigez d'abord les comparaisons : le CR dépasse 0,1.",
     "erreurStockage": "Les poids n'ont pas pu être enregistrés dans ce navigateur (stockage local indisponible)."
-  }
+  },
+  "allerContenu": "Aller au contenu"
 }

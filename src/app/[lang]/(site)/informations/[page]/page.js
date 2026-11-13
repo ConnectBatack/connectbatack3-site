@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
-import { langues } from "@/i18n/config";
+import { langues, alternatesPage } from "@/i18n/config";
 
 // Pages légales (mentions légales, confidentialité, conditions). Textes PROVISOIRES :
 // ils seront relus avant l'ouverture des dons réels (voir le journal des décisions).
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   const { lang, page } = await params;
   const dict = await chargerDictionnaire(lang);
   const p = dict.legal.pages[page];
-  return p ? { title: `${p.titre} | ConnectBatack 3` } : {};
+  return p ? { title: `${p.titre} | ConnectBatack 3`, alternates: alternatesPage(lang, `/informations/${page}`) } : {};
 }
 
 export default async function PageLegale({ params }) {

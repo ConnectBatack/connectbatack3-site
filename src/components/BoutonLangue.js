@@ -5,95 +5,109 @@ import { usePathname, useRouter } from "next/navigation";
 import { langues, nomsLangues } from "@/i18n/config";
 
 // Sélecteur de langue fixé en bas de l'écran : il reste visible pendant le défilement.
-// Avant de changer de langue, une fenêtre explique dans la langue choisie d'où vient la traduction.
+// Chaque langue est un vrai lien (il fonctionne sans JavaScript). Avec JavaScript, une fenêtre
+// explique d'abord, dans la langue choisie, d'où vient la traduction.
+// La fenêtre est un <dialog> natif : focus gardé dans la fenêtre, Échap, page bloquée derrière,
+// focus rendu au bouton à la fermeture.
 export default function BoutonLangue({ langue, textes }) {
   const [ouvert, setOuvert] = useState(false);
   const [cible, setCible] = useState(null);
-  const boutonContinuer = useRef(null);
+  const conteneur = useRef(null);
+  const bouton = useRef(null);
+  const fenetre = useRef(null);
   const chemin = usePathname();
   const router = useRouter();
+  const reste = chemin.replace(/^\/[a-z]{2}(?=\/|$)/, "");
 
+  // Menu : fermeture avec Échap et au clic à l'extérieur.
   useEffect(() => {
-    if (!cible) return;
-    boutonContinuer.current?.focus();
-    const fermer = (e) => e.key === "Escape" && setCible(null);
-    window.addEventListener("keydown", fermer);
-    return () => window.removeEventListener("keydown", fermer);
+    if (!ouvert) return;
+    const clavier = (e) => {
+      if (e.key === "Escape") {
+        setOuvert(false);
+        bouton.current?.focus();
+      }
+    };
+    const clic = (e) => {
+      if (!conteneur.current?.contains(e.target)) setOuvert(false);
+    };
+    document.addEventListener("keydown", clavier);
+    document.addEventListener("mousedown", clic);
+    return () => {
+      document.removeEventListener("keydown", clavier);
+      document.removeEventListener("mousedown", clic);
+    };
+  }, [ouvert]);
+
+  // Ouverture de la fenêtre quand une autre langue est choisie.
+  useEffect(() => {
+    if (cible && fenetre.current && !fenetre.current.open) fenetre.current.showModal();
   }, [cible]);
 
-  function choisir(l) {
+  function choisir(e, l) {
     setOuvert(false);
-    if (l !== langue) setCible(l);
+    if (l === langue) {
+      e.preventDefault();
+      return;
+    }
+    e.preventDefault();
+    setCible(l);
   }
 
   function confirmer() {
-    document.cookie = `langue=${cible}; path=/; max-age=31536000; SameSite=Lax${location.protocol === "https:" ? "; Secure" : ""}`;
-    const reste = chemin.replace(/^\/[a-z]{2}(?=\/|$)/, "");
+    const securise = window.location.protocol === "https:" ? "; Secure" : "";
+    document.cookie = `langue=${cible}; path=/; max-age=31536000; SameSite=Lax${securise}`;
+    fenetre.current?.close();
     router.push(`/${cible}${reste}`);
-    setCible(null);
   }
 
   const t = cible ? textes[cible] : null;
 
   return (
     <>
-      <div className="langue-flottante">
+      <div className="langue-flottante" ref={conteneur}>
         {ouvert && (
-          <ul className="langue-menu" role="listbox" aria-label={textes[langue].bouton}>
+          <ul className="langue-menu">
             {langues.map((l) => (
               <li key={l}>
-                <button
-                  type="button"
-                  role="option"
-                  aria-selected={l === langue}
-                  lang={l}
-                  onClick={() => choisir(l)}
-                >
+                <a href={`/${l}${reste}`} hrefLang={l} lang={l} aria-current={l === langue ? "true" : undefined} onClick={(e) => choisir(e, l)}>
                   {nomsLangues[l]}
-                </button>
+                </a>
               </li>
             ))}
           </ul>
         )}
-        <button
-          type="button"
-          className="langue-bouton"
-          aria-expanded={ouvert}
-          aria-label={`${textes[langue].bouton} : ${nomsLangues[langue]}`}
-          onClick={() => setOuvert(!ouvert)}
-        >
+        <button type="button" ref={bouton} className="langue-bouton" aria-expanded={ouvert} onClick={() => setOuvert(!ouvert)}>
           {langue.toUpperCase()}
+          <span className="visuellement-cache">, {textes[langue].bouton} : {nomsLangues[langue]}</span>
         </button>
       </div>
 
-      {t && (
-        <div className="fenetre-fond" onClick={() => setCible(null)}>
-          <div
-            className="fenetre"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="titre-langue"
-            lang={cible}
-            onClick={(e) => e.stopPropagation()}
-          >
+      <dialog
+        ref={fenetre}
+        className="fenetre"
+        aria-labelledby="titre-langue"
+        lang={cible ?? undefined}
+        onClose={() => {
+          setCible(null);
+          bouton.current?.focus();
+        }}
+      >
+        {t && (
+          <>
             <h2 id="titre-langue">{t.titre}</h2>
             <p>{t.texte}</p>
             <div className="fenetre-actions">
-              <button type="button" className="bouton bouton-contour" onClick={() => setCible(null)}>
+              <button type="button" className="bouton bouton-contour" onClick={() => fenetre.current?.close()}>
                 {t.annuler}
               </button>
-              <button
-                type="button"
-                className="bouton bouton-principal"
-                ref={boutonContinuer}
-                onClick={confirmer}
-              >
+              <button type="button" className="bouton bouton-principal" autoFocus onClick={confirmer}>
                 {t.continuer}
               </button>
             </div>
-          </div>
-        </div>
-      )}
+          </>
+        )}
+      </dialog>
     </>
   );
 }

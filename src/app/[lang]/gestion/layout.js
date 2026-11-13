@@ -16,6 +16,7 @@ export default async function MiseEnPageGestion({ children, params }) {
 
   return (
     <div className="gestion" lang={l}>
+      <a className="lien-evitement" href="#contenu">{g.allerContenu}</a>
       <p className="bandeau-preversion">{g.maquette}</p>
       <div className="gestion-cadre">
         <aside className="gestion-menu">

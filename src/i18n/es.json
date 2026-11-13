@@ -14,7 +14,10 @@
     "histoire": "Nuestra historia",
     "transparence": "Transparencia",
     "menu": "Menú",
-    "diapos": "Elegir una foto"
+    "diapos": "Elegir una foto",
+    "diaporamaPause": "Pausar",
+    "diaporamaLecture": "Reanudar",
+    "allerContenu": "Saltar al contenido"
   },
   "accueil": {
     "surtitre": "Batack, oeste de Camerún",
@@ -62,7 +65,7 @@
     "dispensaire": {
       "categorie": "Salud",
       "titre": "Terminar y equipar el centro de salud",
-      "description": "Hoy, los habitantes de Batack tienen que recorrer más de 20 km para llegar al centro de salud más cercano. Cada consulta, incluso para la atención diaria, obliga a hacer este largo trayecto. El edificio del centro de salud ya está construido en la aldea, pero todavía no puede recibir pacientes. Para abrirlo, hay que terminar el tejado, instalar el cableado eléctrico y, después, comprar el material de análisis y de radiología.",
+      "description": "Hoy, los habitantes de Batack tienen que recorrer más de 20 km para llegar al centro de salud más cercano. Cada consulta, incluso para cuidados habituales, obliga a hacer este largo trayecto. El edificio del centro de salud ya está construido en la aldea, pero todavía no puede recibir pacientes. Para abrirlo, hay que terminar el tejado, instalar el cableado eléctrico y, después, comprar el material de análisis y de radiología.",
       "accroche": "Ofrecer atención sanitaria de proximidad a los habitantes"
     },
     "batteries": {
@@ -121,7 +124,7 @@
     "obligatoire": "obligatorio",
     "attestation": "Deseo un certificado fiscal",
     "attestationAide": "El certificado lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal. Es posible que se pidan otros datos, por ejemplo el número de registro nacional en Bélgica.",
-    "conditions": "Acepto las condiciones de uso y la política de privacidad.",
+    "conditions": "Acepto las {conditions} y la {confidentialite}.",
     "paiementTitre": "Método de pago",
     "bancontact": "Bancontact",
     "carte": "Tarjeta bancaria",
@@ -136,7 +139,8 @@
       "email": "Indica un correo electrónico válido.",
       "conditions": "Acepta las condiciones para continuar.",
       "nonConfigure": "El pago en línea todavía no está activado: esta página es una versión preliminar.",
-      "serveur": "No se pudo iniciar el pago. Inténtalo de nuevo dentro de un momento."
+      "serveur": "No se pudo iniciar el pago. Inténtalo de nuevo dentro de un momento.",
+      "autre": "Un dato del formulario no es válido. Vuelve a cargar la página e inténtalo de nuevo."
     },
     "faq": {
       "titre": "Preguntas frecuentes",
@@ -150,7 +154,9 @@
       "r4": "El certificado lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal. Es posible que se pidan otros datos, por ejemplo el número de registro nacional en Bélgica.",
       "q5": "¿Para qué sirve mi donación si no elijo un proyecto?",
       "r5": "Tu donación va al fondo general. Se destina a donde la necesidad es más urgente."
-    }
+    },
+    "lienConditions": "condiciones de uso",
+    "lienConfidentialite": "política de privacidad"
   },
   "merci": {
     "titre": "Gracias por tu donación",
@@ -214,7 +220,7 @@
       {
         "date": "2017",
         "titre": "Una colaboración entre escuelas de ingeniería",
-        "texte": "La Facultad Politécnica de Mons empieza a trabajar con cuatro universidades cameruneses, en Yaundé y en Duala, sobre la formación de ingenieros. Estos intercambios dan a conocer las necesidades de aldeas alejadas de las ciudades, entre ellas Batack."
+        "texte": "La Facultad Politécnica de Mons empieza a trabajar con cuatro universidades camerunesas, en Yaundé y en Duala, sobre la formación de ingenieros. Estos intercambios dan a conocer las necesidades de aldeas alejadas de las ciudades, entre ellas Batack."
       },
       {
         "date": "2024",
@@ -484,6 +490,7 @@
     "nonActive": "La suscripción todavía no está activada: esta página es una versión preliminar.",
     "erreurEmail": "Indica un correo electrónico válido.",
     "erreurConsentement": "Marca la casilla para aceptar los correos.",
-    "merci": "Gracias, tu suscripción se ha registrado."
+    "merci": "Gracias, tu suscripción se ha registrado.",
+    "lienConfidentialite": "Cómo usamos tu dirección: política de privacidad"
   }
 }

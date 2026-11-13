@@ -14,7 +14,10 @@
     "histoire": "Ons verhaal",
     "transparence": "Transparantie",
     "menu": "Menu",
-    "diapos": "Kies een foto"
+    "diapos": "Kies een foto",
+    "diaporamaPause": "Pauzeren",
+    "diaporamaLecture": "Hervatten",
+    "allerContenu": "Naar de inhoud"
   },
   "accueil": {
     "surtitre": "Batack, West-Kameroen",
@@ -27,7 +30,7 @@
     "collecte": "opgehaald van de",
     "soutenir": "Steun dit project",
     "impactTitre": "Wat uw gift mogelijk maakt",
-    "impactIntro": "Eén bedrag, één concreet gebruik. Deze koppelingen zijn voorbeelden en worden vervangen door de echte kosten.",
+    "impactIntro": "Eén bedrag, één concreet gebruik. Deze bedragen en bestemmingen zijn voorbeelden en worden vervangen door de echte kosten.",
     "etapesTitre": "Wat er met uw gift gebeurt",
     "etapes": [
       {
@@ -121,7 +124,7 @@
     "obligatoire": "verplicht",
     "attestation": "Ik wens een fiscaal attest",
     "attestationAide": "Het attest wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres. Er kunnen andere gegevens gevraagd worden, bijvoorbeeld het rijksregisternummer in België.",
-    "conditions": "Ik aanvaard de gebruiksvoorwaarden en het privacybeleid.",
+    "conditions": "Ik aanvaard de {conditions} en het {confidentialite}.",
     "paiementTitre": "Betaalmethode",
     "bancontact": "Bancontact",
     "carte": "Bankkaart",
@@ -136,7 +139,8 @@
       "email": "Vul een geldig e-mailadres in.",
       "conditions": "Aanvaard de voorwaarden om verder te gaan.",
       "nonConfigure": "Online betalen is nog niet geactiveerd: deze pagina is een voorlopige versie.",
-      "serveur": "De betaling kon niet starten. Probeer het zo meteen opnieuw."
+      "serveur": "De betaling kon niet starten. Probeer het zo meteen opnieuw.",
+      "autre": "Een gegeven in het formulier is niet geldig. Laad de pagina opnieuw en probeer het nog eens."
     },
     "faq": {
       "titre": "Veelgestelde vragen",
@@ -150,7 +154,9 @@
       "r4": "Het attest wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres. Er kunnen andere gegevens gevraagd worden, bijvoorbeeld het rijksregisternummer in België.",
       "q5": "Waarvoor dient mijn gift als ik geen project kies?",
       "r5": "Uw gift gaat naar het algemene fonds. Ze wordt gebruikt waar de nood het hoogst is."
-    }
+    },
+    "lienConditions": "gebruiksvoorwaarden",
+    "lienConfidentialite": "privacybeleid"
   },
   "merci": {
     "titre": "Bedankt voor uw gift",
@@ -208,7 +214,7 @@
   },
   "histoire": {
     "titre": "Ons verhaal",
-    "intro": "Sinds 2024 werken ingenieursstudenten uit Bergen en Yaoundé samen met het dorpscomité van Batack. Elke fase vertrekt van een behoefte van het dorp, en de volgende fase controleert of de vorige nog werkt.",
+    "intro": "Sinds 2024 werken ingenieursstudenten uit Bergen en Yaoundé samen met het dorpscomité van Batack. Elke fase vertrekt van een behoefte die het dorp zelf heeft aangegeven, en de volgende fase controleert of de vorige nog werkt.",
     "friseTitre": "De belangrijkste stappen",
     "etapes": [
       {
@@ -310,7 +316,7 @@
     "decisionPoints": [
       "De prioriteiten worden vastgelegd door het COVIDEBA, samen met de zorgverleners van het dorp.",
       "Een rekeninstrument stelt de volgorde van de uitgaven voor en houdt rekening met de volgorde van de werken: eerst het dak, dan het medisch materiaal.",
-      "Er blijft altijd een veiligheidsreserve in kas, vastgelegd door het dorpshoofd.",
+      "Er blijft altijd een veiligheidsreserve in kas, vastgelegd door het traditionele dorpsbestuur.",
       "De eindbeslissing ligt bij het comité: het instrument stelt voor, het comité beslist."
     ],
     "rapportsTitre": "Verslagen",
@@ -484,6 +490,7 @@
     "nonActive": "Inschrijven is nog niet geactiveerd: deze pagina is een voorlopige versie.",
     "erreurEmail": "Vul een geldig e-mailadres in.",
     "erreurConsentement": "Vink het vakje aan om de e-mails te aanvaarden.",
-    "merci": "Bedankt, uw inschrijving is geregistreerd."
+    "merci": "Bedankt, uw inschrijving is geregistreerd.",
+    "lienConfidentialite": "Hoe we uw adres gebruiken: privacybeleid"
   }
 }

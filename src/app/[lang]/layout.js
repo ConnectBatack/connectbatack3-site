@@ -15,9 +15,7 @@ export async function generateMetadata({ params }) {
   return {
     title: dict.meta.titre,
     description: dict.meta.description,
-    alternates: {
-      languages: Object.fromEntries(langues.map((l) => [l, `/${l}`])),
-    },
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://connectbatack3-site.vercel.app"),
   };
 }
 

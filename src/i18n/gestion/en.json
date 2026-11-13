@@ -156,5 +156,6 @@
     "enregistre": "Weights saved. On the \"Investment plan\" page, click \"Apply the AHP weights\".",
     "bloque": "Fix the comparisons first: the CR is above 0.1.",
     "erreurStockage": "The weights could not be saved in this browser (local storage unavailable)."
-  }
+  },
+  "allerContenu": "Skip to content"
 }

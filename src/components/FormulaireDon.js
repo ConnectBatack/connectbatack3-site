@@ -1,17 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { MONTANT_MAX, MONTANT_MIN, montantsProposes, verifierDon } from "@/lib/regles-don";
 
 // Erreurs vérifiées à chaque étape avant de passer à la suivante.
-const champsParEtape = { 1: ["montant", "projet"], 2: ["nom", "email", "prenom"], 3: ["moyen", "conditions"] };
+const champsParEtape = { 1: ["montant", "projet", "frequence"], 2: ["nom", "email", "prenom", "attestation"], 3: ["moyen", "conditions", "langue"] };
+// Champ à atteindre au clavier pour chaque erreur.
+const champDeErreur = { montant: "don-autre", nom: "don-nom", email: "don-email", conditions: "don-conditions" };
 
-export default function FormulaireDon({ t, exemple, titresProjets, langue, projetInitial, montantInitial }) {
+// Lit ?projet=, ?montant= et ?annule= dans le navigateur : la page reste statique (servie par le CDN).
+// Seules les valeurs connues sont gardées.
+export function FormulaireDonDepuisAdresse(props) {
+  const recherche = useSearchParams();
+  const projet = recherche.get("projet");
+  const montant = recherche.get("montant") ?? "";
+  return (
+    <>
+      {recherche.get("annule") === "1" && <p className="message message-info">{props.messageAnnule}</p>}
+      <FormulaireDon
+        {...props}
+        projetInitial={Object.hasOwn(props.titresProjets, projet ?? "") ? projet : ""}
+        montantInitial={/^\d{1,5}$/.test(montant) ? Number(montant) : null}
+      />
+    </>
+  );
+}
+
+export default function FormulaireDon({ t, exemple, titresProjets, langue, liens, projetInitial = "", montantInitial = null }) {
   const proposeInitial = montantsProposes.ponctuel.includes(montantInitial);
   const [etape, setEtape] = useState(1);
   const [don, setDon] = useState({
     frequence: "ponctuel",
-    montant: montantInitial ?? 50,
+    montant: montantInitial && proposeInitial ? montantInitial : 50,
     autre: montantInitial && !proposeInitial ? String(montantInitial) : "",
     projet: projetInitial,
     prenom: "",
@@ -24,6 +45,20 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
   const [erreurs, setErreurs] = useState([]);
   const [envoi, setEnvoi] = useState(false);
   const [erreurServeur, setErreurServeur] = useState("");
+  const titreEtape = useRef(null);
+  const etapeAffichee = useRef(1);
+
+  // Changement d'étape : le focus va sur le titre de la nouvelle étape (lu par les lecteurs d'écran).
+  useEffect(() => {
+    if (etapeAffichee.current !== etape) titreEtape.current?.focus();
+    etapeAffichee.current = etape;
+  }, [etape]);
+
+  // Erreur : le focus va sur le premier champ concerné.
+  useEffect(() => {
+    const id = erreurs.map((e) => champDeErreur[e]).find(Boolean);
+    if (id) document.getElementById(id)?.focus();
+  }, [erreurs]);
 
   const maj = (champ, valeur) => setDon((d) => ({ ...d, [champ]: valeur }));
   const montant = don.autre !== "" ? Number(don.autre) : don.montant;
@@ -58,11 +93,11 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
     setEnvoi(true);
     setErreurServeur("");
     try {
-      const { autre, ...corps } = donComplet;
+      const { autre, conditions, ...reste } = donComplet;
       const reponse = await fetch("/api/paiement", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(corps),
+        body: JSON.stringify({ ...reste, conditions }),
       });
       const resultat = await reponse.json();
       // On ne suit que les adresses de paiement de Stripe.
@@ -77,18 +112,35 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
     setEnvoi(false);
   }
 
-  const messageErreur = (champ) =>
-    erreurs.includes(champ) && (
-      <p className="erreur-champ" role="alert">
-        {t.erreurs[champ].replace("{min}", MONTANT_MIN).replace("{max}", MONTANT_MAX)}
-      </p>
-    );
+  function envoyer(e) {
+    e.preventDefault();
+    if (etape < 3) suivant();
+    else confirmer();
+  }
 
-  const contexte =
-    don.autre === "" ? t.contextes[don.frequence][don.montant] : t.contexteAutre;
+  const texteErreur = (champ) => (t.erreurs[champ] ?? t.erreurs.autre).replace("{min}", MONTANT_MIN).replace("{max}", MONTANT_MAX);
+  const enErreur = (champ) => erreurs.includes(champ);
+  // Attributs d'un champ : signalé invalide et relié à son message.
+  const aria = (champ) => (enErreur(champ) ? { "aria-invalid": true, "aria-describedby": `erreur-${champ}` } : {});
+  const messageErreur = (champ) =>
+    enErreur(champ) && (
+      <p className="erreur-champ" id={`erreur-${champ}`} role="alert">{texteErreur(champ)}</p>
+    );
+  // Erreurs sans champ à l'écran (cas rares) : un message général, pour ne jamais bloquer sans explication.
+  const autres = erreurs.filter((e) => !champDeErreur[e]);
+
+  const contexte = don.autre === "" ? t.contextes[don.frequence][don.montant] : t.contexteAutre;
+  const titre = (texte) => <legend ref={titreEtape} tabIndex={-1}>{texte}</legend>;
+
+  // « J'accepte les {conditions} et la {confidentialite}. » : les deux textes sont des liens.
+  const phraseConditions = t.conditions.split(/(\{conditions\}|\{confidentialite\})/).map((morceau, k) => {
+    if (morceau === "{conditions}") return <a key={k} href={liens.conditions} target="_blank" rel="noopener">{t.lienConditions}</a>;
+    if (morceau === "{confidentialite}") return <a key={k} href={liens.confidentialite} target="_blank" rel="noopener">{t.lienConfidentialite}</a>;
+    return morceau;
+  });
 
   return (
-    <div className="formulaire-don">
+    <form className="formulaire-don" onSubmit={envoyer} noValidate>
       <p className="etape-indicateur">{t.etape.replace("{n}", etape)}</p>
       <div className="etape-barre" aria-hidden="true">
         <span style={{ width: `${(etape / 3) * 100}%` }} />
@@ -96,7 +148,7 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
 
       {etape === 1 && (
         <fieldset>
-          <legend>{t.frequenceTitre}</legend>
+          {titre(t.frequenceTitre)}
           <div className="choix-frequence">
             {["ponctuel", "mensuel"].map((f) => (
               <button
@@ -134,6 +186,7 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
           <label className="champ">
             {t.autreMontant}
             <input
+              id="don-autre"
               type="number"
               inputMode="numeric"
               min={MONTANT_MIN}
@@ -141,6 +194,7 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
               step="1"
               value={don.autre}
               onChange={(e) => maj("autre", e.target.value)}
+              {...aria("montant")}
             />
           </label>
           {messageErreur("montant")}
@@ -149,9 +203,9 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
             {t.projetTitre}
             <select value={don.projet} onChange={(e) => maj("projet", e.target.value)}>
               <option value="">{t.projetGeneral}</option>
-              {Object.entries(titresProjets).map(([id, titre]) => (
+              {Object.entries(titresProjets).map(([id, titreProjet]) => (
                 <option key={id} value={id}>
-                  {titre}
+                  {titreProjet}
                 </option>
               ))}
             </select>
@@ -161,21 +215,23 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
 
       {etape === 2 && (
         <fieldset>
-          <legend>{t.infosTitre}</legend>
+          {titre(t.infosTitre)}
           <div className="champs-deux">
             <label className="champ">
               {t.prenom}
               <input autoComplete="given-name" maxLength={100} value={don.prenom} onChange={(e) => maj("prenom", e.target.value)} />
             </label>
-            <label className="champ">
-              {t.nom} <span className="obligatoire">({t.obligatoire})</span>
-              <input autoComplete="family-name" maxLength={100} required value={don.nom} onChange={(e) => maj("nom", e.target.value)} />
-            </label>
+            <div>
+              <label className="champ">
+                {t.nom} <span className="obligatoire">({t.obligatoire})</span>
+                <input id="don-nom" autoComplete="family-name" maxLength={100} required value={don.nom} onChange={(e) => maj("nom", e.target.value)} {...aria("nom")} />
+              </label>
+              {messageErreur("nom")}
+            </div>
           </div>
-          {messageErreur("nom")}
           <label className="champ">
             {t.email} <span className="obligatoire">({t.obligatoire})</span>
-            <input type="email" autoComplete="email" maxLength={254} required value={don.email} onChange={(e) => maj("email", e.target.value)} />
+            <input id="don-email" type="email" autoComplete="email" maxLength={254} required value={don.email} onChange={(e) => maj("email", e.target.value)} {...aria("email")} />
           </label>
           {messageErreur("email")}
           <label className="case">
@@ -188,7 +244,7 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
 
       {etape === 3 && (
         <fieldset>
-          <legend>{t.paiementTitre}</legend>
+          {titre(t.paiementTitre)}
           <div className="recapitulatif">
             <strong>{t.recapitulatif}</strong>
             <p>
@@ -207,8 +263,8 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
           </div>
           {don.frequence === "mensuel" && <p className="aide">{t.mensuelCarte}</p>}
           <label className="case">
-            <input type="checkbox" checked={don.conditions} onChange={(e) => maj("conditions", e.target.checked)} />
-            {t.conditions} <span className="obligatoire">({t.obligatoire})</span>
+            <input id="don-conditions" type="checkbox" checked={don.conditions} onChange={(e) => maj("conditions", e.target.checked)} {...aria("conditions")} />
+            <span>{phraseConditions} <span className="obligatoire">({t.obligatoire})</span></span>
           </label>
           {messageErreur("conditions")}
           <p className="aide aide-securite">{t.securite}</p>
@@ -220,22 +276,18 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, proje
         </fieldset>
       )}
 
+      {autres.length > 0 && <p className="message message-erreur" role="alert">{t.erreurs.autre}</p>}
+
       <div className="actions-don">
         {etape > 1 && (
           <button type="button" className="bouton bouton-contour" onClick={() => { setErreurs([]); setEtape(etape - 1); }}>
             {t.precedent}
           </button>
         )}
-        {etape < 3 ? (
-          <button type="button" className="bouton bouton-principal" onClick={suivant}>
-            {t.suivant}
-          </button>
-        ) : (
-          <button type="button" className="bouton bouton-principal" disabled={envoi} onClick={confirmer}>
-            {envoi ? t.envoi : t.confirmer}
-          </button>
-        )}
+        <button type="submit" className="bouton bouton-principal" disabled={envoi}>
+          {etape < 3 ? t.suivant : envoi ? t.envoi : t.confirmer}
+        </button>
       </div>
-    </div>
+    </form>
   );
 }

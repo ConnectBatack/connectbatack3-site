@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
+import { alternatesPage } from "@/i18n/config";
 import { cheminPhoto } from "@/donnees/projets";
 import Apparition from "@/components/Apparition";
 import Compteur from "@/components/Compteur";
@@ -21,7 +22,7 @@ const partsExemple = [
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await chargerDictionnaire(lang);
-  return { title: `${dict.transparence.titre} | ConnectBatack 3`, description: dict.transparence.intro };
+  return { title: `${dict.transparence.titre} | ConnectBatack 3`, description: dict.transparence.intro, alternates: alternatesPage(lang, "/transparence") };
 }
 
 export default async function Transparence({ params }) {
@@ -31,7 +32,7 @@ export default async function Transparence({ params }) {
 
   return (
     <>
-      <Parallaxe src={cheminPhoto("cablage")} alt={dict.photos["cablage"]}>
+      <Parallaxe src={cheminPhoto("cablage")} alt={dict.photos["cablage"]} prioritaire>
         <h1>{t.titre}</h1>
         <p>{t.intro}</p>
       </Parallaxe>

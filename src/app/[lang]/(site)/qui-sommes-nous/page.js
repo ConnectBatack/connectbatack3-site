@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
+import { alternatesPage } from "@/i18n/config";
 import { cheminPhoto } from "@/donnees/projets";
 import Apparition from "@/components/Apparition";
 import Parallaxe from "@/components/Parallaxe";
@@ -20,7 +21,7 @@ const partenaires = [
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await chargerDictionnaire(lang);
-  return { title: `${dict.apropos.titre} | ConnectBatack 3`, description: dict.apropos.intro };
+  return { title: `${dict.apropos.titre} | ConnectBatack 3`, description: dict.apropos.intro, alternates: alternatesPage(lang, "/qui-sommes-nous") };
 }
 
 export default async function QuiSommesNous({ params }) {
@@ -30,7 +31,7 @@ export default async function QuiSommesNous({ params }) {
 
   return (
     <>
-      <Parallaxe src={cheminPhoto("rencontre-village")} alt={dict.photos["rencontre-village"]}>
+      <Parallaxe src={cheminPhoto("rencontre-village")} alt={dict.photos["rencontre-village"]} prioritaire>
         <h1>{q.titre}</h1>
         <p>{q.intro}</p>
       </Parallaxe>

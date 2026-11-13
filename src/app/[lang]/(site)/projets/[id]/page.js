@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
 import { projets, cheminPhoto } from "@/donnees/projets";
-import { langues } from "@/i18n/config";
+import { langues, alternatesPage } from "@/i18n/config";
 import Apparition from "@/components/Apparition";
 import Compteur from "@/components/Compteur";
 import BoutonPartage from "@/components/BoutonPartage";
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   const dict = await chargerDictionnaire(lang);
   const t = dict.projets[id];
   if (!t) return {};
-  return { title: `${t.titre} | ConnectBatack 3`, description: t.description };
+  return { title: `${t.titre} | ConnectBatack 3`, description: t.description, alternates: alternatesPage(lang, `/projets/${id}`) };
 }
 
 export default async function PageProjet({ params }) {
@@ -38,7 +38,7 @@ export default async function PageProjet({ params }) {
     <>
       <section className="bandeau-photo bandeau-photo-court">
         <div className="diapo active">
-          <Image src={cheminPhoto(projet.photo)} alt={dict.photos[projet.photo]} fill sizes="100vw" loading="eager" />
+          <Image src={cheminPhoto(projet.photo)} alt={dict.photos[projet.photo]} fill sizes="100vw" loading="eager" fetchPriority="high" />
         </div>
         <div className="bandeau-contenu">
           <div>
@@ -52,7 +52,7 @@ export default async function PageProjet({ params }) {
         <Apparition>
           <h2>{t.titre}</h2>
           <p>{t.description}</p>
-          <div className="progression" role="progressbar" aria-valuenow={pourcent} aria-valuemin={0} aria-valuemax={100}>
+          <div className="progression" role="progressbar" aria-label={t.titre} aria-valuenow={pourcent} aria-valuemin={0} aria-valuemax={100}>
             <span className="progression-barre" style={{ "--p": `${pourcent}%` }} />
           </div>
           <p className="progression-texte">
@@ -80,7 +80,7 @@ export default async function PageProjet({ params }) {
             <BoutonPartage t={dict.partage} titre={t.titre} />
           </div>
         </Apparition>
-        <FormulaireSuivi t={dict.suivi} projet={projet.id} langue={lang} />
+        <FormulaireSuivi t={dict.suivi} projet={projet.id} langue={lang} lienConfidentialite={`/${lang}/informations/confidentialite`} />
       </section>
     </>
   );

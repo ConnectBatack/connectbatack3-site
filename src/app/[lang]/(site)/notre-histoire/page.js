@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
+import { alternatesPage } from "@/i18n/config";
 import { cheminPhoto } from "@/donnees/projets";
 import Apparition from "@/components/Apparition";
 import Parallaxe from "@/components/Parallaxe";
@@ -8,7 +9,7 @@ import Parallaxe from "@/components/Parallaxe";
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await chargerDictionnaire(lang);
-  return { title: `${dict.histoire.titre} | ConnectBatack 3`, description: dict.histoire.intro };
+  return { title: `${dict.histoire.titre} | ConnectBatack 3`, description: dict.histoire.intro, alternates: alternatesPage(lang, "/notre-histoire") };
 }
 
 export default async function NotreHistoire({ params }) {
@@ -18,7 +19,7 @@ export default async function NotreHistoire({ params }) {
 
   return (
     <>
-      <Parallaxe src={cheminPhoto("batack-paysage")} alt={dict.photos["batack-paysage"]}>
+      <Parallaxe src={cheminPhoto("batack-paysage")} alt={dict.photos["batack-paysage"]} prioritaire>
         <h1>{h.titre}</h1>
         <p>{h.intro}</p>
       </Parallaxe>

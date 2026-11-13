@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import MenuMobile from "@/components/MenuMobile";
 import logoBatack from "../../public/images/logos/logo-batack.png";
 
 export default function EnTete({ dict, lang }) {
@@ -29,8 +30,7 @@ export default function EnTete({ dict, lang }) {
         {dict.nav.don}
       </Link>
       {/* Menu pour téléphone : fonctionne sans JavaScript grâce à <details>. */}
-      <details className="menu-mobile">
-        <summary>{dict.nav.menu}</summary>
+      <MenuMobile libelle={dict.nav.menu}>
         <nav aria-label={dict.nav.menu}>
           {liens.map(([href, texte]) => (
             <Link key={href} href={href}>
@@ -40,7 +40,7 @@ export default function EnTete({ dict, lang }) {
           <Link href={`/${lang}/don`}>{dict.nav.don}</Link>
           <Link href={`/${lang}/connexion`}>{dict.nav.connexion}</Link>
         </nav>
-      </details>
+      </MenuMobile>
     </header>
   );
 }

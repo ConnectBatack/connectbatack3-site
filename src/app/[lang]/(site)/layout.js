@@ -10,6 +10,7 @@ export default async function MiseEnPageSite({ children, params }) {
   const textesLangue = await chargerTextesChangementLangue();
   return (
     <>
+      <a className="lien-evitement" href="#contenu">{dict.nav.allerContenu}</a>
       <p className="bandeau-preversion">{dict.preversion}</p>
       <EnTete dict={dict} lang={lang} />
       <main id="contenu">{children}</main>

@@ -37,7 +37,13 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 p { margin: 0 0 1em; }
 a { color: inherit; }
 img { max-width: 100%; }
-:focus-visible { outline: 3px solid var(--or); outline-offset: 3px; }
+/* Focus visible sur tous les fonds : contour foncé et halo doré. */
+:focus-visible { outline: 3px solid var(--encre); outline-offset: 2px; box-shadow: 0 0 0 6px var(--or); }
+.section-sombre :focus-visible, .appel :focus-visible, .bandeau-photo :focus-visible, .parallaxe :focus-visible, .gestion-menu :focus-visible { outline-color: #fff; }
+
+/* Lien « Aller au contenu » : caché tant qu'il n'a pas le focus clavier. */
+.lien-evitement { position: absolute; left: 12px; top: -60px; z-index: 50; padding: 10px 16px; border-radius: var(--rayon); background: var(--encre); color: #fff; font-weight: 700; text-decoration: none; }
+.lien-evitement:focus { top: 12px; }
 
 /* ---------- bandeau de préversion ---------- */
 .bandeau-preversion { margin: 0; padding: 6px 16px; text-align: center; font-size: 0.82rem; background: var(--vert-nuit); color: #fff; }
@@ -97,9 +103,12 @@ img { max-width: 100%; }
 .bandeau-contenu p { max-width: 36em; font-size: 1.12rem; opacity: 0.95; }
 .surtitre { display: block; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-.diapo-points { position: absolute; z-index: 2; right: var(--marge); top: 24px; display: flex; gap: 8px; }
-.diapo-points button { width: 10px; height: 10px; padding: 0; border-radius: 50%; border: 2px solid #fff; background: transparent; cursor: pointer; }
-.diapo-points button[aria-current="true"] { background: #fff; }
+/* Commandes du diaporama : bouton pause et points, avec des zones de clic d'au moins 24 px. */
+.diapo-commandes { position: absolute; z-index: 2; right: var(--marge); top: 18px; display: flex; align-items: center; gap: 2px; padding: 4px 6px; border-radius: var(--rayon); background: rgba(6, 61, 48, 0.55); }
+.diapo-pause { min-height: 32px; padding: 0 12px; margin-right: 6px; border: 2px solid #fff; border-radius: var(--rayon); background: transparent; color: #fff; font: inherit; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
+.diapo-point { display: grid; place-items: center; width: 28px; height: 32px; padding: 0; border: 0; background: none; cursor: pointer; }
+.diapo-point span { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; }
+.diapo-point[aria-current="true"] span { background: #fff; }
 
 .besoin { padding: 26px; background: #fff; color: var(--encre); border-radius: var(--rayon); }
 .besoin .surtitre { color: var(--gris); }
@@ -202,7 +211,8 @@ img { max-width: 100%; }
 .legende li { display: grid; grid-template-columns: 14px 64px 1fr; gap: 12px; align-items: baseline; }
 .legende i { width: 14px; height: 14px; border-radius: 2px; transform: translateY(2px); }
 .legende b { font-variant-numeric: tabular-nums; }
-.tableau-defilant { overflow-x: auto; }
+/* position: relative garde les textes cachés (lecteurs d'écran) dans la zone qui défile. */
+.tableau-defilant { position: relative; overflow-x: auto; }
 .titre-espace { margin-top: 64px; }
 .tableau { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 .tableau th, .tableau td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--trait); }
@@ -268,25 +278,26 @@ img { max-width: 100%; }
 .choix-frequence button.actif { background: var(--encre); color: #fff; }
 
 .choix-montant { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-.choix-montant button { padding: 16px 8px; border-radius: var(--rayon); border: 2px solid #a9b7b1; background: #fff; font: inherit; font-size: 1.2rem; font-weight: 800; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease; }
+.choix-montant button { padding: 16px 8px; border-radius: var(--rayon); border: 2px solid #64776f; background: #fff; font: inherit; font-size: 1.2rem; font-weight: 800; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease; }
 .choix-montant button:hover { border-color: var(--encre); }
 .choix-montant button.actif { border-color: var(--principal); background: var(--principal); color: #fff; }
 .choix-montant small { font-size: 0.72rem; font-weight: 600; }
 .contexte-montant { margin: 14px 0 22px; font-size: 1.05rem; }
 
 .champ { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; font-weight: 700; }
-.champ input, .champ select { padding: 12px 14px; border: 2px solid #a9b7b1; border-radius: var(--rayon); font: inherit; font-weight: 400; background: #fff; }
-.champ input:focus, .champ select:focus { border-color: var(--principal); outline: none; }
+.champ input, .champ select { padding: 12px 14px; border: 2px solid #64776f; border-radius: var(--rayon); font: inherit; font-weight: 400; background: #fff; }
+.champ input:focus, .champ select:focus { border-color: var(--principal); }
 .champs-deux { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .obligatoire { color: var(--erreur); font-weight: 500; font-size: 0.85rem; }
 .case { display: flex; gap: 10px; align-items: flex-start; margin: 10px 0; font-weight: 600; cursor: pointer; }
-.case input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--principal); }
+.case input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--principal); flex-shrink: 0; }
+.case a { color: var(--principal); }
 .aide { font-size: 0.92rem; color: var(--gris); }
 .erreur-champ { margin: -10px 0 14px; color: var(--erreur); font-size: 0.9rem; font-weight: 600; }
 .recapitulatif { padding: 14px 0; border-top: 1px solid var(--trait); border-bottom: 1px solid var(--trait); margin-bottom: 18px; }
 .recapitulatif p { margin: 4px 0 0; }
 .choix-moyen { display: grid; gap: 10px; margin-bottom: 10px; }
-.option-moyen { display: flex; gap: 12px; align-items: center; padding: 16px; border: 2px solid #a9b7b1; border-radius: var(--rayon); font-weight: 700; cursor: pointer; }
+.option-moyen { display: flex; gap: 12px; align-items: center; padding: 16px; border: 2px solid #64776f; border-radius: var(--rayon); font-weight: 700; cursor: pointer; }
 .option-moyen.actif { border-color: var(--principal); }
 .option-moyen input { accent-color: var(--principal); }
 .actions-don { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; }
@@ -299,10 +310,12 @@ img { max-width: 100%; }
 .langue-flottante { position: fixed; right: 18px; bottom: 18px; z-index: 30; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
 .langue-bouton { min-width: 52px; height: 44px; padding: 0 14px; border-radius: var(--rayon); border: 2px solid #fff; background: var(--vert-nuit); color: #fff; font: inherit; font-weight: 800; cursor: pointer; box-shadow: 0 4px 14px rgba(6, 61, 48, 0.3); }
 .langue-menu { list-style: none; margin: 0; padding: 6px; border-radius: var(--rayon); background: #fff; box-shadow: 0 10px 28px rgba(23, 62, 53, 0.2); }
-.langue-menu button { display: block; width: 100%; padding: 8px 16px; border: 0; border-radius: 4px; background: none; font: inherit; text-align: left; cursor: pointer; }
-.langue-menu button:hover, .langue-menu button[aria-selected="true"] { background: var(--vert-clair); font-weight: 700; }
-.fenetre-fond { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: 16px; background: rgba(23, 62, 53, 0.5); animation: fondu 0.2s ease; }
-.fenetre { max-width: 520px; padding: 32px; border-radius: var(--rayon); background: #fff; animation: monte 0.25s ease; }
+.langue-menu a { display: block; padding: 8px 16px; border-radius: 4px; text-decoration: none; }
+.langue-menu a:hover, .langue-menu a[aria-current="true"] { background: var(--vert-clair); font-weight: 700; }
+/* Fenêtre native (<dialog>) : le navigateur gère le focus, Échap et le fond. */
+.fenetre { max-width: min(520px, calc(100vw - 32px)); padding: 32px; border: 0; border-radius: var(--rayon); background: #fff; color: var(--encre); }
+.fenetre[open] { animation: monte 0.25s ease; }
+.fenetre::backdrop { background: rgba(23, 62, 53, 0.5); }
 .fenetre-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 20px; }
 .fenetre .bouton-contour { color: var(--principal); }
 @keyframes fondu { from { opacity: 0; } }
@@ -323,6 +336,7 @@ img { max-width: 100%; }
 
 /* ---------- utilitaires ---------- */
 .visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.bouton-texte:focus-within { outline: 3px solid var(--encre); outline-offset: 2px; box-shadow: 0 0 0 6px var(--or); }
 .bouton-texte { padding: 8px 0; border: 0; background: none; font: inherit; font-weight: 700; color: var(--principal); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .bouton-sombre { color: var(--encre); margin-top: 14px; }
 .nombre { text-align: right; font-variant-numeric: tabular-nums; }
@@ -364,7 +378,7 @@ img { max-width: 100%; }
 .dons-mois { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0 12px; }
 .dons-mois legend { font-weight: 700; margin-bottom: 8px; }
 .dons-mois .champ { font-weight: 500; font-size: 0.9rem; }
-.tableau-saisie input { width: 100%; min-width: 70px; padding: 8px 10px; border: 1px solid #a9b7b1; border-radius: 4px; font: inherit; background: #fff; }
+.tableau-saisie input { width: 100%; min-width: 70px; padding: 8px 10px; border: 1px solid #64776f; border-radius: 4px; font: inherit; background: #fff; }
 .tableau-saisie td { padding: 6px; }
 .planificateur .tableau-saisie td:nth-child(2) input { min-width: 220px; }
 .outil-ahp .tableau-saisie input { max-width: 90px; }
@@ -375,7 +389,7 @@ img { max-width: 100%; }
 .outil-ahp section { margin-bottom: 8px; }
 .liste-criteres { list-style: none; padding: 0; margin: 0 0 14px; display: grid; gap: 8px; max-width: 520px; }
 .liste-criteres li { display: flex; gap: 12px; align-items: center; }
-.liste-criteres input { flex: 1; padding: 10px 12px; border: 1px solid #a9b7b1; border-radius: 4px; font: inherit; background: #fff; }
+.liste-criteres input { flex: 1; padding: 10px 12px; border: 1px solid #64776f; border-radius: 4px; font: inherit; background: #fff; }
 .liste-paires { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
 .liste-paires li { padding: 16px 18px; background: #fff; border: 1px solid var(--trait); border-radius: var(--rayon); }
 .paire-noms { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; }
@@ -414,7 +428,9 @@ img { max-width: 100%; }
   .choix-montant { grid-template-columns: repeat(2, 1fr); }
   .champs-deux { grid-template-columns: 1fr; gap: 0; }
   .section { padding-top: 64px; padding-bottom: 64px; }
-  .gestion-cadre { grid-template-columns: 1fr; }
+  .gestion-cadre { grid-template-columns: minmax(0, 1fr); }
+  .gestion-menu { min-width: 0; }
+  .gestion-contenu { min-width: 0; }
   .gestion-menu { gap: 14px; }
   .gestion-liens { grid-auto-flow: column; overflow-x: auto; }
   .gestion-menu-bas { margin-top: 0; }

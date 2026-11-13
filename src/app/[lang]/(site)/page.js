@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
+import { alternatesPage } from "@/i18n/config";
 import { projets, cheminPhoto } from "@/donnees/projets";
 import { montantsProposes } from "@/lib/regles-don";
 import Apparition from "@/components/Apparition";
@@ -14,6 +15,11 @@ const formatEuro = (lang, n) =>
 // Photos du diaporama d'accueil, dans l'ordre d'affichage.
 const photosAccueil = ["batack-paysage", "accueil-chants", "installation-electrique", "ecole-publique", "marche"];
 
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  return { alternates: alternatesPage(lang, "") };
+}
+
 export default async function Accueil({ params }) {
   const { lang } = await params;
   const dict = await chargerDictionnaire(lang);
@@ -23,7 +29,7 @@ export default async function Accueil({ params }) {
     <>
       <section className="bandeau-photo">
         <Diaporama
-          libelle={dict.nav.diapos}
+          t={{ libelle: dict.nav.diapos, pause: dict.nav.diaporamaPause, lecture: dict.nav.diaporamaLecture }}
           photos={photosAccueil.map((p) => ({ src: cheminPhoto(p), alt: dict.photos[p] }))}
         />
         <div className="bandeau-contenu">
@@ -44,7 +50,7 @@ export default async function Accueil({ params }) {
             <span className="surtitre">{a.prochainBesoin}</span>
             <h2>{a.besoinTitre}</h2>
             <p>{a.besoinTexte}</p>
-            <div className="progression" role="progressbar" aria-valuenow={35} aria-valuemin={0} aria-valuemax={100}>
+            <div className="progression" role="progressbar" aria-label={a.besoinTitre} aria-valuenow={35} aria-valuemin={0} aria-valuemax={100}>
               <span className="progression-barre" style={{ "--p": "35%" }} />
             </div>
             <p className="progression-texte">

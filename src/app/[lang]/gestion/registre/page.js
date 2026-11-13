@@ -1,9 +1,11 @@
+import { exigerSession } from "@/lib/session";
 import { chargerGestion, langueGestion } from "@/i18n/gestion";
 import { ecrituresExemple } from "@/donnees/exemple-gestion";
 import TableauEcritures from "@/components/gestion/TableauEcritures";
 
 export default async function Registre({ params }) {
   const { lang } = await params;
+  await exigerSession(lang); // vérification à chaque page, pas seulement dans la mise en page
   const g = await chargerGestion(lang);
   const r = g.registre;
   return (
