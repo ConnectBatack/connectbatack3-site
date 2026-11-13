@@ -52,7 +52,7 @@
       "ConnectBatack 3 brings together the COVIDEBA, students from the Faculty of Engineering of Mons (UMONS) and the National Advanced School of Engineering of Yaoundé (ENSPY). The first two phases installed a solar microgrid and built the health centre building."
     ],
     "appelTitre": "One donation, one concrete step",
-    "appelTexte": "You can donate without creating an account, once or every month.",
+    "appelTexte": "You can donate without creating an account.",
     "prochainBesoin": "Next need to fund",
     "besoinTitre": "Health centre roof",
     "besoinTexte": "First step of the works: protect the building before installing electricity and medical equipment.",
@@ -145,7 +145,7 @@
     "faq": {
       "titre": "Frequently asked questions",
       "q1": "Do I need an account to donate?",
-      "r1": "You can donate without creating an account, once or every month.",
+      "r1": "You can donate without creating an account.",
       "q2": "Are my bank details secure?",
       "r2": "Payment goes through Stripe, a secure payment provider. Your bank details never pass through this site.",
       "q3": "Can I stop a monthly donation?",
@@ -445,7 +445,7 @@
           {
             "titre": "Donations",
             "texte": [
-              "Donations are voluntary, one-off or monthly. A monthly donation can be stopped: the procedure will be specified.",
+              "Donations are voluntary.",
               "If you made a mistake in the amount, contact us: the donation can be refunded as long as it has not been transferred to the COVIDEBA."
             ]
           },

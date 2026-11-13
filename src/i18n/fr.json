@@ -52,7 +52,7 @@
       "ConnectBatack 3 réunit le COVIDEBA, des étudiants de la Faculté polytechnique de Mons (UMONS) et l'École nationale supérieure polytechnique de Yaoundé (ENSPY). Les deux premières phases ont installé un microréseau solaire et construit le bâtiment du dispensaire."
     ],
     "appelTitre": "Un don, une étape concrète",
-    "appelTexte": "Vous pouvez donner sans créer de compte, une fois ou chaque mois.",
+    "appelTexte": "Vous pouvez donner sans créer de compte.",
     "prochainBesoin": "Prochain besoin à financer",
     "besoinTitre": "Toiture du dispensaire",
     "besoinTexte": "Première étape des travaux : mettre le bâtiment à l'abri avant d'installer l'électricité et le matériel médical.",
@@ -145,7 +145,7 @@
     "faq": {
       "titre": "Questions fréquentes",
       "q1": "Faut-il un compte pour donner ?",
-      "r1": "Vous pouvez donner sans créer de compte, une fois ou chaque mois.",
+      "r1": "Vous pouvez donner sans créer de compte.",
       "q2": "Mes données bancaires sont-elles en sécurité ?",
       "r2": "Le paiement passe par Stripe, un prestataire de paiement sécurisé. Vos données bancaires ne passent jamais par ce site.",
       "q3": "Puis-je arrêter un don mensuel ?",
@@ -445,7 +445,7 @@
           {
             "titre": "Dons",
             "texte": [
-              "Les dons sont libres, ponctuels ou mensuels. Un don mensuel peut être arrêté : la procédure sera précisée.",
+              "Les dons sont libres.",
               "En cas d'erreur de montant, contactez-nous : le don pourra être remboursé tant qu'il n'a pas été transféré au COVIDEBA."
             ]
           },

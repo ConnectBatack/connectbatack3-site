@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
 import { idsProjets } from "@/donnees/projets";
 import { alternatesPage } from "@/i18n/config";
+import { DON_MENSUEL_ACTIF } from "@/lib/regles-don";
 import FormulaireDon, { FormulaireDonDepuisAdresse } from "@/components/FormulaireDon";
 
 export async function generateMetadata({ params }) {
@@ -41,7 +42,8 @@ export default async function PageDon({ params }) {
           <h2>{faq.titre}</h2>
         </div>
         <div className="faq">
-          {[1, 2, 3, 4, 5].map((n) => (
+          {/* La question 3 porte sur l'arrêt du don mensuel. */}
+          {[1, 2, 3, 4, 5].filter((n) => DON_MENSUEL_ACTIF || n !== 3).map((n) => (
             <details key={n}>
               <summary>{faq[`q${n}`]}</summary>
               <p>{faq[`r${n}`]}</p>

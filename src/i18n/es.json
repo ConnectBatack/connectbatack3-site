@@ -52,7 +52,7 @@
       "ConnectBatack 3 reúne al COVIDEBA, a estudiantes de la Facultad Politécnica de Mons (UMONS) y a la Escuela Nacional Superior Politécnica de Yaundé (ENSPY). Las dos primeras fases instalaron una microrred solar y construyeron el edificio del centro de salud."
     ],
     "appelTitre": "Una donación, una etapa concreta",
-    "appelTexte": "Puedes donar sin crear una cuenta, una sola vez o cada mes.",
+    "appelTexte": "Puedes donar sin crear una cuenta.",
     "prochainBesoin": "Próxima necesidad que financiar",
     "besoinTitre": "Tejado del centro de salud",
     "besoinTexte": "Primera etapa de las obras: proteger el edificio antes de instalar la electricidad y el material médico.",
@@ -145,7 +145,7 @@
     "faq": {
       "titre": "Preguntas frecuentes",
       "q1": "¿Hace falta una cuenta para donar?",
-      "r1": "Puedes donar sin crear una cuenta, una sola vez o cada mes.",
+      "r1": "Puedes donar sin crear una cuenta.",
       "q2": "¿Están seguros mis datos bancarios?",
       "r2": "El pago se hace a través de Stripe, un proveedor de pagos seguro. Tus datos bancarios nunca pasan por este sitio.",
       "q3": "¿Puedo cancelar una donación mensual?",
@@ -445,7 +445,7 @@
           {
             "titre": "Donaciones",
             "texte": [
-              "Las donaciones son libres, puntuales o mensuales. Una donación mensual se puede cancelar: el procedimiento se detallará.",
+              "Las donaciones son libres.",
               "Si te equivocaste de importe, contáctanos: la donación podrá reembolsarse mientras no se haya transferido al COVIDEBA."
             ]
           },

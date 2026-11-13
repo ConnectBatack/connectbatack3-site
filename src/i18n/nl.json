@@ -52,7 +52,7 @@
       "ConnectBatack 3 brengt het COVIDEBA samen met studenten van de Polytechnische Faculteit van Bergen (UMONS) en de Nationale Polytechnische Hogeschool van Yaoundé (ENSPY). De eerste twee fasen hebben een zonne-microgrid geïnstalleerd en het gebouw van het gezondheidscentrum gebouwd."
     ],
     "appelTitre": "Eén gift, één concrete stap",
-    "appelTexte": "U kunt doneren zonder account, eenmalig of elke maand.",
+    "appelTexte": "U kunt doneren zonder account.",
     "prochainBesoin": "Volgende te financieren behoefte",
     "besoinTitre": "Dak van het gezondheidscentrum",
     "besoinTexte": "Eerste stap van de werken: het gebouw beschermen voordat de elektriciteit en het medisch materiaal geïnstalleerd worden.",
@@ -145,7 +145,7 @@
     "faq": {
       "titre": "Veelgestelde vragen",
       "q1": "Heb ik een account nodig om te doneren?",
-      "r1": "U kunt doneren zonder account, eenmalig of elke maand.",
+      "r1": "U kunt doneren zonder account.",
       "q2": "Zijn mijn bankgegevens veilig?",
       "r2": "De betaling verloopt via Stripe, een beveiligde betaaldienst. Uw bankgegevens komen nooit op deze site terecht.",
       "q3": "Kan ik een maandelijkse gift stopzetten?",
@@ -445,7 +445,7 @@
           {
             "titre": "Giften",
             "texte": [
-              "Giften zijn vrijwillig, eenmalig of maandelijks. Een maandelijkse gift kan worden stopgezet: de procedure wordt nog verduidelijkt.",
+              "Giften zijn vrijwillig.",
               "Hebt u zich in het bedrag vergist, neem dan contact met ons op: de gift kan worden terugbetaald zolang ze niet aan het COVIDEBA is overgemaakt."
             ]
           },

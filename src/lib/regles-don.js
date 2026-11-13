@@ -3,6 +3,12 @@
 import { idsProjets } from "@/donnees/projets";
 import { langues } from "@/i18n/config";
 
+// Don mensuel masqué (décision de Roy, 13/11/2026) : à réactiver quand l'arrêt du don
+// (portail client Stripe) et le suivi des paiements échoués seront prêts. Les textes qui
+// parlaient du don mensuel ont été raccourcis dans le commit qui a ajouté cette ligne.
+export const DON_MENSUEL_ACTIF = false;
+export const frequences = DON_MENSUEL_ACTIF ? ["ponctuel", "mensuel"] : ["ponctuel"];
+
 export const MONTANT_MIN = 5;
 export const MONTANT_MAX = 5000;
 
@@ -22,7 +28,7 @@ export function verifierDon(don) {
   const erreurs = [];
   const m = don.montant;
   if (typeof m !== "number" || !Number.isInteger(m) || m < MONTANT_MIN || m > MONTANT_MAX) erreurs.push("montant");
-  if (!["ponctuel", "mensuel"].includes(don.frequence)) erreurs.push("frequence");
+  if (!frequences.includes(don.frequence)) erreurs.push("frequence");
   if (!["bancontact", "carte"].includes(don.moyen)) erreurs.push("moyen");
   if (don.frequence === "mensuel" && don.moyen !== "carte") erreurs.push("moyen");
   if (don.projet !== undefined && don.projet !== "" && !idsProjets.includes(don.projet)) erreurs.push("projet");

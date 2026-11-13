@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { MONTANT_MAX, MONTANT_MIN, montantsProposes, verifierDon } from "@/lib/regles-don";
+import { MONTANT_MAX, MONTANT_MIN, frequences, montantsProposes, verifierDon } from "@/lib/regles-don";
 
 // Erreurs vérifiées à chaque étape avant de passer à la suivante.
 const champsParEtape = { 1: ["montant", "projet", "frequence"], 2: ["nom", "email", "prenom", "attestation"], 3: ["moyen", "conditions", "langue"] };
@@ -148,9 +148,10 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
 
       {etape === 1 && (
         <fieldset>
-          {titre(t.frequenceTitre)}
+          {frequences.length > 1 ? titre(t.frequenceTitre) : titre(t.montantTitre)}
+          {frequences.length > 1 && (
           <div className="choix-frequence">
-            {["ponctuel", "mensuel"].map((f) => (
+            {frequences.map((f) => (
               <button
                 key={f}
                 type="button"
@@ -162,8 +163,9 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
               </button>
             ))}
           </div>
+          )}
 
-          <h2>{t.montantTitre}</h2>
+          {frequences.length > 1 && <h2>{t.montantTitre}</h2>}
           <div className="choix-montant">
             {montantsProposes[don.frequence].map((m) => (
               <button

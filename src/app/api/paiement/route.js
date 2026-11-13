@@ -34,6 +34,12 @@ export async function POST(request) {
 
   const mensuel = don.frequence === "mensuel";
   try {
+    // Le donateur est créé chez Stripe avec son nom (utile pour l'attestation fiscale) et son e-mail.
+    const client = await stripe.customers.create({
+      name: [don.prenom, don.nom].filter(Boolean).join(" "),
+      email: don.email,
+      preferred_locales: [don.langue],
+    });
     const session = await stripe.checkout.sessions.create({
       mode: mensuel ? "subscription" : "payment",
       allowed_payment_method_types: [don.moyen === "bancontact" ? "bancontact" : "card"],
@@ -48,7 +54,7 @@ export async function POST(request) {
           },
         },
       ],
-      customer_email: don.email,
+      customer: client.id,
       // L'adresse postale n'est demandée que pour l'attestation fiscale.
       billing_address_collection: don.attestation ? "required" : "auto",
       locale: don.langue,
@@ -65,7 +71,7 @@ export async function POST(request) {
   } catch (e) {
     // Jamais le message complet : Stripe y cite parfois la valeur refusée (par exemple l'e-mail).
     console.error("Stripe :", e?.type ?? "erreur", e?.code ?? "", e?.requestId ?? "");
-    if (e?.param === "customer_email") return NextResponse.json({ erreur: "validation", champs: ["email"] }, { status: 400 });
+    if (e?.param === "email" || e?.param === "customer_email") return NextResponse.json({ erreur: "validation", champs: ["email"] }, { status: 400 });
     return NextResponse.json({ erreur: "serveur" }, { status: 502 });
   }
 }
