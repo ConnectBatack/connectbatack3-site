@@ -363,8 +363,7 @@
             "titre": "Éditeur",
             "texte": [
               "Comité de Développement du Village Batack (COVIDEBA), Batack, Ouest-Cameroun.",
-              "Président : Dr Anatole Chengoué.",
-              "Contact : adresse e-mail à compléter."
+              "Président : Dr Anatole Chengoué."
             ]
           },
           {
@@ -376,7 +375,7 @@
           {
             "titre": "Hébergement",
             "texte": [
-              "Vercel Inc., États-Unis (vercel.com). Adresse postale à compléter."
+              "Vercel Inc., États-Unis (vercel.com)."
             ]
           },
           {
@@ -408,12 +407,6 @@
             "titre": "Utilisation",
             "texte": [
               "Traiter votre don, vous envoyer un reçu et, si vous l'avez demandée, permettre l'envoi de l'attestation fiscale par l'institution agréée qui reçoit les dons."
-            ]
-          },
-          {
-            "titre": "Durée de conservation",
-            "texte": [
-              "À compléter."
             ]
           },
           {

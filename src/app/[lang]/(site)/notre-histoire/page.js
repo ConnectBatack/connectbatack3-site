@@ -32,13 +32,9 @@ export default async function NotreHistoire({ params }) {
           {h.etapes.map((e) => (
             <Apparition as="li" key={e.titre}>
               <p className="frise-date">
+                {/* La date exacte de Connect Batack 1 reste à trouver (dateACompleter dans les dictionnaires).
+                    La mention « à compléter » n'est plus montrée aux visiteurs (décision de Roy, 14/11/2026). */}
                 {e.date}
-                {e.dateACompleter && (
-                  <>
-                    <br />
-                    <span className="a-completer">({dict.aCompleter})</span>
-                  </>
-                )}
               </p>
               <div className={`frise-texte ${e.photo ? "" : "sans-image"}`}>
                 <div>
