@@ -9,7 +9,6 @@ export const projets = [
   { id: "ecole", photo: "salle-de-classe", collecte: 650, objectif: 1200, contributeurs: 9 },
   // Pas encore de photo du réseau d'eau : paysage du village en attendant.
   { id: "eau", photo: "batack-paysage", collecte: 300, objectif: 5000, contributeurs: 4 },
-  { id: "marche", photo: "marche", collecte: 0, objectif: 4000, contributeurs: 0 },
 ];
 
 export const idsProjets = projets.map((p) => p.id);
