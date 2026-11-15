@@ -89,6 +89,12 @@
       "titre": "Setting up the market",
       "accroche": "Give the village a proper marketplace",
       "description": "The market square of Batack is under construction and cannot be used yet. This project funds its fitting out, so that the village's producers and traders have a suitable place to sell. The remaining works and their cost will be set with the COVIDEBA."
+    },
+    "route": {
+      "categorie": "Infrastructure",
+      "titre": "Improving the road",
+      "accroche": "Make Batack's road easier to travel",
+      "description": "The road in Batack is currently a dirt track. This project funds its improvement, to make it easier for residents to get around and for goods and equipment to be transported. The route, the works and the cost will be set with the COVIDEBA."
     }
   },
   "exemple": "example",

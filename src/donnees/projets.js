@@ -10,6 +10,8 @@ export const projets = [
   // Pas encore de photo du réseau d'eau : paysage du village en attendant.
   { id: "eau", photo: "batack-paysage", collecte: 300, objectif: 5000, contributeurs: 4 },
   { id: "marche", photo: "marche", collecte: 0, objectif: 4000, contributeurs: 0 },
+    // Objectif d'exemple : à remplacer par le coût réel annoncé par le COVIDEBA.
+  { id: "route", photo: "batack-paysage", collecte: 0, objectif: 8000, contributeurs: 0 },
 ];
 
 export const idsProjets = projets.map((p) => p.id);

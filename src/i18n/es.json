@@ -89,6 +89,12 @@
       "titre": "Acondicionamiento del mercado",
       "accroche": "Dar al pueblo una plaza de mercado acondicionada",
       "description": "La plaza del mercado de Batack está en construcción y todavía no se puede utilizar. Este proyecto financia su acondicionamiento, para que los productores y comerciantes del pueblo tengan un lugar adecuado donde vender. Los trabajos pendientes y su coste se definirán con el COVIDEBA."
+    },
+    "route": {
+      "categorie": "Infraestructura",
+      "titre": "Mejora de la carretera",
+      "accroche": "Hacer más transitable la carretera de Batack",
+      "description": "La carretera de Batack es hoy un camino de tierra. Este proyecto financia su mejora, para facilitar los desplazamientos de los habitantes y el transporte de mercancías y material. El trazado, los trabajos y el coste se definirán con el COVIDEBA."
     }
   },
   "exemple": "ejemplo",
