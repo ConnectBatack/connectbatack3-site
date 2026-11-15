@@ -83,6 +83,18 @@
       "titre": "Accès à l'eau potable",
       "description": "Le COVIDEBA a déjà construit un premier réseau d'eau potable. Ce projet l'étend vers les quartiers qui en sont encore éloignés, pour que plus de familles aient de l'eau potable près de chez elles. Le tracé et le coût seront précisés avec le COVIDEBA.",
       "accroche": "Rendre l'eau potable accessible à tous"
+    },
+    "marche": {
+      "categorie": "Économie",
+      "titre": "Aménagement du marché",
+      "accroche": "Donner au village une place de marché aménagée",
+      "description": "La place du marché de Batack est en construction et ne peut pas encore être utilisée. Ce projet finance son aménagement, pour que les producteurs et les commerçants du village aient un lieu adapté où vendre. Les travaux restant à faire et leur coût seront précisés avec le COVIDEBA."
+    },
+    "route": {
+      "categorie": "Infrastructure",
+      "titre": "Amélioration de la route",
+      "accroche": "Rendre la route de Batack plus praticable",
+      "description": "La route de Batack est aujourd'hui une piste de terre. Ce projet finance son amélioration, pour faciliter les déplacements des habitants et le transport des marchandises et du matériel. Le tracé, les travaux et le coût seront précisés avec le COVIDEBA."
     }
   },
   "exemple": "exemple",

@@ -83,7 +83,19 @@
       "titre": "Toegang tot drinkwater",
       "description": "Het COVIDEBA heeft al een eerste drinkwaternet aangelegd. Dit project breidt het uit naar de wijken die er nog ver van liggen, zodat meer gezinnen drinkwater dicht bij huis hebben. Het tracé en de kosten worden met het COVIDEBA vastgelegd.",
       "accroche": "Drinkwater toegankelijk maken voor iedereen"
-    }
+    },
+    "marche": {
+      "categorie": "Economie",
+      "titre": "Inrichting van de markt",
+      "accroche": "Het dorp een ingerichte marktplaats geven",
+      "description": "Het marktplein van Batack is in aanbouw en kan nog niet worden gebruikt. Dit project financiert de inrichting ervan, zodat de producenten en handelaars van het dorp een geschikte plek hebben om te verkopen. De resterende werken en hun kosten worden met het COVIDEBA verduidelijkt."
+    },
+      "route": {
+      "categorie": "Infrastructuur",
+      "titre": "Verbetering van de weg",
+      "accroche": "De weg van Batack beter begaanbaar maken",
+      "description": "De weg in Batack is nu een aarden pad. Dit project financiert de verbetering ervan, zodat de inwoners zich gemakkelijker kunnen verplaatsen en goederen en materiaal beter kunnen worden vervoerd. Het tracé, de werken en de kosten worden met het COVIDEBA verduidelijkt."
+    }  
   },
   "exemple": "voorbeeld",
   "don": {
