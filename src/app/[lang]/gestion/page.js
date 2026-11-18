@@ -24,7 +24,7 @@ export default async function TableauDeBord({ params }) {
   return (
     <>
       <h1>{t.titre}</h1>
-      <p className="note-exemple">{g.plan.exemple}</p>
+      <p className="note-exemple">{g.exempleMaquette}</p>
       <ul className="indicateurs">
         {indicateurs.map(([libelle, valeur]) => (
           <li key={libelle}>

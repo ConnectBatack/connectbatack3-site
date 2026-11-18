@@ -160,6 +160,7 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
           <label className="champ">{t.Smin}<input type="number" min="0" value={inst.Smin} onChange={(e) => modifier({ Smin: nombre(e.target.value) })} /></label>
           <label className="champ">{t.delta}<input type="number" min="0" step="0.01" value={inst.delta} onChange={(e) => modifier({ delta: nombre(e.target.value) })} /></label>
         </div>
+        <p className="aide">{t.deltaAide}</p>
         <fieldset className="dons-mois">
           <legend>{t.dons}</legend>
           {inst.D.map((d, k) => (
@@ -264,6 +265,7 @@ function Resultat({ resultat, inst, t, euro, libelle }) {
         <li><span>{t.valeur}</span><strong>{resultat.valeur.toFixed(2)}</strong></li>
         <li><span>{t.temps}</span><strong>{resultat.temps_calcul_s.toFixed(2)} s</strong></li>
       </ul>
+      <p className="aide">{t.valeurAide}</p>
       <div className="tableau-defilant">
         <table className="tableau">
           <thead>

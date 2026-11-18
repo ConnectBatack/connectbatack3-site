@@ -12,7 +12,7 @@ export default async function Registre({ params }) {
     <>
       <h1>{r.titre}</h1>
       <p className="gestion-intro">{r.intro}</p>
-      <p className="note-exemple">{g.plan.exemple}</p>
+      <p className="note-exemple">{g.exempleMaquette}</p>
       <TableauEcritures ecritures={ecrituresExemple} g={g} langue={langueGestion(lang)} />
       <p className="aide">{r.parite}</p>
       <button type="button" className="bouton bouton-principal" disabled title={r.nouvelleMaquette}>

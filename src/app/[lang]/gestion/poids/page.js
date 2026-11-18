@@ -11,7 +11,7 @@ export default async function PagePoids({ params }) {
     <>
       <h1>{g.poids.titre}</h1>
       <p className="gestion-intro">{g.poids.intro}</p>
-      <p className="note-exemple">{g.plan.exemple}</p>
+      <p className="note-exemple">{g.exempleMaquette}</p>
       <OutilAhp t={g.poids} langue={langueGestion(lang)} taches={instanceExemple.taches} nomCritere={g.poids.critere} />
     </>
   );

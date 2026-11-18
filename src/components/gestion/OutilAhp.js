@@ -168,7 +168,6 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
           })}
         </ul>
         <button type="button" className="bouton bouton-principal" onClick={enregistrerVote}>{t.enregistrerVote}</button>
-        <p className="aide">{t.coherence} {nombre(crVote, 3)}</p>
         {message === t.voteIncoherent && <p className="message message-erreur" role="alert">{message}</p>}
           </>
         )}
@@ -192,7 +191,7 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
           ))}
         </ul>
         <p className={coherent ? "message message-info" : "message message-erreur"} role="status">
-          {t.coherence} {nombre(cr, 3)}. {n <= 2 ? t.deuxCriteres : coherent ? t.coherent : t.incoherent}
+          {n <= 2 ? t.deuxCriteres : coherent ? t.coherent : t.incoherent}
         </p>
       </section>
 
@@ -233,6 +232,7 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
           </table>
         </div>
         <button type="button" className="bouton bouton-principal" onClick={enregistrer}>{t.enregistrer}</button>
+        <p className="aide">{t.methode}</p>
         {message && message !== t.voteIncoherent && <p className={message === t.enregistre ? "message message-info" : "message message-erreur"} role="status">{message}</p>}
       </section>
     </div>

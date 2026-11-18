@@ -29,7 +29,7 @@ export const ecrituresExemple = [
   { numero: 6, date: "2026-11-06", libelle: "Cotisation Mobile Money", compte: "Mobile Money", entree: 32800, sortie: 0, devise: "FCFA", etat: "a_contresigner", hash: "71bd…0c93" },
   { numero: 5, date: "2026-11-02", libelle: "Achat de câbles électriques", compte: "Caisse", entree: 0, sortie: 45000, devise: "FCFA", etat: "validee", hash: "c04a…5f12" },
   { numero: 4, date: "2026-10-28", libelle: "Reversement de l'institution agréée", compte: "Banque du COVIDEBA", entree: 1200, sortie: 0, devise: "EUR", etat: "validee", hash: "2e88…b7d0" },
-  { numero: 3, date: "2026-10-20", libelle: "Correction de l'écriture 2 (montant)", compte: "Caisse", entree: 5000, sortie: 0, devise: "FCFA", etat: "validee", hash: "ab31…9e64" },
+  { numero: 3, date: "2026-10-20", libelle: "Correction de la ligne 2 (montant)", compte: "Caisse", entree: 5000, sortie: 0, devise: "FCFA", etat: "validee", hash: "ab31…9e64" },
 ];
 
 // Parité fixe du franc CFA : voir src/lib/monnaie.js.
