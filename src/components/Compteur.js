@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { formatEuroArrondi } from "@/lib/monnaie";
 
+// devise : montant en FCFA, suivi de son équivalent en euros en petit.
 // Nombre qui monte jusqu'à sa valeur quand il entre dans l'écran.
 // Sans JavaScript, ou si le visiteur a demandé moins de mouvement, la valeur finale s'affiche directement.
 export default function Compteur({ valeur, langue, devise = false, pourcentage = false }) {
@@ -33,12 +35,13 @@ export default function Compteur({ valeur, langue, devise = false, pourcentage =
     };
   }, [valeur]);
 
-  const format = devise
-    ? { style: "currency", currency: "EUR", maximumFractionDigits: 0 }
-    : pourcentage
-      ? { style: "percent", maximumFractionDigits: 0 }
-      : { maximumFractionDigits: 0 };
+  const format = pourcentage ? { style: "percent", maximumFractionDigits: 0 } : { maximumFractionDigits: 0 };
   const texte = new Intl.NumberFormat(langue, format).format(pourcentage ? affiche / 100 : affiche);
 
-  return <strong ref={ref}>{texte}</strong>;
+  if (!devise) return <strong ref={ref}>{texte}</strong>;
+  return (
+    <strong ref={ref}>
+      {`${texte} FCFA`} <small className="montant-euro">({formatEuroArrondi(langue, valeur)})</small>
+    </strong>
+  );
 }

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { clientStripe } from "@/lib/stripe";
 import { nettoyerDon, verifierDon } from "@/lib/regles-don";
+import { centimesEuro } from "@/lib/monnaie";
 import { adresseSite, lireObjetJson, origineAutorisee } from "@/lib/requete";
 
 // Crée une session Stripe Checkout et renvoie son adresse.
@@ -48,8 +49,9 @@ export async function POST(request) {
           quantity: 1,
           price_data: {
             currency: "eur",
-            unit_amount: don.montant * 100,
-            product_data: { name: mensuel ? "Don mensuel ConnectBatack 3" : "Don ConnectBatack 3" },
+            // Le montant du don est en FCFA : Stripe prélève son équivalent exact en euros.
+            unit_amount: centimesEuro(don.montant),
+            product_data: { name: mensuel ? "Don mensuel au COVIDEBA" : "Don au COVIDEBA" },
             ...(mensuel ? { recurring: { interval: "month" } } : {}),
           },
         },
@@ -61,6 +63,7 @@ export async function POST(request) {
       // Pas de donnée personnelle dans les métadonnées : seulement ce qui sert au suivi du don.
       metadata: {
         projet: don.projet || "general",
+        montant_fcfa: String(don.montant),
         attestation: don.attestation ? "oui" : "non",
         langue: don.langue,
       },

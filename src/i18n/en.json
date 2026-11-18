@@ -1,6 +1,6 @@
 {
   "meta": {
-    "titre": "ConnectBatack 3: support the village of Batack",
+    "titre": "COVIDEBA: support the village of Batack",
     "description": "Help open the health centre in Batack, Cameroon, and see what each donation is used for."
   },
   "preversion": "Site preview: figures are examples and no real payment is possible.",
@@ -28,7 +28,7 @@
     "collecte": "raised out of",
     "soutenir": "Support this project",
     "impactTitre": "What your donation makes possible",
-    "impactIntro": "One amount, one specific use. These amounts and uses are examples and will be replaced by real costs.",
+    "impactIntro": "Examples of what a donation pays for.",
     "etapesTitre": "What happens to your donation",
     "etapes": [
       {
@@ -47,15 +47,15 @@
     "aproposTitre": "About us",
     "aproposTexte": [
       "The COVIDEBA is the development committee of the village of Batack. It leads the village projects: drinking water, schools, health.",
-      "ConnectBatack 3 brings together the COVIDEBA, students from the Faculty of Engineering of Mons (UMONS) and the National Advanced School of Engineering of Yaoundé (ENSPY). The first two phases installed a solar microgrid and built the health centre building."
+      "Since 2024, engineering students from Belgium and Cameroon have been working with the COVIDEBA. The first two phases installed a solar microgrid and built the health centre building."
     ],
-    "appelTitre": "One donation, one concrete step",
+    "appelTitre": "Support the village's projects",
     "appelTexte": "You can donate without creating an account.",
     "prochainBesoin": "Next funding need",
     "besoinTitre": "Health centre roof",
     "besoinTexte": "First step of the works: protect the building before installing electricity and medical equipment.",
-    "parallaxeTitre": "Three phases, one village",
-    "parallaxeTexte": "From the solar charging station to the health centre, each phase starts from a need expressed by the village of Batack.",
+    "parallaxeTitre": "A partnership launched by the COVIDEBA",
+    "parallaxeTexte": "In 2024, Prof. Anatole Chengoué, a member of the COVIDEBA, and his friend Prof. Pierre Dehombreux brought the committee into a partnership with engineering students from Belgium and Cameroon. A solar charging station, then power for the health centre: each project answers a request from the village.",
     "parallaxeLien": "Read our story",
     "aproposLien": "Find out who we are"
   },
@@ -106,20 +106,20 @@
     "ponctuel": "Once",
     "mensuel": "Monthly",
     "montantTitre": "Amount of my donation",
-    "autreMontant": "Other amount (€)",
+    "autreMontant": "Other amount (FCFA)",
     "parMois": "per month",
     "contextes": {
       "ponctuel": {
-        "25": "helps buy basic medicines for the health centre",
-        "50": "helps maintain the solar batteries",
-        "100": "helps pay a teacher's monthly salary",
-        "250": "helps build the health centre roof"
+        "10000": "helps buy basic medicines for the health centre",
+        "25000": "helps maintain the solar batteries",
+        "50000": "helps pay for the health centre's electrical wiring",
+        "100000": "helps build the health centre roof"
       },
       "mensuel": {
-        "10": "helps buy basic medicines every month",
-        "20": "helps maintain the batteries every month",
-        "35": "helps pay a teacher every month",
-        "50": "helps fund the health centre works every month"
+        "5000": "helps buy basic medicines every month",
+        "10000": "helps maintain the batteries every month",
+        "25000": "helps pay each month for the health centre's electrical wiring",
+        "50000": "helps fund the health centre works every month"
       }
     },
     "contexteAutre": "Your donation goes to the project you choose, or to the general fund if you do not choose one.",
@@ -132,8 +132,12 @@
     "nom": "Last name",
     "email": "Email address",
     "obligatoire": "required",
+    "pays": "Country of residence",
+    "paysChoisir": "Choose",
+    "paysBelgique": "Belgium",
+    "paysAutre": "Other country",
     "attestation": "I would like a tax certificate",
-    "attestationAide": "The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address. Other information may be requested, such as the national register number in Belgium.",
+    "attestationAide": "The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address. Other information may be requested, such as your national register number.",
     "conditions": "I accept the {conditions} and the {confidentialite}.",
     "paiementTitre": "Payment method",
     "bancontact": "Bancontact",
@@ -141,16 +145,18 @@
     "mensuelCarte": "Monthly donations are made by card.",
     "securite": "Payment is processed by Stripe on a secure page. Your bank details do not pass through this site.",
     "recapitulatif": "Summary",
+    "preleve": "Amount charged by Stripe: {euros} (fixed rate: €1 = 655.957 FCFA).",
     "confirmer": "Confirm my donation",
     "envoi": "Redirecting to payment…",
     "erreurs": {
-      "montant": "Choose an amount between €{min} and €{max}, with no cents.",
+      "montant": "Choose an amount of at least {min}.",
       "nom": "Enter your last name.",
       "email": "Enter a valid email address.",
       "conditions": "Accept the terms to continue.",
       "nonConfigure": "Online payment is not active yet: this page is a preview.",
       "serveur": "The payment could not start. Please try again in a moment.",
-      "autre": "Some information in the form is not valid. Reload the page, then try again."
+      "autre": "Some information in the form is not valid. Reload the page, then try again.",
+      "pays": "Please select your country of residence."
     },
     "faq": {
       "titre": "Frequently asked questions",
@@ -161,7 +167,7 @@
       "q3": "Can I stop a monthly donation?",
       "r3": "The procedure for stopping a monthly donation will be specified later.",
       "q4": "How do I get a tax certificate?",
-      "r4": "The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address. Other information may be requested, such as the national register number in Belgium.",
+      "r4": "Tax certificates are only available to donors who live in Belgium. The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address, and other information may be requested, such as your national register number.",
       "q5": "What happens to my donation if I do not choose a project?",
       "r5": "Your donation goes to the general fund. It is used where the need is most urgent."
     },
@@ -186,7 +192,7 @@
     "reserve": "Area reserved for COVIDEBA members and supervisors."
   },
   "pied": {
-    "texte": "ConnectBatack 3: COVIDEBA, Faculty of Engineering of Mons (UMONS) and ENSPY.",
+    "texte": "Batack Village Development Committee (COVIDEBA), West Cameroon.",
     "droits": "© 2026 COVIDEBA",
     "projet": "The project",
     "informations": "Information",
@@ -291,8 +297,31 @@
         "texte": "The building exists. It still needs to be made operational."
       }
     ],
-    "appelTitre": "What comes next depends on you",
-    "appelTexte": "Each donation funds a concrete step, which is then published on this site."
+    "appelTitre": "Next step: opening the health centre",
+    "appelTexte": "Each donation funds a concrete step, which is then published on this site.",
+    "equipesTitre": "The student teams",
+    "equipesTexte": "Connect Batack 3 brings together students from the Faculty of Engineering of the University of Mons (computer science and management, mechanics, energy) and from the National Advanced School of Engineering of Yaoundé (industrial engineering, mechanics, computer science).",
+    "etudiants": "The list of members will be published soon.",
+    "encadrantsTitre": "Supervision",
+    "roles": {
+      "dehombreux": "Faculty of Engineering of Mons (UMONS)",
+      "fokam": "National Advanced School of Engineering of Yaoundé (ENSPY)",
+      "chengoue": "Member of the COVIDEBA, professor at ENSPY"
+    },
+    "partenairesTitre": "Partners and funders",
+    "partenaires": {
+      "ares": "Academy of Research and Higher Education (Belgium). Funds student cooperation microprojects.",
+      "solarly": "Solar energy company, partner of the January 2026 installation."
+    },
+    "charteTitre": "Our charter",
+    "charteIntro": "The Mons and Yaoundé teams work according to five principles.",
+    "charte": [
+      "Mutual respect: each member is a full partner, and cultural differences are an asset.",
+      "Punctuality and keeping commitments.",
+      "Shared decisions: important decisions are discussed and approved by both teams.",
+      "Recognising everyone's work and every success, even small ones.",
+      "Availability and transparency: everyone gives advance notice of absence, delay or difficulty."
+    ]
   },
   "transparence": {
     "titre": "Transparency",
@@ -338,30 +367,7 @@
     "covidebaTitre": "The COVIDEBA",
     "covidebaTexte": [
       "The Batack Village Development Committee (COVIDEBA) brings together residents and members of the Batack community. It leads the village projects and decides how funds are used.",
-      "It is chaired by Dr Anatole Chengoué."
-    ],
-    "equipesTitre": "The student teams",
-    "equipesTexte": "Connect Batack 3 brings together students from the Faculty of Engineering of the University of Mons (computer science and management, mechanics, energy) and from the National Advanced School of Engineering of Yaoundé (industrial engineering, mechanics, computer science).",
-    "etudiants": "The list of members will be published soon.",
-    "encadrantsTitre": "Supervision",
-    "roles": {
-      "dehombreux": "Faculty of Engineering of Mons (UMONS)",
-      "fokam": "National Advanced School of Engineering of Yaoundé (ENSPY)",
-      "chengoue": "Chair of the COVIDEBA"
-    },
-    "partenairesTitre": "Partners and funders",
-    "partenaires": {
-      "ares": "Academy of Research and Higher Education (Belgium). Funds student cooperation microprojects.",
-      "solarly": "Solar energy company, partner of the January 2026 installation."
-    },
-    "charteTitre": "Our charter",
-    "charteIntro": "The Mons and Yaoundé teams work according to five principles.",
-    "charte": [
-      "Mutual respect: each member is a full partner, and cultural differences are an asset.",
-      "Punctuality and keeping commitments.",
-      "Shared decisions: important decisions are discussed and approved by both teams.",
-      "Recognising everyone's work and every success, even small ones.",
-      "Availability and transparency: everyone gives advance notice of absence, delay or difficulty."
+      "It is chaired by Mr Tchapa."
     ]
   },
   "legal": {
@@ -375,7 +381,7 @@
             "titre": "Publisher",
             "texte": [
               "Batack Village Development Committee (COVIDEBA), Batack, West Cameroon.",
-              "Chair: Dr Anatole Chengoué."
+              "Chair: Mr Tchapa."
             ]
           },
           {

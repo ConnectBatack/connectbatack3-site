@@ -1,22 +1,24 @@
 // DONNÉES D'EXEMPLE de l'espace de gestion (maquette). Rien ici ne vient du COVIDEBA :
 // coûts, durées, poids et dons sont inventés pour montrer le fonctionnement.
+// Tâches limitées au dispensaire (remarque c du professeur, décision de Roy du 18/11/2026) :
+// le choix réel des tâches revient au COVIDEBA.
 // Elles seront remplacées par la base de données (backend de Pio).
 
+// Montants en FCFA (consigne de l'équipe, 18/11/2026).
 // Instance au format commun des solveurs (Delegation_Argon4/format_entree_solveur/FORMAT.md).
 export const instanceExemple = {
   nom: "exemple_maquette_dispensaire",
   h: 6,
-  S0: 3200,
-  Smin: 500,
+  S0: 2100000,
+  Smin: 330000,
   delta: 0.1,
-  D: [900, 900, 900, 900, 900, 900],
+  D: [590000, 590000, 590000, 590000, 590000, 590000],
   taches: [
-    { id: 1, libelle: "Toiture du dispensaire", cout: 2500, duree: 2, poids: 9 },
-    { id: 2, libelle: "Câblage électrique", cout: 1200, duree: 1, poids: 8 },
-    { id: 3, libelle: "Matériel d'analyse", cout: 2000, duree: 1, poids: 7 },
-    { id: 4, libelle: "Entretien des batteries", cout: 400, duree: 1, poids: 6 },
-    { id: 5, libelle: "Salaire d'un instituteur (trimestre)", cout: 900, duree: 3, poids: 7 },
-    { id: 6, libelle: "Citerne d'eau", cout: 1500, duree: 2, poids: 5 },
+    { id: 1, libelle: "Toiture du dispensaire", cout: 1640000, duree: 2, poids: 9 },
+    { id: 2, libelle: "Câblage électrique", cout: 790000, duree: 1, poids: 8 },
+    { id: 3, libelle: "Matériel d'analyse", cout: 1310000, duree: 1, poids: 7 },
+    { id: 4, libelle: "Matériel de radiologie", cout: 985000, duree: 2, poids: 6 },
+    { id: 5, libelle: "Entretien des batteries solaires", cout: 262000, duree: 1, poids: 5 },
   ],
   precedences: [[1, 2], [2, 3]],
 };
@@ -30,5 +32,4 @@ export const ecrituresExemple = [
   { numero: 3, date: "2026-10-20", libelle: "Correction de l'écriture 2 (montant)", compte: "Caisse", entree: 5000, sortie: 0, devise: "FCFA", etat: "validee", hash: "ab31…9e64" },
 ];
 
-// Parité fixe du franc CFA : 1 € = 655,957 FCFA.
-export const PARITE_FCFA = 655.957;
+// Parité fixe du franc CFA : voir src/lib/monnaie.js.

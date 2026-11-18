@@ -1,6 +1,6 @@
 {
   "meta": {
-    "titre": "ConnectBatack 3: steun het dorp Batack",
+    "titre": "COVIDEBA: steun het dorp Batack",
     "description": "Help het gezondheidscentrum van Batack in Kameroen te openen en zie waarvoor elke gift wordt gebruikt."
   },
   "preversion": "Voorlopige versie van de site: de cijfers zijn voorbeelden en er is geen echte betaling mogelijk.",
@@ -28,7 +28,7 @@
     "collecte": "opgehaald van de",
     "soutenir": "Steun dit project",
     "impactTitre": "Wat uw gift mogelijk maakt",
-    "impactIntro": "Eén bedrag, één concreet gebruik. Deze bedragen en bestemmingen zijn voorbeelden en worden vervangen door de echte kosten.",
+    "impactIntro": "Voorbeelden van wat een gift financiert.",
     "etapesTitre": "Wat er met uw gift gebeurt",
     "etapes": [
       {
@@ -47,15 +47,15 @@
     "aproposTitre": "Over ons",
     "aproposTexte": [
       "Het COVIDEBA is het ontwikkelingscomité van het dorp Batack. Het leidt de projecten van het dorp: drinkwater, scholen, gezondheid.",
-      "ConnectBatack 3 brengt het COVIDEBA samen met studenten van de Polytechnische Faculteit van Bergen (UMONS) en de Nationale Polytechnische Hogeschool van Yaoundé (ENSPY). De eerste twee fasen hebben een zonne-microgrid geïnstalleerd en het gebouw van het gezondheidscentrum gebouwd."
+      "Sinds 2024 werken ingenieursstudenten uit België en Kameroen samen met het COVIDEBA. De eerste twee fasen hebben een zonne-microgrid geïnstalleerd en het gebouw van het gezondheidscentrum gebouwd."
     ],
-    "appelTitre": "Eén gift, één concrete stap",
+    "appelTitre": "Steun de projecten van het dorp",
     "appelTexte": "U kunt doneren zonder account.",
     "prochainBesoin": "Eerstvolgende behoefte",
     "besoinTitre": "Dak van het gezondheidscentrum",
     "besoinTexte": "Eerste stap van de werken: het gebouw beschermen voordat de elektriciteit en het medisch materiaal geïnstalleerd worden.",
-    "parallaxeTitre": "Drie fasen, één dorp",
-    "parallaxeTexte": "Van het oplaadstation op zonne-energie tot het gezondheidscentrum: elke fase vertrekt van een behoefte die het dorp Batack zelf heeft aangegeven.",
+    "parallaxeTitre": "Een samenwerking gestart door het COVIDEBA",
+    "parallaxeTexte": "In 2024 brachten prof. Anatole Chengoué, lid van het COVIDEBA, en zijn vriend prof. Pierre Dehombreux het comité in een samenwerking met ingenieursstudenten uit België en Kameroen. Een oplaadstation op zonne-energie, daarna energie voor het gezondheidscentrum: elk project beantwoordt een vraag van het dorp.",
     "parallaxeLien": "Lees ons verhaal",
     "aproposLien": "Ontdek wie we zijn"
   },
@@ -90,12 +90,12 @@
       "accroche": "Het dorp een ingerichte marktplaats geven",
       "description": "Het marktplein van Batack is in aanbouw en kan nog niet worden gebruikt. Dit project financiert de inrichting ervan, zodat de producenten en handelaars van het dorp een geschikte plek hebben om te verkopen. De resterende werken en hun kosten worden met het COVIDEBA verduidelijkt."
     },
-      "route": {
+    "route": {
       "categorie": "Infrastructuur",
       "titre": "Verbetering van de weg",
       "accroche": "De weg van Batack beter begaanbaar maken",
       "description": "De weg in Batack is nu een aarden pad. Dit project financiert de verbetering ervan, zodat de inwoners zich gemakkelijker kunnen verplaatsen en goederen en materiaal beter kunnen worden vervoerd. Het tracé, de werken en de kosten worden met het COVIDEBA verduidelijkt."
-    }  
+    }
   },
   "exemple": "voorbeeld",
   "don": {
@@ -106,20 +106,20 @@
     "ponctuel": "Eenmalig",
     "mensuel": "Elke maand",
     "montantTitre": "Bedrag van mijn gift",
-    "autreMontant": "Ander bedrag (€)",
+    "autreMontant": "Ander bedrag (FCFA)",
     "parMois": "per maand",
     "contextes": {
       "ponctuel": {
-        "25": "draagt bij aan de aankoop van basisgeneesmiddelen voor het gezondheidscentrum",
-        "50": "draagt bij aan het onderhoud van de zonnebatterijen",
-        "100": "draagt bij aan het maandloon van een leerkracht",
-        "250": "draagt bij aan het dak van het gezondheidscentrum"
+        "10000": "draagt bij aan de aankoop van basisgeneesmiddelen voor het gezondheidscentrum",
+        "25000": "draagt bij aan het onderhoud van de zonnebatterijen",
+        "50000": "draagt bij aan de elektrische bekabeling van het gezondheidscentrum",
+        "100000": "draagt bij aan het dak van het gezondheidscentrum"
       },
       "mensuel": {
-        "10": "draagt elke maand bij aan basisgeneesmiddelen",
-        "20": "draagt elke maand bij aan het onderhoud van de batterijen",
-        "35": "draagt elke maand bij aan het loon van een leerkracht",
-        "50": "draagt elke maand bij aan de bouwwerken van het gezondheidscentrum"
+        "5000": "draagt elke maand bij aan basisgeneesmiddelen",
+        "10000": "draagt elke maand bij aan het onderhoud van de batterijen",
+        "25000": "draagt elke maand bij aan de elektrische bekabeling van het gezondheidscentrum",
+        "50000": "draagt elke maand bij aan de bouwwerken van het gezondheidscentrum"
       }
     },
     "contexteAutre": "Uw gift gaat naar het gekozen project, of naar het algemene fonds als u geen project kiest.",
@@ -132,8 +132,12 @@
     "nom": "Achternaam",
     "email": "E-mailadres",
     "obligatoire": "verplicht",
+    "pays": "Land van verblijf",
+    "paysChoisir": "Kies",
+    "paysBelgique": "België",
+    "paysAutre": "Ander land",
     "attestation": "Ik wens een fiscaal attest",
-    "attestationAide": "Het attest wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres. Er kunnen andere gegevens gevraagd worden, bijvoorbeeld het rijksregisternummer in België.",
+    "attestationAide": "Het attest wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres. Er kunnen andere gegevens gevraagd worden, bijvoorbeeld uw rijksregisternummer.",
     "conditions": "Ik aanvaard de {conditions} en het {confidentialite}.",
     "paiementTitre": "Betaalmethode",
     "bancontact": "Bancontact",
@@ -141,16 +145,18 @@
     "mensuelCarte": "Een maandelijkse gift verloopt via bankkaart.",
     "securite": "De betaling wordt door Stripe verwerkt op een beveiligde pagina. Uw bankgegevens komen niet op deze site terecht.",
     "recapitulatif": "Overzicht",
+    "preleve": "Bedrag dat Stripe afschrijft: {euros} (vaste wisselkoers: 1 € = 655,957 FCFA).",
     "confirmer": "Mijn gift bevestigen",
     "envoi": "Doorsturen naar de betaling…",
     "erreurs": {
-      "montant": "Kies een bedrag tussen {min} € en {max} €, zonder centen.",
+      "montant": "Kies een bedrag van minstens {min}.",
       "nom": "Vul uw achternaam in.",
       "email": "Vul een geldig e-mailadres in.",
       "conditions": "Aanvaard de voorwaarden om verder te gaan.",
       "nonConfigure": "Online betalen is nog niet geactiveerd: deze pagina is een voorlopige versie.",
       "serveur": "De betaling kon niet starten. Probeer het zo meteen opnieuw.",
-      "autre": "Een gegeven in het formulier is niet geldig. Laad de pagina opnieuw en probeer het nog eens."
+      "autre": "Een gegeven in het formulier is niet geldig. Laad de pagina opnieuw en probeer het nog eens.",
+      "pays": "Kies uw land van verblijf."
     },
     "faq": {
       "titre": "Veelgestelde vragen",
@@ -161,7 +167,7 @@
       "q3": "Kan ik een maandelijkse gift stopzetten?",
       "r3": "De procedure om een maandelijkse gift stop te zetten wordt later verduidelijkt.",
       "q4": "Hoe ontvang ik een fiscaal attest?",
-      "r4": "Het attest wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres. Er kunnen andere gegevens gevraagd worden, bijvoorbeeld het rijksregisternummer in België.",
+      "r4": "Het fiscaal attest is alleen bestemd voor schenkers die in België wonen. Het wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres, en er kunnen andere gegevens gevraagd worden, bijvoorbeeld uw rijksregisternummer.",
       "q5": "Waarvoor dient mijn gift als ik geen project kies?",
       "r5": "Uw gift gaat naar het algemene fonds. Ze wordt gebruikt waar de nood het hoogst is."
     },
@@ -186,7 +192,7 @@
     "reserve": "Ruimte voorbehouden aan de leden van het COVIDEBA en de begeleiders."
   },
   "pied": {
-    "texte": "ConnectBatack 3: COVIDEBA, Polytechnische Faculteit van Bergen (UMONS) en ENSPY.",
+    "texte": "Ontwikkelingscomité van het dorp Batack (COVIDEBA), West-Kameroen.",
     "droits": "© 2026 COVIDEBA",
     "projet": "Het project",
     "informations": "Informatie",
@@ -291,8 +297,31 @@
         "texte": "Het gebouw staat er. Het moet nog in gebruik genomen worden."
       }
     ],
-    "appelTitre": "Het vervolg schrijven we samen met u",
-    "appelTexte": "Elke gift financiert een concrete stap, die daarna op deze site wordt gepubliceerd."
+    "appelTitre": "Volgende stap: het gezondheidscentrum openen",
+    "appelTexte": "Elke gift financiert een concrete stap, die daarna op deze site wordt gepubliceerd.",
+    "equipesTitre": "De studententeams",
+    "equipesTexte": "Connect Batack 3 brengt studenten samen van de Polytechnische Faculteit van de Universiteit van Bergen (informatica en beheer, mechanica, energie) en van de Nationale Polytechnische Hogeschool van Yaoundé (industriële ingenieurswetenschappen, mechanica, informatica).",
+    "etudiants": "De ledenlijst wordt binnenkort gepubliceerd.",
+    "encadrantsTitre": "Begeleiding",
+    "roles": {
+      "dehombreux": "Polytechnische Faculteit van Bergen (UMONS)",
+      "fokam": "Nationale Polytechnische Hogeschool van Yaoundé (ENSPY)",
+      "chengoue": "Lid van het COVIDEBA, professor aan ENSPY"
+    },
+    "partenairesTitre": "Partners en financiers",
+    "partenaires": {
+      "ares": "Academie voor Onderzoek en Hoger Onderwijs (België). Financiert microprojecten van studenten in ontwikkelingssamenwerking.",
+      "solarly": "Bedrijf gespecialiseerd in zonne-energie, partner van de installatie van januari 2026."
+    },
+    "charteTitre": "Ons charter",
+    "charteIntro": "De teams uit Bergen en Yaoundé werken volgens vijf principes.",
+    "charte": [
+      "Wederzijds respect: elk lid is een volwaardige partner, en culturele verschillen zijn een rijkdom.",
+      "Stiptheid en het nakomen van afspraken.",
+      "Gedeelde beslissingen: belangrijke beslissingen worden besproken en goedgekeurd door beide teams.",
+      "Erkenning voor ieders werk en voor elk succes, ook de kleine.",
+      "Beschikbaarheid en transparantie: iedereen meldt vooraf een afwezigheid, vertraging of moeilijkheid."
+    ]
   },
   "transparence": {
     "titre": "Transparantie",
@@ -338,30 +367,7 @@
     "covidebaTitre": "Het COVIDEBA",
     "covidebaTexte": [
       "Het Ontwikkelingscomité van het Dorp Batack (COVIDEBA) brengt inwoners en leden van de gemeenschap van Batack samen. Het leidt de projecten van het dorp en beslist hoe de middelen worden gebruikt.",
-      "Voorzitter is dr. Anatole Chengoué."
-    ],
-    "equipesTitre": "De studententeams",
-    "equipesTexte": "Connect Batack 3 brengt studenten samen van de Polytechnische Faculteit van de Universiteit van Bergen (informatica en beheer, mechanica, energie) en van de Nationale Polytechnische Hogeschool van Yaoundé (industriële ingenieurswetenschappen, mechanica, informatica).",
-    "etudiants": "De ledenlijst wordt binnenkort gepubliceerd.",
-    "encadrantsTitre": "Begeleiding",
-    "roles": {
-      "dehombreux": "Polytechnische Faculteit van Bergen (UMONS)",
-      "fokam": "Nationale Polytechnische Hogeschool van Yaoundé (ENSPY)",
-      "chengoue": "Voorzitter van het COVIDEBA"
-    },
-    "partenairesTitre": "Partners en financiers",
-    "partenaires": {
-      "ares": "Academie voor Onderzoek en Hoger Onderwijs (België). Financiert microprojecten van studenten in ontwikkelingssamenwerking.",
-      "solarly": "Bedrijf gespecialiseerd in zonne-energie, partner van de installatie van januari 2026."
-    },
-    "charteTitre": "Ons charter",
-    "charteIntro": "De teams uit Bergen en Yaoundé werken volgens vijf principes.",
-    "charte": [
-      "Wederzijds respect: elk lid is een volwaardige partner, en culturele verschillen zijn een rijkdom.",
-      "Stiptheid en het nakomen van afspraken.",
-      "Gedeelde beslissingen: belangrijke beslissingen worden besproken en goedgekeurd door beide teams.",
-      "Erkenning voor ieders werk en voor elk succes, ook de kleine.",
-      "Beschikbaarheid en transparantie: iedereen meldt vooraf een afwezigheid, vertraging of moeilijkheid."
+      "Voorzitter is de heer Tchapa."
     ]
   },
   "legal": {
@@ -375,7 +381,7 @@
             "titre": "Uitgever",
             "texte": [
               "Ontwikkelingscomité van het Dorp Batack (COVIDEBA), Batack, West-Kameroen.",
-              "Voorzitter: dr. Anatole Chengoué."
+              "Voorzitter: de heer Tchapa."
             ]
           },
           {

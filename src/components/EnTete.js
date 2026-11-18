@@ -14,7 +14,7 @@ export default function EnTete({ dict, lang }) {
     <header className="entete">
       <Link className="logo logo-image" href={`/${lang}`}>
         <Image src={logoBatack} alt="Batack" height={46} preload />
-        <small>ConnectBatack 3 · COVIDEBA</small>
+        <small>COVIDEBA</small>
       </Link>
       <nav className="navigation" aria-label={dict.nav.menu}>
         {liens.map(([href, texte]) => (

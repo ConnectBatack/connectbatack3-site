@@ -2,9 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { cheminPhoto } from "@/donnees/projets";
 import Apparition from "@/components/Apparition";
+import Montant from "@/components/Montant";
 
-const formatEuro = (lang, n) =>
-  new Intl.NumberFormat(lang, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
 
 // Carte de projet : photo en fond, accroche courte en majuscules, avancement en bas.
 export default function CarteProjet({ projet, dict, lang }) {
@@ -25,7 +24,7 @@ export default function CarteProjet({ projet, dict, lang }) {
           </span>
           <span className="carte-ligne">
             <span className="progression-texte">
-              <b>{formatEuro(lang, projet.collecte)}</b> {dict.accueil.collecte} {formatEuro(lang, projet.objectif)}
+              <Montant fcfa={projet.collecte} lang={lang} gras /> {dict.accueil.collecte} <Montant fcfa={projet.objectif} lang={lang} />
             </span>
             <span aria-hidden="true">→</span>
           </span>

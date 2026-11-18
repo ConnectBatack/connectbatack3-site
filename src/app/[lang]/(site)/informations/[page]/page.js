@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   const { lang, page } = await params;
   const dict = await chargerDictionnaire(lang);
   const p = dict.legal.pages[page];
-  return p ? { title: `${p.titre} | ConnectBatack 3`, alternates: alternatesPage(lang, `/informations/${page}`) } : {};
+  return p ? { title: `${p.titre} | COVIDEBA`, alternates: alternatesPage(lang, `/informations/${page}`) } : {};
 }
 
 export default async function PageLegale({ params }) {

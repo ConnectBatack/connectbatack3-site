@@ -6,11 +6,10 @@ import { projets, cheminPhoto } from "@/donnees/projets";
 import { langues, alternatesPage } from "@/i18n/config";
 import Apparition from "@/components/Apparition";
 import Compteur from "@/components/Compteur";
+import Montant from "@/components/Montant";
 import BoutonPartage from "@/components/BoutonPartage";
 import FormulaireSuivi from "@/components/FormulaireSuivi";
 
-const formatEuro = (lang, n) =>
-  new Intl.NumberFormat(lang, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
 
 export async function generateStaticParams() {
   return langues.flatMap((lang) => projets.map((p) => ({ lang, id: p.id })));
@@ -21,7 +20,7 @@ export async function generateMetadata({ params }) {
   const dict = await chargerDictionnaire(lang);
   const t = dict.projets[id];
   if (!t) return {};
-  return { title: `${t.titre} | ConnectBatack 3`, description: t.description, alternates: alternatesPage(lang, `/projets/${id}`) };
+  return { title: `${t.titre} | COVIDEBA`, description: t.description, alternates: alternatesPage(lang, `/projets/${id}`) };
 }
 
 export default async function PageProjet({ params }) {
@@ -56,7 +55,7 @@ export default async function PageProjet({ params }) {
             <span className="progression-barre" style={{ "--p": `${pourcent}%` }} />
           </div>
           <p className="progression-texte">
-            <strong>{formatEuro(lang, projet.collecte)}</strong> {a.collecte} {formatEuro(lang, projet.objectif)}
+            <strong><Montant fcfa={projet.collecte} lang={lang} /></strong> {a.collecte} <Montant fcfa={projet.objectif} lang={lang} />
           </p>
           <ul className="stats-projet">
             <li>

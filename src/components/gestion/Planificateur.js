@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { validerInstance } from "@/lib/solveur/modele";
 import { CLE_POIDS_AHP } from "@/components/gestion/OutilAhp";
+import { formatFcfa } from "@/lib/monnaie";
 
 const LIMITE_TEMPS_S = 30;
 const TAILLE_MAX_FICHIER = 1024 * 1024; // 1 Mo
@@ -25,7 +26,8 @@ export default function Planificateur({ t, langue, instanceInitiale }) {
 
   useEffect(() => () => worker.current?.terminate(), []);
 
-  const euro = (n) => new Intl.NumberFormat(langue, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
+  // Montants en FCFA (consigne de l'équipe, 18/11/2026).
+  const euro = (n) => formatFcfa(langue, n);
   const nombre = (v) => (v === "" ? NaN : Number(v));
 
   function modifier(changement) {

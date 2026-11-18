@@ -3,11 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { MONTANT_MAX, MONTANT_MIN, frequences, montantsProposes, verifierDon } from "@/lib/regles-don";
+import { formatEuroArrondi, formatEuroExact, formatFcfa } from "@/lib/monnaie";
 
 // Erreurs vérifiées à chaque étape avant de passer à la suivante.
-const champsParEtape = { 1: ["montant", "projet", "frequence"], 2: ["nom", "email", "prenom", "attestation"], 3: ["moyen", "conditions", "langue"] };
+const champsParEtape = { 1: ["montant", "projet", "frequence"], 2: ["nom", "email", "prenom", "pays", "attestation"], 3: ["moyen", "conditions", "langue"] };
 // Champ à atteindre au clavier pour chaque erreur.
-const champDeErreur = { montant: "don-autre", nom: "don-nom", email: "don-email", conditions: "don-conditions" };
+const champDeErreur = { montant: "don-autre", nom: "don-nom", email: "don-email", conditions: "don-conditions", pays: "don-pays" };
 
 // Lit ?projet=, ?montant= et ?annule= dans le navigateur : la page reste statique (servie par le CDN).
 // Seules les valeurs connues sont gardées.
@@ -21,7 +22,7 @@ export function FormulaireDonDepuisAdresse(props) {
       <FormulaireDon
         {...props}
         projetInitial={Object.hasOwn(props.titresProjets, projet ?? "") ? projet : ""}
-        montantInitial={/^\d{1,5}$/.test(montant) ? Number(montant) : null}
+        montantInitial={/^\d{1,9}$/.test(montant) ? Number(montant) : null}
       />
     </>
   );
@@ -32,12 +33,13 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
   const [etape, setEtape] = useState(1);
   const [don, setDon] = useState({
     frequence: "ponctuel",
-    montant: montantInitial && proposeInitial ? montantInitial : 50,
+    montant: montantInitial && proposeInitial ? montantInitial : 25000,
     autre: montantInitial && !proposeInitial ? String(montantInitial) : "",
     projet: projetInitial,
     prenom: "",
     nom: "",
     email: "",
+    pays: "",
     attestation: false,
     conditions: false,
     moyen: "bancontact",
@@ -63,8 +65,8 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
   const maj = (champ, valeur) => setDon((d) => ({ ...d, [champ]: valeur }));
   const montant = don.autre !== "" ? Number(don.autre) : don.montant;
   const donComplet = { ...don, montant, langue };
-  const format = (n) =>
-    new Intl.NumberFormat(langue, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
+  const format = (n) => formatFcfa(langue, n);
+  const euro = (n) => <small className="montant-euro">({formatEuroArrondi(langue, n)})</small>;
 
   function changerFrequence(f) {
     setDon((d) => ({
@@ -118,7 +120,7 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
     else confirmer();
   }
 
-  const texteErreur = (champ) => (t.erreurs[champ] ?? t.erreurs.autre).replace("{min}", MONTANT_MIN).replace("{max}", MONTANT_MAX);
+  const texteErreur = (champ) => (t.erreurs[champ] ?? t.erreurs.autre).replace("{min}", format(MONTANT_MIN));
   const enErreur = (champ) => erreurs.includes(champ);
   // Attributs d'un champ : signalé invalide et relié à son message.
   const aria = (champ) => (enErreur(champ) ? { "aria-invalid": true, "aria-describedby": `erreur-${champ}` } : {});
@@ -175,13 +177,13 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
                 aria-pressed={don.autre === "" && don.montant === m}
                 onClick={() => setDon((d) => ({ ...d, montant: m, autre: "" }))}
               >
-                {format(m)}
+                {format(m)} {euro(m)}
                 {don.frequence === "mensuel" && <small> {t.parMois}</small>}
               </button>
             ))}
           </div>
           <p className="contexte-montant" aria-live="polite">
-            {don.autre === "" && <strong>{format(don.montant)} </strong>}
+            {don.autre === "" && <><strong>{format(don.montant)}</strong> {euro(don.montant)} </>}
             {contexte} <span className="note-exemple">({exemple})</span>
           </p>
 
@@ -236,10 +238,26 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
             <input id="don-email" type="email" autoComplete="email" maxLength={254} required value={don.email} onChange={(e) => maj("email", e.target.value)} {...aria("email")} />
           </label>
           {messageErreur("email")}
-          <label className="case">
-            <input type="checkbox" checked={don.attestation} onChange={(e) => maj("attestation", e.target.checked)} />
-            {t.attestation}
+          <label className="champ">
+            {t.pays} <span className="obligatoire">({t.obligatoire})</span>
+            <select
+              id="don-pays"
+              value={don.pays}
+              onChange={(e) => setDon((d) => ({ ...d, pays: e.target.value, attestation: e.target.value === "BE" && d.attestation }))}
+              {...aria("pays")}
+            >
+              <option value="">{t.paysChoisir}</option>
+              <option value="BE">{t.paysBelgique}</option>
+              <option value="autre">{t.paysAutre}</option>
+            </select>
           </label>
+          {messageErreur("pays")}
+          {don.pays === "BE" && (
+            <label className="case">
+              <input type="checkbox" checked={don.attestation} onChange={(e) => maj("attestation", e.target.checked)} />
+              {t.attestation}
+            </label>
+          )}
           {don.attestation && <p className="aide">{t.attestationAide}</p>}
         </fieldset>
       )}
@@ -254,6 +272,7 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
               {don.frequence === "mensuel" ? ` ${t.parMois}` : ""} ·{" "}
               {don.projet ? titresProjets[don.projet] : t.projetGeneral}
             </p>
+            <p className="aide">{t.preleve.replace("{euros}", formatEuroExact(langue, montant))}</p>
           </div>
           <div className="choix-moyen">
             {(don.frequence === "mensuel" ? ["carte"] : ["bancontact", "carte"]).map((m) => (

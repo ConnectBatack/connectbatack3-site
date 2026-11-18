@@ -1,6 +1,6 @@
 {
   "meta": {
-    "titre": "ConnectBatack 3: apoya a la aldea de Batack",
+    "titre": "COVIDEBA: apoya a la aldea de Batack",
     "description": "Ayuda a abrir el centro de salud de Batack, en Camerún, y comprueba para qué sirve cada donación."
   },
   "preversion": "Versión preliminar del sitio: las cifras son ejemplos y no se puede realizar ningún pago real.",
@@ -28,7 +28,7 @@
     "collecte": "recaudados de",
     "soutenir": "Apoyar este proyecto",
     "impactTitre": "Lo que permite tu donación",
-    "impactIntro": "Un importe, un uso concreto. Estas correspondencias son ejemplos y se sustituirán por los costes reales.",
+    "impactIntro": "Ejemplos de lo que financia una donación.",
     "etapesTitre": "Qué pasa con tu donación",
     "etapes": [
       {
@@ -47,15 +47,15 @@
     "aproposTitre": "Quiénes somos",
     "aproposTexte": [
       "El COVIDEBA es el comité de desarrollo de la aldea de Batack. Impulsa los proyectos de la aldea: agua potable, escuelas, salud.",
-      "ConnectBatack 3 reúne al COVIDEBA, a estudiantes de la Facultad Politécnica de Mons (UMONS) y a la Escuela Nacional Superior Politécnica de Yaundé (ENSPY). Las dos primeras fases instalaron una microrred solar y construyeron el edificio del centro de salud."
+      "Desde 2024, estudiantes de ingeniería de Bélgica y de Camerún trabajan con el COVIDEBA. Las dos primeras fases instalaron una microrred solar y construyeron el edificio del centro de salud."
     ],
-    "appelTitre": "Una donación, una etapa concreta",
+    "appelTitre": "Apoya los proyectos de la aldea",
     "appelTexte": "Puedes donar sin crear una cuenta.",
     "prochainBesoin": "Próxima necesidad por financiar",
     "besoinTitre": "Tejado del centro de salud",
     "besoinTexte": "Primera etapa de las obras: proteger el edificio antes de instalar la electricidad y el material médico.",
-    "parallaxeTitre": "Tres fases, una misma aldea",
-    "parallaxeTexte": "De la estación de carga solar al centro de salud, cada fase parte de una necesidad expresada por la aldea de Batack.",
+    "parallaxeTitre": "Una cooperación impulsada por el COVIDEBA",
+    "parallaxeTexte": "En 2024, el Prof. Anatole Chengoué, miembro del COVIDEBA, y su amigo el Prof. Pierre Dehombreux comprometieron al comité en una cooperación con estudiantes de ingeniería de Bélgica y de Camerún. Una estación de carga solar y después la energía del centro de salud: cada proyecto responde a una petición de la aldea.",
     "parallaxeLien": "Leer nuestra historia",
     "aproposLien": "Conocer quiénes somos"
   },
@@ -106,20 +106,20 @@
     "ponctuel": "Una vez",
     "mensuel": "Cada mes",
     "montantTitre": "Importe de mi donación",
-    "autreMontant": "Otro importe (€)",
+    "autreMontant": "Otro importe (FCFA)",
     "parMois": "al mes",
     "contextes": {
       "ponctuel": {
-        "25": "ayuda a comprar medicamentos básicos para el centro de salud",
-        "50": "ayuda a mantener las baterías solares",
-        "100": "ayuda a pagar el salario mensual de un maestro",
-        "250": "ayuda a construir el tejado del centro de salud"
+        "10000": "ayuda a comprar medicamentos básicos para el centro de salud",
+        "25000": "ayuda a mantener las baterías solares",
+        "50000": "ayuda a pagar el cableado eléctrico del centro de salud",
+        "100000": "ayuda a construir el tejado del centro de salud"
       },
       "mensuel": {
-        "10": "ayuda cada mes a comprar medicamentos básicos",
-        "20": "ayuda cada mes al mantenimiento de las baterías",
-        "35": "ayuda cada mes a pagar a un maestro",
-        "50": "ayuda cada mes a las obras del centro de salud"
+        "5000": "ayuda cada mes a comprar medicamentos básicos",
+        "10000": "ayuda cada mes al mantenimiento de las baterías",
+        "25000": "ayuda cada mes a pagar el cableado eléctrico del centro de salud",
+        "50000": "ayuda cada mes a las obras del centro de salud"
       }
     },
     "contexteAutre": "Tu donación va al proyecto que elijas o, si no eliges ninguno, al fondo general.",
@@ -132,8 +132,12 @@
     "nom": "Apellido",
     "email": "Correo electrónico",
     "obligatoire": "obligatorio",
+    "pays": "País de residencia",
+    "paysChoisir": "Elige",
+    "paysBelgique": "Bélgica",
+    "paysAutre": "Otro país",
     "attestation": "Deseo un certificado fiscal",
-    "attestationAide": "El certificado lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal. Es posible que se pidan otros datos, por ejemplo el número de registro nacional en Bélgica.",
+    "attestationAide": "El certificado lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal. Es posible que se pidan otros datos, por ejemplo tu número de registro nacional.",
     "conditions": "Acepto las {conditions} y la {confidentialite}.",
     "paiementTitre": "Método de pago",
     "bancontact": "Bancontact",
@@ -141,16 +145,18 @@
     "mensuelCarte": "La donación mensual se hace con tarjeta bancaria.",
     "securite": "Stripe procesa el pago en una página segura. Tus datos bancarios no pasan por este sitio.",
     "recapitulatif": "Resumen",
+    "preleve": "Importe cobrado por Stripe: {euros} (paridad fija: 1 € = 655,957 FCFA).",
     "confirmer": "Confirmar mi donación",
     "envoi": "Redirigiendo al pago…",
     "erreurs": {
-      "montant": "Elige un importe entre {min} € y {max} €, sin céntimos.",
+      "montant": "Elige un importe de al menos {min}.",
       "nom": "Indica tu apellido.",
       "email": "Indica un correo electrónico válido.",
       "conditions": "Acepta las condiciones para continuar.",
       "nonConfigure": "El pago en línea todavía no está activado: esta página es una versión preliminar.",
       "serveur": "No se pudo iniciar el pago. Inténtalo de nuevo dentro de un momento.",
-      "autre": "Un dato del formulario no es válido. Vuelve a cargar la página e inténtalo de nuevo."
+      "autre": "Un dato del formulario no es válido. Vuelve a cargar la página e inténtalo de nuevo.",
+      "pays": "Indica tu país de residencia."
     },
     "faq": {
       "titre": "Preguntas frecuentes",
@@ -161,7 +167,7 @@
       "q3": "¿Puedo cancelar una donación mensual?",
       "r3": "El procedimiento para cancelar una donación mensual se detallará más adelante.",
       "q4": "¿Cómo recibo un certificado fiscal?",
-      "r4": "El certificado lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal. Es posible que se pidan otros datos, por ejemplo el número de registro nacional en Bélgica.",
+      "r4": "El certificado fiscal está reservado a los donantes que residen en Bélgica. Lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal, y es posible que se pidan otros datos, por ejemplo tu número de registro nacional.",
       "q5": "¿Para qué sirve mi donación si no elijo un proyecto?",
       "r5": "Tu donación va al fondo general. Se destina a donde la necesidad es más urgente."
     },
@@ -186,7 +192,7 @@
     "reserve": "Espacio reservado a los miembros del COVIDEBA y a los supervisores."
   },
   "pied": {
-    "texte": "ConnectBatack 3: COVIDEBA, Facultad Politécnica de Mons (UMONS) y ENSPY.",
+    "texte": "Comité de Desarrollo de la Aldea Batack (COVIDEBA), oeste de Camerún.",
     "droits": "© 2026 COVIDEBA",
     "projet": "El proyecto",
     "informations": "Información",
@@ -291,8 +297,31 @@
         "texte": "El edificio existe. Falta ponerlo en funcionamiento."
       }
     ],
-    "appelTitre": "Lo que viene depende de ti",
-    "appelTexte": "Cada donación financia una etapa concreta, que luego se publica en este sitio."
+    "appelTitre": "Próximo paso: abrir el centro de salud",
+    "appelTexte": "Cada donación financia una etapa concreta, que luego se publica en este sitio.",
+    "equipesTitre": "Los equipos de estudiantes",
+    "equipesTexte": "Connect Batack 3 reúne a estudiantes de la Facultad Politécnica de la Universidad de Mons (informática y gestión, mecánica, energía) y de la Escuela Nacional Superior Politécnica de Yaundé (ingeniería industrial, mecánica, informática).",
+    "etudiants": "La lista de miembros se publicará próximamente.",
+    "encadrantsTitre": "La supervisión",
+    "roles": {
+      "dehombreux": "Facultad Politécnica de Mons (UMONS)",
+      "fokam": "Escuela Nacional Superior Politécnica de Yaundé (ENSPY)",
+      "chengoue": "Miembro del COVIDEBA, profesor en la ENSPY"
+    },
+    "partenairesTitre": "Socios y financiadores",
+    "partenaires": {
+      "ares": "Academia de Investigación y Enseñanza Superior (Bélgica). Financia los microproyectos estudiantiles de cooperación.",
+      "solarly": "Empresa especializada en energía solar, que colaboró en la instalación de enero de 2026."
+    },
+    "charteTitre": "Nuestros principios",
+    "charteIntro": "Los equipos de Mons y de Yaundé trabajan según cinco principios.",
+    "charte": [
+      "Respeto mutuo: cada miembro es un socio de pleno derecho, y las diferencias culturales son una riqueza.",
+      "Puntualidad y cumplimiento de los compromisos.",
+      "Decisiones compartidas: las decisiones importantes se debaten y las aprueban ambos equipos.",
+      "Reconocimiento del trabajo de cada uno y de los logros, incluso los pequeños.",
+      "Disponibilidad y transparencia: cada uno avisa con antelación en caso de ausencia, retraso o dificultad."
+    ]
   },
   "transparence": {
     "titre": "Transparencia",
@@ -338,30 +367,7 @@
     "covidebaTitre": "El COVIDEBA",
     "covidebaTexte": [
       "El Comité de Desarrollo de la Aldea de Batack (COVIDEBA) reúne a habitantes y miembros de la comunidad de Batack. Impulsa los proyectos de la aldea y decide cómo se usan los fondos.",
-      "Lo preside el Dr. Anatole Chengoué."
-    ],
-    "equipesTitre": "Los equipos de estudiantes",
-    "equipesTexte": "Connect Batack 3 reúne a estudiantes de la Facultad Politécnica de la Universidad de Mons (informática y gestión, mecánica, energía) y de la Escuela Nacional Superior Politécnica de Yaundé (ingeniería industrial, mecánica, informática).",
-    "etudiants": "La lista de miembros se publicará próximamente.",
-    "encadrantsTitre": "La supervisión",
-    "roles": {
-      "dehombreux": "Facultad Politécnica de Mons (UMONS)",
-      "fokam": "Escuela Nacional Superior Politécnica de Yaundé (ENSPY)",
-      "chengoue": "Presidente del COVIDEBA"
-    },
-    "partenairesTitre": "Socios y financiadores",
-    "partenaires": {
-      "ares": "Academia de Investigación y Enseñanza Superior (Bélgica). Financia los microproyectos estudiantiles de cooperación.",
-      "solarly": "Empresa especializada en energía solar, que colaboró en la instalación de enero de 2026."
-    },
-    "charteTitre": "Nuestros principios",
-    "charteIntro": "Los equipos de Mons y de Yaundé trabajan según cinco principios.",
-    "charte": [
-      "Respeto mutuo: cada miembro es un socio de pleno derecho, y las diferencias culturales son una riqueza.",
-      "Puntualidad y cumplimiento de los compromisos.",
-      "Decisiones compartidas: las decisiones importantes se debaten y las aprueban ambos equipos.",
-      "Reconocimiento del trabajo de cada uno y de los logros, incluso los pequeños.",
-      "Disponibilidad y transparencia: cada uno avisa con antelación en caso de ausencia, retraso o dificultad."
+      "Lo preside el Sr. Tchapa."
     ]
   },
   "legal": {
@@ -375,7 +381,7 @@
             "titre": "Editor",
             "texte": [
               "Comité de Desarrollo de la Aldea de Batack (COVIDEBA), Batack, oeste de Camerún.",
-              "Presidente: Dr. Anatole Chengoué."
+              "Presidente: Sr. Tchapa."
             ]
           },
           {

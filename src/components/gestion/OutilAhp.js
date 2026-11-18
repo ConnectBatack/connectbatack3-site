@@ -2,19 +2,37 @@
 
 import { useMemo, useState } from "react";
 import {
-  matriceDepuisComparaisons, poidsVecteurPropre, ratioCoherence, scoresTaches,
+  agreger, matriceDepuisComparaisons, poidsVecteurPropre, ratioCoherence, scoresTaches,
   valeurDepuisCurseur, SEUIL_COHERENCE,
 } from "@/lib/ahp";
 
 export const CLE_POIDS_AHP = "cb3-poids-ahp";
 const MIN_CRITERES = 2;
 const MAX_CRITERES = 10;
+const MAX_VOTANTS = 50;
+
+// Matrice de comparaisons d'un votant à partir de ses curseurs.
+function matriceDuVote(criteres, curseurs) {
+  const comparaisons = {};
+  criteres.forEach((a, i) => {
+    comparaisons[i] = {};
+    criteres.forEach((b, j) => {
+      if (j > i) comparaisons[i][j] = valeurDepuisCurseur(curseurs[`${a.id}-${b.id}`] ?? 0);
+    });
+  });
+  return matriceDepuisComparaisons(criteres.length, comparaisons);
+}
 
 // Écran AHP : critères, comparaisons deux à deux (échelle de Saaty), poids et cohérence, notes des tâches.
+// Vote du COVIDEBA (décision de Roy, 19/11/2026) : sur un seul appareil, chaque votant compare les critères à son tour.
+// Les votes sont anonymes : seules leurs matrices sont gardées, en mémoire, jamais affichées une par une.
+// Les poids sont recalculés après chaque vote, par moyenne géométrique des matrices (agreger, comme module_ahp/ahp.py).
 export default function OutilAhp({ t, langue, taches, nomCritere }) {
   const [criteres, setCriteres] = useState(() => [1, 2, 3].map((k) => ({ id: k, nom: `${nomCritere} ${k}` })));
   // curseurs[`${a}-${b}`] : de -8 à 8 ; positif = le critère a compte plus que b.
   const [curseurs, setCurseurs] = useState({});
+  const [nbVotants, setNbVotants] = useState(1);
+  const [votes, setVotes] = useState([]); // matrices des votes enregistrés
   const [notes, setNotes] = useState({});
   const [message, setMessage] = useState("");
 
@@ -23,17 +41,15 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
   for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) paires.push([criteres[i], criteres[j]]);
   const cle = (a, b) => `${a.id}-${b.id}`;
 
+  const voteEnCours = useMemo(() => matriceDuVote(criteres, curseurs), [criteres, curseurs]);
+  const crVote = ratioCoherence(voteEnCours);
+  // Avant le premier vote enregistré, le résultat montre le vote en cours (aperçu).
   const { poids, cr } = useMemo(() => {
-    const comparaisons = {};
-    criteres.forEach((a, i) => {
-      comparaisons[i] = {};
-      criteres.forEach((b, j) => {
-        if (j > i) comparaisons[i][j] = valeurDepuisCurseur(curseurs[`${a.id}-${b.id}`] ?? 0);
-      });
-    });
-    const A = matriceDepuisComparaisons(criteres.length, comparaisons);
+    const A = votes.length > 0 ? agreger(votes) : voteEnCours;
     return { poids: poidsVecteurPropre(A).poids, cr: ratioCoherence(A) };
-  }, [criteres, curseurs]);
+  }, [votes, voteEnCours]);
+  const voteCommence = votes.length > 0;
+  const voteTermine = votes.length >= nbVotants;
 
   const note = (tacheId, critereId) => notes[`${tacheId}-${critereId}`] ?? 5;
   const poidsTaches = scoresTaches(poids, taches.map((tache) => criteres.map((c) => note(tache.id, c.id))));
@@ -56,7 +72,21 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
     setMessage("");
   }
 
+  function enregistrerVote() {
+    if (crVote > SEUIL_COHERENCE) return setMessage(t.voteIncoherent);
+    setVotes([...votes, voteEnCours]);
+    setCurseurs({}); // le votant suivant part du centre et ne voit pas le vote précédent
+    setMessage("");
+  }
+
+  function recommencerVote() {
+    setVotes([]);
+    setCurseurs({});
+    setMessage("");
+  }
+
   function enregistrer() {
+    if (!voteTermine) return setMessage(t.attendreVotes);
     if (!coherent) return setMessage(t.bloque);
     const valeurs = Object.fromEntries(taches.map((tache, i) => [tache.id, Math.round(poidsTaches[i] * 100) / 100]));
     try {
@@ -79,21 +109,38 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
                 aria-label={t.critere}
                 value={c.nom}
                 maxLength={60}
+                disabled={voteCommence}
                 onChange={(e) => setCriteres(criteres.map((x) => (x.id === c.id ? { ...x, nom: e.target.value } : x)))}
               />
-              <button type="button" className="bouton-texte" disabled={n <= MIN_CRITERES} onClick={() => setCriteres(criteres.filter((x) => x.id !== c.id))}>
+              <button type="button" className="bouton-texte" disabled={voteCommence || n <= MIN_CRITERES} onClick={() => setCriteres(criteres.filter((x) => x.id !== c.id))}>
                 {t.supprimer}
               </button>
             </li>
           ))}
         </ul>
-        <button type="button" className="bouton bouton-contour bouton-sombre" disabled={n >= MAX_CRITERES} onClick={ajouterCritere}>
+        <button type="button" className="bouton bouton-contour bouton-sombre" disabled={voteCommence || n >= MAX_CRITERES} onClick={ajouterCritere}>
           {t.ajouterCritere}
         </button>
+        {voteCommence && <p className="aide">{t.criteresVerrouilles}</p>}
       </section>
 
       <section>
         <h2>{t.comparaisonsTitre}</h2>
+        <label className="champ champ-court">
+          {t.nbVotants}
+          <input
+            type="number" min="1" max={MAX_VOTANTS} step="1"
+            value={nbVotants}
+            disabled={voteCommence}
+            onChange={(e) => setNbVotants(Math.min(MAX_VOTANTS, Math.max(1, Math.round(Number(e.target.value)) || 1)))}
+          />
+        </label>
+        <p className="aide">{t.votantsAide}</p>
+        {voteTermine ? (
+          <p className="message message-info" role="status">{t.votesTermines.replace("{n}", nbVotants)}</p>
+        ) : (
+          <>
+        <h3 className="vote-numero">{t.voteNumero.replace("{k}", votes.length + 1).replace("{n}", nbVotants)}</h3>
         <p className="aide">{t.comparaisonsAide}</p>
         <ul className="liste-paires">
           {paires.map(([a, b]) => {
@@ -120,10 +167,21 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
             );
           })}
         </ul>
+        <button type="button" className="bouton bouton-principal" onClick={enregistrerVote}>{t.enregistrerVote}</button>
+        <p className="aide">{t.coherence} {nombre(crVote, 3)}</p>
+        {message === t.voteIncoherent && <p className="message message-erreur" role="alert">{message}</p>}
+          </>
+        )}
+        {voteCommence && (
+          <button type="button" className="bouton-texte" onClick={recommencerVote}>{t.recommencerVote}</button>
+        )}
       </section>
 
       <section>
         <h2>{t.resultatTitre}</h2>
+        <p className="aide">
+          {voteCommence ? t.resultatVotes.replace("{k}", votes.length).replace("{n}", nbVotants) : t.resultatApercu}
+        </p>
         <ul className="poids-criteres">
           {criteres.map((c, i) => (
             <li key={c.id}>
@@ -175,7 +233,7 @@ export default function OutilAhp({ t, langue, taches, nomCritere }) {
           </table>
         </div>
         <button type="button" className="bouton bouton-principal" onClick={enregistrer}>{t.enregistrer}</button>
-        {message && <p className={message === t.enregistre ? "message message-info" : "message message-erreur"} role="status">{message}</p>}
+        {message && message !== t.voteIncoherent && <p className={message === t.enregistre ? "message message-info" : "message message-erreur"} role="status">{message}</p>}
       </section>
     </div>
   );

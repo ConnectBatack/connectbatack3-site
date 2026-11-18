@@ -3,6 +3,7 @@ import Link from "next/link";
 import { chargerGestion, langueGestion } from "@/i18n/gestion";
 import { instanceExemple, ecrituresExemple } from "@/donnees/exemple-gestion";
 import TableauEcritures from "@/components/gestion/TableauEcritures";
+import { formatFcfa } from "@/lib/monnaie";
 
 export default async function TableauDeBord({ params }) {
   const { lang } = await params;
@@ -10,7 +11,7 @@ export default async function TableauDeBord({ params }) {
   const g = await chargerGestion(lang);
   const l = langueGestion(lang);
   const t = g.tableau;
-  const euro = (n) => new Intl.NumberFormat(l, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
+  const euro = (n) => formatFcfa(l, n);
   const aContresigner = ecrituresExemple.filter((e) => e.etat === "a_contresigner").length;
 
   const indicateurs = [

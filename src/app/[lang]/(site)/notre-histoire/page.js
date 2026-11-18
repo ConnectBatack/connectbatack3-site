@@ -6,10 +6,22 @@ import { cheminPhoto } from "@/donnees/projets";
 import Apparition from "@/components/Apparition";
 import Parallaxe from "@/components/Parallaxe";
 
+// Noms propres : identiques dans toutes les langues. Les rôles sont dans les dictionnaires.
+// Équipes, encadrement, partenaires et charte : déplacés depuis « Qui sommes-nous » (consigne de l'équipe, 18/11/2026).
+const encadrants = [
+  { id: "dehombreux", nom: "Pr Pierre Dehombreux" },
+  { id: "fokam", nom: "Pr Christian Fokam Bopda" },
+  { id: "chengoue", nom: "Pr Anatole Chengoué" },
+];
+const partenaires = [
+  { id: "ares", nom: "ARES" },
+  { id: "solarly", nom: "Solarly" },
+];
+
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await chargerDictionnaire(lang);
-  return { title: `${dict.histoire.titre} | ConnectBatack 3`, description: dict.histoire.intro, alternates: alternatesPage(lang, "/notre-histoire") };
+  return { title: `${dict.histoire.titre} | COVIDEBA`, description: dict.histoire.intro, alternates: alternatesPage(lang, "/notre-histoire") };
 }
 
 export default async function NotreHistoire({ params }) {
@@ -72,6 +84,56 @@ export default async function NotreHistoire({ params }) {
             </Apparition>
           ))}
         </ul>
+      </section>
+
+      <section className="section">
+        <Apparition className="duo duo-inverse">
+          <div>
+            <h2>{h.equipesTitre}</h2>
+            <p>{h.equipesTexte}</p>
+            <p className="note-exemple">{h.etudiants}</p>
+          </div>
+          <div className="duo-image">
+            <Image src={cheminPhoto("equipe-dispensaire")} alt={dict.photos["equipe-dispensaire"]} fill sizes="(max-width: 900px) 100vw, 50vw" />
+          </div>
+        </Apparition>
+      </section>
+
+      <section className="section section-teintee">
+        <Apparition className="section-entete">
+          <h2>{h.encadrantsTitre}</h2>
+        </Apparition>
+        <ul className="personnes">
+          {encadrants.map((e) => (
+            <li key={e.id}>
+              <strong>{e.nom}</strong>
+              <span>{h.roles[e.id]}</span>
+            </li>
+          ))}
+        </ul>
+        <Apparition className="section-entete">
+          <h2 className="titre-espace">{h.partenairesTitre}</h2>
+        </Apparition>
+        <ul className="personnes">
+          {partenaires.map((p) => (
+            <li key={p.id}>
+              <strong>{p.nom}</strong>
+              <span>{h.partenaires[p.id]}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="section">
+        <Apparition className="section-entete">
+          <h2>{h.charteTitre}</h2>
+          <p>{h.charteIntro}</p>
+        </Apparition>
+        <ol className="charte">
+          {h.charte.map((c) => (
+            <li key={c.slice(0, 24)}>{c}</li>
+          ))}
+        </ol>
       </section>
 
       <section className="appel">

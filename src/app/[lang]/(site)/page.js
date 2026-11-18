@@ -4,13 +4,12 @@ import { chargerDictionnaire } from "@/i18n/dictionnaires";
 import { alternatesPage } from "@/i18n/config";
 import { projets, cheminPhoto } from "@/donnees/projets";
 import { montantsProposes } from "@/lib/regles-don";
+import Montant from "@/components/Montant";
 import Apparition from "@/components/Apparition";
 import Diaporama from "@/components/Diaporama";
 import Parallaxe from "@/components/Parallaxe";
 import CarteProjet from "@/components/CarteProjet";
 
-const formatEuro = (lang, n) =>
-  new Intl.NumberFormat(lang, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
 
 // Photos du diaporama d'accueil, dans l'ordre d'affichage.
 const photosAccueil = ["batack-paysage", "accueil-chants", "installation-electrique", "ecole-publique", "marche"];
@@ -54,7 +53,7 @@ export default async function Accueil({ params }) {
               <span className="progression-barre" style={{ "--p": "35%" }} />
             </div>
             <p className="progression-texte">
-              <strong>{formatEuro(lang, 1400)}</strong> {a.collecte} {formatEuro(lang, 4000)}
+              <strong><Montant fcfa={920000} lang={lang} /></strong> {a.collecte} <Montant fcfa={2625000} lang={lang} />
             </p>
             <p className="note-exemple">{dict.noteExemple}</p>
             <Link className="bouton bouton-principal" href={`/${lang}/don?projet=dispensaire`}>
@@ -84,7 +83,7 @@ export default async function Accueil({ params }) {
         <div className="liste-montants">
           {montantsProposes.ponctuel.map((m) => (
             <Link key={m} href={`/${lang}/don?montant=${m}`}>
-              <strong>{formatEuro(lang, m)}</strong>
+              <strong><Montant fcfa={m} lang={lang} /></strong>
               <span>{dict.don.contextes.ponctuel[m]}</span>
             </Link>
           ))}

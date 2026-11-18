@@ -9,7 +9,7 @@ import Parallaxe from "@/components/Parallaxe";
 // DONNÉES D'EXEMPLE : elles seront calculées à partir du registre comptable
 // quand la base de données existera.
 const chiffresExemple = [
-  { valeur: 6050, devise: true },
+  { valeur: 3970000, devise: true },
   { valeur: 87, devise: false },
   { valeur: 0, devise: false },
 ];
@@ -22,7 +22,7 @@ const partsExemple = [
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await chargerDictionnaire(lang);
-  return { title: `${dict.transparence.titre} | ConnectBatack 3`, description: dict.transparence.intro, alternates: alternatesPage(lang, "/transparence") };
+  return { title: `${dict.transparence.titre} | COVIDEBA`, description: dict.transparence.intro, alternates: alternatesPage(lang, "/transparence") };
 }
 
 export default async function Transparence({ params }) {

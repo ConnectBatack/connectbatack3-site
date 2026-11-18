@@ -8,7 +8,7 @@ import FormulaireDon, { FormulaireDonDepuisAdresse } from "@/components/Formulai
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await chargerDictionnaire(lang);
-  return { title: `${dict.don.titre} | ConnectBatack 3`, alternates: alternatesPage(lang, "/don") };
+  return { title: `${dict.don.titre} | COVIDEBA`, alternates: alternatesPage(lang, "/don") };
 }
 
 // Page statique : les paramètres d'adresse (?projet=, ?montant=, ?annule=) sont lus dans le navigateur.

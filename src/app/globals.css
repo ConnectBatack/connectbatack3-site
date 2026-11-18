@@ -140,8 +140,8 @@ img { max-width: 100%; }
 .carte-categorie { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin: 0; }
 .carte-titre { font-weight: 600; margin: 0; }
 .carte-ligne { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-.carte-ligne span:last-child { font-size: 1.6rem; line-height: 1; transition: transform 0.2s ease; }
-.carte:hover .carte-ligne span:last-child { transform: translateX(4px); }
+.carte-ligne > span:last-child { font-size: 1.6rem; line-height: 1; transition: transform 0.2s ease; }
+.carte:hover .carte-ligne > span:last-child { transform: translateX(4px); }
 .carte .progression { background: rgba(255, 255, 255, 0.3); }
 .carte .progression-barre { background: var(--or); }
 .carte .progression-texte { color: rgba(255, 255, 255, 0.9); }
@@ -150,6 +150,9 @@ img { max-width: 100%; }
 .progression-barre { display: block; height: 100%; width: 0; background: var(--principal); transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s; }
 .apparition-initial .progression-barre, .apparition-visible .progression-barre { width: var(--p); }
 .progression-texte { font-size: 0.9rem; color: var(--gris); margin-bottom: 0; }
+/* Équivalent en euros d'un montant en FCFA : en petit, sans couleur propre (hérite du texte). */
+.montant { white-space: nowrap; }
+.montant-euro { font-size: 0.78em; font-weight: 400; opacity: 0.8; }
 
 /* ---------- montants mis en contexte ---------- */
 .liste-montants { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); border-top: 1px solid var(--trait); }
@@ -443,3 +446,8 @@ img { max-width: 100%; }
   .apparition-cache { opacity: 1; transform: none; }
   .progression-barre { width: var(--p); }
 }
+
+/* Vote AHP du COVIDEBA : nombre de votants et numéro du vote en cours. */
+.champ-court input { max-width: 8rem; }
+.vote-numero { margin: 24px 0 8px; }
+.bouton-texte:disabled { opacity: 0.4; cursor: not-allowed; text-decoration: none; }
