@@ -227,19 +227,19 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
             </label>
             <div>
               <label className="champ">
-                {t.nom} <span className="obligatoire">({t.obligatoire})</span>
+                <span>{t.nom} <span className="obligatoire">({t.obligatoire})</span></span>
                 <input id="don-nom" autoComplete="family-name" maxLength={100} required value={don.nom} onChange={(e) => maj("nom", e.target.value)} {...aria("nom")} />
               </label>
               {messageErreur("nom")}
             </div>
           </div>
           <label className="champ">
-            {t.email} <span className="obligatoire">({t.obligatoire})</span>
+            <span>{t.email} <span className="obligatoire">({t.obligatoire})</span></span>
             <input id="don-email" type="email" autoComplete="email" maxLength={254} required value={don.email} onChange={(e) => maj("email", e.target.value)} {...aria("email")} />
           </label>
           {messageErreur("email")}
           <label className="champ">
-            {t.pays} <span className="obligatoire">({t.obligatoire})</span>
+            <span>{t.pays} <span className="obligatoire">({t.obligatoire})</span></span>
             <select
               id="don-pays"
               value={don.pays}
