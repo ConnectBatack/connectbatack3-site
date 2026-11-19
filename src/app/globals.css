@@ -151,8 +151,9 @@ img { max-width: 100%; }
 .apparition-initial .progression-barre, .apparition-visible .progression-barre { width: var(--p); }
 .progression-texte { font-size: 0.9rem; color: var(--gris); margin-bottom: 0; }
 /* Équivalent en euros d'un montant en FCFA : en petit, sans couleur propre (hérite du texte). */
-.montant { white-space: nowrap; }
-.montant-euro { font-size: 0.78em; font-weight: 400; opacity: 0.8; }
+.montant-euro { font-size: 0.78em; font-weight: 400; opacity: 0.8; white-space: nowrap; }
+/* Dans la liste des montants de l'accueil, le montant garde la couleur du titre (et non le gris des phrases). */
+.liste-montants strong span { color: inherit; }
 
 /* ---------- montants mis en contexte ---------- */
 .liste-montants { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); border-top: 1px solid var(--trait); }

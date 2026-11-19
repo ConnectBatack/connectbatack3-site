@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MenuMobile from "@/components/MenuMobile";
 import logoBatack from "../../public/images/logos/logo-batack.png";
+import logoCovideba from "../../public/images/logos/logo-covideba.png";
 
 export default function EnTete({ dict, lang }) {
   const liens = [
@@ -14,7 +15,8 @@ export default function EnTete({ dict, lang }) {
     <header className="entete">
       <Link className="logo logo-image" href={`/${lang}`}>
         <Image src={logoBatack} alt="Batack" height={46} preload />
-        <small>COVIDEBA</small>
+        {/* Logo du COVIDEBA à côté de celui de Batack, comme dans le pied de page (demande de Roy, 19/11/2026). */}
+        <Image src={logoCovideba} alt="COVIDEBA" height={46} preload />
       </Link>
       <nav className="navigation" aria-label={dict.nav.menu}>
         {liens.map(([href, texte]) => (
