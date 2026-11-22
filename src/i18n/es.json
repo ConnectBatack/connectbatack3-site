@@ -55,7 +55,7 @@
     "besoinTitre": "Tejado del centro de salud",
     "besoinTexte": "Primera etapa de las obras: proteger el edificio antes de instalar la electricidad y el material médico.",
     "parallaxeTitre": "Una cooperación impulsada por el COVIDEBA",
-    "parallaxeTexte": "En 2024, el Prof. Anatole Chengoué, miembro del COVIDEBA, y su amigo el Prof. Pierre Dehombreux comprometieron al comité en una cooperación con estudiantes de ingeniería de Bélgica y de Camerún. Una estación de carga solar y después la energía del centro de salud: cada proyecto responde a una petición de la aldea.",
+    "parallaxeTexte": "En 2024, el Prof. Chengoué Mbouyap Anatole, presidente del COVIDEBA, y su amigo el Prof. Pierre Dehombreux comprometieron al comité en una cooperación con estudiantes de ingeniería de Bélgica y de Camerún. Una estación de carga solar y después la energía del centro de salud: cada proyecto responde a una petición de la aldea.",
     "parallaxeLien": "Leer nuestra historia",
     "aproposLien": "Conocer quiénes somos"
   },
@@ -69,7 +69,7 @@
     "batteries": {
       "categorie": "Energía",
       "titre": "Energía solar del centro de salud",
-      "description": "En enero de 2026, Connect Batack 2 equipó el centro de salud con paneles solares y baterías. Hacen funcionar el frigorífico que conserva las vacunas y la iluminación para la atención nocturna. Las baterías se desgastan: este proyecto financia su mantenimiento regular y, después, su sustitución, para que el centro de salud no dependa de una red eléctrica poco fiable.",
+      "description": "En enero de 2026, un equipo de estudiantes de Mons y de Yaundé equipó el centro de salud con paneles solares y baterías. Hacen funcionar el frigorífico que conserva las vacunas y la iluminación para la atención nocturna. Las baterías se desgastan: este proyecto financia su mantenimiento regular y, después, su sustitución, para que el centro de salud no dependa de una red eléctrica poco fiable.",
       "accroche": "Asegurar la autonomía energética del centro de salud"
     },
     "ecole": {
@@ -221,7 +221,7 @@
     "elevage": "La cría de cerdos de la aldea",
     "pisciculture": "Los estanques de piscicultura",
     "accueil-chants": "Recibimiento del equipo con cantos tradicionales en Batack",
-    "station-recharge": "El equipo delante de la estación de carga solar de Connect Batack 1",
+    "station-recharge": "El equipo estudiantil delante de la estación de carga solar",
     "equipe-dispensaire": "El equipo en el centro de salud durante la misión de enero de 2026",
     "equipe-batack": "Los equipos de Mons y de Yaundé en Batack, enero de 2026",
     "rencontre-village": "Encuentro en Batack durante la misión de enero de 2026",
@@ -230,8 +230,8 @@
   },
   "histoire": {
     "titre": "Nuestra historia",
-    "intro": "Desde 2024, estudiantes de ingeniería de Mons y de Yaundé trabajan con el comité de la aldea de Batack. Cada fase parte de una necesidad expresada por la aldea, y la siguiente comprueba que la anterior sigue funcionando.",
-    "friseTitre": "Las grandes etapas",
+    "intro": "El Comité de Desarrollo de la Aldea Batack (COVIDEBA) reúne a habitantes y miembros de la comunidad de Batack. Lleva los proyectos de la aldea, como su primera red de agua potable, y decide el uso de los fondos.",
+    "friseTitre": "Las etapas de la cooperación",
     "etapes": [
       {
         "date": "2017",
@@ -240,26 +240,25 @@
       },
       {
         "date": "2024",
-        "titre": "Nace Connect Batack",
-        "texte": "Se ponen en marcha los primeros microproyectos estudiantiles con el apoyo de la ARES. Reúnen a la Facultad Politécnica de Mons (UMONS), a la Escuela Nacional Superior Politécnica de Yaundé (ENSPY) y al COVIDEBA."
+        "titre": "Los primeros microproyectos estudiantiles",
+        "texte": "Por iniciativa del Prof. Chengoué Mbouyap Anatole, presidente del COVIDEBA, y del Prof. Pierre Dehombreux, el COVIDEBA pone en marcha con estudiantes de la Facultad Politécnica de Mons (UMONS) y de la ENSPY microproyectos apoyados por la ARES."
       },
       {
-        "date": "Connect Batack 1",
+        "date": "Primera misión",
         "titre": "Una estación de carga solar",
         "texte": "Primera realización: una estación pública de carga solar para teléfonos y lámparas, en una aldea sin una red eléctrica fiable. Un año después, el equipo siguiente comprobó que seguía funcionando.",
-        "photo": "station-recharge",
-        "dateACompleter": true
+        "photo": "station-recharge"
       },
       {
         "date": "Enero de 2026",
-        "titre": "Connect Batack 2: energía para el centro de salud",
+        "titre": "Energía para el centro de salud",
         "texte": "Del 24 al 30 de enero de 2026, el equipo instala en el centro de salud un sistema solar autónomo: un frigorífico para conservar las vacunas e iluminación para la atención nocturna. El trabajo se hace con técnicos locales y el COVIDEBA, para que la aldea pueda mantener la instalación.",
         "photo": "installation-electrique"
       },
       {
         "date": "2026-2027",
-        "titre": "Connect Batack 3: financiar y planificar",
-        "texte": "El centro de salud está construido pero aún no funciona, y el hospital más cercano está a 20 km. Esta última fase con la UMONS crea este sitio de donaciones, prepara el expediente técnico del centro de salud y busca financiación duradera, en Europa y en Camerún. Está prevista una misión a la aldea en enero de 2027.",
+        "titre": "Financiar y planificar",
+        "texte": "El centro de salud está construido pero aún no funciona, y el hospital más cercano está a 20 km. La fase actual, financiada por la UMONS, crea este sitio de donaciones para el COVIDEBA, prepara el expediente técnico del centro de salud y busca financiación duradera, en Europa y en Camerún. Hay una misión prevista en la aldea en enero de 2027.",
         "photo": "dispensaire-exterieur"
       }
     ],
@@ -299,29 +298,16 @@
     ],
     "appelTitre": "Próximo paso: abrir el centro de salud",
     "appelTexte": "Cada donación financia una etapa concreta, que luego se publica en este sitio.",
-    "equipesTitre": "Los equipos de estudiantes",
-    "equipesTexte": "Connect Batack 3 reúne a estudiantes de la Facultad Politécnica de la Universidad de Mons (informática y gestión, mecánica, energía) y de la Escuela Nacional Superior Politécnica de Yaundé (ingeniería industrial, mecánica, informática).",
+    "equipesTitre": "La cooperación con los estudiantes de ingeniería",
+    "equipesTexte": "Desde 2024, el COVIDEBA trabaja con estudiantes de la Facultad Politécnica de la Universidad de Mons (informática y gestión, mecánica, energía) y de la Escuela Nacional Superior Politécnica de Yaundé (ingeniería industrial, mecánica, informática).",
     "etudiants": "La lista de miembros se publicará próximamente.",
-    "encadrantsTitre": "La supervisión",
-    "roles": {
-      "dehombreux": "Facultad Politécnica de Mons (UMONS)",
-      "fokam": "Escuela Nacional Superior Politécnica de Yaundé (ENSPY)",
-      "chengoue": "Miembro del COVIDEBA, profesor en la ENSPY"
-    },
     "partenairesTitre": "Socios y financiadores",
     "partenaires": {
       "ares": "Academia de Investigación y Enseñanza Superior (Bélgica). Financia los microproyectos estudiantiles de cooperación.",
+      "umons": "Universidad de Mons. Su Facultad Politécnica supervisa los equipos estudiantiles, y la UMONS financia la fase actual de la cooperación, al nivel de la financiación de los proyectos ARES.",
       "solarly": "Empresa especializada en energía solar, que colaboró en la instalación de enero de 2026."
     },
-    "charteTitre": "Nuestros principios",
-    "charteIntro": "Los equipos de Mons y de Yaundé trabajan según cinco principios.",
-    "charte": [
-      "Respeto mutuo: cada miembro es un socio de pleno derecho, y las diferencias culturales son una riqueza.",
-      "Puntualidad y cumplimiento de los compromisos.",
-      "Decisiones compartidas: las decisiones importantes se debaten y las aprueban ambos equipos.",
-      "Reconocimiento del trabajo de cada uno y de los logros, incluso los pequeños.",
-      "Disponibilidad y transparencia: cada uno avisa con antelación en caso de ausencia, retraso o dificultad."
-    ]
+    "encadrement": "Supervisión: Prof. Pierre Dehombreux (UMONS), Prof. Fokam Bopda Christian (ENSPY) y Prof. Chengoué Mbouyap Anatole (presidente del COVIDEBA, profesor en la ENSPY)."
   },
   "transparence": {
     "titre": "Transparencia",
@@ -367,7 +353,7 @@
     "covidebaTitre": "El COVIDEBA",
     "covidebaTexte": [
       "El Comité de Desarrollo de la Aldea de Batack (COVIDEBA) reúne a habitantes y miembros de la comunidad de Batack. Impulsa los proyectos de la aldea y decide cómo se usan los fondos.",
-      "Lo preside el Sr. Tchapa."
+      "Lo preside el Prof. Chengoué Mbouyap Anatole."
     ]
   },
   "legal": {
@@ -381,13 +367,13 @@
             "titre": "Editor",
             "texte": [
               "Comité de Desarrollo de la Aldea de Batack (COVIDEBA), Batack, oeste de Camerún.",
-              "Presidente: Sr. Tchapa."
+              "Presidente: Prof. Chengoué Mbouyap Anatole."
             ]
           },
           {
             "titre": "Diseño",
             "texte": [
-              "Sitio diseñado por los estudiantes del proyecto Connect Batack 3: Facultad Politécnica de la Universidad de Mons y Escuela Nacional Superior Politécnica de Yaundé."
+              "Sitio diseñado para el COVIDEBA por estudiantes de la Facultad Politécnica de la Universidad de Mons y de la Escuela Nacional Superior Politécnica de Yaundé."
             ]
           },
           {
@@ -399,7 +385,7 @@
           {
             "titre": "Fotos",
             "texte": [
-              "Fotos de las misiones Connect Batack, publicadas con el consentimiento de las personas fotografiadas."
+              "Fotos de las misiones estudiantiles en Batack, publicadas con el consentimiento de las personas fotografiadas."
             ]
           }
         ]

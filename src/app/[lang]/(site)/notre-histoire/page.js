@@ -6,15 +6,12 @@ import { cheminPhoto } from "@/donnees/projets";
 import Apparition from "@/components/Apparition";
 import Parallaxe from "@/components/Parallaxe";
 
-// Noms propres : identiques dans toutes les langues. Les rôles sont dans les dictionnaires.
-// Équipes, encadrement, partenaires et charte : déplacés depuis « Qui sommes-nous » (consigne de l'équipe, 18/11/2026).
-const encadrants = [
-  { id: "dehombreux", nom: "Pr Pierre Dehombreux" },
-  { id: "fokam", nom: "Pr Christian Fokam Bopda" },
-  { id: "chengoue", nom: "Pr Anatole Chengoué" },
-];
+// Page centrée sur le COVIDEBA (demande de Roy, 19/11/2026) : présentation du comité, le village aujourd'hui,
+// puis la coopération avec les étudiants (étapes, encadrement) et les financeurs, plus bas.
+// À AJOUTER : les grandes étapes du COVIDEBA et du village.
 const partenaires = [
   { id: "ares", nom: "ARES" },
+  { id: "umons", nom: "UMONS" },
   { id: "solarly", nom: "Solarly" },
 ];
 
@@ -35,34 +32,6 @@ export default async function NotreHistoire({ params }) {
         <h1>{h.titre}</h1>
         <p>{h.intro}</p>
       </Parallaxe>
-
-      <section className="section">
-        <Apparition className="section-entete">
-          <h2>{h.friseTitre}</h2>
-        </Apparition>
-        <ol className="frise">
-          {h.etapes.map((e) => (
-            <Apparition as="li" key={e.titre}>
-              <p className="frise-date">
-                {/* La date exacte de Connect Batack 1 reste à trouver (dateACompleter dans les dictionnaires).
-                    La mention « à compléter » n'est plus montrée aux visiteurs (décision de Roy, 14/11/2026). */}
-                {e.date}
-              </p>
-              <div className={`frise-texte ${e.photo ? "" : "sans-image"}`}>
-                <div>
-                  <h3>{e.titre}</h3>
-                  <p>{e.texte}</p>
-                </div>
-                {e.photo && (
-                  <div className="frise-photo">
-                    <Image src={cheminPhoto(e.photo)} alt={dict.photos[e.photo]} fill sizes="(max-width: 900px) 100vw, 300px" />
-                  </div>
-                )}
-              </div>
-            </Apparition>
-          ))}
-        </ol>
-      </section>
 
       <section className="section section-teintee">
         <Apparition className="section-entete">
@@ -91,28 +60,39 @@ export default async function NotreHistoire({ params }) {
           <div>
             <h2>{h.equipesTitre}</h2>
             <p>{h.equipesTexte}</p>
+            <p>{h.encadrement}</p>
             <p className="note-exemple">{h.etudiants}</p>
           </div>
           <div className="duo-image">
             <Image src={cheminPhoto("equipe-dispensaire")} alt={dict.photos["equipe-dispensaire"]} fill sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
         </Apparition>
+        <Apparition className="section-entete">
+          <h3 className="titre-espace">{h.friseTitre}</h3>
+        </Apparition>
+        <ol className="frise">
+          {h.etapes.map((e) => (
+            <Apparition as="li" key={e.titre}>
+              <p className="frise-date">{e.date}</p>
+              <div className={`frise-texte ${e.photo ? "" : "sans-image"}`}>
+                <div>
+                  <h4>{e.titre}</h4>
+                  <p>{e.texte}</p>
+                </div>
+                {e.photo && (
+                  <div className="frise-photo">
+                    <Image src={cheminPhoto(e.photo)} alt={dict.photos[e.photo]} fill sizes="(max-width: 900px) 100vw, 300px" />
+                  </div>
+                )}
+              </div>
+            </Apparition>
+          ))}
+        </ol>
       </section>
 
       <section className="section section-teintee">
         <Apparition className="section-entete">
-          <h2>{h.encadrantsTitre}</h2>
-        </Apparition>
-        <ul className="personnes">
-          {encadrants.map((e) => (
-            <li key={e.id}>
-              <strong>{e.nom}</strong>
-              <span>{h.roles[e.id]}</span>
-            </li>
-          ))}
-        </ul>
-        <Apparition className="section-entete">
-          <h2 className="titre-espace">{h.partenairesTitre}</h2>
+          <h2>{h.partenairesTitre}</h2>
         </Apparition>
         <ul className="personnes">
           {partenaires.map((p) => (
@@ -122,18 +102,6 @@ export default async function NotreHistoire({ params }) {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="section">
-        <Apparition className="section-entete">
-          <h2>{h.charteTitre}</h2>
-          <p>{h.charteIntro}</p>
-        </Apparition>
-        <ol className="charte">
-          {h.charte.map((c) => (
-            <li key={c.slice(0, 24)}>{c}</li>
-          ))}
-        </ol>
       </section>
 
       <section className="appel">

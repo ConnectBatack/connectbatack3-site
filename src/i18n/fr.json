@@ -55,7 +55,7 @@
     "besoinTitre": "Toiture du dispensaire",
     "besoinTexte": "Première étape des travaux : mettre le bâtiment à l'abri avant d'installer l'électricité et le matériel médical.",
     "parallaxeTitre": "Une coopération lancée par le COVIDEBA",
-    "parallaxeTexte": "En 2024, le Pr Anatole Chengoué, membre du COVIDEBA, et son ami le Pr Pierre Dehombreux ont engagé le comité dans une coopération avec des étudiants ingénieurs de Belgique et du Cameroun. Station de recharge solaire, puis énergie du dispensaire : chaque projet répond à une demande du village.",
+    "parallaxeTexte": "En 2024, le Pr Chengoué Mbouyap Anatole, président du COVIDEBA, et son ami le Pr Pierre Dehombreux ont engagé le comité dans une coopération avec des étudiants ingénieurs de Belgique et du Cameroun. Station de recharge solaire, puis énergie du dispensaire : chaque projet répond à une demande du village.",
     "parallaxeLien": "Lire notre histoire",
     "aproposLien": "Découvrir qui nous sommes"
   },
@@ -69,7 +69,7 @@
     "batteries": {
       "categorie": "Énergie",
       "titre": "Énergie solaire du dispensaire",
-      "description": "En janvier 2026, Connect Batack 2 a équipé le dispensaire de panneaux solaires et de batteries. Ils font fonctionner le réfrigérateur qui conserve les vaccins et l'éclairage des soins de nuit. Les batteries s'usent : ce projet finance leur entretien régulier, puis leur remplacement, pour que le dispensaire ne dépende pas d'un réseau électrique peu fiable.",
+      "description": "En janvier 2026, une équipe d'étudiants de Mons et de Yaoundé a équipé le dispensaire de panneaux solaires et de batteries. Ils font fonctionner le réfrigérateur qui conserve les vaccins et l'éclairage des soins de nuit. Les batteries s'usent : ce projet finance leur entretien régulier, puis leur remplacement, pour que le dispensaire ne dépende pas d'un réseau électrique peu fiable.",
       "accroche": "Assurer l'autonomie énergétique du dispensaire"
     },
     "ecole": {
@@ -221,7 +221,7 @@
     "elevage": "L'élevage de porcs du village",
     "pisciculture": "Les bassins de pisciculture",
     "accueil-chants": "Accueil de l'équipe par des chants traditionnels à Batack",
-    "station-recharge": "L'équipe devant la station de recharge solaire de Connect Batack 1",
+    "station-recharge": "L'équipe étudiante devant la station de recharge solaire",
     "equipe-dispensaire": "L'équipe au dispensaire pendant la mission de janvier 2026",
     "equipe-batack": "Les équipes de Mons et de Yaoundé à Batack, janvier 2026",
     "rencontre-village": "Rencontre à Batack pendant la mission de janvier 2026",
@@ -230,8 +230,8 @@
   },
   "histoire": {
     "titre": "Notre histoire",
-    "intro": "Depuis 2024, des étudiants ingénieurs de Mons et de Yaoundé travaillent avec le comité du village de Batack. Chaque phase part d'un besoin exprimé par le village, et la suivante vérifie que la précédente fonctionne toujours.",
-    "friseTitre": "Les grandes étapes",
+    "intro": "Le Comité de développement du village Batack (COVIDEBA) réunit des habitants et des membres de la communauté de Batack. Il porte les projets du village, comme son premier réseau d'eau potable, et décide de l'usage des fonds.",
+    "friseTitre": "Les étapes de la coopération",
     "etapes": [
       {
         "date": "2017",
@@ -240,26 +240,25 @@
       },
       {
         "date": "2024",
-        "titre": "Lancement de Connect Batack",
-        "texte": "Les premiers microprojets étudiants sont lancés avec le soutien de l'ARES. Ils réunissent la Faculté polytechnique de Mons (UMONS), l'École nationale supérieure polytechnique de Yaoundé (ENSPY) et le COVIDEBA."
+        "titre": "Les premiers microprojets étudiants",
+        "texte": "À l'initiative du Pr Chengoué Mbouyap Anatole, président du COVIDEBA, et du Pr Pierre Dehombreux, le COVIDEBA lance avec des étudiants de la Faculté polytechnique de Mons (UMONS) et de l'ENSPY des microprojets soutenus par l'ARES."
       },
       {
-        "date": "Connect Batack 1",
+        "date": "Première mission",
         "titre": "Une station de recharge solaire",
         "texte": "Première réalisation : une station de recharge solaire publique, pour charger téléphones et lampes dans un village sans réseau électrique fiable. Un an plus tard, l'équipe suivante a vérifié qu'elle fonctionnait toujours.",
-        "photo": "station-recharge",
-        "dateACompleter": true
+        "photo": "station-recharge"
       },
       {
         "date": "Janvier 2026",
-        "titre": "Connect Batack 2 : l'énergie au dispensaire",
+        "titre": "L'énergie au dispensaire",
         "texte": "Du 24 au 30 janvier 2026, l'équipe installe au dispensaire un système solaire autonome : un réfrigérateur pour conserver les vaccins et de l'éclairage pour les soins de nuit. Le travail se fait avec des techniciens locaux et le COVIDEBA, pour que le village puisse entretenir l'installation.",
         "photo": "installation-electrique"
       },
       {
         "date": "2026-2027",
-        "titre": "Connect Batack 3 : financer et planifier",
-        "texte": "Le dispensaire est bâti mais pas encore en service, et l'hôpital le plus proche est à 20 km. Cette dernière phase avec l'UMONS crée ce site de dons, prépare le dossier technique du dispensaire et cherche des financements durables, en Europe comme au Cameroun. Une mission au village est prévue en janvier 2027.",
+        "titre": "Financer et planifier",
+        "texte": "Le dispensaire est bâti mais pas encore en service, et l'hôpital le plus proche est à 20 km. La phase actuelle, financée par l'UMONS, crée ce site de dons pour le COVIDEBA, prépare le dossier technique du dispensaire et cherche des financements durables, en Europe comme au Cameroun. Une mission au village est prévue en janvier 2027.",
         "photo": "dispensaire-exterieur"
       }
     ],
@@ -299,29 +298,16 @@
     ],
     "appelTitre": "Prochaine étape : ouvrir le dispensaire",
     "appelTexte": "Chaque don finance une étape concrète, publiée ensuite sur ce site.",
-    "equipesTitre": "Les équipes étudiantes",
-    "equipesTexte": "Connect Batack 3 réunit des étudiants de la Faculté polytechnique de l'Université de Mons (informatique et gestion, mécanique, énergie) et de l'École nationale supérieure polytechnique de Yaoundé (génie industriel, mécanique, informatique).",
+    "equipesTitre": "La coopération avec les étudiants ingénieurs",
+    "equipesTexte": "Depuis 2024, le COVIDEBA travaille avec des étudiants de la Faculté polytechnique de l'Université de Mons (informatique et gestion, mécanique, énergie) et de l'École nationale supérieure polytechnique de Yaoundé (génie industriel, mécanique, informatique).",
     "etudiants": "La liste des membres sera publiée prochainement.",
-    "encadrantsTitre": "L'encadrement",
-    "roles": {
-      "dehombreux": "Faculté polytechnique de Mons (UMONS)",
-      "fokam": "École nationale supérieure polytechnique de Yaoundé (ENSPY)",
-      "chengoue": "Membre du COVIDEBA, professeur à l'ENSPY"
-    },
     "partenairesTitre": "Partenaires et financeurs",
     "partenaires": {
       "ares": "Académie de recherche et d'enseignement supérieur. Finance les microprojets étudiants de coopération.",
+      "umons": "Université de Mons. Sa Faculté polytechnique encadre les équipes étudiantes, et l'UMONS finance la phase actuelle de la coopération, à hauteur des financements des projets ARES.",
       "solarly": "Entreprise spécialisée dans l'énergie solaire, partenaire de l'installation de janvier 2026."
     },
-    "charteTitre": "Notre charte",
-    "charteIntro": "Les équipes de Mons et de Yaoundé travaillent selon cinq principes.",
-    "charte": [
-      "Respect mutuel : chaque membre est un partenaire à part entière, et les différences de culture sont une richesse.",
-      "Ponctualité et respect des engagements.",
-      "Décisions partagées : les décisions importantes sont discutées et validées par les deux équipes.",
-      "Reconnaissance du travail de chacun et des réussites, même petites.",
-      "Disponibilité et transparence : chacun prévient à l'avance en cas d'absence, de retard ou de difficulté."
-    ]
+    "encadrement": "Encadrement : Pr Pierre Dehombreux (UMONS), Pr Fokam Bopda Christian (ENSPY) et Pr Chengoué Mbouyap Anatole (président du COVIDEBA, professeur à l'ENSPY)."
   },
   "transparence": {
     "titre": "Transparence",
@@ -367,7 +353,7 @@
     "covidebaTitre": "Le COVIDEBA",
     "covidebaTexte": [
       "Le Comité de Développement du Village Batack (COVIDEBA) réunit des habitants et des membres de la communauté de Batack. Il porte les projets du village et décide de l'usage des fonds.",
-      "Il est présidé par M. Tchapa."
+      "Il est présidé par le Pr Chengoué Mbouyap Anatole."
     ]
   },
   "legal": {
@@ -381,13 +367,13 @@
             "titre": "Éditeur",
             "texte": [
               "Comité de Développement du Village Batack (COVIDEBA), Batack, Ouest-Cameroun.",
-              "Président : M. Tchapa."
+              "Président : Pr Chengoué Mbouyap Anatole."
             ]
           },
           {
             "titre": "Conception",
             "texte": [
-              "Site conçu par les étudiants du projet Connect Batack 3 : Faculté polytechnique de l'Université de Mons et École nationale supérieure polytechnique de Yaoundé."
+              "Site conçu pour le COVIDEBA par des étudiants de la Faculté polytechnique de l'Université de Mons et de l'École nationale supérieure polytechnique de Yaoundé."
             ]
           },
           {
@@ -399,7 +385,7 @@
           {
             "titre": "Photos",
             "texte": [
-              "Photos des missions Connect Batack, publiées avec l'accord des personnes photographiées."
+              "Photos des missions étudiantes à Batack, publiées avec l'accord des personnes photographiées."
             ]
           }
         ]

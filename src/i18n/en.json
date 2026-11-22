@@ -55,7 +55,7 @@
     "besoinTitre": "Health centre roof",
     "besoinTexte": "First step of the works: protect the building before installing electricity and medical equipment.",
     "parallaxeTitre": "A partnership launched by the COVIDEBA",
-    "parallaxeTexte": "In 2024, Prof. Anatole Chengoué, a member of the COVIDEBA, and his friend Prof. Pierre Dehombreux brought the committee into a partnership with engineering students from Belgium and Cameroon. A solar charging station, then power for the health centre: each project answers a request from the village.",
+    "parallaxeTexte": "In 2024, Prof. Chengoué Mbouyap Anatole, chair of the COVIDEBA, and his friend Prof. Pierre Dehombreux brought the committee into a partnership with engineering students from Belgium and Cameroon. A solar charging station, then power for the health centre: each project answers a request from the village.",
     "parallaxeLien": "Read our story",
     "aproposLien": "Find out who we are"
   },
@@ -69,7 +69,7 @@
     "batteries": {
       "categorie": "Energy",
       "titre": "Solar power for the health centre",
-      "description": "In January 2026, Connect Batack 2 equipped the health centre with solar panels and batteries. They power the refrigerator that stores vaccines and the lighting for night-time care. Batteries wear out: this project funds their regular maintenance, then their replacement, so that the health centre does not depend on an unreliable power grid.",
+      "description": "In January 2026, a team of students from Mons and Yaoundé equipped the health centre with solar panels and batteries. They power the refrigerator that stores vaccines and the lighting for night-time care. Batteries wear out: this project funds their regular maintenance, then their replacement, so that the health centre does not depend on an unreliable power grid.",
       "accroche": "Ensure the health centre's energy self-sufficiency"
     },
     "ecole": {
@@ -221,7 +221,7 @@
     "elevage": "The village pig farm",
     "pisciculture": "The fish farming ponds",
     "accueil-chants": "The team welcomed with traditional songs in Batack",
-    "station-recharge": "The team in front of the Connect Batack 1 solar charging station",
+    "station-recharge": "The student team in front of the solar charging station",
     "equipe-dispensaire": "The team at the health centre during the January 2026 mission",
     "equipe-batack": "The Mons and Yaoundé teams in Batack, January 2026",
     "rencontre-village": "Meeting in Batack during the January 2026 mission",
@@ -230,8 +230,8 @@
   },
   "histoire": {
     "titre": "Our story",
-    "intro": "Since 2024, engineering students from Mons and Yaoundé have been working with the Batack village committee. Each phase starts from a need expressed by the village, and the next one checks that the previous one still works.",
-    "friseTitre": "Key milestones",
+    "intro": "The Batack Village Development Committee (COVIDEBA) brings together residents and members of the Batack community. It leads the village's projects, such as its first drinking water network, and decides how the funds are used.",
+    "friseTitre": "Stages of the cooperation",
     "etapes": [
       {
         "date": "2017",
@@ -240,26 +240,25 @@
       },
       {
         "date": "2024",
-        "titre": "Connect Batack begins",
-        "texte": "The first student microprojects were launched with the support of ARES. They brought together the Faculty of Engineering of Mons (UMONS), the National Advanced School of Engineering of Yaoundé (ENSPY) and the COVIDEBA."
+        "titre": "The first student microprojects",
+        "texte": "On the initiative of Prof. Chengoué Mbouyap Anatole, chair of the COVIDEBA, and Prof. Pierre Dehombreux, the COVIDEBA launched microprojects supported by ARES with students from the Faculty of Engineering of Mons (UMONS) and ENSPY."
       },
       {
-        "date": "Connect Batack 1",
+        "date": "First mission",
         "titre": "A solar charging station",
         "texte": "First achievement: a public solar charging station for phones and lamps, in a village without a reliable power grid. A year later, the next team checked that it was still working.",
-        "photo": "station-recharge",
-        "dateACompleter": true
+        "photo": "station-recharge"
       },
       {
         "date": "January 2026",
-        "titre": "Connect Batack 2: power for the health centre",
+        "titre": "Power for the health centre",
         "texte": "From 24 to 30 January 2026, the team installed a stand-alone solar system at the health centre: a refrigerator to store vaccines and lighting for night-time care. The work was done with local technicians and the COVIDEBA, so that the village can maintain the installation.",
         "photo": "installation-electrique"
       },
       {
         "date": "2026-2027",
-        "titre": "Connect Batack 3: funding and planning",
-        "texte": "The health centre is built but not yet in service, and the nearest hospital is 20 km away. This last phase with UMONS creates this donation site, prepares the technical file for the health centre and looks for lasting funding, in Europe and in Cameroon. A mission to the village is planned for January 2027.",
+        "titre": "Funding and planning",
+        "texte": "The health centre is built but not yet in service, and the nearest hospital is 20 km away. The current phase, funded by UMONS, creates this donation site for the COVIDEBA, prepares the technical file for the health centre and looks for lasting funding, in Europe and in Cameroon. A mission to the village is planned for January 2027.",
         "photo": "dispensaire-exterieur"
       }
     ],
@@ -299,29 +298,16 @@
     ],
     "appelTitre": "Next step: opening the health centre",
     "appelTexte": "Each donation funds a concrete step, which is then published on this site.",
-    "equipesTitre": "The student teams",
-    "equipesTexte": "Connect Batack 3 brings together students from the Faculty of Engineering of the University of Mons (computer science and management, mechanics, energy) and from the National Advanced School of Engineering of Yaoundé (industrial engineering, mechanics, computer science).",
+    "equipesTitre": "Cooperation with engineering students",
+    "equipesTexte": "Since 2024, the COVIDEBA has been working with students from the Faculty of Engineering of the University of Mons (computer science and management, mechanics, energy) and from the National Advanced School of Engineering of Yaoundé (industrial engineering, mechanics, computer science).",
     "etudiants": "The list of members will be published soon.",
-    "encadrantsTitre": "Supervision",
-    "roles": {
-      "dehombreux": "Faculty of Engineering of Mons (UMONS)",
-      "fokam": "National Advanced School of Engineering of Yaoundé (ENSPY)",
-      "chengoue": "Member of the COVIDEBA, professor at ENSPY"
-    },
     "partenairesTitre": "Partners and funders",
     "partenaires": {
       "ares": "Academy of Research and Higher Education (Belgium). Funds student cooperation microprojects.",
+      "umons": "University of Mons. Its Faculty of Engineering supervises the student teams, and UMONS funds the current phase of the cooperation, at the level of ARES project funding.",
       "solarly": "Solar energy company, partner of the January 2026 installation."
     },
-    "charteTitre": "Our charter",
-    "charteIntro": "The Mons and Yaoundé teams work according to five principles.",
-    "charte": [
-      "Mutual respect: each member is a full partner, and cultural differences are an asset.",
-      "Punctuality and keeping commitments.",
-      "Shared decisions: important decisions are discussed and approved by both teams.",
-      "Recognising everyone's work and every success, even small ones.",
-      "Availability and transparency: everyone gives advance notice of absence, delay or difficulty."
-    ]
+    "encadrement": "Supervision: Prof. Pierre Dehombreux (UMONS), Prof. Fokam Bopda Christian (ENSPY) and Prof. Chengoué Mbouyap Anatole (chair of the COVIDEBA, professor at ENSPY)."
   },
   "transparence": {
     "titre": "Transparency",
@@ -367,7 +353,7 @@
     "covidebaTitre": "The COVIDEBA",
     "covidebaTexte": [
       "The Batack Village Development Committee (COVIDEBA) brings together residents and members of the Batack community. It leads the village projects and decides how funds are used.",
-      "It is chaired by Mr Tchapa."
+      "It is chaired by Prof. Chengoué Mbouyap Anatole."
     ]
   },
   "legal": {
@@ -381,13 +367,13 @@
             "titre": "Publisher",
             "texte": [
               "Batack Village Development Committee (COVIDEBA), Batack, West Cameroon.",
-              "Chair: Mr Tchapa."
+              "Chair: Prof. Chengoué Mbouyap Anatole."
             ]
           },
           {
             "titre": "Design",
             "texte": [
-              "Site designed by the students of the Connect Batack 3 project: Faculty of Engineering of the University of Mons and National Advanced School of Engineering of Yaoundé."
+              "Site designed for the COVIDEBA by students from the Faculty of Engineering of the University of Mons and the National Advanced School of Engineering of Yaoundé."
             ]
           },
           {
@@ -399,7 +385,7 @@
           {
             "titre": "Photos",
             "texte": [
-              "Photos from the Connect Batack missions, published with the consent of the people photographed."
+              "Photos from the student missions in Batack, published with the consent of the people photographed."
             ]
           }
         ]

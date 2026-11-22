@@ -55,7 +55,7 @@
     "besoinTitre": "Dak van het gezondheidscentrum",
     "besoinTexte": "Eerste stap van de werken: het gebouw beschermen voordat de elektriciteit en het medisch materiaal geïnstalleerd worden.",
     "parallaxeTitre": "Een samenwerking gestart door het COVIDEBA",
-    "parallaxeTexte": "In 2024 brachten prof. Anatole Chengoué, lid van het COVIDEBA, en zijn vriend prof. Pierre Dehombreux het comité in een samenwerking met ingenieursstudenten uit België en Kameroen. Een oplaadstation op zonne-energie, daarna energie voor het gezondheidscentrum: elk project beantwoordt een vraag van het dorp.",
+    "parallaxeTexte": "In 2024 brachten prof. Chengoué Mbouyap Anatole, voorzitter van het COVIDEBA, en zijn vriend prof. Pierre Dehombreux het comité in een samenwerking met ingenieursstudenten uit België en Kameroen. Een oplaadstation op zonne-energie, daarna energie voor het gezondheidscentrum: elk project beantwoordt een vraag van het dorp.",
     "parallaxeLien": "Lees ons verhaal",
     "aproposLien": "Ontdek wie we zijn"
   },
@@ -69,7 +69,7 @@
     "batteries": {
       "categorie": "Energie",
       "titre": "Zonne-energie voor het gezondheidscentrum",
-      "description": "In januari 2026 heeft Connect Batack 2 het gezondheidscentrum uitgerust met zonnepanelen en batterijen. Ze laten de koelkast voor vaccins en de verlichting voor de zorg 's nachts werken. Batterijen slijten: dit project financiert hun regelmatig onderhoud en later hun vervanging, zodat het gezondheidscentrum niet afhangt van een onbetrouwbaar elektriciteitsnet.",
+      "description": "In januari 2026 heeft een team van studenten uit Bergen en Yaoundé het gezondheidscentrum uitgerust met zonnepanelen en batterijen. Ze laten de koelkast voor vaccins en de verlichting voor de zorg 's nachts werken. Batterijen slijten: dit project financiert hun regelmatig onderhoud en later hun vervanging, zodat het gezondheidscentrum niet afhangt van een onbetrouwbaar elektriciteitsnet.",
       "accroche": "De energie-onafhankelijkheid van het gezondheidscentrum verzekeren"
     },
     "ecole": {
@@ -221,7 +221,7 @@
     "elevage": "De varkenshouderij van het dorp",
     "pisciculture": "De visvijvers",
     "accueil-chants": "Het team wordt in Batack verwelkomd met traditionele liederen",
-    "station-recharge": "Het team voor het oplaadstation op zonne-energie van Connect Batack 1",
+    "station-recharge": "Het studententeam voor het oplaadstation op zonne-energie",
     "equipe-dispensaire": "Het team in het gezondheidscentrum tijdens de missie van januari 2026",
     "equipe-batack": "De teams uit Bergen en Yaoundé in Batack, januari 2026",
     "rencontre-village": "Ontmoeting in Batack tijdens de missie van januari 2026",
@@ -230,36 +230,35 @@
   },
   "histoire": {
     "titre": "Ons verhaal",
-    "intro": "Sinds 2024 werken ingenieursstudenten uit Bergen en Yaoundé samen met het dorpscomité van Batack. Elke fase vertrekt van een behoefte die het dorp zelf heeft aangegeven, en de volgende fase controleert of de vorige nog werkt.",
-    "friseTitre": "De belangrijkste stappen",
+    "intro": "Het Ontwikkelingscomité van het dorp Batack (COVIDEBA) brengt inwoners en leden van de gemeenschap van Batack samen. Het leidt de projecten van het dorp, zoals het eerste drinkwaternet, en beslist over het gebruik van de middelen.",
+    "friseTitre": "De stappen van de samenwerking",
     "etapes": [
       {
         "date": "2017",
-        "titre": "Een samenwerking tussen ingenieursscholen",
+        "titre": "Een partnerschap tussen ingenieursscholen",
         "texte": "De Polytechnische Faculteit van Bergen begint samen te werken met vier Kameroense universiteiten, in Yaoundé en Douala, rond de opleiding van ingenieurs. Zo komen de noden van dorpen ver van de steden aan het licht, waaronder Batack."
       },
       {
         "date": "2024",
-        "titre": "Start van Connect Batack",
-        "texte": "De eerste microprojecten van studenten starten met de steun van ARES. Ze brengen de Polytechnische Faculteit van Bergen (UMONS), de Nationale Polytechnische Hogeschool van Yaoundé (ENSPY) en het COVIDEBA samen."
+        "titre": "De eerste studentenmicroprojecten",
+        "texte": "Op initiatief van prof. Chengoué Mbouyap Anatole, voorzitter van het COVIDEBA, en prof. Pierre Dehombreux start het COVIDEBA met studenten van de Polytechnische Faculteit van Bergen (UMONS) en ENSPY microprojecten met steun van ARES."
       },
       {
-        "date": "Connect Batack 1",
+        "date": "Eerste missie",
         "titre": "Een oplaadstation op zonne-energie",
         "texte": "Eerste realisatie: een openbaar oplaadstation op zonne-energie voor telefoons en lampen, in een dorp zonder betrouwbaar elektriciteitsnet. Een jaar later controleerde het volgende team dat het nog werkte.",
-        "photo": "station-recharge",
-        "dateACompleter": true
+        "photo": "station-recharge"
       },
       {
         "date": "Januari 2026",
-        "titre": "Connect Batack 2: energie voor het gezondheidscentrum",
+        "titre": "Energie voor het gezondheidscentrum",
         "texte": "Van 24 tot 30 januari 2026 installeert het team een autonoom zonnesysteem in het gezondheidscentrum: een koelkast om vaccins te bewaren en verlichting voor de zorg 's nachts. Het werk gebeurt samen met lokale technici en het COVIDEBA, zodat het dorp de installatie zelf kan onderhouden.",
         "photo": "installation-electrique"
       },
       {
         "date": "2026-2027",
-        "titre": "Connect Batack 3: financieren en plannen",
-        "texte": "Het gezondheidscentrum is gebouwd maar nog niet in gebruik, en het dichtstbijzijnde ziekenhuis ligt op 20 km. Deze laatste fase met UMONS bouwt deze donatiesite, bereidt het technisch dossier van het gezondheidscentrum voor en zoekt duurzame financiering, in Europa en in Kameroen. In januari 2027 is een missie naar het dorp gepland.",
+        "titre": "Financieren en plannen",
+        "texte": "Het gezondheidscentrum is gebouwd maar nog niet in gebruik, en het dichtstbijzijnde ziekenhuis ligt op 20 km. De huidige fase, gefinancierd door UMONS, bouwt deze donatiesite voor het COVIDEBA, bereidt het technisch dossier van het gezondheidscentrum voor en zoekt duurzame financiering, in Europa en in Kameroen. In januari 2027 is een missie naar het dorp gepland.",
         "photo": "dispensaire-exterieur"
       }
     ],
@@ -299,29 +298,16 @@
     ],
     "appelTitre": "Volgende stap: het gezondheidscentrum openen",
     "appelTexte": "Elke gift financiert een concrete stap, die daarna op deze site wordt gepubliceerd.",
-    "equipesTitre": "De studententeams",
-    "equipesTexte": "Connect Batack 3 brengt studenten samen van de Polytechnische Faculteit van de Universiteit van Bergen (informatica en beheer, mechanica, energie) en van de Nationale Polytechnische Hogeschool van Yaoundé (industriële ingenieurswetenschappen, mechanica, informatica).",
+    "equipesTitre": "De samenwerking met ingenieursstudenten",
+    "equipesTexte": "Sinds 2024 werkt het COVIDEBA samen met studenten van de Polytechnische Faculteit van de Universiteit van Bergen (informatica en beheer, mechanica, energie) en van de Nationale Polytechnische Hogeschool van Yaoundé (industrieel ingenieur, mechanica, informatica).",
     "etudiants": "De ledenlijst wordt binnenkort gepubliceerd.",
-    "encadrantsTitre": "Begeleiding",
-    "roles": {
-      "dehombreux": "Polytechnische Faculteit van Bergen (UMONS)",
-      "fokam": "Nationale Polytechnische Hogeschool van Yaoundé (ENSPY)",
-      "chengoue": "Lid van het COVIDEBA, professor aan ENSPY"
-    },
     "partenairesTitre": "Partners en financiers",
     "partenaires": {
       "ares": "Academie voor Onderzoek en Hoger Onderwijs (België). Financiert microprojecten van studenten in ontwikkelingssamenwerking.",
+      "umons": "Universiteit van Bergen. Haar Polytechnische Faculteit begeleidt de studententeams, en UMONS financiert de huidige fase van de samenwerking, op het niveau van de financiering van ARES-projecten.",
       "solarly": "Bedrijf gespecialiseerd in zonne-energie, partner van de installatie van januari 2026."
     },
-    "charteTitre": "Ons charter",
-    "charteIntro": "De teams uit Bergen en Yaoundé werken volgens vijf principes.",
-    "charte": [
-      "Wederzijds respect: elk lid is een volwaardige partner, en culturele verschillen zijn een rijkdom.",
-      "Stiptheid en het nakomen van afspraken.",
-      "Gedeelde beslissingen: belangrijke beslissingen worden besproken en goedgekeurd door beide teams.",
-      "Erkenning voor ieders werk en voor elk succes, ook de kleine.",
-      "Beschikbaarheid en transparantie: iedereen meldt vooraf een afwezigheid, vertraging of moeilijkheid."
-    ]
+    "encadrement": "Begeleiding: prof. Pierre Dehombreux (UMONS), prof. Fokam Bopda Christian (ENSPY) en prof. Chengoué Mbouyap Anatole (voorzitter van het COVIDEBA, professor aan ENSPY)."
   },
   "transparence": {
     "titre": "Transparantie",
@@ -367,7 +353,7 @@
     "covidebaTitre": "Het COVIDEBA",
     "covidebaTexte": [
       "Het Ontwikkelingscomité van het Dorp Batack (COVIDEBA) brengt inwoners en leden van de gemeenschap van Batack samen. Het leidt de projecten van het dorp en beslist hoe de middelen worden gebruikt.",
-      "Voorzitter is de heer Tchapa."
+      "Voorzitter is prof. Chengoué Mbouyap Anatole."
     ]
   },
   "legal": {
@@ -381,13 +367,13 @@
             "titre": "Uitgever",
             "texte": [
               "Ontwikkelingscomité van het Dorp Batack (COVIDEBA), Batack, West-Kameroen.",
-              "Voorzitter: de heer Tchapa."
+              "Voorzitter: prof. Chengoué Mbouyap Anatole."
             ]
           },
           {
             "titre": "Ontwerp",
             "texte": [
-              "Site ontworpen door de studenten van het project Connect Batack 3: Polytechnische Faculteit van de Universiteit van Bergen en Nationale Polytechnische Hogeschool van Yaoundé."
+              "Site ontworpen voor het COVIDEBA door studenten van de Polytechnische Faculteit van de Universiteit van Bergen en de Nationale Polytechnische Hogeschool van Yaoundé."
             ]
           },
           {
@@ -399,7 +385,7 @@
           {
             "titre": "Foto's",
             "texte": [
-              "Foto's van de Connect Batack-missies, gepubliceerd met toestemming van de gefotografeerde personen."
+              "Foto's van de studentenmissies in Batack, gepubliceerd met toestemming van de gefotografeerde personen."
             ]
           }
         ]
