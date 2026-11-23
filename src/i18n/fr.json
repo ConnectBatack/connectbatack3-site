@@ -47,7 +47,7 @@
     "aproposTitre": "Qui sommes-nous",
     "aproposTexte": [
       "Le COVIDEBA est le comité de développement du village de Batack. Il porte les projets du village : eau potable, écoles, santé.",
-      "Depuis 2024, des étudiants ingénieurs de Belgique et du Cameroun travaillent avec le COVIDEBA. Les deux premières phases ont installé un microréseau solaire et construit le bâtiment du dispensaire."
+      "Depuis 2024, le COVIDEBA mène certains de ses projets avec des étudiants ingénieurs de Belgique et du Cameroun, comme l'énergie solaire du dispensaire."
     ],
     "appelTitre": "Soutenir les projets du village",
     "appelTexte": "Vous pouvez donner sans créer de compte.",
@@ -371,7 +371,7 @@
   },
   "apropos": {
     "titre": "Qui sommes-nous",
-    "intro": "Ce site est édité par le comité du village. Des étudiants ingénieurs de Belgique et du Cameroun l'ont conçu avec lui.",
+    "intro": "Ce site est celui du Comité de développement du village Batack (COVIDEBA). Il présente ses projets et reçoit les dons qui les financent.",
     "covidebaTitre": "Le COVIDEBA",
     "covidebaTexte": [
       "Le Comité de Développement du Village Batack (COVIDEBA) réunit des habitants et des membres de la communauté de Batack. Il porte les projets du village et décide de l'usage des fonds.",

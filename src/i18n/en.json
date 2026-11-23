@@ -47,7 +47,7 @@
     "aproposTitre": "About us",
     "aproposTexte": [
       "The COVIDEBA is the development committee of the village of Batack. It leads the village projects: drinking water, schools, health.",
-      "Since 2024, engineering students from Belgium and Cameroon have been working with the COVIDEBA. The first two phases installed a solar microgrid and built the health centre building."
+      "Since 2024, the COVIDEBA has carried out some of its projects with engineering students from Belgium and Cameroon, such as solar power for the health centre."
     ],
     "appelTitre": "Support the village's projects",
     "appelTexte": "You can donate without creating an account.",
@@ -371,7 +371,7 @@
   },
   "apropos": {
     "titre": "About us",
-    "intro": "This site is published by the village committee. Engineering students from Belgium and Cameroon designed it together with the committee.",
+    "intro": "This is the website of the Batack Village Development Committee (COVIDEBA). It presents the committee's projects and receives the donations that fund them.",
     "covidebaTitre": "The COVIDEBA",
     "covidebaTexte": [
       "The Batack Village Development Committee (COVIDEBA) brings together residents and members of the Batack community. It leads the village projects and decides how funds are used.",
