@@ -2,33 +2,46 @@ import Link from "next/link";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
 import { alternatesPage } from "@/i18n/config";
 import { cheminPhoto } from "@/donnees/projets";
+import { PARITE_FCFA, chargerTransparenceSite } from "@/lib2/serveur";
 import Apparition from "@/components/Apparition";
 import Compteur from "@/components/Compteur";
 import Parallaxe from "@/components/Parallaxe";
 
-// DONNÉES D'EXEMPLE : elles seront calculées à partir du registre comptable
-// quand la base de données existera.
-const chiffresExemple = [
-  { valeur: 3970000, devise: true },
-  { valeur: 87, devise: false },
-  { valeur: 0, devise: false },
-];
-const partsExemple = [
-  { pourcent: 90, couleur: "var(--principal)" },
-  { pourcent: 4, couleur: "var(--or)" },
-  { pourcent: 6, couleur: "var(--vert-nuit)" },
-];
-
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const dict = await chargerDictionnaire(lang);
-  return { title: `${dict.transparence.titre} | COVIDEBA`, description: dict.transparence.intro, alternates: alternatesPage(lang, "/transparence") };
+  return {
+    title: `${dict.transparence.titre} | COVIDEBA`,
+    description: dict.transparence.intro,
+    alternates: alternatesPage(lang, "/transparence"),
+  };
 }
 
 export default async function Transparence({ params }) {
   const { lang } = await params;
-  const dict = await chargerDictionnaire(lang);
+  const [dict, stats] = await Promise.all([chargerDictionnaire(lang), chargerTransparenceSite()]);
   const t = dict.transparence;
+
+  const chiffres = [
+    { valeur: stats.collectedFcfa, devise: true },
+    { valeur: stats.donorsCount, devise: false },
+    { valeur: stats.projectsCount, devise: false },
+  ];
+
+  const totalMouvements = stats.balanceFcfa + stats.spentFcfa;
+  const partDisponible = totalMouvements > 0 ? Math.round((stats.balanceFcfa / totalMouvements) * 100) : 100;
+  const partDepensee = totalMouvements > 0 ? Math.max(0, 100 - partDisponible) : 0;
+  const parts = [
+    { pourcent: partDisponible, couleur: "var(--principal)" },
+    { pourcent: 0, couleur: "var(--or)" },
+    { pourcent: partDepensee, couleur: "var(--vert-nuit)" },
+  ];
+
+  const formaterMontant = (eur) =>
+    new Intl.NumberFormat(lang, { style: "currency", currency: "XAF", maximumFractionDigits: 0 }).format(
+      Math.round(Number(eur || 0) * PARITE_FCFA),
+    );
+  const formaterDate = (d) => new Intl.DateTimeFormat(lang, { dateStyle: "medium" }).format(new Date(d));
 
   return (
     <>
@@ -42,14 +55,14 @@ export default async function Transparence({ params }) {
           <h2>{t.chiffresTitre}</h2>
         </Apparition>
         <div className="chiffres">
-          {chiffresExemple.map((c, i) => (
+          {chiffres.map((c, i) => (
             <div className="chiffre" key={t.chiffres[i]}>
               <Compteur valeur={c.valeur} langue={lang} devise={c.devise} />
               <span>{t.chiffres[i]}</span>
             </div>
           ))}
         </div>
-        <p className="note-exemple">{t.miseAJour}</p>
+        {!stats.depuisBackend && <p className="note-exemple">{t.miseAJour}</p>}
       </section>
 
       <section className="section">
@@ -60,13 +73,17 @@ export default async function Transparence({ params }) {
             <p className="aide">{t.methode}</p>
           </div>
           <div>
-            <div className="repartition" role="img" aria-label={t.parts.map((p, i) => `${p} ${partsExemple[i].pourcent} %`).join(", ")}>
-              {partsExemple.map((p, i) => (
+            <div
+              className="repartition"
+              role="img"
+              aria-label={t.parts.map((p, i) => `${p} ${parts[i].pourcent} %`).join(", ")}
+            >
+              {parts.map((p, i) => (
                 <span key={t.parts[i]} style={{ width: `${p.pourcent}%`, background: p.couleur }} />
               ))}
             </div>
             <ul className="legende">
-              {partsExemple.map((p, i) => (
+              {parts.map((p, i) => (
                 <li key={t.parts[i]}>
                   <i style={{ background: p.couleur }} />
                   <b>{p.pourcent} %</b>
@@ -74,7 +91,6 @@ export default async function Transparence({ params }) {
                 </li>
               ))}
             </ul>
-            <p className="note-exemple">({dict.exemple})</p>
           </div>
         </Apparition>
       </section>
@@ -94,9 +110,22 @@ export default async function Transparence({ params }) {
               </tr>
             </thead>
             <tbody>
-              <tr className="tableau-vide">
-                <td colSpan={t.colonnes.length}>{t.registreVide}</td>
-              </tr>
+              {stats.recentEntries.length === 0 ? (
+                <tr className="tableau-vide">
+                  <td colSpan={t.colonnes.length}>{t.registreVide}</td>
+                </tr>
+              ) : (
+                stats.recentEntries.map((e) => (
+                  <tr key={e.entry_number}>
+                    <td>{formaterDate(e.entry_date)}</td>
+                    <td>{e.label}</td>
+                    <td>{e.account}</td>
+                    <td className="nombre">{e.direction === "entree" ? formaterMontant(e.amount_eur_equiv) : ""}</td>
+                    <td className="nombre">{e.direction === "sortie" ? formaterMontant(e.amount_eur_equiv) : ""}</td>
+                    <td><code>{String(e.entry_hash || "").slice(0, 8)}</code></td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         </div>

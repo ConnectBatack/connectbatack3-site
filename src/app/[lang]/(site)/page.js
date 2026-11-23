@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
 import { alternatesPage } from "@/i18n/config";
-import { projets, cheminPhoto } from "@/donnees/projets";
+import { cheminPhoto } from "@/donnees/projets";
+import { chargerProjetsSite } from "@/lib2/serveur";
 import { montantsProposes } from "@/lib/regles-don";
 import Montant from "@/components/Montant";
 import Apparition from "@/components/Apparition";
@@ -21,8 +22,15 @@ export async function generateMetadata({ params }) {
 
 export default async function Accueil({ params }) {
   const { lang } = await params;
-  const dict = await chargerDictionnaire(lang);
+  const [dict, listeProjets] = await Promise.all([chargerDictionnaire(lang), chargerProjetsSite()]);
   const a = dict.accueil;
+  const besoinProjet = listeProjets.find((p) => p.isFeaturedNeed) || listeProjets[0];
+  const besoinTitre = besoinProjet?.textes?.title?.[lang] || besoinProjet?.textes?.title?.fr || a.besoinTitre;
+  const besoinDescription =
+    besoinProjet?.textes?.tagline?.[lang] || besoinProjet?.textes?.tagline?.fr || a.besoinTexte;
+  const besoinCollecte = besoinProjet ? besoinProjet.collecte : 920000;
+  const besoinObjectif = besoinProjet && besoinProjet.objectif > 0 ? besoinProjet.objectif : 2625000;
+  const besoinPourcent = Math.min(100, Math.round((besoinCollecte / besoinObjectif) * 100));
 
   return (
     <>
@@ -47,16 +55,16 @@ export default async function Accueil({ params }) {
           </div>
           <Apparition className="besoin">
             <span className="surtitre">{a.prochainBesoin}</span>
-            <h2>{a.besoinTitre}</h2>
-            <p>{a.besoinTexte}</p>
-            <div className="progression" role="progressbar" aria-label={a.besoinTitre} aria-valuenow={35} aria-valuemin={0} aria-valuemax={100}>
-              <span className="progression-barre" style={{ "--p": "35%" }} />
+            <h2>{besoinTitre}</h2>
+            <p>{besoinDescription}</p>
+            <div className="progression" role="progressbar" aria-label={besoinTitre} aria-valuenow={besoinPourcent} aria-valuemin={0} aria-valuemax={100}>
+              <span className="progression-barre" style={{ "--p": `${besoinPourcent}%` }} />
             </div>
             <p className="progression-texte">
-              <strong><Montant fcfa={920000} lang={lang} /></strong> {a.collecte} <Montant fcfa={2625000} lang={lang} />
+              <strong><Montant fcfa={besoinCollecte} lang={lang} /></strong> {a.collecte} <Montant fcfa={besoinObjectif} lang={lang} />
             </p>
             <p className="note-exemple">{dict.noteExemple}</p>
-            <Link className="bouton bouton-principal" href={`/${lang}/don?projet=dispensaire`}>
+            <Link className="bouton bouton-principal" href={`/${lang}/don?projet=${besoinProjet?.id || "dispensaire"}`}>
               {a.soutenir}
             </Link>
           </Apparition>
@@ -69,7 +77,7 @@ export default async function Accueil({ params }) {
           <p>{a.projetsIntro}</p>
         </Apparition>
         <ul className="grille">
-          {projets.map((p) => (
+          {listeProjets.map((p) => (
             <CarteProjet key={p.id} projet={p} dict={dict} lang={lang} />
           ))}
         </ul>

@@ -33,7 +33,7 @@
     "etapes": [
       {
         "titre": "U geeft",
-        "texte": "De betaling verloopt via Stripe, een beveiligde betaaldienst. Uw bankgegevens komen nooit op deze site terecht."
+        "texte": "U schrijft uw gift over naar de bankrekening of Mobile Money-rekening van het COVIDEBA en dient daarna het betalingsbewijs op deze site in."
       },
       {
         "titre": "Het comité beslist",
@@ -137,47 +137,69 @@
     "paysBelgique": "België",
     "paysAutre": "Ander land",
     "attestation": "Ik wens een fiscaal attest",
-    "attestationAide": "Het attest wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres. Er kunnen andere gegevens gevraagd worden, bijvoorbeeld uw rijksregisternummer.",
+    "attestationAide": "Het attest wordt begin volgend jaar uitgereikt na controle van uw betalingsbewijs. Er kunnen andere gegevens gevraagd worden, zoals uw rijksregisternummer.",
     "conditions": "Ik aanvaard de {conditions} en het {confidentialite}.",
-    "paiementTitre": "Betaalmethode",
+    "paiementTitre": "Overschrijving naar het COVIDEBA en bewijs indienen",
     "bancontact": "Bancontact",
     "carte": "Bankkaart",
     "mensuelCarte": "Een maandelijkse gift verloopt via bankkaart.",
-    "securite": "De betaling wordt door Stripe verwerkt op een beveiligde pagina. Uw bankgegevens komen niet op deze site terecht.",
+    "securite": "Uw betalingsbewijs wordt door de penningmeester van het COVIDEBA gecontroleerd voordat de gift in het openbare register bevestigd wordt.",
     "recapitulatif": "Overzicht",
-    "preleve": "Bedrag dat Stripe afschrijft: {euros} (vaste wisselkoers: 1 € = 655,957 FCFA).",
+    "preleve": "Indicatief equivalent: {euros} (vaste wisselkoers: 1 € = 655,957 FCFA).",
     "confirmer": "Mijn gift bevestigen",
-    "envoi": "Doorsturen naar de betaling…",
+    "envoi": "Bewijs verzenden…",
     "erreurs": {
       "montant": "Kies een bedrag van minstens {min}.",
       "nom": "Vul uw achternaam in.",
       "email": "Vul een geldig e-mailadres in.",
       "conditions": "Aanvaard de voorwaarden om verder te gaan.",
-      "nonConfigure": "Online betalen is nog niet geactiveerd: deze pagina is een voorlopige versie.",
-      "serveur": "De betaling kon niet starten. Probeer het zo meteen opnieuw.",
+      "nonConfigure": "Het verzenden van bewijzen is nog niet geactiveerd op deze server.",
+      "serveur": "Het bewijs kon niet verzonden worden. Probeer het zo meteen opnieuw.",
       "autre": "Een gegeven in het formulier is niet geldig. Laad de pagina opnieuw en probeer het nog eens.",
-      "pays": "Kies uw land van verblijf."
+      "pays": "Kies uw land van verblijf.",
+      "telephone": "Vul een geldig telefoonnummer in.",
+      "referenceRecu": "Vul de referentie van het bewijs of de transactie in.",
+      "recuObligatoire": "Voeg een foto of PDF van uw betalingsbewijs toe.",
+      "recuType": "Niet-ondersteund formaat: gebruik JPG, PNG, WEBP of PDF.",
+      "recuTaille": "Het bestand is groter dan 10 MB."
     },
     "faq": {
       "titre": "Veelgestelde vragen",
       "q1": "Heb ik een account nodig om te doneren?",
       "r1": "U kunt doneren zonder account.",
       "q2": "Zijn mijn bankgegevens veilig?",
-      "r2": "De betaling verloopt via Stripe, een beveiligde betaaldienst. Uw bankgegevens komen nooit op deze site terecht.",
+      "r2": "U schrijft het bedrag rechtstreeks over naar de bankrekening of Mobile Money-rekening van het COVIDEBA. Deze site ontvangt enkel uw betalingsbewijs ter bevestiging.",
       "q3": "Kan ik een maandelijkse gift stopzetten?",
       "r3": "De procedure om een maandelijkse gift stop te zetten wordt later verduidelijkt.",
       "q4": "Hoe ontvang ik een fiscaal attest?",
-      "r4": "Het fiscaal attest is alleen bestemd voor schenkers die in België wonen. Het wordt begin volgend jaar uitgereikt door de erkende instelling die de giften ontvangt. Stripe vraagt u om uw postadres, en er kunnen andere gegevens gevraagd worden, bijvoorbeeld uw rijksregisternummer.",
+      "r4": "Het fiscaal attest is enkel bestemd voor schenkers die in België wonen en wordt begin volgend jaar uitgereikt na controle van de storting.",
       "q5": "Waarvoor dient mijn gift als ik geen project kies?",
       "r5": "Uw gift gaat naar het algemene fonds. Ze wordt gebruikt waar de nood het hoogst is."
     },
     "lienConditions": "gebruiksvoorwaarden",
-    "lienConfidentialite": "privacybeleid"
+    "lienConfidentialite": "privacybeleid",
+    "telephone": "Telefoonnummer",
+    "contactAide": "Vul minstens een e-mailadres of telefoonnummer in.",
+    "comptesTitre": "Officiële rekeningen van het COVIDEBA",
+    "comptesIntro": "Schrijf het bedrag over naar een van onderstaande rekeningen en voeg het betalingsbewijs of de bevestiging toe.",
+    "compteTitulaire": "Rekeninghouder",
+    "compteBanque": "Bank",
+    "compteNumero": "Rekeningnummer / IBAN",
+    "compteMtn": "MTN Mobile Money",
+    "compteOrange": "Orange Money",
+    "virement": "Bankoverschrijving",
+    "depot_bancaire": "Storting aan het bankloket",
+    "mobile_money": "Mobile Money (MTN / Orange)",
+    "referenceRecu": "Referentie van het bewijs of de transactie",
+    "referencePlaceholder": "Bijv. VIR-2026-1234 of transactie-ID",
+    "fichierRecu": "Betalingsbewijs (JPG, PNG, WEBP of PDF)",
+    "fichierRecuAide": "Maximale grootte: 10 MB. Het bewijs blijft privé en wordt enkel door de penningmeester gecontroleerd."
   },
   "merci": {
-    "titre": "Bedankt voor uw gift",
-    "texte": "Stripe stuurt u een ontvangstbewijs per e-mail. Als u een fiscaal attest gevraagd hebt, ontvangt u het begin volgend jaar.",
-    "annule": "De betaling is geannuleerd. Er is geen bedrag afgeschreven."
+    "titre": "Bedankt, uw betalingsbewijs is verzonden",
+    "texte": "De penningmeester van het COVIDEBA controleert uw storting en bevestigt uw gift in het register. Als u een fiscaal attest gevraagd hebt, ontvangt u het begin volgend jaar.",
+    "reference": "Verzonden referentie:",
+    "annule": "De verzending is geannuleerd."
   },
   "connexion": {
     "titre": "COVIDEBA-ruimte",
@@ -323,10 +345,10 @@
     "repartitionIntro": "Uw gift wordt in drie delen verdeeld. De percentages hieronder zijn voorbeelden: de echte cijfers worden na het eerste jaar gepubliceerd.",
     "parts": [
       "Projecten van het dorp",
-      "Betaalkosten (Stripe, bank)",
+      "Bank- en overschrijvingskosten",
       "Andere kosten (website, overschrijvingen naar Kameroen)"
     ],
-    "methode": "Methode: de betaalkosten zijn de kosten die Stripe en de bank aanrekenen. De andere kosten omvatten de hosting van de website en de overschrijvingen naar Kameroen. Er bestaat geen eenduidige definitie van \"kosten\": we vermelden altijd wat elk deel bevat.",
+    "methode": "Methode: de bankkosten zijn de kosten bij stortingen en overschrijvingen naar Kameroen. Andere kosten omvatten hosting en lokaal beheer.",
     "registreTitre": "Het uitgavenregister",
     "registreIntro": "Elke belangrijke uitgave wordt gepubliceerd met de factuur of een foto, en met het verslag van de vergadering van het COVIDEBA die ze heeft goedgekeurd. Een boeking wordt nooit gewist: een fout wordt rechtgezet met een nieuwe boeking, die ook zichtbaar is.",
     "colonnes": [
@@ -402,9 +424,8 @@
           {
             "titre": "Verzamelde gegevens",
             "texte": [
-              "Bij een gift: uw achternaam, uw voornaam (facultatief) en uw e-mailadres.",
-              "Als u een fiscaal attest vraagt: uw postadres, verzameld door Stripe.",
-              "Uw bankgegevens worden alleen bij Stripe ingevoerd. Deze site ontvangt ze nooit."
+              "Bij een gift: uw achternaam, voornaam (facultatief), e-mailadres of telefoonnummer en uw betalingsbewijs.",
+              "Het ingediende bewijs wordt privé bewaard en enkel gebruikt om uw storting te controleren."
             ]
           },
           {

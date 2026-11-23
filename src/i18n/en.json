@@ -33,7 +33,7 @@
     "etapes": [
       {
         "titre": "You donate",
-        "texte": "Payment goes through Stripe, a secure payment provider. Your bank details never pass through this site."
+        "texte": "You send your donation directly to the COVIDEBA bank or Mobile Money account, then submit the deposit receipt on this site."
       },
       {
         "titre": "The committee decides",
@@ -137,47 +137,69 @@
     "paysBelgique": "Belgium",
     "paysAutre": "Other country",
     "attestation": "I would like a tax certificate",
-    "attestationAide": "The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address. Other information may be requested, such as your national register number.",
+    "attestationAide": "The certificate is issued early the following year after your receipt is verified. Other information may be requested, such as your national register number.",
     "conditions": "I accept the {conditions} and the {confidentialite}.",
-    "paiementTitre": "Payment method",
+    "paiementTitre": "Transfer to the COVIDEBA account and receipt upload",
     "bancontact": "Bancontact",
     "carte": "Credit or debit card",
     "mensuelCarte": "Monthly donations are made by card.",
-    "securite": "Payment is processed by Stripe on a secure page. Your bank details do not pass through this site.",
+    "securite": "Your receipt is verified by the COVIDEBA treasurer before the donation is confirmed in the public register.",
     "recapitulatif": "Summary",
-    "preleve": "Amount charged by Stripe: {euros} (fixed rate: €1 = 655.957 FCFA).",
+    "preleve": "Indicative equivalent: {euros} (fixed rate: €1 = 655.957 FCFA).",
     "confirmer": "Confirm my donation",
-    "envoi": "Redirecting to payment…",
+    "envoi": "Submitting receipt…",
     "erreurs": {
       "montant": "Choose an amount of at least {min}.",
       "nom": "Enter your last name.",
       "email": "Enter a valid email address.",
       "conditions": "Accept the terms to continue.",
-      "nonConfigure": "Online payment is not active yet: this page is a preview.",
-      "serveur": "The payment could not start. Please try again in a moment.",
+      "nonConfigure": "Receipt submission is not active yet on this server.",
+      "serveur": "The receipt could not be submitted. Please try again in a moment.",
       "autre": "Some information in the form is not valid. Reload the page, then try again.",
-      "pays": "Please select your country of residence."
+      "pays": "Please select your country of residence.",
+      "telephone": "Enter a valid phone number.",
+      "referenceRecu": "Enter the receipt or transaction reference.",
+      "recuObligatoire": "Attach the photo or PDF of your deposit receipt.",
+      "recuType": "Unsupported file type: please use JPG, PNG, WEBP or PDF.",
+      "recuTaille": "File exceeds 10 MB."
     },
     "faq": {
       "titre": "Frequently asked questions",
       "q1": "Do I need an account to donate?",
       "r1": "You can donate without creating an account.",
       "q2": "Are my bank details secure?",
-      "r2": "Payment goes through Stripe, a secure payment provider. Your bank details never pass through this site.",
+      "r2": "You make the transfer directly to the COVIDEBA bank or Mobile Money account. This site only receives your deposit receipt for confirmation.",
       "q3": "Can I stop a monthly donation?",
       "r3": "The procedure for stopping a monthly donation will be specified later.",
       "q4": "How do I get a tax certificate?",
-      "r4": "Tax certificates are only available to donors who live in Belgium. The certificate is issued early the following year by the approved institution that receives the donations. Stripe will ask for your postal address, and other information may be requested, such as your national register number.",
+      "r4": "Tax certificates are only available to donors who live in Belgium. The certificate is issued early the following year after your transfer is verified.",
       "q5": "What happens to my donation if I do not choose a project?",
       "r5": "Your donation goes to the general fund. It is used where the need is most urgent."
     },
     "lienConditions": "terms of use",
-    "lienConfidentialite": "privacy policy"
+    "lienConfidentialite": "privacy policy",
+    "telephone": "Phone number",
+    "contactAide": "Provide at least an email address or a phone number.",
+    "comptesTitre": "Official COVIDEBA accounts",
+    "comptesIntro": "Make your transfer to one of the accounts below, then attach your deposit receipt or confirmation screenshot.",
+    "compteTitulaire": "Account holder",
+    "compteBanque": "Bank",
+    "compteNumero": "Account number / IBAN",
+    "compteMtn": "MTN Mobile Money",
+    "compteOrange": "Orange Money",
+    "virement": "Bank transfer",
+    "depot_bancaire": "Bank counter deposit",
+    "mobile_money": "Mobile Money (MTN / Orange)",
+    "referenceRecu": "Receipt or transaction reference",
+    "referencePlaceholder": "E.g. VIR-2026-1234 or transaction ID",
+    "fichierRecu": "Deposit receipt (JPG, PNG, WEBP or PDF)",
+    "fichierRecuAide": "Maximum size: 10 MB. The receipt remains private and is used only by the treasurer to verify your deposit."
   },
   "merci": {
-    "titre": "Thank you for your donation",
-    "texte": "Stripe sends you a receipt by email. If you asked for a tax certificate, you will receive it early next year.",
-    "annule": "The payment was cancelled. No amount was charged."
+    "titre": "Thank you, your receipt has been submitted",
+    "texte": "The COVIDEBA treasurer will verify your deposit and confirm your donation in the register. If you requested a tax certificate, you will receive it early next year.",
+    "reference": "Submitted reference:",
+    "annule": "Submission was cancelled."
   },
   "connexion": {
     "titre": "COVIDEBA area",
@@ -323,10 +345,10 @@
     "repartitionIntro": "Your donation is split into three parts. The percentages below are examples: the real figures will be published after the first year.",
     "parts": [
       "Village projects",
-      "Payment fees (Stripe, bank)",
+      "Bank and transfer fees",
       "Other costs (website, transfers to Cameroon)"
     ],
-    "methode": "Method: payment fees are those charged by Stripe and the bank. Other costs include website hosting and money transfers to Cameroon. There is no single definition of \"costs\": we will always state what each part contains.",
+    "methode": "Method: bank fees are those charged on deposits and transfers to Cameroon. Other costs include website hosting and local management.",
     "registreTitre": "The expense register",
     "registreIntro": "Every significant expense is published with its invoice or a photo, and with the minutes of the COVIDEBA meeting that approved it. An entry is never deleted: a mistake is corrected by a new entry, which is also visible.",
     "colonnes": [
@@ -402,9 +424,8 @@
           {
             "titre": "Data collected",
             "texte": [
-              "When you donate: your last name, your first name (optional) and your email address.",
-              "If you ask for a tax certificate: your postal address, collected by Stripe.",
-              "Your bank details are entered only on Stripe. This site never receives them."
+              "When you donate: your last name, first name (optional), email address or phone number, and your deposit receipt.",
+              "The submitted receipt is stored privately and used only to verify your deposit."
             ]
           },
           {

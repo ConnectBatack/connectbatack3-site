@@ -33,7 +33,7 @@
     "etapes": [
       {
         "titre": "Tú donas",
-        "texte": "El pago se hace a través de Stripe, un proveedor de pagos seguro. Tus datos bancarios nunca pasan por este sitio."
+        "texte": "Realizas tu donación a la cuenta bancaria o Mobile Money del COVIDEBA y luego envías el recibo en este sitio."
       },
       {
         "titre": "El comité decide",
@@ -137,47 +137,69 @@
     "paysBelgique": "Bélgica",
     "paysAutre": "Otro país",
     "attestation": "Deseo un certificado fiscal",
-    "attestationAide": "El certificado lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal. Es posible que se pidan otros datos, por ejemplo tu número de registro nacional.",
+    "attestationAide": "El certificado se emite a principios del año siguiente tras verificar tu recibo. Se podrán pedir otros datos, como tu número de registro nacional.",
     "conditions": "Acepto las {conditions} y la {confidentialite}.",
-    "paiementTitre": "Método de pago",
+    "paiementTitre": "Ingreso en la cuenta del COVIDEBA y envío del recibo",
     "bancontact": "Bancontact",
     "carte": "Tarjeta bancaria",
     "mensuelCarte": "La donación mensual se hace con tarjeta bancaria.",
-    "securite": "Stripe procesa el pago en una página segura. Tus datos bancarios no pasan por este sitio.",
+    "securite": "El tesorero del COVIDEBA verifica tu recibo antes de confirmar la donación en el registro público.",
     "recapitulatif": "Resumen",
-    "preleve": "Importe cobrado por Stripe: {euros} (paridad fija: 1 € = 655,957 FCFA).",
+    "preleve": "Equivalente indicativo: {euros} (paridad fija: 1 € = 655,957 FCFA).",
     "confirmer": "Confirmar mi donación",
-    "envoi": "Redirigiendo al pago…",
+    "envoi": "Enviando recibo…",
     "erreurs": {
       "montant": "Elige un importe de al menos {min}.",
       "nom": "Indica tu apellido.",
       "email": "Indica un correo electrónico válido.",
       "conditions": "Acepta las condiciones para continuar.",
-      "nonConfigure": "El pago en línea todavía no está activado: esta página es una versión preliminar.",
-      "serveur": "No se pudo iniciar el pago. Inténtalo de nuevo dentro de un momento.",
+      "nonConfigure": "El envío del recibo todavía no está activado en este servidor.",
+      "serveur": "No se pudo enviar el recibo. Inténtalo de nuevo en un momento.",
       "autre": "Un dato del formulario no es válido. Vuelve a cargar la página e inténtalo de nuevo.",
-      "pays": "Indica tu país de residencia."
+      "pays": "Indica tu país de residencia.",
+      "telephone": "Indica un número de teléfono válido.",
+      "referenceRecu": "Indica la referencia del recibo o transacción.",
+      "recuObligatoire": "Adjunta la foto o PDF del recibo de depósito.",
+      "recuType": "Formato no válido: usa JPG, PNG, WEBP o PDF.",
+      "recuTaille": "El archivo supera los 10 MB."
     },
     "faq": {
       "titre": "Preguntas frecuentes",
       "q1": "¿Hace falta una cuenta para donar?",
       "r1": "Puedes donar sin crear una cuenta.",
       "q2": "¿Están seguros mis datos bancarios?",
-      "r2": "El pago se hace a través de Stripe, un proveedor de pagos seguro. Tus datos bancarios nunca pasan por este sitio.",
+      "r2": "Realizas el ingreso directamente en la cuenta bancaria o Mobile Money del COVIDEBA. Este sitio solo recibe el recibo para confirmarlo.",
       "q3": "¿Puedo cancelar una donación mensual?",
       "r3": "El procedimiento para cancelar una donación mensual se detallará más adelante.",
       "q4": "¿Cómo recibo un certificado fiscal?",
-      "r4": "El certificado fiscal está reservado a los donantes que residen en Bélgica. Lo emite a principios del año siguiente la institución autorizada que recibe las donaciones. Stripe te pedirá tu dirección postal, y es posible que se pidan otros datos, por ejemplo tu número de registro nacional.",
+      "r4": "El certificado fiscal está reservado a donantes residentes en Bélgica y se emite a principios del año siguiente tras verificar el ingreso.",
       "q5": "¿Para qué sirve mi donación si no elijo un proyecto?",
       "r5": "Tu donación va al fondo general. Se destina a donde la necesidad es más urgente."
     },
     "lienConditions": "condiciones de uso",
-    "lienConfidentialite": "política de privacidad"
+    "lienConfidentialite": "política de privacidad",
+    "telephone": "Teléfono",
+    "contactAide": "Indica al menos un correo electrónico o un número de teléfono.",
+    "comptesTitre": "Cuentas oficiales del COVIDEBA",
+    "comptesIntro": "Realiza tu ingreso en una de las cuentas siguientes y adjunta el recibo o captura de confirmación.",
+    "compteTitulaire": "Titular",
+    "compteBanque": "Banco",
+    "compteNumero": "Número de cuenta / IBAN",
+    "compteMtn": "MTN Mobile Money",
+    "compteOrange": "Orange Money",
+    "virement": "Transferencia bancaria",
+    "depot_bancaire": "Ingreso bancario en ventanilla",
+    "mobile_money": "Mobile Money (MTN / Orange)",
+    "referenceRecu": "Referencia del recibo o transacción",
+    "referencePlaceholder": "Ej. VIR-2026-1234 o ID de transacción",
+    "fichierRecu": "Recibo o comprobante de depósito (JPG, PNG, WEBP o PDF)",
+    "fichierRecuAide": "Tamaño máximo: 10 MB. El comprobante es privado y solo sirve para la verificación del tesorero."
   },
   "merci": {
-    "titre": "Gracias por tu donación",
-    "texte": "Stripe te envía un recibo por correo electrónico. Si pediste un certificado fiscal, lo recibirás a principios del año que viene.",
-    "annule": "El pago se ha cancelado. No se ha cobrado ningún importe."
+    "titre": "Gracias, hemos recibido tu comprobante",
+    "texte": "El tesorero del COVIDEBA verificará tu depósito y confirmará tu donación en el registro. Si pediste un certificado fiscal, lo recibirás a principios del año que viene.",
+    "reference": "Referencia enviada:",
+    "annule": "El envío se ha cancelado."
   },
   "connexion": {
     "titre": "Espacio COVIDEBA",
@@ -323,10 +345,10 @@
     "repartitionIntro": "Tu donación se reparte en tres partes. Los porcentajes de abajo son ejemplos: las cifras reales se publicarán tras el primer año.",
     "parts": [
       "Proyectos de la aldea",
-      "Comisiones de pago (Stripe, banco)",
+      "Comisiones bancarias y de transferencia",
       "Otros gastos (sitio web, transferencias a Camerún)"
     ],
-    "methode": "Método: las comisiones de pago son las que cobran Stripe y el banco. Los otros gastos incluyen el alojamiento del sitio web y las transferencias de dinero a Camerún. No existe una definición única de «gastos»: siempre indicaremos qué contiene cada parte.",
+    "methode": "Método: las comisiones bancarias son las aplicadas en los depósitos y transferencias a Camerún. Los otros gastos incluyen el alojamiento web y la gestión local.",
     "registreTitre": "El registro de gastos",
     "registreIntro": "Cada gasto importante se publica con su factura o una foto, y con el acta de la reunión del COVIDEBA que lo aprobó. Un asiento nunca se borra: un error se corrige con un nuevo asiento, también visible.",
     "colonnes": [
@@ -402,9 +424,8 @@
           {
             "titre": "Datos recogidos",
             "texte": [
-              "Al donar: tu apellido, tu nombre (opcional) y tu correo electrónico.",
-              "Si pides un certificado fiscal: tu dirección postal, recogida por Stripe.",
-              "Tus datos bancarios solo se introducen en Stripe. Este sitio nunca los recibe."
+              "Al donar: tu apellido, nombre (opcional), correo electrónico o teléfono y el comprobante del depósito.",
+              "El comprobante enviado se guarda de forma privada y solo se usa para verificar tu ingreso."
             ]
           },
           {

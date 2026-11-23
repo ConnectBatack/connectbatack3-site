@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
 import { projets, cheminPhoto } from "@/donnees/projets";
+import { chargerProjetSite } from "@/lib2/serveur";
 import { langues, alternatesPage } from "@/i18n/config";
 import Apparition from "@/components/Apparition";
 import Compteur from "@/components/Compteur";
@@ -10,34 +11,51 @@ import Montant from "@/components/Montant";
 import BoutonPartage from "@/components/BoutonPartage";
 import FormulaireSuivi from "@/components/FormulaireSuivi";
 
-
 export async function generateStaticParams() {
   return langues.flatMap((lang) => projets.map((p) => ({ lang, id: p.id })));
 }
 
+function textesProjet(projet, dict, lang) {
+  const fallback = dict.projets[projet?.id] || {};
+  return {
+    categorie: projet?.textes?.category?.[lang] || projet?.textes?.category?.fr || fallback.categorie || "",
+    titre: projet?.textes?.title?.[lang] || projet?.textes?.title?.fr || fallback.titre || projet?.id || "",
+    accroche: projet?.textes?.tagline?.[lang] || projet?.textes?.tagline?.fr || fallback.accroche || "",
+    description: projet?.textes?.description?.[lang] || projet?.textes?.description?.fr || fallback.description || "",
+  };
+}
+
 export async function generateMetadata({ params }) {
   const { lang, id } = await params;
-  const dict = await chargerDictionnaire(lang);
-  const t = dict.projets[id];
-  if (!t) return {};
+  const [dict, projet] = await Promise.all([chargerDictionnaire(lang), chargerProjetSite(id)]);
+  if (!projet && !dict.projets[id]) return {};
+  const t = textesProjet(projet || { id }, dict, lang);
   return { title: `${t.titre} | COVIDEBA`, description: t.description, alternates: alternatesPage(lang, `/projets/${id}`) };
 }
 
 export default async function PageProjet({ params }) {
   const { lang, id } = await params;
-  const projet = projets.find((p) => p.id === id);
+  const [dict, projet] = await Promise.all([chargerDictionnaire(lang), chargerProjetSite(id)]);
   if (!projet) notFound();
 
-  const dict = await chargerDictionnaire(lang);
-  const t = dict.projets[id];
+  const t = textesProjet(projet, dict, lang);
   const a = dict.accueil;
-  const pourcent = Math.min(100, Math.round((projet.collecte / projet.objectif) * 100));
+  const src = projet.photoSrc || cheminPhoto(projet.photo);
+  const pourcent = projet.objectif > 0 ? Math.min(100, Math.round((projet.collecte / projet.objectif) * 100)) : 0;
 
   return (
     <>
       <section className="bandeau-photo bandeau-photo-court">
         <div className="diapo active">
-          <Image src={cheminPhoto(projet.photo)} alt={dict.photos[projet.photo]} fill sizes="100vw" loading="eager" fetchPriority="high" />
+          <Image
+            src={src}
+            alt={dict.photos[projet.photo] || t.titre}
+            fill
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+            unoptimized={src.startsWith("/api/")}
+          />
         </div>
         <div className="bandeau-contenu">
           <div>

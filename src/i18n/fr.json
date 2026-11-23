@@ -33,7 +33,7 @@
     "etapes": [
       {
         "titre": "Vous donnez",
-        "texte": "Le paiement passe par Stripe, un prestataire de paiement sécurisé. Vos données bancaires ne passent jamais par ce site."
+        "texte": "Vous versez votre don sur le compte bancaire ou Mobile Money du COVIDEBA, puis vous déposez le reçu sur ce site."
       },
       {
         "titre": "Le comité décide",
@@ -137,47 +137,69 @@
     "paysBelgique": "Belgique",
     "paysAutre": "Autre pays",
     "attestation": "Je souhaite une attestation fiscale",
-    "attestationAide": "L'attestation est délivrée au début de l'année suivante par l'institution agréée qui reçoit les dons. Stripe vous demandera votre adresse postale. D'autres informations pourront être demandées, par exemple votre numéro de registre national.",
+    "attestationAide": "L'attestation est délivrée au début de l'année suivante après vérification de votre reçu. D'autres informations pourront être demandées, par exemple votre numéro de registre national.",
     "conditions": "J'accepte les {conditions} et la {confidentialite}.",
-    "paiementTitre": "Mode de paiement",
+    "paiementTitre": "Dépôt sur le compte du COVIDEBA et envoi du reçu",
     "bancontact": "Bancontact",
     "carte": "Carte bancaire",
     "mensuelCarte": "Le don mensuel se fait par carte bancaire.",
-    "securite": "Le paiement est traité par Stripe sur une page sécurisée. Vos données bancaires ne passent pas par ce site.",
+    "securite": "Votre reçu est vérifié par le trésorier du COVIDEBA avant l'inscription définitive du don au registre public.",
     "recapitulatif": "Récapitulatif",
-    "preleve": "Montant prélevé par Stripe : {euros} (parité fixe : 1 € = 655,957 FCFA).",
+    "preleve": "Équivalent indicatif : {euros} (parité fixe : 1 € = 655,957 FCFA).",
     "confirmer": "Confirmer mon don",
-    "envoi": "Redirection vers le paiement…",
+    "envoi": "Envoi du reçu en cours…",
     "erreurs": {
       "montant": "Choisissez un montant d'au moins {min}.",
       "nom": "Indiquez votre nom de famille.",
       "email": "Indiquez une adresse e-mail valide.",
       "conditions": "Acceptez les conditions pour continuer.",
-      "nonConfigure": "Le paiement en ligne n'est pas encore activé : cette page est une préversion.",
-      "serveur": "Le paiement n'a pas pu démarrer. Réessayez dans un instant.",
+      "nonConfigure": "L'envoi du reçu n'est pas encore activé sur ce serveur.",
+      "serveur": "Le reçu n'a pas pu être envoyé. Réessayez dans un instant.",
       "autre": "Une information du formulaire n'est pas valide. Rechargez la page, puis réessayez.",
-      "pays": "Indiquez votre pays de résidence."
+      "pays": "Indiquez votre pays de résidence.",
+      "telephone": "Indiquez un numéro de téléphone valide.",
+      "referenceRecu": "Indiquez la référence du reçu ou de la transaction.",
+      "recuObligatoire": "Joignez la photo ou le PDF du reçu de dépôt.",
+      "recuType": "Format non accepté : utilisez un fichier JPG, PNG, WEBP ou PDF.",
+      "recuTaille": "Le fichier dépasse 10 Mo."
     },
     "faq": {
       "titre": "Questions fréquentes",
       "q1": "Faut-il un compte pour donner ?",
       "r1": "Vous pouvez donner sans créer de compte.",
       "q2": "Mes données bancaires sont-elles en sécurité ?",
-      "r2": "Le paiement passe par Stripe, un prestataire de paiement sécurisé. Vos données bancaires ne passent jamais par ce site.",
+      "r2": "Vous effectuez le versement directement sur le compte bancaire ou Mobile Money du COVIDEBA. Ce site reçoit uniquement votre reçu pour confirmation.",
       "q3": "Puis-je arrêter un don mensuel ?",
       "r3": "La procédure pour arrêter un don mensuel sera précisée ultérieurement.",
       "q4": "Comment recevoir une attestation fiscale ?",
-      "r4": "L'attestation fiscale est réservée aux donateurs qui résident en Belgique. Elle est délivrée au début de l'année suivante par l'institution agréée qui reçoit les dons. Stripe vous demandera votre adresse postale, et d'autres informations pourront être demandées, par exemple votre numéro de registre national.",
+      "r4": "L'attestation fiscale est réservée aux donateurs qui résident en Belgique. Elle est délivrée au début de l'année suivante après vérification du versement.",
       "q5": "À quoi sert mon don si je ne choisis pas de projet ?",
       "r5": "Votre don rejoint le fonds général. Il est affecté là où le besoin est le plus urgent."
     },
     "lienConditions": "conditions d'utilisation",
-    "lienConfidentialite": "politique de confidentialité"
+    "lienConfidentialite": "politique de confidentialité",
+    "telephone": "Téléphone",
+    "contactAide": "Indiquez au moins une adresse e-mail ou un numéro de téléphone.",
+    "comptesTitre": "Comptes officiels du COVIDEBA",
+    "comptesIntro": "Effectuez votre versement sur l'un des comptes ci-dessous, puis joignez le reçu ou la capture de confirmation.",
+    "compteTitulaire": "Titulaire",
+    "compteBanque": "Banque",
+    "compteNumero": "Numéro de compte / IBAN",
+    "compteMtn": "MTN Mobile Money",
+    "compteOrange": "Orange Money",
+    "virement": "Virement bancaire",
+    "depot_bancaire": "Dépôt bancaire au guichet",
+    "mobile_money": "Mobile Money (MTN / Orange)",
+    "referenceRecu": "Référence du reçu ou de la transaction",
+    "referencePlaceholder": "Ex. VIR-2026-1234 ou ID transaction",
+    "fichierRecu": "Reçu ou preuve de dépôt (JPG, PNG, WEBP ou PDF)",
+    "fichierRecuAide": "Taille maximale : 10 Mo. Le justificatif reste privé et sert uniquement à la vérification par le trésorier."
   },
   "merci": {
-    "titre": "Merci pour votre don",
-    "texte": "Stripe vous envoie un reçu par e-mail. Si vous avez demandé une attestation fiscale, vous la recevrez au début de l'année prochaine.",
-    "annule": "Le paiement a été annulé. Aucun montant n'a été prélevé."
+    "titre": "Merci, votre reçu a été transmis",
+    "texte": "Le trésorier du COVIDEBA va vérifier votre dépôt et confirmer votre don dans le registre. Si vous avez demandé une attestation fiscale, vous la recevrez au début de l'année prochaine.",
+    "reference": "Référence transmise :",
+    "annule": "La soumission a été annulée."
   },
   "connexion": {
     "titre": "Espace COVIDEBA",
@@ -323,10 +345,10 @@
     "repartitionIntro": "Votre don se répartit en trois parts. Les pourcentages ci-dessous sont des exemples : les vrais chiffres seront publiés après la première année.",
     "parts": [
       "Projets du village",
-      "Frais de paiement (Stripe, banque)",
+      "Frais bancaires et de transfert",
       "Autres frais (site, transferts vers le Cameroun)"
     ],
-    "methode": "Méthode : les frais de paiement sont ceux que facturent Stripe et la banque. Les autres frais comprennent l'hébergement du site et les transferts d'argent vers le Cameroun. Il n'existe pas de définition unique des « frais » : nous indiquerons toujours ce que chaque part contient.",
+    "methode": "Méthode : les frais bancaires sont ceux prélevés lors des dépôts et transferts vers le Cameroun. Les autres frais comprennent l'hébergement du site et la gestion locale.",
     "registreTitre": "Le registre des dépenses",
     "registreIntro": "Chaque dépense importante est publiée avec sa facture ou une photo, et avec le compte rendu de la réunion du COVIDEBA qui l'a validée. Une écriture n'est jamais effacée : une erreur est corrigée par une nouvelle écriture, visible elle aussi.",
     "colonnes": [
@@ -402,9 +424,8 @@
           {
             "titre": "Données collectées",
             "texte": [
-              "Lors d'un don : votre nom, votre prénom (facultatif) et votre adresse e-mail.",
-              "Si vous demandez une attestation fiscale : votre adresse postale, collectée par Stripe.",
-              "Vos données bancaires sont saisies uniquement chez Stripe. Ce site ne les reçoit jamais."
+              "Lors d'un don : votre nom, votre prénom (facultatif), votre adresse e-mail ou votre numéro de téléphone, ainsi que le reçu de votre versement.",
+              "Le reçu transmis est conservé de façon privée et sert uniquement à vérifier votre dépôt."
             ]
           },
           {

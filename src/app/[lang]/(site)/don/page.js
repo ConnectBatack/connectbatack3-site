@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { chargerDictionnaire } from "@/i18n/dictionnaires";
-import { idsProjets } from "@/donnees/projets";
 import { alternatesPage } from "@/i18n/config";
 import { DON_MENSUEL_ACTIF } from "@/lib/regles-don";
+import { chargerInfosCovideba, chargerProjetsSite } from "@/lib2/serveur";
 import FormulaireDon, { FormulaireDonDepuisAdresse } from "@/components/FormulaireDon";
 
 export async function generateMetadata({ params }) {
@@ -11,17 +11,26 @@ export async function generateMetadata({ params }) {
   return { title: `${dict.don.titre} | COVIDEBA`, alternates: alternatesPage(lang, "/don") };
 }
 
-// Page statique : les paramètres d'adresse (?projet=, ?montant=, ?annule=) sont lus dans le navigateur.
 export default async function PageDon({ params }) {
   const { lang } = await params;
-  const dict = await chargerDictionnaire(lang);
-  const titresProjets = Object.fromEntries(idsProjets.map((id) => [id, dict.projets[id].titre]));
+  const [dict, { comptes }, listeProjets] = await Promise.all([
+    chargerDictionnaire(lang),
+    chargerInfosCovideba(),
+    chargerProjetsSite(),
+  ]);
+  const titresProjets = Object.fromEntries(
+    listeProjets.map((p) => [
+      p.id,
+      p.textes?.title?.[lang] || p.textes?.title?.fr || dict.projets[p.id]?.titre || p.id,
+    ]),
+  );
   const faq = dict.don.faq;
   const proprietes = {
     t: dict.don,
     exemple: dict.exemple,
     titresProjets,
     langue: lang,
+    comptes,
     liens: { conditions: `/${lang}/informations/conditions`, confidentialite: `/${lang}/informations/confidentialite` },
   };
 

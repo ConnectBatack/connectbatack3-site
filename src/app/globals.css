@@ -71,10 +71,21 @@ img { max-width: 100%; }
 /* ---------- en-tête ---------- */
 .entete {
   position: sticky; top: 0; z-index: 20;
-  display: flex; align-items: center; gap: 24px;
-  padding: 12px var(--marge);
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--trait);
+}
+.barre-contact {
+  display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 24px;
+  padding: 6px var(--marge);
+  background: var(--vert-clair);
+  border-bottom: 1px solid var(--trait);
+  font-size: 0.86rem; font-weight: 600; color: var(--encre);
+}
+.barre-contact a { text-decoration: none; }
+.barre-contact a:hover { text-decoration: underline; }
+.entete-barre {
+  display: flex; align-items: center; gap: 24px;
+  padding: 12px var(--marge);
 }
 .logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1.1; }
 .logo strong { font-size: 1.35rem; color: var(--principal); }
@@ -86,11 +97,12 @@ img { max-width: 100%; }
 .logo-covideba { width: auto; height: 120px; margin-bottom: 16px; }
 .navigation { display: flex; gap: 20px; margin-left: auto; font-weight: 600; }
 .navigation a { text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; white-space: nowrap; }
-.entete > .bouton { white-space: nowrap; }
+.entete-barre > .bouton { white-space: nowrap; }
 .lien-discret { color: var(--gris); font-weight: 500; }
 @media (max-width: 1240px) { .logo-image small { display: none; } .navigation { gap: 16px; font-size: 0.95rem; } }
 .navigation a:hover { border-bottom-color: var(--principal); }
 .menu-mobile { display: none; }
+.menu-separateur { border: 0; border-top: 1px solid var(--trait); margin: 6px 0; }
 
 /* ---------- grand bandeau photo (diaporama) ---------- */
 .bandeau-photo { position: relative; min-height: min(78vh, 720px); display: flex; align-items: flex-end; color: #fff; overflow: hidden; background: var(--vert-nuit); }
@@ -304,6 +316,14 @@ img { max-width: 100%; }
 .option-moyen { display: flex; gap: 12px; align-items: center; padding: 16px; border: 2px solid #64776f; border-radius: var(--rayon); font-weight: 700; cursor: pointer; }
 .option-moyen.actif { border-color: var(--principal); }
 .option-moyen input { accent-color: var(--principal); }
+.comptes-covideba { margin-bottom: 20px; padding: 18px; background: var(--fond-teinte); border: 1px solid var(--trait); border-radius: var(--rayon); }
+.comptes-covideba h3 { margin: 0 0 6px; font-size: 1.08rem; }
+.comptes-covideba dl { margin: 12px 0 0; display: grid; gap: 8px; }
+.comptes-covideba dl > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding-top: 6px; border-top: 1px solid var(--trait); }
+.comptes-covideba dt { font-weight: 700; color: var(--encre); }
+.comptes-covideba dd { margin: 0; color: var(--encre); }
+.comptes-covideba code { font-size: 0.95rem; font-weight: 700; }
+.champ-fichier input[type="file"] { padding: 10px; background: var(--fond-teinte); }
 .actions-don { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; }
 .actions-don .bouton-principal:only-child { margin-left: auto; }
 .message { padding: 14px 0; font-weight: 600; }
@@ -333,6 +353,10 @@ img { max-width: 100%; }
 .pied ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
 .pied a { text-decoration: none; }
 .pied a:hover { text-decoration: underline; }
+.pied-contact { margin: 8px 0 14px; font-weight: 600; color: var(--encre); }
+.pied-espace { margin-bottom: 14px; }
+.bouton-espace { color: var(--encre); border-color: var(--encre); padding: 9px 18px; font-size: 0.95rem; }
+.bouton-espace:hover { background: var(--vert-clair); text-decoration: none; }
 
 /* ---------- connexion ---------- */
 .formulaire-connexion { display: grid; gap: 4px; max-width: 420px; margin: 24px 0; }
@@ -423,7 +447,7 @@ img { max-width: 100%; }
   .menu-mobile summary::-webkit-details-marker { display: none; }
   .menu-mobile nav { position: absolute; right: 0; top: calc(100% + 8px); display: grid; min-width: 220px; padding: 8px; background: #fff; border: 1px solid var(--trait); border-radius: var(--rayon); box-shadow: 0 10px 28px rgba(23, 62, 53, 0.15); }
   .menu-mobile nav a { padding: 10px 12px; text-decoration: none; font-weight: 600; }
-  .entete > .bouton-principal { display: none; }
+  .entete-barre > .bouton-principal, .barre-contact { display: none; }
 }
 
 @media (max-width: 900px) {
@@ -453,3 +477,111 @@ img { max-width: 100%; }
 .champ-court input { max-width: 8rem; }
 .vote-numero { margin: 24px 0 8px; }
 .bouton-texte:disabled { opacity: 0.4; cursor: not-allowed; text-decoration: none; }
+
+/* Paramètres admin & profil */
+.gestion-deconnexion { color: #fff; text-align: left; padding: 0; font-size: 0.9rem; }
+.gestion-deconnexion:hover { color: var(--or); }
+.gestion-sections { display: grid; gap: 28px; margin-top: 24px; }
+.gestion-carte { background: #fff; border: 1px solid var(--trait); border-radius: var(--rayon); padding: 24px; display: grid; gap: 14px; }
+.gestion-carte h2 { margin: 0; font-size: 1.2rem; }
+.gestion-grille-form { display: grid; gap: 12px 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.gestion-grille-form .champ-large { grid-column: 1 / -1; }
+.gestion-grille-form textarea { padding: 10px 12px; border: 1px solid #64776f; border-radius: 4px; font: inherit; background: #fff; resize: vertical; }
+.gestion-actions-carte { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 4px; }
+.gestion-carte .tableau input:not([type="checkbox"]), .gestion-carte .tableau select { width: 100%; min-width: 120px; padding: 6px 8px; border: 1px solid #64776f; border-radius: 4px; font: inherit; background: #fff; }
+.gestion-liste-projets, .gestion-onglets { display: flex; flex-wrap: wrap; gap: 8px; }
+.pied-adresse { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); margin: 4px 0 8px; }
+
+/* Interface admin simplifiée pour utilisateurs non-informaticiens */
+.admin-raccourcis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 20px 0 32px; }
+.admin-raccourci-carte { display: flex; flex-direction: column; gap: 6px; padding: 18px; background: #fff; border: 2px solid var(--trait); border-radius: var(--rayon); text-decoration: none; transition: border-color 0.15s ease, transform 0.15s ease; }
+.admin-raccourci-carte:hover { border-color: var(--principal); transform: translateY(-2px); }
+.admin-raccourci-carte strong { font-size: 1.05rem; color: var(--principal); }
+.admin-raccourci-carte span { font-size: 0.92rem; color: var(--gris); }
+
+.admin-projets-grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin-bottom: 8px; }
+.admin-projet-vignette { display: grid; grid-template-columns: 56px 1fr; gap: 10px; align-items: center; text-align: left; padding: 10px; background: #fff; border: 2px solid var(--trait); border-radius: var(--rayon); cursor: pointer; font: inherit; transition: border-color 0.15s ease, background 0.15s ease; }
+.admin-projet-vignette:hover { border-color: var(--principal); }
+.admin-projet-vignette.actif { border-color: var(--principal); background: var(--vert-clair); }
+.admin-projet-vignette img { width: 56px; height: 56px; object-fit: cover; border-radius: 4px; }
+.admin-projet-vignette strong { display: block; font-size: 0.95rem; line-height: 1.25; color: var(--encre); }
+.admin-projet-vignette small { display: block; font-size: 0.82rem; color: var(--gris); margin-top: 2px; }
+.admin-projet-nouveau { display: flex; align-items: center; justify-content: center; text-align: center; grid-template-columns: 1fr; min-height: 78px; border-style: dashed; color: var(--principal); font-weight: 700; }
+
+.admin-etape-entete { display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--trait); }
+.admin-etape-badge { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: var(--principal); color: #fff; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; }
+.admin-info-traduction { padding: 12px 16px; border-radius: var(--rayon); background: var(--vert-clair); border: 1px solid var(--trait); font-size: 0.92rem; color: var(--encre); }
+
+.admin-pilules { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.admin-pilule { padding: 5px 12px; border-radius: 999px; border: 1px solid var(--trait); background: var(--fond-teinte); font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; color: var(--encre); }
+.admin-pilule.actif, .admin-pilule:hover { background: var(--principal); color: #fff; border-color: var(--principal); }
+
+.admin-photos-grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; margin-top: 6px; }
+.admin-photo-choix { position: relative; padding: 0; border: 3px solid var(--trait); border-radius: var(--rayon); overflow: hidden; cursor: pointer; background: #fff; aspect-ratio: 4 / 3; }
+.admin-photo-choix img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.admin-photo-choix.actif { border-color: var(--principal); box-shadow: 0 0 0 2px var(--or); }
+.admin-photo-choix span { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(6, 61, 48, 0.82); color: #fff; font-size: 0.72rem; padding: 2px 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.admin-onglets-nav { display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 2px solid var(--trait); padding-bottom: 12px; }
+.admin-membres-grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.admin-membre-carte { border: 1px solid var(--trait); border-radius: var(--rayon); padding: 16px; background: var(--fond-teinte); display: grid; gap: 10px; }
+.admin-membre-entete { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.admin-badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; background: var(--vert-clair); color: var(--principal-fonce); }
+.admin-details-trad { border: 1px solid var(--trait); border-radius: var(--rayon); padding: 12px 16px; background: var(--fond-teinte); }
+.admin-details-trad summary { cursor: pointer; font-weight: 700; color: var(--principal); }
+
+/* Sidebar style Gmail pour l'espace d'administration */
+.gmail-shell { display: flex; min-height: 100vh; background: #f2f6f3; color: var(--encre); }
+.gmail-sidebar { width: 268px; flex-shrink: 0; display: flex; flex-direction: column; gap: 10px; padding: 12px 12px 16px 0; background: #f2f6f3; transition: width 0.18s ease; position: sticky; top: 0; height: 100vh; overflow-y: auto; z-index: 30; }
+.gmail-sidebar.reduite { width: 76px; padding-right: 8px; align-items: center; }
+.gmail-sidebar-entete { display: flex; align-items: center; gap: 10px; padding: 4px 8px 4px 14px; min-height: 44px; }
+.gmail-sidebar.reduite .gmail-sidebar-entete { padding: 4px; justify-content: center; }
+.gmail-icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 0; border-radius: 999px; background: transparent; color: var(--encre); cursor: pointer; flex-shrink: 0; }
+.gmail-icon-btn:hover { background: rgba(8, 123, 81, 0.1); }
+.gmail-brand-texte { display: flex; flex-direction: column; text-decoration: none; line-height: 1.15; }
+.gmail-brand-texte strong { font-size: 1.15rem; color: var(--principal); }
+.gmail-brand-texte span { font-size: 0.76rem; color: var(--gris); }
+
+.gmail-compose-btn { display: inline-flex; align-items: center; gap: 12px; margin: 4px 0 8px 12px; padding: 14px 20px; border-radius: 16px; background: #c5ebd9; color: var(--vert-nuit); text-decoration: none; font-weight: 700; font-size: 0.96rem; box-shadow: 0 1px 3px rgba(6, 61, 48, 0.16); transition: box-shadow 0.15s ease, background 0.15s ease; align-self: flex-start; }
+.gmail-compose-btn:hover { background: #b5e3cd; box-shadow: 0 3px 8px rgba(6, 61, 48, 0.22); }
+.gmail-sidebar.reduite .gmail-compose-btn { margin-left: 0; padding: 14px; align-self: center; justify-content: center; }
+
+.gmail-nav { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.gmail-nav-groupe { display: flex; flex-direction: column; gap: 2px; }
+.gmail-separateur { border: 0; border-top: 1px solid #d9e4dc; margin: 8px 0 8px 16px; }
+.gmail-sidebar.reduite .gmail-separateur { margin: 8px 6px; }
+.gmail-groupe-titre { margin: 4px 0 4px 20px; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gris); }
+
+.gmail-nav-item { display: flex; align-items: center; gap: 14px; padding: 0 16px 0 20px; height: 40px; border-radius: 0 999px 999px 0; text-decoration: none; font-size: 0.94rem; font-weight: 500; color: var(--encre); background: transparent; border: 0; font-family: inherit; cursor: pointer; text-align: left; width: 100%; transition: background 0.12s ease; }
+.gmail-nav-item:hover { background: #e3ece6; }
+.gmail-nav-item.actif { background: #cde8da; color: var(--vert-nuit); font-weight: 700; }
+.gmail-sidebar.reduite .gmail-nav-item { padding: 0; width: 44px; height: 44px; border-radius: 999px; justify-content: center; margin: 0 auto; }
+.gmail-nav-texte { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gmail-nav-badge { font-size: 0.78rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; background: var(--or); color: var(--vert-nuit); }
+
+.gmail-sidebar-bas { display: flex; flex-direction: column; gap: 6px; margin-top: auto; }
+.gmail-langues { display: flex; gap: 6px; padding: 4px 20px; }
+.gmail-langues a { padding: 2px 10px; border-radius: 999px; border: 1px solid var(--trait); background: #fff; font-size: 0.8rem; font-weight: 700; text-decoration: none; }
+.gmail-langues a[aria-current="true"] { background: var(--principal); color: #fff; border-color: var(--principal); }
+
+.gmail-profil-carte { display: flex; align-items: center; gap: 10px; margin: 4px 0 2px 12px; padding: 8px 10px; border-radius: 12px; background: #fff; border: 1px solid var(--trait); }
+.gmail-sidebar.reduite .gmail-profil-carte { margin-left: 0; padding: 4px; background: transparent; border-color: transparent; }
+.gmail-avatar { width: 34px; height: 34px; border-radius: 999px; background: var(--principal); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; }
+.gmail-profil-meta { min-width: 0; display: flex; flex-direction: column; line-height: 1.2; }
+.gmail-profil-meta strong { font-size: 0.86rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gmail-profil-meta small { font-size: 0.75rem; color: var(--gris); text-transform: capitalize; }
+.gmail-logout-btn { color: var(--erreur); }
+
+.gmail-contenu { flex: 1; min-width: 0; margin: 12px 12px 12px 0; padding: 32px clamp(18px, 3.5vw, 48px) 64px; background: #fff; border: 1px solid var(--trait); border-radius: 16px; }
+.gmail-contenu h1 { font-size: clamp(1.7rem, 3.2vw, 2.35rem); }
+.gmail-contenu h2 { font-size: 1.25rem; margin-top: 28px; }
+.gmail-topbar-mobile, .gmail-backdrop { display: none; }
+
+@media (max-width: 900px) {
+  .gmail-shell { flex-direction: column; }
+  .gmail-topbar-mobile { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: #f2f6f3; border-bottom: 1px solid var(--trait); position: sticky; top: 0; z-index: 25; }
+  .gmail-backdrop { display: block; position: fixed; inset: 0; background: rgba(6, 61, 48, 0.35); z-index: 35; }
+  .gmail-sidebar { position: fixed; left: 0; top: 0; bottom: 0; width: 272px; transform: translateX(-105%); transition: transform 0.2s ease; box-shadow: 4px 0 20px rgba(0, 0, 0, 0.16); z-index: 40; }
+  .gmail-sidebar.ouvert { transform: translateX(0); }
+  .gmail-contenu { margin: 8px; padding: 20px 16px 48px; border-radius: 12px; }
+}

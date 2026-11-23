@@ -1,24 +1,20 @@
 import { exigerSession } from "@/lib/session";
 import { chargerGestion, langueGestion } from "@/i18n/gestion";
-import { ecrituresExemple } from "@/donnees/exemple-gestion";
+import { chargerRegistreGestion } from "@/lib2/serveur";
 import TableauEcritures from "@/components/gestion/TableauEcritures";
 
 export default async function Registre({ params }) {
   const { lang } = await params;
-  await exigerSession(lang); // vérification à chaque page, pas seulement dans la mise en page
-  const g = await chargerGestion(lang);
+  await exigerSession(lang);
+  const [g, reg] = await Promise.all([chargerGestion(lang), chargerRegistreGestion(100)]);
   const r = g.registre;
   return (
     <>
       <h1>{r.titre}</h1>
       <p className="gestion-intro">{r.intro}</p>
-      <p className="note-exemple">{g.exempleMaquette}</p>
-      <TableauEcritures ecritures={ecrituresExemple} g={g} langue={langueGestion(lang)} />
+      {!reg.depuisBackend && <p className="note-exemple">{g.exempleMaquette}</p>}
+      <TableauEcritures ecritures={reg.ecritures} g={g} langue={langueGestion(lang)} />
       <p className="aide">{r.parite}</p>
-      <button type="button" className="bouton bouton-principal" disabled title={r.nouvelleMaquette}>
-        {r.nouvelle}
-      </button>
-      <p className="aide">{r.nouvelleMaquette}</p>
     </>
   );
 }

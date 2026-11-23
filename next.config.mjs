@@ -18,7 +18,7 @@ const csp = [
   "connect-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
-  "form-action 'self' https://checkout.stripe.com",
+  "form-action 'self'",
   "frame-ancestors 'none'",
 ].join("; ");
 

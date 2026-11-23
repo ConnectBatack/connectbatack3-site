@@ -1,34 +1,49 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import { MONTANT_MAX, MONTANT_MIN, frequences, montantsProposes, verifierDon } from "@/lib/regles-don";
+import { useRouter, useSearchParams } from "next/navigation";
+import {
+  MONTANT_MAX,
+  MONTANT_MIN,
+  TAILLE_MAX_RECU,
+  TYPES_RECU_AUTORISES,
+  montantsProposes,
+  moyensDepot,
+  verifierDon,
+} from "@/lib/regles-don";
 import { formatEuroArrondi, formatEuroExact, formatFcfa } from "@/lib/monnaie";
+import { covidebaComptes } from "@/donnees/covideba";
 
-// Erreurs vérifiées à chaque étape avant de passer à la suivante.
-const champsParEtape = { 1: ["montant", "projet", "frequence"], 2: ["nom", "email", "prenom", "pays", "attestation"], 3: ["moyen", "conditions", "langue"] };
-// Champ à atteindre au clavier pour chaque erreur.
-const champDeErreur = { montant: "don-autre", nom: "don-nom", email: "don-email", conditions: "don-conditions", pays: "don-pays" };
+const champsParEtape = {
+  1: ["montant", "projet"],
+  2: ["nom", "email", "telephone", "prenom", "pays", "attestation"],
+  3: ["moyen", "referenceRecu", "conditions", "langue"],
+};
+const champDeErreur = {
+  montant: "don-autre",
+  nom: "don-nom",
+  email: "don-email",
+  telephone: "don-telephone",
+  pays: "don-pays",
+  referenceRecu: "don-reference",
+  conditions: "don-conditions",
+};
 
-// Lit ?projet=, ?montant= et ?annule= dans le navigateur : la page reste statique (servie par le CDN).
-// Seules les valeurs connues sont gardées.
 export function FormulaireDonDepuisAdresse(props) {
   const recherche = useSearchParams();
   const projet = recherche.get("projet");
   const montant = recherche.get("montant") ?? "";
   return (
-    <>
-      {recherche.get("annule") === "1" && <p className="message message-info">{props.messageAnnule}</p>}
-      <FormulaireDon
-        {...props}
-        projetInitial={Object.hasOwn(props.titresProjets, projet ?? "") ? projet : ""}
-        montantInitial={/^\d{1,9}$/.test(montant) ? Number(montant) : null}
-      />
-    </>
+    <FormulaireDon
+      {...props}
+      projetInitial={Object.hasOwn(props.titresProjets, projet ?? "") ? projet : ""}
+      montantInitial={/^\d{1,9}$/.test(montant) ? Number(montant) : null}
+    />
   );
 }
 
-export default function FormulaireDon({ t, exemple, titresProjets, langue, liens, projetInitial = "", montantInitial = null }) {
+export default function FormulaireDon({ t, exemple, titresProjets, langue, liens, comptes = covidebaComptes, projetInitial = "", montantInitial = null }) {
+  const router = useRouter();
   const proposeInitial = montantsProposes.ponctuel.includes(montantInitial);
   const [etape, setEtape] = useState(1);
   const [don, setDon] = useState({
@@ -39,24 +54,26 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
     prenom: "",
     nom: "",
     email: "",
+    telephone: "",
     pays: "",
     attestation: false,
     conditions: false,
-    moyen: "bancontact",
+    moyen: "virement",
+    referenceRecu: "",
   });
+  const [fichierRecu, setFichierRecu] = useState(null);
+  const [erreurFichier, setErreurFichier] = useState("");
   const [erreurs, setErreurs] = useState([]);
   const [envoi, setEnvoi] = useState(false);
   const [erreurServeur, setErreurServeur] = useState("");
   const titreEtape = useRef(null);
   const etapeAffichee = useRef(1);
 
-  // Changement d'étape : le focus va sur le titre de la nouvelle étape (lu par les lecteurs d'écran).
   useEffect(() => {
     if (etapeAffichee.current !== etape) titreEtape.current?.focus();
     etapeAffichee.current = etape;
   }, [etape]);
 
-  // Erreur : le focus va sur le premier champ concerné.
   useEffect(() => {
     const id = erreurs.map((e) => champDeErreur[e]).find(Boolean);
     if (id) document.getElementById(id)?.focus();
@@ -68,16 +85,6 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
   const format = (n) => formatFcfa(langue, n);
   const euro = (n) => <small className="montant-euro">({formatEuroArrondi(langue, n)})</small>;
 
-  function changerFrequence(f) {
-    setDon((d) => ({
-      ...d,
-      frequence: f,
-      montant: montantsProposes[f][1],
-      autre: "",
-      moyen: f === "mensuel" ? "carte" : d.moyen,
-    }));
-  }
-
   function erreursEtape(n) {
     return verifierDon(donComplet).filter((e) => champsParEtape[n].includes(e));
   }
@@ -88,26 +95,64 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
     if (e.length === 0) setEtape(etape + 1);
   }
 
+  function changerFichier(file) {
+    setErreurFichier("");
+    if (!file) {
+      setFichierRecu(null);
+      return;
+    }
+    if (!TYPES_RECU_AUTORISES.includes(file.type)) {
+      setFichierRecu(null);
+      setErreurFichier(t.erreurs.recuType);
+      return;
+    }
+    if (file.size > TAILLE_MAX_RECU) {
+      setFichierRecu(null);
+      setErreurFichier(t.erreurs.recuTaille);
+      return;
+    }
+    setFichierRecu(file);
+  }
+
   async function confirmer() {
     const e = erreursEtape(3);
     setErreurs(e);
+    if (!fichierRecu) {
+      setErreurFichier(t.erreurs.recuObligatoire);
+      document.getElementById("don-recu")?.focus();
+      return;
+    }
     if (e.length > 0) return;
+
     setEnvoi(true);
     setErreurServeur("");
     try {
-      const { autre, conditions, ...reste } = donComplet;
-      const reponse = await fetch("/api/paiement", {
+      const formData = new FormData();
+      formData.append("montant_fcfa", String(montant));
+      formData.append("moyen", don.moyen);
+      formData.append("receipt_reference", don.referenceRecu.trim());
+      formData.append("nom", don.nom.trim());
+      formData.append("prenom", don.prenom.trim());
+      formData.append("email", don.email.trim());
+      formData.append("telephone", don.telephone.trim());
+      formData.append("pays", don.pays);
+      formData.append("attestation", String(don.attestation === true && don.pays === "BE"));
+      formData.append("conditions", String(don.conditions === true));
+      formData.append("langue", langue);
+      formData.append("projet", don.projet || "");
+      formData.append("receipt_file", fichierRecu);
+
+      const reponse = await fetch("/api/don", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...reste, conditions }),
+        body: formData,
       });
       const resultat = await reponse.json();
-      // On ne suit que les adresses de paiement de Stripe.
-      if (reponse.ok && resultat.url?.startsWith("https://checkout.stripe.com/")) {
-        window.location.assign(resultat.url);
+      if (reponse.ok && resultat.ok) {
+        const ref = encodeURIComponent(resultat.receipt_reference || don.referenceRecu.trim());
+        router.push(`/${langue}/don/merci?ref=${ref}`);
         return;
       }
-      setErreurServeur(resultat.erreur === "nonConfigure" ? t.erreurs.nonConfigure : t.erreurs.serveur);
+      setErreurServeur(resultat.erreur === "nonActive" ? t.erreurs.nonConfigure : resultat.detail || t.erreurs.serveur);
     } catch {
       setErreurServeur(t.erreurs.serveur);
     }
@@ -122,19 +167,16 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
 
   const texteErreur = (champ) => (t.erreurs[champ] ?? t.erreurs.autre).replace("{min}", format(MONTANT_MIN));
   const enErreur = (champ) => erreurs.includes(champ);
-  // Attributs d'un champ : signalé invalide et relié à son message.
   const aria = (champ) => (enErreur(champ) ? { "aria-invalid": true, "aria-describedby": `erreur-${champ}` } : {});
   const messageErreur = (champ) =>
     enErreur(champ) && (
       <p className="erreur-champ" id={`erreur-${champ}`} role="alert">{texteErreur(champ)}</p>
     );
-  // Erreurs sans champ à l'écran (cas rares) : un message général, pour ne jamais bloquer sans explication.
   const autres = erreurs.filter((e) => !champDeErreur[e]);
 
-  const contexte = don.autre === "" ? t.contextes[don.frequence][don.montant] : t.contexteAutre;
+  const contexte = don.autre === "" ? t.contextes.ponctuel[don.montant] : t.contexteAutre;
   const titre = (texte) => <legend ref={titreEtape} tabIndex={-1}>{texte}</legend>;
 
-  // « J'accepte les {conditions} et la {confidentialite}. » : les deux textes sont des liens.
   const phraseConditions = t.conditions.split(/(\{conditions\}|\{confidentialite\})/).map((morceau, k) => {
     if (morceau === "{conditions}") return <a key={k} href={liens.conditions} target="_blank" rel="noopener">{t.lienConditions}</a>;
     if (morceau === "{confidentialite}") return <a key={k} href={liens.confidentialite} target="_blank" rel="noopener">{t.lienConfidentialite}</a>;
@@ -150,26 +192,9 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
 
       {etape === 1 && (
         <fieldset>
-          {frequences.length > 1 ? titre(t.frequenceTitre) : titre(t.montantTitre)}
-          {frequences.length > 1 && (
-          <div className="choix-frequence">
-            {frequences.map((f) => (
-              <button
-                key={f}
-                type="button"
-                className={don.frequence === f ? "actif" : ""}
-                aria-pressed={don.frequence === f}
-                onClick={() => changerFrequence(f)}
-              >
-                {t[f]}
-              </button>
-            ))}
-          </div>
-          )}
-
-          {frequences.length > 1 && <h2>{t.montantTitre}</h2>}
+          {titre(t.montantTitre)}
           <div className="choix-montant">
-            {montantsProposes[don.frequence].map((m) => (
+            {montantsProposes.ponctuel.map((m) => (
               <button
                 key={m}
                 type="button"
@@ -178,7 +203,6 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
                 onClick={() => setDon((d) => ({ ...d, montant: m, autre: "" }))}
               >
                 {format(m)} {euro(m)}
-                {don.frequence === "mensuel" && <small> {t.parMois}</small>}
               </button>
             ))}
           </div>
@@ -233,11 +257,23 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
               {messageErreur("nom")}
             </div>
           </div>
-          <label className="champ">
-            <span>{t.email} <span className="obligatoire">({t.obligatoire})</span></span>
-            <input id="don-email" type="email" autoComplete="email" maxLength={254} required value={don.email} onChange={(e) => maj("email", e.target.value)} {...aria("email")} />
-          </label>
-          {messageErreur("email")}
+          <div className="champs-deux">
+            <div>
+              <label className="champ">
+                {t.email}
+                <input id="don-email" type="email" autoComplete="email" maxLength={254} value={don.email} onChange={(e) => maj("email", e.target.value)} {...aria("email")} />
+              </label>
+              {messageErreur("email")}
+            </div>
+            <div>
+              <label className="champ">
+                {t.telephone}
+                <input id="don-telephone" type="tel" autoComplete="tel" maxLength={32} value={don.telephone} onChange={(e) => maj("telephone", e.target.value)} {...aria("telephone")} />
+              </label>
+              {messageErreur("telephone")}
+            </div>
+          </div>
+          <p className="aide">{t.contactAide}</p>
           <label className="champ">
             <span>{t.pays} <span className="obligatoire">({t.obligatoire})</span></span>
             <select
@@ -268,21 +304,60 @@ export default function FormulaireDon({ t, exemple, titresProjets, langue, liens
           <div className="recapitulatif">
             <strong>{t.recapitulatif}</strong>
             <p>
-              {format(montant)}
-              {don.frequence === "mensuel" ? ` ${t.parMois}` : ""} ·{" "}
-              {don.projet ? titresProjets[don.projet] : t.projetGeneral}
+              {format(montant)} · {don.projet ? titresProjets[don.projet] : t.projetGeneral}
             </p>
             <p className="aide">{t.preleve.replace("{euros}", formatEuroExact(langue, montant))}</p>
           </div>
+
+          <div className="comptes-covideba">
+            <h3>{t.comptesTitre}</h3>
+            <p className="aide">{t.comptesIntro}</p>
+            <dl>
+              {comptes.titulaire && <div><dt>{t.compteTitulaire}</dt><dd>{comptes.titulaire}</dd></div>}
+              {comptes.banque && <div><dt>{t.compteBanque}</dt><dd>{comptes.banque}</dd></div>}
+              {comptes.compteBancaire && <div><dt>{t.compteNumero}</dt><dd><code>{comptes.compteBancaire}</code></dd></div>}
+              {comptes.mtnMomo && <div><dt>{t.compteMtn}</dt><dd><code>{comptes.mtnMomo}</code></dd></div>}
+              {comptes.orangeMoney && <div><dt>{t.compteOrange}</dt><dd><code>{comptes.orangeMoney}</code></dd></div>}
+              {comptes.adressePostale && <div><dt>Adresse</dt><dd>{comptes.adressePostale}</dd></div>}
+              {comptes.autresInfos && <div><dt>Note</dt><dd>{comptes.autresInfos}</dd></div>}
+            </dl>
+          </div>
+
           <div className="choix-moyen">
-            {(don.frequence === "mensuel" ? ["carte"] : ["bancontact", "carte"]).map((m) => (
+            {moyensDepot.map((m) => (
               <label key={m} className={`option-moyen ${don.moyen === m ? "actif" : ""}`}>
                 <input type="radio" name="moyen" value={m} checked={don.moyen === m} onChange={() => maj("moyen", m)} />
                 {t[m]}
               </label>
             ))}
           </div>
-          {don.frequence === "mensuel" && <p className="aide">{t.mensuelCarte}</p>}
+
+          <label className="champ">
+            <span>{t.referenceRecu} <span className="obligatoire">({t.obligatoire})</span></span>
+            <input
+              id="don-reference"
+              maxLength={120}
+              required
+              placeholder={t.referencePlaceholder}
+              value={don.referenceRecu}
+              onChange={(e) => maj("referenceRecu", e.target.value)}
+              {...aria("referenceRecu")}
+            />
+          </label>
+          {messageErreur("referenceRecu")}
+
+          <label className="champ champ-fichier">
+            <span>{t.fichierRecu} <span className="obligatoire">({t.obligatoire})</span></span>
+            <input
+              id="don-recu"
+              type="file"
+              accept=".jpg,.jpeg,.png,.webp,.pdf,image/jpeg,image/png,image/webp,application/pdf"
+              onChange={(e) => changerFichier(e.target.files?.[0] ?? null)}
+            />
+            <small className="aide">{t.fichierRecuAide}</small>
+          </label>
+          {erreurFichier && <p className="erreur-champ" role="alert">{erreurFichier}</p>}
+
           <label className="case">
             <input id="don-conditions" type="checkbox" checked={don.conditions} onChange={(e) => maj("conditions", e.target.checked)} {...aria("conditions")} />
             <span>{phraseConditions} <span className="obligatoire">({t.obligatoire})</span></span>
